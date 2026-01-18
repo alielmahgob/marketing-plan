@@ -4,20 +4,3904 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>BandZahlen - Marketing Plan</title>
 
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			* {
+				text-align: left !important;
+				font-family: Nunito !important;
+			}
+			p {
+				margin: 0 !important;
+			}
+			/* Auto-animate styles for landing-page-like scroll animations */
+			@keyframes fadeInUp {
+				from {
+					opacity: 0;
+					transform: translateY(30px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+
+			@keyframes fadeInLeft {
+				from {
+					opacity: 0;
+					transform: translateX(-30px);
+				}
+				to {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+
+			@keyframes fadeInRight {
+				from {
+					opacity: 0;
+					transform: translateX(30px);
+				}
+				to {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+
+			@keyframes scaleIn {
+				from {
+					opacity: 0;
+					transform: scale(0.9);
+				}
+				to {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+
+			/* Elements that should animate when slide appears */
+			.animate-on-slide {
+				opacity: 0;
+			}
+
+			/* Animation triggers when .animated class is added */
+			.animate-on-slide.fade-in-up.animated {
+				animation: fadeInUp 0.6s ease-out forwards;
+			}
+
+			.animate-on-slide.fade-in.animated {
+				animation: fadeIn 0.6s ease-out forwards;
+			}
+
+			.animate-on-slide.fade-in-left.animated {
+				animation: fadeInLeft 0.6s ease-out forwards;
+			}
+
+			.animate-on-slide.fade-in-right.animated {
+				animation: fadeInRight 0.6s ease-out forwards;
+			}
+
+			.animate-on-slide.scale-in.animated {
+				animation: scaleIn 0.6s ease-out forwards;
+			}
+
+			section {
+				width: 100% !important;
+				display: flex !important;
+				height: 100% !important;
+			}
+			.slide-title {
+				font-family: 'Nunito', sans-serif;
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.slide-title .logo-container {
+				margin-bottom: 40px;
+			}
+
+			.slide-title .logo-text {
+				font-size: 80px;
+				font-weight: 800;
+				color: #FFFFFF;
+				letter-spacing: -2px;
+			}
+
+			.slide-title .main-title {
+				font-size: 64px;
+				font-weight: 800;
+				color: #FFFFFF;
+				margin-bottom: 16px;
+				line-height: 1.1;
+			}
+
+			.slide-title .subtitle {
+				font-size: 32px;
+				color: rgba(255, 255, 255, 0.9);
+				font-weight: 400;
+				margin-bottom: 60px;
+			}
+
+			.slide-title .meta-info {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+				font-size: 24px;
+				color: #FFFFFF;
+			}
+
+			.slide-title .team-members {
+				font-weight: 700;
+				color: #FFFFFF;
+			}
+
+			.slide-title .course-info {
+				font-weight: 400;
+				color: rgba(255, 255, 255, 0.7);
+			}
+
+			/* Decorative Elements */
+			.slide-title .circle-decor {
+				position: absolute;
+				border-radius: 50%;
+				opacity: 0.05;
+				background-color: #FFFFFF;
+				pointer-events: none;
+				z-index: 0;
+			}
+
+			.slide-title .c1 {
+				width: 300px;
+				height: 300px;
+				top: 0px;
+				right: 0px;
+			}
+
+			.slide-title .c2 {
+				width: 200px;
+				height: 200px;
+				bottom: 50px;
+				left: 50px;
+			}
+
+			/* Ensure slide content is above decorative elements */
+			.slide-title > *:not(.circle-decor) {
+				position: relative;
+				z-index: 1;
+			}
+
+			/* Introduction Slide Styles */
+			.slide-introduction {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-introduction .header {
+				margin-bottom: 20px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-introduction .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-introduction .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-introduction .content-wrapper {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 20px;
+			}
+
+			.slide-introduction .images-row {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 80px;
+				height: 300px;
+				width: 100%;
+			}
+
+			.slide-introduction .img-wristband {
+				height: 260px;
+				object-fit: contain;
+			}
+
+			.slide-introduction .img-app {
+				height: 100%;
+				object-fit: contain;
+			}
+
+			.slide-introduction .text-row {
+				max-width: 960px;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 12px;
+			}
+
+			.slide-introduction .main-text {
+				font-size: 28px;
+				line-height: 1.45;
+				color: #333;
+				font-weight: 400;
+			}
+
+			.slide-introduction .highlight {
+				color: #1E56A0;
+				font-weight: 700;
+			}
+
+			.slide-introduction .feature-pills {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 12px;
+			}
+
+			.slide-introduction .pill {
+				background-color: #E3F2FD;
+				color: #1E56A0;
+				padding: 8px 20px;
+				border-radius: 24px;
+				font-weight: 700;
+				font-size: 18px;
+			}
+
+			/* PESTEL Slide Styles */
+			.slide-pestel {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-pestel .header {
+				margin-bottom: 30px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-pestel .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-pestel .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-pestel .pestel-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				gap: 24px;
+				width: 100%;
+				flex: 1;
+			}
+
+			.slide-pestel .factor-card {
+				background-color: #F8FAFC;
+				border-radius: 12px;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				border-top: 4px solid #1E56A0;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+			}
+
+			.slide-pestel .card-header {
+				display: flex;
+				align-items: center;
+				margin-bottom: 12px;
+				border-bottom: 1px solid #EEE;
+				padding-bottom: 8px;
+			}
+
+			.slide-pestel .factor-letter {
+				background-color: #1E56A0;
+				color: white;
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-weight: 800;
+				font-size: 18px;
+				margin-right: 12px;
+			}
+
+			.slide-pestel .card-title {
+				font-size: 18px;
+				font-weight: 700;
+				color: #333;
+				text-transform: uppercase;
+			}
+
+			.slide-pestel .points-list {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+
+			.slide-pestel .points-list li {
+				font-size: 14px;
+				line-height: 1.3;
+				color: #444;
+				position: relative;
+				padding-left: 18px;
+			}
+
+			.slide-pestel .points-list li.opportunity::before {
+				content: "+";
+				color: #388E3C;
+				font-weight: 800;
+				position: absolute;
+				left: 0;
+				font-size: 16px;
+			}
+
+			.slide-pestel .points-list li.threat::before {
+				content: "−";
+				color: #D32F2F;
+				font-weight: 800;
+				position: absolute;
+				left: 0;
+				font-size: 16px;
+			}
+
+			/* Porter's Five Forces Slide Styles */
+			.slide-forces {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-forces .header {
+				margin-bottom: 30px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-forces .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-forces .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-forces .forces-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 24px;
+				width: 100%;
+				flex: 1;
+			}
+
+			.slide-forces .force-card {
+				background-color: #F8FAFC;
+				border-radius: 12px;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				border-top: 4px solid #E0E0E0;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+			}
+
+			/* Intensity Borders */
+			.slide-forces .intensity-high {
+				border-top-color: #D32F2F;
+			}
+
+			.slide-forces .intensity-medium {
+				border-top-color: #F57C00;
+			}
+
+			.slide-forces .intensity-low {
+				border-top-color: #388E3C;
+			}
+
+			.slide-forces .card-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 16px;
+				border-bottom: 1px solid #EEE;
+				padding-bottom: 12px;
+			}
+
+			.slide-forces .card-title {
+				font-size: 18px;
+				font-weight: 800;
+				color: #1E56A0;
+				text-transform: uppercase;
+			}
+
+			.slide-forces .rating-badge {
+				font-size: 14px;
+				font-weight: 700;
+				padding: 4px 12px;
+				border-radius: 20px;
+				color: white;
+				text-transform: uppercase;
+			}
+
+			.slide-forces .bg-high {
+				background-color: #D32F2F;
+			}
+
+			.slide-forces .bg-medium {
+				background-color: #F57C00;
+			}
+
+			.slide-forces .bg-low {
+				background-color: #388E3C;
+			}
+
+			.slide-forces .points-list {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+
+			.slide-forces .points-list li {
+				font-size: 15px;
+				line-height: 1.4;
+				color: #444;
+				position: relative;
+				padding-left: 16px;
+			}
+
+			.slide-forces .points-list li::before {
+				content: "•";
+				color: #1E56A0;
+				font-weight: bold;
+				position: absolute;
+				left: 0;
+			}
+
+			.slide-forces .bottom-row-container {
+				grid-column: 1 / -1;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 24px;
+				margin-top: 0;
+			}
+
+			/* Competitor Analysis Slide Styles */
+			.slide-competitor {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-competitor .header {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 20px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-competitor .slide-title {
+				font-size: 42px;
+				font-weight: 800;
+				color: #1E56A0;
+				line-height: 1.1;
+			}
+
+			.slide-competitor .slide-subtitle {
+				font-size: 20px;
+				color: #666;
+				margin-top: 6px;
+				font-weight: 600;
+			}
+
+			.slide-competitor .grid-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 20px;
+				flex-grow: 1;
+				height: 100%;
+				align-items: stretch;
+			}
+
+			.slide-competitor .competitor-card {
+				background-color: #F8FAFC;
+				border-radius: 10px;
+				padding: 16px;
+				display: flex;
+				flex-direction: column;
+				border: 1px solid #E2E8F0;
+				height: 100%;
+			}
+
+			.slide-competitor .logo-area {
+				height: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 16px;
+				background: white;
+				border-radius: 6px;
+				padding: 12px;
+				border: 1px solid #eee;
+			}
+
+			.slide-competitor .logo-area img {
+				max-width: 100%;
+				max-height: 100%;
+				object-fit: contain;
+			}
+
+			.slide-competitor .data-list {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				flex-grow: 1;
+				font-size: 11px;
+				line-height: 1.35;
+				color: #475569;
+			}
+
+			.slide-competitor .data-item {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-competitor .data-label {
+				font-weight: 800;
+				color: #334155;
+				margin-bottom: 1px;
+				font-size: 11px;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+
+			.slide-competitor .data-value {
+				color: #475569;
+			}
+
+			/* Specific colors for Strengths/Weaknesses labels */
+			.slide-competitor .label-strength {
+				color: #2E7D32;
+			}
+
+			.slide-competitor .label-weakness {
+				color: #C62828;
+			}
+
+			.slide-competitor .advantage-box {
+				margin-top: 16px;
+				background-color: #E3F2FD;
+				border-left: 3px solid #1E56A0;
+				padding: 10px;
+				border-radius: 0 6px 6px 0;
+			}
+
+			.slide-competitor .advantage-title {
+				font-size: 11px;
+				font-weight: 800;
+				color: #1E56A0;
+				text-transform: uppercase;
+				margin-bottom: 3px;
+			}
+
+			.slide-competitor .advantage-text {
+				font-size: 11px;
+				font-weight: 700;
+				color: #0D47A1;
+				line-height: 1.3;
+			}
+
+			/* Market Segmentation Slide Styles */
+			.slide-segmentation {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-segmentation .header {
+				margin-bottom: 30px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-segmentation .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-segmentation .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-segmentation .segments-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				gap: 24px;
+				width: 100%;
+				flex: 1;
+			}
+
+			.slide-segmentation .segment-card {
+				background-color: #FFFFFF;
+				border-radius: 12px;
+				padding: 24px;
+				display: flex;
+				flex-direction: column;
+				border: 1px solid #E0E0E0;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+				position: relative;
+			}
+
+			.slide-segmentation .card-header {
+				display: flex;
+				align-items: center;
+				margin-bottom: 12px;
+			}
+
+			.slide-segmentation .icon-circle {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				background-color: #F0F4F8;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-right: 12px;
+				font-size: 18px;
+				font-weight: 800;
+				color: #1E56A0;
+				flex-shrink: 0;
+			}
+
+			.slide-segmentation .segment-title {
+				font-size: 20px;
+				font-weight: 800;
+				color: #333;
+			}
+
+			.slide-segmentation .segment-desc {
+				font-size: 15px;
+				line-height: 1.4;
+				color: #555;
+			}
+
+			/* Subtle accent borders */
+			.slide-segmentation .segment-card::after {
+				content: "";
+				position: absolute;
+				top: 24px;
+				right: 24px;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: #E0E0E0;
+			}
+
+			/* Targeting Strategy Slide Styles */
+			.slide-targeting {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-targeting .header {
+				margin-bottom: 40px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-targeting .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-targeting .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-targeting .content-wrapper {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+				gap: 40px;
+			}
+
+			.slide-targeting .segments-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 30px;
+				flex: 1;
+			}
+
+			.slide-targeting .segment-card {
+				background-color: #FFFFFF;
+				border-radius: 16px;
+				padding: 30px;
+				display: flex;
+				flex-direction: column;
+				border: 1px solid #E0E0E0;
+				box-shadow: 0 8px 16px rgba(0,0,0,0.04);
+				position: relative;
+			}
+
+			.slide-targeting .segment-card::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 8px;
+				border-radius: 16px 16px 0 0;
+			}
+
+			.slide-targeting .card-tech::before {
+				background-color: #1E56A0;
+			}
+
+			.slide-targeting .card-safety::before {
+				background-color: #388E3C;
+			}
+
+			.slide-targeting .card-edu::before {
+				background-color: #F57C00;
+			}
+
+			.slide-targeting .icon-circle {
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				background-color: #F0F4F8;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 20px;
+				font-size: 24px;
+				font-weight: 800;
+				color: #1E56A0;
+			}
+
+			.slide-targeting .segment-title {
+				font-size: 24px;
+				font-weight: 800;
+				color: #333;
+				margin-bottom: 16px;
+			}
+
+			.slide-targeting .segment-desc {
+				font-size: 16px;
+				line-height: 1.5;
+				color: #555;
+			}
+
+			.slide-targeting .rationale-box {
+				background-color: #F0F4F8;
+				border-radius: 12px;
+				padding: 24px 40px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			.slide-targeting .rationale-title {
+				font-size: 20px;
+				font-weight: 800;
+				color: #1E56A0;
+				margin-right: 40px;
+				white-space: nowrap;
+			}
+
+			.slide-targeting .rationale-list {
+				display: flex;
+				gap: 40px;
+				list-style: none;
+			}
+
+			.slide-targeting .rationale-item {
+				font-size: 18px;
+				font-weight: 600;
+				color: #444;
+				display: flex;
+				align-items: center;
+			}
+
+			.slide-targeting .check-icon {
+				min-width: 22px;
+				min-height: 22px;
+				max-width: 22px;
+				max-height: 22px;
+				background-color: #1E56A0;
+				color: white;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-right: 12px;
+				font-size: 14px;
+				font-weight: 800;
+				padding-right: 2px;
+			}
+
+			/* Marketing Objectives Slide Styles */
+			.slide-objectives {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-objectives .header {
+				margin-bottom: 40px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-objectives .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-objectives .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-objectives .objectives-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				gap: 30px;
+				width: 100%;
+				flex: 1;
+			}
+
+			.slide-objectives .obj-card {
+				background-color: #FFFFFF;
+				border: 1px solid #E0E0E0;
+				border-radius: 16px;
+				padding: 24px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+				position: relative;
+				overflow: hidden;
+			}
+
+			/* Top accent bar */
+			.slide-objectives .obj-card::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 6px;
+				background-color: #1E56A0;
+			}
+
+			.slide-objectives .card-category {
+				font-size: 14px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #82B1FF;
+				font-weight: 700;
+				margin-bottom: 12px;
+			}
+
+			.slide-objectives .card-metric {
+				font-size: 42px;
+				font-weight: 800;
+				color: #1E56A0;
+				line-height: 1;
+				margin-bottom: 12px;
+			}
+
+			.slide-objectives .card-desc {
+				font-size: 16px;
+				line-height: 1.4;
+				color: #555;
+				flex-grow: 1;
+			}
+
+			.slide-objectives .timeframe-badge {
+				align-self: flex-start;
+				background-color: #F0F4F8;
+				color: #1E56A0;
+				font-size: 13px;
+				font-weight: 700;
+				padding: 6px 12px;
+				border-radius: 20px;
+				margin-top: 16px;
+			}
+
+			/* Brand Identity Prism Slide Styles */
+			.slide-prism {
+				font-family: 'Nunito', sans-serif;
+				background-color: #F4F6F8;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-prism .header {
+				margin-bottom: 36px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-prism .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-prism .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-prism .content-wrapper {
+				display: block;
+				position: relative;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.slide-prism .prism-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-rows: auto auto;
+				gap: 12px;
+				width: 100%;
+				z-index: 2;
+			}
+
+			.slide-prism .prism-card {
+				background: white;
+				padding: 12px;
+				border-radius: 0;
+				box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+				border-top: 4px solid #1E56A0;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+			}
+
+			.slide-prism .prism-card h3 {
+				font-size: 20px;
+				color: #1E56A0;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				margin-bottom: 8px;
+				font-weight: 700;
+			}
+
+			.slide-prism .prism-card ul {
+				list-style: none;
+			}
+
+			.slide-prism .prism-card li {
+				font-size: 18px;
+				margin-bottom: 6px;
+				color: #444;
+				display: flex;
+				align-items: center;
+			}
+
+			.slide-prism .prism-card li::before {
+				content: "•";
+				color: #82B1FF;
+				font-weight: bold;
+				margin-right: 8px;
+			}
+
+			/* Grid positioning for six cards */
+			.slide-prism .card-physique {
+				grid-column: 1;
+				grid-row: 1;
+			}
+
+			.slide-prism .card-culture {
+				grid-column: 2;
+				grid-row: 1;
+			}
+
+			.slide-prism .card-reflection {
+				grid-column: 3;
+				grid-row: 1;
+			}
+
+			.slide-prism .card-personality {
+				grid-column: 1;
+				grid-row: 2;
+			}
+
+			.slide-prism .card-relationship {
+				grid-column: 2;
+				grid-row: 2;
+			}
+
+			.slide-prism .card-self-image {
+				grid-column: 3;
+				grid-row: 2;
+			}
+
+			/* Brand Expression Slide Styles */
+			.slide-brand-expression {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-brand-expression .header {
+				margin-bottom: 20px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-brand-expression .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-brand-expression .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-brand-expression .content-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 30px;
+				flex: 1;
+				align-content: start;
+				align-items: start;
+			}
+
+			/* Slogan Section */
+			.slide-brand-expression .slogan-box {
+				text-align: center;
+			}
+
+			.slide-brand-expression .slogan-text {
+				font-size: 56px;
+				font-weight: 800;
+				color: #1E56A0;
+				line-height: 1.2;
+			}
+
+			.slide-brand-expression .slogan-label {
+				font-size: 14px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				color: #82B1FF;
+				margin-bottom: 6px;
+				font-weight: 700;
+			}
+
+			/* Promise Section */
+			.slide-brand-expression .promise-box {
+				background-color: #E3F2FD;
+				padding: 24px;
+				border-left: 6px solid #1E56A0;
+			}
+
+			.slide-brand-expression .section-label {
+				font-size: 16px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #1E56A0;
+				font-weight: 800;
+				margin-bottom: 12px;
+			}
+
+			.slide-brand-expression .promise-text {
+				font-size: 28px;
+				line-height: 1.5;
+				color: #333;
+				font-weight: 600;
+			}
+
+			/* Tone Section */
+			.slide-brand-expression .tone-box {
+				display: flex;
+				flex-direction: column;
+				grid-column: 1 / -1;
+			}
+
+			.slide-brand-expression .tone-tags {
+				display: flex;
+				gap: 12px;
+				flex-wrap: wrap;
+			}
+
+			.slide-brand-expression .tone-tag {
+				background-color: #F5F5F5;
+				color: #555;
+				padding: 10px 18px;
+				border-radius: 0;
+				font-size: 20px;
+				font-weight: 600;
+				border: 1px solid #E0E0E0;
+			}
+
+			/* Brand Assets Slide Styles */
+			.slide-brand-assets {
+				font-family: 'Nunito', sans-serif;
+				background-color: #F4F6F8;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-brand-assets .header {
+				margin-bottom: 24px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-brand-assets .title {
+				font-size: 42px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 4px;
+			}
+
+			.slide-brand-assets .subtitle {
+				font-size: 20px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-brand-assets .grid-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 260px 180px;
+				gap: 20px;
+				flex: 1;
+			}
+
+			.slide-brand-assets .section-card {
+				background: white;
+				padding: 12px;
+				display: flex;
+				flex-direction: column;
+				box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+				height: 100%;
+			}
+
+			.slide-brand-assets .section-label {
+				font-size: 14px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #999;
+				margin-bottom: 8px;
+				font-weight: 700;
+				border-bottom: 2px solid #F4F6F8;
+				padding-bottom: 6px;
+			}
+
+			/* Logos Section */
+			.slide-brand-assets .logos-section {
+				grid-column: 1 / span 2;
+				grid-row: 1;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 20px;
+				padding: 0;
+				background: transparent;
+				box-shadow: none;
+			}
+
+			.slide-brand-assets .logo-display {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 16px;
+				background: white;
+				box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+				height: 224px !important;
+			}
+
+			.slide-brand-assets .logo-display.dark-bg {
+				background: #1E56A0;
+			}
+
+			.slide-brand-assets .logo-img {
+				width: auto;
+				max-height: 160px;
+				max-width: 80%;
+				height: auto;
+				object-fit: contain;
+			}
+
+			.slide-brand-assets .logo-caption {
+				margin-top: 12px;
+				font-size: 16px;
+				color: #666;
+				font-weight: 600;
+			}
+
+			.slide-brand-assets .logo-display.dark-bg .logo-caption {
+				color: #E0E0E0;
+			}
+
+			/* Colors Section */
+			.slide-brand-assets .colors-section {
+				grid-column: 1;
+				grid-row: 2;
+			}
+
+			.slide-brand-assets .color-swatches {
+				display: flex;
+				gap: 12px;
+				height: 100%;
+				align-items: center;
+			}
+
+			.slide-brand-assets .swatch {
+				flex: 1;
+				height: 64px;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				padding: 10px;
+				border: 1px solid #eee;
+			}
+
+			.slide-brand-assets .swatch-blue {
+				background-color: #1E56A0;
+				color: white;
+			}
+
+			.slide-brand-assets .swatch-white {
+				background-color: #FFFFFF;
+				color: #333;
+				border: 1px solid #ddd;
+			}
+
+			.slide-brand-assets .color-name {
+				font-weight: 700;
+				font-size: 16px;
+			}
+
+			.slide-brand-assets .color-hex {
+				font-family: monospace;
+				font-size: 14px;
+				opacity: 0.8;
+			}
+
+			/* Typography Section */
+			.slide-brand-assets .typography-section {
+				grid-column: 2;
+				grid-row: 2;
+			}
+
+			.slide-brand-assets .type-specimen {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+			}
+
+			.slide-brand-assets .font-name {
+				font-size: 32px;
+				font-weight: 800;
+				color: #333;
+				margin-bottom: 4px;
+			}
+
+			.slide-brand-assets .font-sample {
+				font-size: 18px;
+				color: #666;
+				line-height: 1.4;
+			}
+
+			.slide-brand-assets .font-weights {
+				margin-top: 8px;
+				display: flex;
+				gap: 16px;
+				font-size: 14px;
+				color: #1E56A0;
+			}
+
+			/* Product Design Slide Styles */
+			.slide-product-design {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-product-design .header {
+				margin-bottom: 20px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-product-design .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-product-design .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-product-design .content-grid {
+				display: grid;
+				grid-template-columns: 1.2fr 1fr;
+				gap: 40px;
+				flex: 1;
+				align-items: center;
+			}
+
+			/* Left: Features List */
+			.slide-product-design .features-list {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+				justify-content: center;
+			}
+
+			.slide-product-design .feature-item {
+				display: flex;
+				align-items: flex-start;
+				gap: 12px;
+			}
+
+			.slide-product-design .feature-icon {
+				width: 36px;
+				height: 36px;
+				background-color: #E3F2FD;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #1E56A0;
+				font-weight: 800;
+				font-size: 18px;
+				flex-shrink: 0;
+				margin-top: 2px;
+			}
+
+			.slide-product-design .feature-text h3 {
+				font-size: 21px;
+				color: #1E56A0;
+				margin-bottom: 4px;
+				font-weight: 700;
+				margin-top: 8px;
+			}
+
+			.slide-product-design .feature-text p {
+				font-size: 17px;
+				color: #555;
+				line-height: 1.35;
+			}
+
+			/* Right: Images */
+			.slide-product-design .images-container {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+				justify-content: center;
+				align-items: center;
+				background-color: transparent;
+				padding: 0;
+				height: 100%;
+			}
+
+			.slide-product-design .images-row {
+				display: flex;
+				flex-direction: row;
+				gap: 12px;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+			}
+
+			.slide-product-design .wristband-img {
+				width: 240px;
+				height: 220px;
+				object-fit: contain;
+			}
+
+			.slide-product-design .caption {
+				text-align: center;
+				margin-top: 8px;
+				font-size: 15px;
+				color: #888;
+				font-style: italic;
+			}
+
+			/* Parent App Slide Styles */
+			.slide-parent-app {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-parent-app .header {
+				margin-bottom: 30px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-parent-app .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-parent-app .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-parent-app .content-grid {
+				display: grid;
+				grid-template-columns: 1fr 1.2fr;
+				gap: 50px;
+				flex: 1;
+				align-items: center;
+			}
+
+			/* Left: Features Text */
+			.slide-parent-app .features-container {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+			}
+
+			.slide-parent-app .feature-group h3 {
+				font-size: 24px;
+				color: #1E56A0;
+				font-weight: 800;
+				margin-bottom: 12px;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+			.slide-parent-app .feature-group h3::before {
+				content: '';
+				display: block;
+				width: 8px;
+				height: 24px;
+				background-color: #4FC3F7;
+				border-radius: 4px;
+			}
+
+			.slide-parent-app .feature-list {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			.slide-parent-app .feature-list li {
+				font-size: 18px;
+				color: #555;
+				padding-left: 24px;
+				position: relative;
+				line-height: 1.4;
+			}
+
+			.slide-parent-app .feature-list li::before {
+				content: '•';
+				color: #1E56A0;
+				font-weight: bold;
+				font-size: 24px;
+				position: absolute;
+				left: 0;
+				top: -4px;
+			}
+
+			/* Right: Screenshot */
+			.slide-parent-app .image-wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+			}
+
+			.slide-parent-app .app-screenshot {
+				max-width: 100%;
+				max-height: 520px;
+				object-fit: contain;
+			}
+
+			/* Pricing Strategy Slide Styles */
+			.slide-pricing {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-pricing .header {
+				margin-bottom: 40px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-pricing .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-pricing .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			/* Hardware Section */
+			.slide-pricing .hardware-section {
+				display: flex;
+				gap: 40px;
+				margin-bottom: 30px;
+				padding-bottom: 24px;
+				border-bottom: 2px solid #E3F2FD;
+			}
+
+			.slide-pricing .hardware-card {
+				flex: 1;
+				background-color: #F8FBFF;
+				padding: 16px;
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border: 1px solid #E3F2FD;
+			}
+
+			.slide-pricing .hw-info h3 {
+				font-size: 24px;
+				color: #1E56A0;
+				margin-bottom: 4px;
+			}
+
+			.slide-pricing .hw-info p {
+				font-size: 16px;
+				color: #666;
+			}
+
+			.slide-pricing .hw-price {
+				font-size: 32px;
+				font-weight: 800;
+				color: #333;
+			}
+
+			/* Subscription Section */
+			.slide-pricing .subs-title {
+				font-size: 24px;
+				font-weight: 700;
+				color: #333;
+				margin-bottom: 24px;
+			}
+
+			.slide-pricing .subs-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 30px;
+				flex: 1;
+			}
+
+			.slide-pricing .sub-card {
+				border: 1px solid #E0E0E0;
+				border-radius: 12px;
+				padding: 12px;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-pricing .sub-card.featured {
+				background-color: #1E56A0;
+				color: white;
+				border: none;
+				box-shadow: 0 10px 20px rgba(30, 86, 160, 0.15);
+			}
+
+			.slide-pricing .plan-name {
+				font-size: 22px;
+				font-weight: 700;
+				margin-bottom: 8px;
+				color: #1E56A0;
+			}
+
+			.slide-pricing .sub-card.featured .plan-name {
+				color: #81D4FA;
+			}
+
+			.slide-pricing .plan-price {
+				font-size: 36px;
+				font-weight: 800;
+				margin-bottom: 16px;
+				color: #333;
+			}
+
+			.slide-pricing .sub-card.featured .plan-price {
+				color: white;
+			}
+
+			.slide-pricing .plan-period {
+				font-size: 16px;
+				font-weight: 400;
+				color: #888;
+			}
+
+			.slide-pricing .sub-card.featured .plan-period {
+				color: #BBDEFB;
+			}
+
+			.slide-pricing .feature-list {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+
+			.slide-pricing .feature-item {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				font-size: 16px;
+				color: #555;
+			}
+
+			.slide-pricing .sub-card.featured .feature-item {
+				color: #E3F2FD;
+			}
+
+			.slide-pricing .check-icon {
+				color: #4CAF50;
+				font-weight: bold;
+				font-size: 18px;
+			}
+
+			.slide-pricing .sub-card.featured .check-icon {
+				color: #81D4FA;
+			}
+
+			/* Channel Selection Slide Styles */
+			.slide-channels {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-channels .header {
+				margin-bottom: 40px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-channels .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-channels .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-channels .process-container {
+				display: flex;
+				justify-content: space-between;
+				align-items: stretch;
+				flex: 1;
+				gap: 30px;
+			}
+
+			/* Column Styles */
+			.slide-channels .column {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-channels .col-title {
+				font-size: 20px;
+				font-weight: 800;
+				color: #1E56A0;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+				border-bottom: 2px solid #E0E0E0;
+				padding-bottom: 10px;
+			}
+
+			/* 1. Considered Channels (Left) */
+			.slide-channels .col-considered {
+				flex: 1.2;
+			}
+
+			.slide-channels .list-group {
+				margin-bottom: 24px;
+			}
+
+			.slide-channels .group-label {
+				font-size: 14px;
+				font-weight: 700;
+				color: #999;
+				margin-bottom: 8px;
+				text-transform: uppercase;
+			}
+
+			.slide-channels .channel-tag {
+				display: inline-block;
+				padding: 6px 12px;
+				background-color: #F5F5F5;
+				color: #757575;
+				border-radius: 4px;
+				font-size: 14px;
+				margin: 0 6px 8px 0;
+				font-weight: 600;
+			}
+
+			/* 2. Selection Criteria (Middle) */
+			.slide-channels .col-criteria {
+				flex: 0.8;
+				background-color: #E3F2FD;
+				border-radius: 12px;
+				padding: 24px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				position: relative;
+			}
+
+			/* Arrow effect */
+			.slide-channels .col-criteria::after {
+				content: '';
+				position: absolute;
+				right: -20px;
+				top: 50%;
+				transform: translateY(-50%);
+				border-top: 20px solid transparent;
+				border-bottom: 20px solid transparent;
+				border-left: 20px solid #E3F2FD;
+			}
+
+			.slide-channels .criteria-title {
+				font-size: 18px;
+				font-weight: 800;
+				color: #1565C0;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+
+			.slide-channels .criteria-item {
+				background-color: #FFFFFF;
+				padding: 12px 16px;
+				border-radius: 6px;
+				margin-bottom: 12px;
+				font-size: 15px;
+				font-weight: 700;
+				color: #1E56A0;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+				display: flex;
+				align-items: center;
+			}
+
+			.slide-channels .criteria-icon {
+				margin-right: 10px;
+				color: #FF9800;
+			}
+
+			/* 3. Selected Channels (Right) */
+			.slide-channels .col-selected {
+				flex: 1.2;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 24px;
+			}
+
+			.slide-channels .selected-card {
+				background-color: #1E56A0;
+				color: #FFFFFF;
+				padding: 30px;
+				border-radius: 12px;
+				box-shadow: 0 10px 20px rgba(30, 86, 160, 0.2);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.slide-channels .card-type {
+				font-size: 12px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				opacity: 0.8;
+				margin-bottom: 8px;
+			}
+
+			.slide-channels .card-name {
+				font-size: 24px;
+				font-weight: 800;
+				line-height: 1.2;
+			}
+
+			.slide-channels .check-mark {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+				width: 24px;
+				height: 24px;
+				background-color: #FFFFFF;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #1E56A0;
+				font-weight: 900;
+				font-size: 14px;
+			}
+
+			/* Parenting Influencer Marketing Slide Styles */
+			.slide-influencer {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-influencer .header {
+				margin-bottom: 30px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-influencer .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-influencer .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-influencer .content-grid {
+				display: grid;
+				grid-template-columns: 1.3fr 1fr;
+				gap: 36px;
+				flex: 1;
+			}
+
+			/* Left Column: Strategy */
+			.slide-influencer .strategy-col {
+				display: flex;
+				flex-direction: column;
+				gap: 18px;
+			}
+
+			.slide-influencer .section-box {
+				border-left: 4px solid #1E56A0;
+				padding-left: 20px;
+			}
+
+			.slide-influencer .section-title {
+				font-size: 20px;
+				font-weight: 800;
+				color: #1E56A0;
+				margin-bottom: 12px;
+				text-transform: uppercase;
+			}
+
+			.slide-influencer .bullet-list {
+				list-style: none;
+			}
+
+			.slide-influencer .bullet-list li {
+				font-size: 18px;
+				color: #424242;
+				margin-bottom: 6px;
+				position: relative;
+				padding-left: 24px;
+				line-height: 1.4;
+			}
+
+			.slide-influencer .bullet-list li::before {
+				content: '•';
+				color: #FF9800;
+				font-weight: bold;
+				font-size: 24px;
+				position: absolute;
+				left: 0;
+				top: -4px;
+			}
+
+			.slide-influencer .tags-container {
+				display: flex;
+				gap: 8px;
+				flex-wrap: wrap;
+			}
+
+			.slide-influencer .tag {
+				background-color: #E3F2FD;
+				color: #1565C0;
+				padding: 6px 12px;
+				border-radius: 20px;
+				font-weight: 700;
+				font-size: 16px;
+			}
+
+			.slide-influencer .role-box {
+				background-color: #F5F5F5;
+				padding: 18px;
+				border-radius: 8px;
+			}
+
+			.slide-influencer .role-item {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 8px;
+				font-size: 18px;
+			}
+
+			.slide-influencer .role-label {
+				font-weight: 600;
+				color: #616161;
+			}
+
+			.slide-influencer .role-value {
+				font-weight: 800;
+				color: #1E56A0;
+			}
+
+			/* Right Column: Execution */
+			.slide-influencer .execution-col {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+
+			/* Tablet Mockup */
+			.slide-influencer .tablet-mockup {
+				width: 480px;
+				height: auto;
+				border: 12px solid #333;
+				border-radius: 20px;
+				background-color: #FAFAFA;
+				position: relative;
+				overflow: hidden;
+				box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+				display: flex;
+				flex-direction: column;
+			}
+
+			/* Mockup Header */
+			.slide-influencer .mockup-header {
+				height: 40px;
+				background-color: #FFFFFF;
+				border-bottom: 1px solid #EEE;
+				display: flex;
+				align-items: center;
+				padding: 0 15px;
+				font-size: 12px;
+				color: #999;
+				font-weight: 700;
+				justify-content: center;
+			}
+
+			/* Mockup Content Area (Image) */
+			.slide-influencer .mockup-visual {
+				background-color: #FFFFFF;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+			}
+
+			.slide-influencer .mockup-visual img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			/* Mockup Caption */
+			.slide-influencer .mockup-caption {
+				background-color: #FFFFFF;
+				padding: 16px;
+				font-size: 14px;
+				line-height: 1.4;
+				color: #333;
+				border-top: 1px solid #EEE;
+			}
+
+			.slide-influencer .caption-bold {
+				font-weight: 800;
+				color: #1E56A0;
+				display: block;
+				margin-bottom: 4px;
+			}
+
+			.slide-influencer .core-message {
+				margin-top: 20px;
+				text-align: center;
+				font-size: 18px;
+				font-weight: 800;
+				color: #1E56A0;
+				font-style: italic;
+			}
+
+			/* Shopping Mall Booths Slide Styles */
+			.slide-mall-booths {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-mall-booths .header {
+				margin-bottom: 30px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-mall-booths .title {
+				font-size: 48px;
+				font-weight: 700;
+				color: #1E56A0;
+				line-height: 1.1;
+				margin-bottom: 8px;
+			}
+
+			.slide-mall-booths .subtitle {
+				font-size: 24px;
+				color: #666;
+				font-weight: 400;
+			}
+
+			.slide-mall-booths .content-grid {
+				display: grid;
+				grid-template-columns: 1.3fr 1fr;
+				gap: 40px;
+				flex: 1;
+			}
+
+			/* Left Column: Strategy */
+			.slide-mall-booths .strategy-col {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
+
+			.slide-mall-booths .section-box {
+				border-left: 4px solid #1E56A0;
+				padding-left: 20px;
+			}
+
+			.slide-mall-booths .section-title {
+				font-size: 20px;
+				font-weight: 800;
+				color: #1E56A0;
+				margin-bottom: 12px;
+				text-transform: uppercase;
+			}
+
+			.slide-mall-booths .bullet-list {
+				list-style: none;
+			}
+
+			.slide-mall-booths .bullet-list li {
+				font-size: 18px;
+				color: #424242;
+				margin-bottom: 8px;
+				position: relative;
+				padding-left: 24px;
+				line-height: 1.4;
+			}
+
+			.slide-mall-booths .bullet-list li::before {
+				content: '•';
+				color: #FF9800;
+				font-weight: bold;
+				font-size: 24px;
+				position: absolute;
+				left: 0;
+				top: -4px;
+			}
+
+			.slide-mall-booths .tags-container {
+				display: flex;
+				gap: 10px;
+				flex-wrap: wrap;
+			}
+
+			.slide-mall-booths .tag {
+				background-color: #E3F2FD;
+				color: #1565C0;
+				padding: 8px 16px;
+				border-radius: 20px;
+				font-weight: 700;
+				font-size: 16px;
+			}
+
+			.slide-mall-booths .role-box {
+				background-color: #F5F5F5;
+				padding: 20px;
+				border-radius: 8px;
+			}
+
+			.slide-mall-booths .role-item {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 8px;
+				font-size: 18px;
+			}
+
+			.slide-mall-booths .role-label {
+				font-weight: 600;
+				color: #616161;
+			}
+
+			.slide-mall-booths .role-value {
+				font-weight: 800;
+				color: #1E56A0;
+			}
+
+			/* Right Column: Execution */
+			.slide-mall-booths .execution-col {
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+			}
+
+			/* Booth Setup Box */
+			.slide-mall-booths .booth-setup {
+				background-color: #FFF3E0;
+				border-left: 4px solid #FF9800;
+				padding: 16px;
+				border-radius: 4px;
+			}
+
+			.slide-mall-booths .booth-title {
+				font-weight: 800;
+				color: #E65100;
+				margin-bottom: 8px;
+				text-transform: uppercase;
+				font-size: 14px;
+			}
+
+			.slide-mall-booths .booth-text {
+				font-size: 15px;
+				color: #5D4037;
+				line-height: 1.4;
+			}
+
+			/* Flyer Mockup */
+			.slide-mall-booths .flyer-container {
+				position: relative;
+				width: max-content;
+				background-color: #FFFFFF;
+				border: 1px solid #E0E0E0;
+				box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+				padding: 30px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				transform: rotate(-1deg);
+			}
+
+			.slide-mall-booths .flyer-header {
+				font-size: 22px;
+				font-weight: 800;
+				color: #1E56A0;
+				margin-bottom: 16px;
+				line-height: 1.2;
+			}
+
+			.slide-mall-booths .flyer-body {
+				font-size: 16px;
+				color: #424242;
+				line-height: 1.5;
+				margin-bottom: 20px;
+			}
+
+			.slide-mall-booths .flyer-footer {
+				font-size: 12px;
+				color: #999;
+				border-top: 1px solid #EEE;
+				padding-top: 10px;
+				width: 100%;
+			}
+
+			.slide-mall-booths .location-tag {
+				align-self: center;
+				background-color: #333;
+				color: #FFF;
+				padding: 6px 12px;
+				border-radius: 4px;
+				font-size: 12px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+
+			/* Distribution Channel Selection Slide Styles */
+			.slide-distribution {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-distribution .header {
+				margin-bottom: 40px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-distribution .slide-title {
+				font-size: 48px;
+				font-weight: 800;
+				color: #1E56A0;
+				line-height: 1.1;
+			}
+
+			.slide-distribution .slide-subtitle {
+				font-size: 24px;
+				color: #64748B;
+				margin-top: 8px;
+				font-weight: 600;
+			}
+
+			.slide-distribution .content-wrapper {
+				display: flex;
+				gap: 60px;
+				height: 100%;
+				align-items: center;
+			}
+
+			/* Left Column: The Selection Pool */
+			.slide-distribution .selection-pool {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
+
+			.slide-distribution .pool-label {
+				font-size: 18px;
+				font-weight: 700;
+				color: #64748B;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				margin-bottom: 10px;
+			}
+
+			.slide-distribution .tags-container {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 12px;
+			}
+
+			.slide-distribution .channel-tag {
+				padding: 12px 24px;
+				border-radius: 50px;
+				font-size: 18px;
+				font-weight: 600;
+			}
+
+			/* Unselected Style */
+			.slide-distribution .tag-unselected {
+				background-color: #F1F5F9;
+				color: #94A3B8;
+				border: 1px solid #E2E8F0;
+			}
+
+			/* Selected Style */
+			.slide-distribution .tag-selected {
+				background-color: #1E56A0;
+				color: #ffffff;
+				box-shadow: 0 4px 6px -1px rgba(30, 86, 160, 0.2);
+				border: 1px solid #1E56A0;
+				position: relative;
+				padding-right: 42px;
+			}
+
+			.slide-distribution .tag-selected::after {
+				content: '✓';
+				position: absolute;
+				right: 16px;
+				font-weight: 800;
+			}
+
+			/* Right Column: The Strategic 5 */
+			.slide-distribution .strategic-list {
+				flex: 0.8;
+				background-color: #F8FAFC;
+				border-radius: 20px;
+				padding: 30px;
+				border: 1px solid #E2E8F0;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-distribution .list-header {
+				font-size: 22px;
+				font-weight: 800;
+				color: #1E56A0;
+				margin-bottom: 24px;
+				padding-bottom: 16px;
+				border-bottom: 2px solid #E2E8F0;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+			.slide-distribution .final-list {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+
+			.slide-distribution .final-item {
+				display: flex;
+				align-items: center;
+				gap: 16px;
+				font-size: 20px;
+				font-weight: 700;
+				color: #334155;
+				background: white;
+				padding: 16px 20px;
+				border-radius: 12px;
+				border: 1px solid #E2E8F0;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+			}
+
+			.slide-distribution .number-badge {
+				background-color: #E0F2FE;
+				color: #0284C7;
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-weight: 800;
+			}
+
+			/* Strategic Channel Rationale Slide Styles */
+			.slide-channel-rationale {
+				font-family: 'Nunito', sans-serif;
+				background-color: #FFFFFF;
+				color: #333333;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-channel-rationale .header {
+				margin-bottom: 30px;
+				border-left: 8px solid #1E56A0;
+				padding-left: 24px;
+				text-align: left;
+			}
+
+			.slide-channel-rationale .slide-title {
+				font-size: 48px;
+				font-weight: 800;
+				color: #1E56A0;
+				line-height: 1.1;
+			}
+
+			.slide-channel-rationale .slide-subtitle {
+				font-size: 24px;
+				color: #64748B;
+				margin-top: 8px;
+				font-weight: 600;
+			}
+
+			/* Content List */
+			.slide-channel-rationale .channels-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 16px;
+				flex-grow: 1;
+			}
+
+			.slide-channel-rationale .channel-item {
+				display: flex;
+				align-items: flex-start;
+				background-color: #F8FAFC;
+				border: 1px solid #E2E8F0;
+				border-radius: 12px;
+				padding: 16px 24px;
+			}
+
+			.slide-channel-rationale .number-box {
+				background-color: #1E56A0;
+				color: white;
+				width: 36px;
+				height: 36px;
+				border-radius: 8px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 18px;
+				font-weight: 800;
+				margin-right: 20px;
+				flex-shrink: 0;
+				margin-top: 2px;
+			}
+
+			.slide-channel-rationale .text-content {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-channel-rationale .channel-name {
+				font-size: 20px;
+				font-weight: 800;
+				color: #1E56A0;
+				margin-bottom: 4px;
+			}
+
+			.slide-channel-rationale .channel-desc {
+				font-size: 16px;
+				color: #475569;
+				line-height: 1.4;
+				font-weight: 500;
+			}
+
+			/* Thank You Slide Styles */
+			.slide-thank-you {
+				font-family: 'Nunito', sans-serif;
+				position: relative;
+				overflow: hidden;
+				background-image: linear-gradient(135deg, #1E56A0 0%, #0D2B55 100%);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.slide-thank-you .thank-you-content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				text-align: center;
+			}
+
+			.slide-thank-you .thank-you-text {
+				font-size: 96px;
+				font-weight: 800;
+				color: #FFFFFF;
+				margin-bottom: 40px;
+				letter-spacing: -2px;
+			}
+
+			.slide-thank-you .team-names {
+				font-size: 28px;
+				color: rgba(255, 255, 255, 0.9);
+				font-weight: 600;
+				margin-bottom: 20px;
+			}
+
+			.slide-thank-you .brand-name {
+				font-size: 48px;
+				font-weight: 800;
+				color: #FFFFFF;
+				letter-spacing: -1px;
+			}
+
+			/* Decorative Elements */
+			.slide-thank-you .circle-decor {
+				position: absolute;
+				border-radius: 50%;
+				opacity: 0.05;
+				background-color: #FFFFFF;
+				pointer-events: none;
+				z-index: 0;
+			}
+
+			.slide-thank-you .c1 {
+				width: 300px;
+				height: 300px;
+				top: 0px;
+				right: 0px;
+			}
+
+			.slide-thank-you .c2 {
+				width: 200px;
+				height: 200px;
+				bottom: 50px;
+				left: 50px;
+			}
+
+			.slide-thank-you .thank-you-content > * {
+				position: relative;
+				z-index: 1;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section class="slide-title" data-background="linear-gradient(135deg, #1E56A0 0%, #0D2B55 100%)">
+					<!-- Decorative Background -->
+					<div class="circle-decor c1"></div>
+					<div class="circle-decor c2"></div>
+
+					<div style="display: flex; flex-direction: column;align-items: center; justify-content: center; height: 100%;" >
+
+						<div class="logo-container">
+							<div style="text-align: center !important;" class="logo-text">BandZahlen</div>
+						</div>
+						
+						<div style="text-align: center !important;" class="main-title">Marketing Plan</div>
+						<div style="text-align: center !important;" class="subtitle">Foundation of Marketing | International MBA 25/26</div>
+						
+						<div class="meta-info">
+							<div style="text-align: center !important;" class="team-members">Ali Almahgoub, Efe Senyuva, Gokhan Aydogan, Chen Meng</div>
+							<div style="text-align: center !important;" class="course-info">Team Presentation</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-introduction">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Introduction</div>
+						<div class="subtitle">The Concept</div>
+					</div>
+
+					<div class="content-wrapper">
+						
+						<!-- Top: Images -->
+						<div class="images-row animate-on-slide fade-in-up">
+							<!-- Wristband Image -->
+							<img src="https://private-us-east-1.manuscdn.com/sessionFile/HlYBomzI9mP44qvagXT49Q/sandbox/slides_resource_itkk9uyi7v0lt0bk87h3w-234b0097-e2b-prod-us2_1768461440946_na1fn_L2hvbWUvdWJ1bnR1L2JhbmR6YWhsZW5fc2xpZGVzL3dyaXN0YmFuZF9oZXJv.png?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvSGxZQm9tekk5bVA0NHF2YWdYVDQ5US9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pdGtrOXV5aTd2MGx0MGJrODdoM3ctMjM0YjAwOTctZTJiLXByb2QtdXMyXzE3Njg0NjE0NDA5NDZfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwySmhibVI2WVdoc1pXNWZjMnhwWkdWekwzZHlhWE4wWW1GdVpGOW9aWEp2LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE1NjAsaF8xNTYwL2Zvcm1hdCx3ZWJwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=pRiIfOR5SxvuNZIVq3x4Oi63Nv1n3O-276xruMyTHSLNNG3DPRVHb8YG~AEprmcIkIGImIUcTLkLPhe4cYd8Ra14b9zOaseAzSQdSF8fzsTC-ZmBxbpjT9Ghbvo8i3XP7SFvsDcuTezv0i9V7i7JytbnPksmo0Pz7TYfuZNw047g8ZehRxYqigcvxIDZylSBinj0ZomvWYgcIu5WbANao3cWeX9~OLHL7TQyzp5V4BboG9ALDLNqfi6vgSYd2Gxs93lHoZ3~Ib0~zcBjtOsCw05o9u-55vj1Ylz0Z0oSRqtmlof7I~jv32IlxMfBKzOWjtpjPSzGS-9Us9v2LsOJzg__" class="img-wristband" alt="BandZahlen Wristbands">
+							
+							<!-- App Image -->
+							<img src="https://private-us-east-1.manuscdn.com/sessionFile/HlYBomzI9mP44qvagXT49Q/sandbox/slides_resource_itkk9uyi7v0lt0bk87h3w-234b0097-e2b-prod-us2_1768463441372_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9TY3JlZW5zaG90MjAyNi0wMS0xNWF0OC4wMS40MkFN.png?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvSGxZQm9tekk5bVA0NHF2YWdYVDQ5US9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pdGtrOXV5aTd2MGx0MGJrODdoM3ctMjM0YjAwOTctZTJiLXByb2QtdXMyXzE3Njg0NjM0NDEzNzJfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5VFkzSmxaVzV6YUc5ME1qQXlOaTB3TVMweE5XRjBPQzR3TVM0ME1rRk4ucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTU2MCxoXzE1NjAvZm9ybWF0LHdlYnAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=YST3HuR4f7nvtTiuogRhxhha0a7wOxmGjcurdHxufyRlhm7eaRcAWtH-Qv0h~UYCbL8zKNG4moTsWD8nU9-MZ49jutfT1LShjxcu3e2XTfNGr~~xab~MjTmm-Bzvbcjfzayr2lLBdnXs~-7X3Rh2X-GGxQrQ-KaVwLOdOm3SLu1qUu4kgDh01dhc1V9Ryq-pjYtE~TIWr-XBcrvodSbVgZyeOyAtdiPKUNS~ED1tva~Ml5ZFtiBvIdaD3wVJiFIDa2Iios~j0MxikrJMCHQMKKxQ9zoPm2tfdO674UIg5Zk0ZtB8TZL7ZeWFMgCOe-FxwbHCp2Sb6RHfJUudqZwkQg__" class="img-app" alt="BandZahlen App">
+						</div>
+
+						<!-- Bottom: Text -->
+						<div class="text-row animate-on-slide fade-in-up">
+							<div class="main-text">
+								<span class="highlight">BandZahlen</span> is a smart wristband for children enabling <span class="highlight">safe tap-to-pay</span> purchases with parental monitoring and spending limits.
+							</div>
+							
+							<div class="feature-pills animate-on-slide fade-in-up">
+								<div class="pill">Payment-First</div>
+								<div class="pill">Safe for Kids</div>
+								<div class="pill">Parental Control</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-pestel">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Macro-Environment Analysis</div>
+						<div class="subtitle">PESTEL Framework</div>
+					</div>
+
+					<div class="pestel-grid">
+						
+						<!-- Political -->
+						<div class="factor-card animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="factor-letter">P</div>
+								<div class="card-title">Political</div>
+							</div>
+							<ul class="points-list">
+								<li class="opportunity">Government focus on child safety & digital transformation.</li>
+								<li class="opportunity">Potential funding for school tech programs.</li>
+								<li class="threat">Tight regulations on child data tracking.</li>
+								<li class="threat">Varying rules for minors across borders.</li>
+							</ul>
+						</div>
+
+						<!-- Economic -->
+						<div class="factor-card animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="factor-letter">E</div>
+								<div class="card-title">Economic</div>
+							</div>
+							<ul class="points-list">
+								<li class="opportunity">Growing digital payment & wearable markets.</li>
+								<li class="opportunity">Parents seeking affordable tech during downturns.</li>
+								<li class="threat">Price sensitivity among families.</li>
+								<li class="threat">Rising hardware & supply chain costs.</li>
+							</ul>
+						</div>
+
+						<!-- Social -->
+						<div class="factor-card animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="factor-letter">S</div>
+								<div class="card-title">Social</div>
+							</div>
+							<ul class="points-list">
+								<li class="opportunity">Trend toward cashless lifestyles & early financial education.</li>
+								<li class="opportunity">Parents value supervised independence.</li>
+								<li class="threat">Privacy concerns about monitoring children.</li>
+								<li class="threat">Fear of tech making kids "too adult-like".</li>
+							</ul>
+						</div>
+
+						<!-- Technological -->
+						<div class="factor-card animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="factor-letter">T</div>
+								<div class="card-title">Technological</div>
+							</div>
+							<ul class="points-list">
+								<li class="opportunity">Wide availability of NFC & scalable cloud ecosystems.</li>
+								<li class="opportunity">GPS/Health sensors enable future features.</li>
+								<li class="threat">Cybersecurity & hacking risks.</li>
+								<li class="threat">Hardware limitations (battery, POS compatibility).</li>
+							</ul>
+						</div>
+
+						<!-- Environmental -->
+						<div class="factor-card animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="factor-letter">E</div>
+								<div class="card-title">Environmental</div>
+							</div>
+							<ul class="points-list">
+								<li class="opportunity">Use of recyclable silicone & eco-friendly packaging.</li>
+								<li class="opportunity">Alignment with sustainability trends.</li>
+								<li class="threat">Concerns about electronic waste (e-waste).</li>
+								<li class="threat">Higher costs for sustainable materials.</li>
+							</ul>
+						</div>
+
+						<!-- Legal -->
+						<div class="factor-card animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="factor-letter">L</div>
+								<div class="card-title">Legal</div>
+							</div>
+							<ul class="points-list">
+								<li class="opportunity">GDPR compliance builds trust & credibility.</li>
+								<li class="opportunity">Clear consent rules protect the brand.</li>
+								<li class="threat">High liability for data breaches.</li>
+								<li class="threat">Complex regulations on tracking minors.</li>
+							</ul>
+						</div>
+
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-forces">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Micro-Environment Analysis</div>
+						<div class="subtitle">Porter's Five Forces</div>
+					</div>
+
+					<div class="forces-grid">
+						
+						<!-- 1. Threat of New Entrants -->
+						<div class="force-card intensity-medium animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="card-title">New Entrants</div>
+								<div class="rating-badge bg-medium">Medium</div>
+							</div>
+							<ul class="points-list">
+								<li><strong>Barriers:</strong> Payment licensing, GDPR compliance, and need for high parental trust.</li>
+								<li><strong>Enablers:</strong> Easy outsourcing of wearables & standardized NFC tech.</li>
+								<li><strong>Trend:</strong> Fintech startups are rapidly growing in Germany.</li>
+							</ul>
+						</div>
+
+						<!-- 2. Threat of Substitutes -->
+						<div class="force-card intensity-high animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="card-title">Substitutes</div>
+								<div class="rating-badge bg-high">High</div>
+							</div>
+							<ul class="points-list">
+								<li><strong>Habit:</strong> Strong competition from cash payments.</li>
+								<li><strong>Partial Solutions:</strong> Existing tracking apps or simple debit cards.</li>
+								<li><strong>Differentiation:</strong> No single substitute offers BandZahlen's full feature set.</li>
+							</ul>
+						</div>
+
+						<!-- 3. Buyer Power -->
+						<div class="force-card intensity-high animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="card-title">Buyer Power</div>
+								<div class="rating-badge bg-high">High</div>
+							</div>
+							<ul class="points-list">
+								<li><strong>Choice:</strong> Many alternative ways to manage kids' spending.</li>
+								<li><strong>Behavior:</strong> Parents compare prices heavily; low switching costs.</li>
+								<li><strong>Key Factor:</strong> Trust is the deciding factor over price.</li>
+							</ul>
+						</div>
+
+						<!-- Bottom Row Wrapper -->
+						<div class="bottom-row-container">
+							
+							<!-- 4. Supplier Power -->
+							<div class="force-card intensity-low animate-on-slide fade-in-up">
+								<div class="card-header">
+									<div class="card-title">Supplier Power</div>
+									<div class="rating-badge bg-low">Low</div>
+								</div>
+								<ul class="points-list">
+									<li><strong>Sourcing:</strong> Components (NFC, Silicone, GPS) are standardized and global.</li>
+									<li><strong>Flexibility:</strong> Low switching costs between suppliers.</li>
+									<li><strong>Availability:</strong> Many suppliers exist for all key hardware parts.</li>
+								</ul>
+							</div>
+
+							<!-- 5. Competitive Rivalry -->
+							<div class="force-card intensity-medium animate-on-slide fade-in-up">
+								<div class="card-header">
+									<div class="card-title">Competitive Rivalry</div>
+									<div class="rating-badge bg-medium">Medium</div>
+								</div>
+								<ul class="points-list">
+									<li><strong>Landscape:</strong> Competitors spread across apps, cards, and wearables.</li>
+									<li><strong>Potential Threats:</strong> Big banks or fitness trackers (Fitbit/Garmin) adding payment features.</li>
+									<li><strong>Position:</strong> No direct "all-in-one" replacement currently dominates.</li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-competitor">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="slide-title">Competitor Analysis</div>
+						<div class="slide-subtitle">Detailed Strategic Comparison</div>
+					</div>
+
+					<div class="grid-container">
+						<!-- Competitor 1: gohenry -->
+						<div class="competitor-card animate-on-slide fade-in-up">
+							<div class="logo-area">
+								<img width="150" src="./go henry.png" alt="gohenry logo">
+							</div>
+							
+							<div class="data-list">
+								<div class="data-item">
+									<span class="data-label">Category / Sector</span>
+									<span class="data-value">Kids payment / kids banking</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label">Core Purpose</span>
+									<span class="data-value">Teach kids money management with parental control</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label">Key Features</span>
+									<span class="data-value">Kids spending account/card + parent monitoring & limits</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label label-strength">Strengths</span>
+									<span class="data-value">Strong finance positioning, structured money learning</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label label-weakness">Weaknesses</span>
+									<span class="data-value">Not a wristband; less "instant child-friendly wearable"; less safety-layer</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label">Target Customer</span>
+									<span class="data-value">Parents who want financial education + controlled spending</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label">Pricing Logic</span>
+									<span class="data-value">Subscription-based kids finance model</span>
+								</div>
+							</div>
+
+							<div class="advantage-box">
+								<div class="advantage-title">Why BandZahlen Wins</div>
+								<div class="advantage-text">More child-friendly wearable experience + combines payments with reassurance features</div>
+							</div>
+						</div>
+
+						<!-- Competitor 2: Spacetalk -->
+						<div class="competitor-card animate-on-slide fade-in-up">
+							<div class="logo-area">
+								<img width="150" src="./spacetalk.png" alt="Spacetalk logo">
+							</div>
+							
+							<div class="data-list">
+								<div class="data-item">
+									<span class="data-label">Category / Sector</span>
+									<span class="data-value">Kids wearable safety watch (GPS tracking)</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label">Core Purpose</span>
+									<span class="data-value">Child safety + parent reassurance through wearable tracking</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label">Key Features</span>
+									<span class="data-value">GPS location tracking + child-parent connectivity features</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label label-strength">Strengths</span>
+									<span class="data-value">Strong safety/trust angle, wearable format is familiar</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label label-weakness">Weaknesses</span>
+									<span class="data-value">Not payment-first; doesn't teach spending responsibility; more "watch device" complexity</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label">Target Customer</span>
+									<span class="data-value">Safety-focused parents prioritizing child location visibility</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label">Pricing Logic</span>
+									<span class="data-value">Hardware purchase + possible service/subscription layer</span>
+								</div>
+							</div>
+
+							<div class="advantage-box">
+								<div class="advantage-title">Why BandZahlen Wins</div>
+								<div class="advantage-text">Payment-first independence + parental spending control + reassurance in one device</div>
+							</div>
+						</div>
+
+						<!-- Competitor 3: Purewrist -->
+						<div class="competitor-card animate-on-slide fade-in-up">
+							<div class="logo-area">
+								<img src="./purewrist.png" width="150" alt="purewrist logo">
+							</div>
+							
+							<div class="data-list">
+								<div class="data-item">
+									<span class="data-label">Category / Sector</span>
+									<span class="data-value">Wearable contactless payment (NFC payment wristband)</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label">Core Purpose</span>
+									<span class="data-value">Enable tap-to-pay transactions through a wearable bracelet</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label">Key Features</span>
+									<span class="data-value">Contactless NFC payment wristband + linked mobile app</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label label-strength">Strengths</span>
+									<span class="data-value">Payment-first wearable positioning;</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label label-weakness">Weaknesses</span>
+									<span class="data-value">Not designed specifically for children; lacks built-in parental controls and education focus; limited parent reassurance layer</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label">Target Customer</span>
+									<span class="data-value">General consumers who want a wearable payment alternative</span>
+								</div>
+								<div class="data-item">
+									<span class="data-label">Pricing Logic</span>
+									<span class="data-value">Hardware purchase + potential subscription/service fee model (depending on plan)</span>
+								</div>
+							</div>
+
+							<div class="advantage-box">
+								<div class="advantage-title">Why BandZahlen Wins</div>
+								<div class="advantage-text">Child-focused payment independence + parental control + reassurance features (spending limits + tracking + wellbeing insights)</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-segmentation">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Market Segmentation</div>
+						<div class="subtitle">Overview of Parent Profiles</div>
+					</div>
+
+					<div class="segments-grid">
+						
+						<!-- 1. Tech Enthusiasts -->
+						<div class="segment-card animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="icon-circle">T</div>
+								<div class="segment-title">Tech Enthusiasts</div>
+							</div>
+							<div class="segment-desc">
+								Parents who enjoy adopting new technologies and see smart gadgets as part of modern family life. They value innovation and convenience.
+							</div>
+						</div>
+
+						<!-- 2. Safety Seekers -->
+						<div class="segment-card animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="icon-circle">S</div>
+								<div class="segment-title">Safety Seekers</div>
+							</div>
+							<div class="segment-desc">
+								Parents highly concerned about safety and behavior when unsupervised. They want to control and monitor spending to ensure responsible use.
+							</div>
+						</div>
+
+						<!-- 3. Education Builders -->
+						<div class="segment-card animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="icon-circle">E</div>
+								<div class="segment-title">Education Builders</div>
+							</div>
+							<div class="segment-desc">
+								Parents who want to teach financial responsibility and independence. They view the product as a learning tool rather than just a gadget.
+							</div>
+						</div>
+
+						<!-- 4. Budget Minders -->
+						<div class="segment-card animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="icon-circle" style="color: #757575; background-color: #EEEEEE;">B</div>
+								<div class="segment-title" style="color: #555;">Budget Minders</div>
+							</div>
+							<div class="segment-desc">
+								Parents who like practical, affordable solutions. They are interested in the idea but will compare prices carefully before purchasing.
+							</div>
+						</div>
+
+						<!-- 5. Traditionalists -->
+						<div class="segment-card animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="icon-circle" style="color: #757575; background-color: #EEEEEE;">Tr</div>
+								<div class="segment-title" style="color: #555;">Traditionalists</div>
+							</div>
+							<div class="segment-desc">
+								Parents who prefer cash and low-tech methods. They may not trust digital payment systems or see the product as necessary.
+							</div>
+						</div>
+
+						<!-- 6. Trend Followers -->
+						<div class="segment-card animate-on-slide fade-in-up">
+							<div class="card-header">
+								<div class="icon-circle" style="color: #757575; background-color: #EEEEEE;">F</div>
+								<div class="segment-title" style="color: #555;">Trend Followers</div>
+							</div>
+							<div class="segment-desc">
+								Parents who buy popular products seen on social media. They care about staying updated and being part of the latest family-tech trends.
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-targeting">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Targeting Strategy</div>
+						<div class="subtitle">Selected Primary Audiences</div>
+					</div>
+
+					<div class="content-wrapper">
+						
+						<div class="segments-grid">
+							
+							<!-- Tech Enthusiasts -->
+							<div class="segment-card card-tech animate-on-slide fade-in-up">
+								<div class="icon-circle" style="color: #1E56A0; background-color: #E3F2FD;">T</div>
+								<div class="segment-title">Tech Enthusiasts</div>
+								<div class="segment-desc">
+									Parents who enjoy adopting new technologies and see smart gadgets as part of modern family life. They value innovation and convenience.
+								</div>
+							</div>
+
+							<!-- Safety Seekers -->
+							<div class="segment-card card-safety animate-on-slide fade-in-up">
+								<div class="icon-circle" style="color: #388E3C; background-color: #E8F5E9;">S</div>
+								<div class="segment-title">Safety Seekers</div>
+								<div class="segment-desc">
+									Parents highly concerned about safety and behavior when unsupervised. They want to control and monitor spending to ensure responsible use.
+								</div>
+							</div>
+
+							<!-- Education Builders -->
+							<div class="segment-card card-edu animate-on-slide fade-in-up">
+								<div class="icon-circle" style="color: #F57C00; background-color: #FFF3E0;">E</div>
+								<div class="segment-title">Education Builders</div>
+								<div class="segment-desc">
+									Parents who want to teach financial responsibility and independence. They view the product as a learning tool rather than just a gadget.
+								</div>
+							</div>
+
+						</div>
+
+						<!-- Strategic Rationale -->
+						<div class="rationale-box animate-on-slide fade-in-up">
+							<div class="rationale-title">Why We Chose These Segments</div>
+							<ul class="rationale-list">
+								<li class="rationale-item">
+									<div class="check-icon">✓</div>
+									High fit with Value Proposition
+								</li>
+								<li class="rationale-item">
+									<div class="check-icon">✓</div>
+									Strong willingness to pay
+								</li>
+								<li class="rationale-item">
+									<div class="check-icon">✓</div>
+									Reachable via selected channels
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-objectives">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Marketing Objectives</div>
+						<div class="subtitle">Key Performance Indicators & Milestones</div>
+					</div>
+
+					<div class="objectives-grid">
+						
+						<!-- 1. Market Entry -->
+						<div class="obj-card animate-on-slide fade-in-up">
+							<div class="card-category">Market Entry</div>
+							<div class="card-metric">Launch</div>
+							<div class="card-desc">Official market entry and product launch across Germany.</div>
+							<div class="timeframe-badge">Within 12 Months</div>
+						</div>
+
+						<!-- 2. Awareness -->
+						<div class="obj-card animate-on-slide fade-in-up">
+							<div class="card-category">Awareness</div>
+							<div class="card-metric">300k</div>
+							<div class="card-desc">Parents reached with 25,000 engagements via influencer campaigns.</div>
+							<div class="timeframe-badge">Within 3 Months</div>
+						</div>
+
+						<!-- 3. Sales -->
+						<div class="obj-card animate-on-slide fade-in-up">
+							<div class="card-category">Sales Volume</div>
+							<div class="card-metric">1,000</div>
+							<div class="card-desc">Wristbands sold through Amazon and MediaMarkt channels.</div>
+							<div class="timeframe-badge">Within 6 Months</div>
+						</div>
+
+						<!-- 4. Activation -->
+						<div class="obj-card animate-on-slide fade-in-up">
+							<div class="card-category">Activation</div>
+							<div class="card-metric">70%</div>
+							<div class="card-desc">Setup completion rate (Pairing + Limit Set + First Payment).</div>
+							<div class="timeframe-badge">Within 7 Days</div>
+						</div>
+
+						<!-- 5. Usage -->
+						<div class="obj-card animate-on-slide fade-in-up">
+							<div class="card-category">Retention</div>
+							<div class="card-metric">60%</div>
+							<div class="card-desc">Weekly Active Usage (WAU) among users after purchase.</div>
+							<div class="timeframe-badge">3 Months Post-Purchase</div>
+						</div>
+
+						<!-- 6. Satisfaction -->
+						<div class="obj-card animate-on-slide fade-in-up">
+							<div class="card-category">Satisfaction</div>
+							<div class="card-metric">4.5★</div>
+							<div class="card-desc">Average customer rating on Amazon reviews.</div>
+							<div class="timeframe-badge">Within 6 Months</div>
+						</div>
+
+					</div>
+				</section>
+
+				<section data-background-color="#F4F6F8" class="slide-prism">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Brand Identity Prism</div>
+						<div class="subtitle">Strategic Framework (Kapferer)</div>
+					</div>
+
+					<div class="content-wrapper">
+						<div class="prism-grid">
+							<!-- Row 1 -->
+							<div class="prism-card card-physique animate-on-slide fade-in-up">
+								<h3>Physique</h3>
+								<ul>
+									<li>NFC wristband</li>
+									<li>Parental control app</li>
+									<li>Simple & safe design</li>
+								</ul>
+							</div>
+
+							<div class="prism-card card-culture animate-on-slide fade-in-up">
+								<h3>Culture</h3>
+								<ul>
+									<li>Safety first</li>
+									<li>Transparency</li>
+									<li>Responsibility</li>
+									<li>Trust</li>
+								</ul>
+							</div>
+
+							<div class="prism-card card-reflection animate-on-slide fade-in-up">
+								<h3>Reflection</h3>
+								<ul>
+									<li>Responsible families</li>
+									<li>Children learning independence</li>
+								</ul>
+							</div>
+
+							<!-- Row 2 -->
+							<div class="prism-card card-personality animate-on-slide fade-in-up">
+								<h3>Personality</h3>
+								<ul>
+									<li>Calm & Caring</li>
+									<li>Responsible</li>
+									<li>Modern (not flashy)</li>
+								</ul>
+							</div>
+
+							<div class="prism-card card-relationship animate-on-slide fade-in-up">
+								<h3>Relationship</h3>
+								<ul>
+									<li>Supportive guide</li>
+									<li>Partner for parents</li>
+									<li>Mentor for children</li>
+								</ul>
+							</div>
+
+							<div class="prism-card card-self-image animate-on-slide fade-in-up">
+								<h3>Self-Image</h3>
+								<ul>
+									<li>Reassured parents</li>
+									<li>Confident children</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-brand-expression">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Brand Expression</div>
+						<div class="subtitle">Slogan, Promise & Tone</div>
+					</div>
+
+					<div class="content-grid">
+						<!-- Slogan -->
+						<div class="slogan-box animate-on-slide fade-in-up">
+							<div class="slogan-label">Brand Slogan</div>
+							<div class="slogan-text">"Independent children,<br>reassured parents"</div>
+						</div>
+
+						<!-- Brand Promise -->
+						<div class="promise-box animate-on-slide fade-in-up">
+							<div class="section-label">Brand Promise</div>
+							<div class="promise-text">
+								BandZahlen enables children's financial independence through safe payments, while giving parents calm, transparent control — reinforced by advanced reassurance features (location + wellbeing insights).
+							</div>
+						</div>
+
+						<!-- Brand Tone (spans both columns) -->
+						<div class="tone-box animate-on-slide fade-in-up">
+							<div class="section-label">Brand Tone</div>
+							<div class="tone-tags">
+								<div class="tone-tag">Reassuring</div>
+								<div class="tone-tag">Educational</div>
+								<div class="tone-tag">Calm</div>
+								<div class="tone-tag">Trustworthy</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#F4F6F8" class="slide-brand-assets">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Brand Assets</div>
+						<div class="subtitle">Visual Identity System</div>
+					</div>
+
+					<div class="grid-container">
+							<!-- Primary Logo -->
+							<div class="logo-display animate-on-slide fade-in-up">
+								<img src="./BandZahlen.png" width="300px" alt="Primary Logo" class="">
+								<div class="logo-caption">Primary Logo</div>
+							</div>
+
+							<!-- Secondary/Reversed Logo -->
+							<div class="logo-display dark-bg animate-on-slide fade-in-up">
+								<img src="./logo.png" width="300px" alt="Secondary Logo" class="">
+								<div class="logo-caption">Secondary Logo</div>
+							</div>
+
+						<!-- Colors Section -->
+						<div class="section-card colors-section animate-on-slide fade-in-up">
+							<div class="section-label">Color Palette</div>
+							<div class="color-swatches">
+								<div class="swatch swatch-blue">
+									<div class="color-name">BandZahlen Blue</div>
+									<div class="color-hex">#1E56A0</div>
+								</div>
+								<div class="swatch swatch-white">
+									<div class="color-name">White</div>
+									<div class="color-hex">#FFFFFF</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Typography Section -->
+						<div class="section-card typography-section animate-on-slide fade-in-up">
+							<div class="section-label">Typography</div>
+							<div class="type-specimen">
+								<div class="font-name">Nunito</div>
+								<div class="font-sample">
+									Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj<br>
+									0123456789
+								</div>
+								<div class="font-weights">
+									<span style="font-weight: 400">Regular</span>
+									<span style="font-weight: 600">SemiBold</span>
+									<span style="font-weight: 700">Bold</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-product-design">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Product Design</div>
+						<div class="subtitle">The Wristband Hardware</div>
+					</div>
+
+					<div class="content-grid" style="gap: 0px !important">
+						<!-- Left: Features -->
+						<div class="features-list">
+							<div class="feature-item animate-on-slide fade-in-up">
+								<div class="feature-icon">1</div>
+								<div class="feature-text">
+									<h3>Child-Friendly Material</h3>
+									<p>Soft, hypoallergenic, waterproof silicone for all-day comfort and durability.</p>
+								</div>
+							</div>
+							<div class="feature-item animate-on-slide fade-in-up">
+								<div class="feature-icon">2</div>
+								<div class="feature-text">
+									<h3>Comfort Fit Specifications</h3>
+    								<p>Lightweight build (~20g) with 10 adjustment holes and an inner diameter range of 45–60mm.</p>
+  
+								</div>
+							</div>
+							<div class="feature-item animate-on-slide fade-in-up">
+								<div class="feature-icon">3</div>
+								<div class="feature-text">
+									<h3>Secure & Adjustable</h3>
+									<p>Secure clasp and adjustable strap sized for children.</p>
+								</div>
+							</div>
+							<div class="feature-item animate-on-slide fade-in-up">
+								<div class="feature-icon">4</div>
+								<div class="feature-text">
+									<h3>NFC Technology</h3>
+									<p>Embedded secure chip for fast, battery-free "tap-to-pay" transactions.</p>
+								</div>
+							</div>
+							<div class="feature-item animate-on-slide fade-in-up">
+								<div class="feature-icon">5</div>
+								<div class="feature-text">
+									<h3>Customizable Designs</h3>
+									<p>Multiple themes (Characters, Patterns) to drive excitement and adoption.</p>
+								</div>
+							</div>
+							<div class="feature-item animate-on-slide fade-in-up">
+								<div class="feature-icon">6</div>
+								<div class="feature-text">
+									<h3>Integrated GPS</h3>
+									<p>Low-power GPS for periodic location updates and safe-zone alerts.</p>
+								</div>
+							</div>
+							<div class="feature-item animate-on-slide fade-in-up">
+								<div class="feature-icon">7</div>
+								<div class="feature-text">
+									<h3>Wellbeing Sensors</h3>
+									<p>Motion and heart-rate sensors providing basic activity insights.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Right: Images -->
+						<div class="images-container animate-on-slide fade-in-up">
+							<div style="flex-direction: column !important;" class="images-row">
+								<img style="width:100%" src="./colors.png" class="wristband-img" alt="Spiderman Themed Wristband">
+								<img style="width:100%" src="./custom.png" class="wristband-img" alt="Hello Kitty Themed Wristband">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-parent-app">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Product Design</div>
+						<div class="subtitle">The Parent App: Control & Reassurance</div>
+					</div>
+
+					<div class="content-grid">
+						<!-- Left: Features -->
+						<div class="features-container">
+							
+							<!-- Group 1: Financial Control -->
+							<div class="feature-group animate-on-slide fade-in-up">
+								<h3>Financial Control</h3>
+								<ul class="feature-list">
+									<li><strong>Real-time Balance:</strong> Instantly view current balance and top up securely.</li>
+									<li><strong>Smart Limits:</strong> Set daily spending caps to teach budgeting.</li>
+									<li><strong>Transaction History:</strong> See exactly where and when money is spent.</li>
+								</ul>
+							</div>
+
+							<!-- Group 2: Advanced Reassurance -->
+							<div class="feature-group animate-on-slide fade-in-up">
+								<h3>Advanced Reassurance</h3>
+								<ul class="feature-list">
+									<li><strong>Live Location:</strong> Check real-time status with safe zone alerts.</li>
+									<li><strong>Wellbeing Insights:</strong> Monitor daily activity steps and heart rate trends.</li>
+									<li><strong>Remote Management:</strong> Instantly lock the band if lost or misplaced.</li>
+								</ul>
+							</div>
+
+						</div>
+
+						<!-- Right: Screenshot -->
+						<div class="image-wrapper animate-on-slide fade-in-up">
+							<img src="./Screenshot.png" alt="BandZahlen Parent App Dashboard and Advanced Features" class="app-screenshot">
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-pricing">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Pricing Strategy</div>
+						<div class="subtitle">Hardware & Subscription Model</div>
+					</div>
+
+					<!-- Hardware Pricing -->
+					<div class="hardware-section animate-on-slide fade-in-up">
+						<div class="hardware-card">
+							<div class="hw-info">
+								<h3>Base Wristband</h3>
+								<p>Standard colors</p>
+							</div>
+							<div class="hw-price">€19.99</div>
+						</div>
+						<div class="hardware-card">
+							<div class="hw-info">
+								<h3>Custom Designs</h3>
+								<p>Licensed themes & patterns</p>
+							</div>
+							<div class="hw-price">€24.99</div>
+						</div>
+					</div>
+
+					<!-- Subscription Tiers -->
+					<div class="subs-title animate-on-slide fade-in-up">Subscription Plans</div>
+					<div class="subs-grid">
+						
+						<!-- Basic -->
+						<div class="sub-card animate-on-slide fade-in-up">
+							<div class="plan-name">BandZahlen Basic</div>
+							<div class="plan-price">€0<span class="plan-period">/mo</span></div>
+							<ul class="feature-list">
+								<li class="feature-item"><span class="check-icon">✓</span> NFC tap-to-pay payments</li>
+								<li class="feature-item"><span class="check-icon">✓</span> Transaction history & balance overview</li>
+								<li class="feature-item"><span class="check-icon">✓</span> Basic parental access (view-only)</li>
+							</ul>
+						</div>
+
+						<!-- Safety -->
+						<div class="sub-card featured animate-on-slide fade-in-up">
+							<div class="plan-name">BandZahlen Safety</div>
+							<div class="plan-price">€4.99<span class="plan-period">/mo</span></div>
+							<ul class="feature-list">
+								<li class="feature-item"><span class="check-icon">✓</span> <strong>Everything in Basic</strong></li>
+								<li class="feature-item"><span class="check-icon">✓</span> Spending limits (daily/weekly)</li>
+								<li class="feature-item"><span class="check-icon">✓</span> Real-time spending notifications</li>
+								<li class="feature-item"><span class="check-icon">✓</span> Instant freeze / unfreeze wristband</li>
+								<li class="feature-item"><span class="check-icon">✓</span> GPS location tracking</li>
+								<li class="feature-item"><span class="check-icon">✓</span> Safe zones + enter/exit alerts</li>
+							</ul>
+						</div>
+
+						<!-- Premium -->
+						<div class="sub-card animate-on-slide fade-in-up">
+							<div class="plan-name">BandZahlen Premium</div>
+							<div class="plan-price">€6.99<span class="plan-period">/mo</span></div>
+							<ul class="feature-list">
+								<li class="feature-item"><span class="check-icon">✓</span> <strong>Everything in Safety</strong></li>
+								<li class="feature-item"><span class="check-icon">✓</span> Wellbeing insights (steps + basic heart-rate status)</li>
+								<li class="feature-item"><span class="check-icon">✓</span> Location history & movement timeline (last 7 days)</li>
+								<li class="feature-item"><span class="check-icon">✓</span> Spending analytics (weekly/monthly reports + category insights)</li>
+							</ul>
+						</div>
+
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-channels">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Channel Selection Overview</div>
+						<div class="subtitle">From Broad Consideration to Strategic Focus</div>
+					</div>
+
+					<div class="process-container">
+						
+						<!-- Column 1: Long List -->
+						<div class="column col-considered animate-on-slide fade-in-up">
+							<div class="col-title">Considered Channels</div>
+							
+							<div class="list-group">
+								<div class="group-label">Online</div>
+								<div class="channel-tag">Social Media Ads</div>
+								<div class="channel-tag">Parenting Blogs</div>
+								<div class="channel-tag">Google Search Ads</div>
+								<div class="channel-tag">PR Articles</div>
+								<div class="channel-tag">Email Newsletters</div>
+								<div class="channel-tag" style="background-color: #E3F2FD; color: #1565C0; border: 1px solid #1E56A0;">Parenting Influencers</div>
+							</div>
+
+							<div class="list-group">
+								<div class="group-label">Offline</div>
+								<div class="channel-tag">School Workshops</div>
+								<div class="channel-tag">Community Events</div>
+								<div class="channel-tag">Flyers</div>
+								<div class="channel-tag">Sports Clubs</div>
+								<div class="channel-tag">Toy Stores</div>
+								<div class="channel-tag" style="background-color: #E3F2FD; color: #1565C0; border: 1px solid #1E56A0;">Mall Booths</div>
+							</div>
+						</div>
+
+						<!-- Column 2: Criteria -->
+						<div class="column col-criteria animate-on-slide fade-in-up">
+							<div class="criteria-title">Selection Criteria</div>
+							<div class="criteria-item">
+								<span class="criteria-icon">🎯</span> Direct Reach to Parents
+							</div>
+							<div class="criteria-item">
+								<span class="criteria-icon">🤝</span> Ability to Build Trust
+							</div>
+							<div class="criteria-item">
+								<span class="criteria-icon">🎓</span> Ability to Educate
+							</div>
+						</div>
+
+						<!-- Column 3: Selected -->
+						<div class="column col-selected animate-on-slide fade-in-up">
+							<div class="col-title">Final Selection</div>
+							
+							<div class="selected-card animate-on-slide fade-in-up">
+								<div class="check-mark">✓</div>
+								<div class="card-type">Online Channel</div>
+								<div class="card-name">Parenting Influencer Marketing</div>
+							</div>
+
+							<div class="selected-card animate-on-slide fade-in-up">
+								<div class="check-mark">✓</div>
+								<div class="card-type">Offline Channel</div>
+								<div class="card-name">Shopping Mall Playground Booths</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-influencer">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Parenting Influencer Marketing</div>
+						<div class="subtitle">Primary Online Channel</div>
+					</div>
+
+					<div class="content-grid">
+						
+						<!-- Left: Strategy -->
+						<div class="strategy-col">
+							
+							<div class="section-box animate-on-slide fade-in-up">
+								<div class="section-title">Why This Channel</div>
+								<ul class="bullet-list">
+									<li>Parents trust recommendations from other parents (Social Proof).</li>
+									<li>High reach across relevant parent segments.</li>
+									<li>Allows visual explanation of the wristband + app ecosystem.</li>
+								</ul>
+							</div>
+
+							<div class="section-box animate-on-slide fade-in-up">
+								<div class="section-title">Target Segments</div>
+								<div class="tags-container">
+									<div class="tag">Safety Seekers</div>
+									<div class="tag">Education Builders</div>
+									<div class="tag">Tech Enthusiasts</div>
+								</div>
+							</div>
+
+							<div class="section-box animate-on-slide fade-in-up">
+								<div class="section-title">Strategic Role</div>
+								<div class="role-box">
+									<div class="role-item">
+										<span class="role-label">Primary Goal:</span>
+										<span class="role-value">Awareness</span>
+									</div>
+									<div class="role-item">
+										<span class="role-label">Secondary Goal:</span>
+										<span class="role-value">Education & Trust</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<!-- Right: Execution Mockup -->
+						<div class="execution-col animate-on-slide fade-in-up">
+							<div class="tablet-mockup">
+								<div class="mockup-header">INSTAGRAM PROFILE</div>
+								
+								<div class="mockup-visual">
+									<img src="./insta.png" alt="Mamiblock Instagram Profile">
+								</div>
+
+								<div class="mockup-caption">
+									<span class="caption-bold">@mamiblock</span>
+									"My child wants independence — but I still want control. With BandZahlen, she pays on her own, and I see everything in real time. She feels trusted. I feel calm."
+								</div>
+							</div>
+
+							<div class="core-message">
+								"Your child gains independence.<br>You stay in control."
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-mall-booths">
+					<div class="header animate-on-slide fade-in-up">
+						<div class="title">Shopping Mall Playground Booths</div>
+						<div class="subtitle">Primary Offline Channel</div>
+					</div>
+
+					<div class="content-grid">
+						
+						<!-- Left: Strategy -->
+						<div class="strategy-col">
+							
+							<div class="section-box animate-on-slide fade-in-up">
+								<div class="section-title">Why This Channel</div>
+								<ul class="bullet-list">
+									<li>Parents are already present with their children (Context).</li>
+									<li>Family-safe environment increases trust.</li>
+									<li>Enables live explanation and reassurance.</li>
+								</ul>
+							</div>
+
+							<div class="section-box animate-on-slide fade-in-up">
+								<div class="section-title">Target Segments</div>
+								<div class="tags-container">
+									<div class="tag">Safety Seekers</div>
+									<div class="tag">Education Builders</div>
+								</div>
+							</div>
+
+							<div class="section-box animate-on-slide fade-in-up">
+								<div class="section-title">Strategic Role</div>
+								<div class="role-box">
+									<div class="role-item">
+										<span class="role-label">Primary Goal:</span>
+										<span class="role-value">Trust Building</span>
+									</div>
+									<div class="role-item">
+										<span class="role-label">Secondary Goal:</span>
+										<span class="role-value">Education</span>
+									</div>
+									<div class="role-item">
+										<span class="role-label">Supporting:</span>
+										<span class="role-value">Conversion</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<!-- Right: Execution -->
+						<div class="execution-col">
+							
+							<div class="booth-setup animate-on-slide fade-in-up">
+								<div class="booth-title">Booth Setup Strategy</div>
+								<div class="booth-text">
+									Small, open booth near indoor playgrounds. Physical wristbands on display + Tablet showing the parent app for live demos.
+								</div>
+							</div>
+
+							<div class="flyer-container animate-on-slide fade-in-up">
+								<div style="text-align: center !important;" class="flyer-header">
+									A safe first step into financial independence.
+								</div>
+								<div style="text-align: center !important;" class="flyer-body">
+									"Your child pays with a wristband.<br>
+									You set limits, see purchases, and stay in control."
+								</div>
+								<div class="flyer-footer">
+									BandZahlen - Smart Payment for Kids
+								</div>
+							</div>
+
+							<div class="location-tag animate-on-slide fade-in-up">
+								📍 Distributed at Mall Playground Floors
+							</div>
+
+						</div>
+
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-distribution">
+					<div class="header animate-on-slide fade-in-up">
+						<div style="    font-size: 48px;
+						font-weight: 700;
+						color: #1E56A0;
+						line-height: 1.1;
+						margin-bottom: 8px;">Distribution Channel Selection</div>
+						<div class="slide-subtitle">Identifying High-Impact Touchpoints</div>
+					</div>
+
+					<div class="content-wrapper">
+						<!-- Left: The Pool -->
+						<div class="selection-pool animate-on-slide fade-in-up">
+							<div class="pool-label">Potential Channels Evaluated</div>
+							<div class="tags-container">
+								<div class="channel-tag tag-selected">Company website</div>
+								<div class="channel-tag tag-unselected">Bookstores</div>
+								<div class="channel-tag tag-selected">Marketplaces</div>
+								<div class="channel-tag tag-unselected">Drugstores</div>
+								<div class="channel-tag tag-unselected">Pharmacies</div>
+								<div class="channel-tag tag-selected">Electronics retailers</div>
+								<div class="channel-tag tag-unselected">Supermarkets</div>
+								<div class="channel-tag tag-selected">Toy stores</div>
+								<div class="channel-tag tag-unselected">Wearable/accessory shops</div>
+								<div class="channel-tag tag-selected">Family centers</div>
+								<div class="channel-tag tag-unselected">School canteens</div>
+							</div>
+						</div>
+
+						<!-- Right: The Final 5 -->
+						<div class="strategic-list animate-on-slide fade-in-up">
+							<div class="list-header">
+								<span>★</span> Strategic Selection (Top 5)
+							</div>
+							<div class="final-list">
+								<div class="final-item animate-on-slide fade-in-up">
+									<div class="number-badge">1</div>
+									BandZahlen Official Website
+								</div>
+								<div class="final-item animate-on-slide fade-in-up">
+									<div class="number-badge">2</div>
+									Online Marketplace
+								</div>
+								<div class="final-item animate-on-slide fade-in-up">
+									<div class="number-badge">3</div>
+									Electronic Retailers
+								</div>
+								<div class="final-item animate-on-slide fade-in-up">
+									<div class="number-badge">4</div>
+									Toy Stores
+								</div>
+								<div class="final-item animate-on-slide fade-in-up">
+									<div class="number-badge">5</div>
+									Family Centers
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF" class="slide-channel-rationale">
+					<div class="header animate-on-slide fade-in-up">
+						<div style="    font-size: 48px;
+						font-weight: 700;
+						color: #1E56A0;
+						line-height: 1.1;
+						margin-bottom: 8px;">Strategic Channel Rationale</div>
+						<div class="slide-subtitle">Why We Chose These 5 Touchpoints</div>
+					</div>
+
+					<div class="channels-grid">
+						<!-- 1 -->
+						<div class="channel-item animate-on-slide fade-in-up">
+							<div class="number-box">1</div>
+							<div class="text-content">
+								<div class="channel-name">BandZahlen Official Website</div>
+								<div class="channel-desc">Direct-to-consumer channel that builds trust through full product explanation, brand storytelling, and direct customer support.</div>
+							</div>
+						</div>
+
+						<!-- 2 -->
+						<div class="channel-item animate-on-slide fade-in-up">
+							<div class="number-box">2</div>
+							<div class="text-content">
+								<div class="channel-name">Online Marketplace</div>
+								<div class="channel-desc">High reach and convenience for parents, supported by reviews and familiar checkout/return processes that reduce perceived risk.</div>
+							</div>
+						</div>
+
+						<!-- 3 -->
+						<div class="channel-item animate-on-slide fade-in-up">
+							<div class="number-box">3</div>
+							<div class="text-content">
+								<div class="channel-name">Electronic Retailers</div>
+								<div class="channel-desc">Trusted offline retailers where parents can see the product physically and better understand the technology and reassurance features.</div>
+							</div>
+						</div>
+
+						<!-- 4 -->
+						<div class="channel-item animate-on-slide fade-in-up">
+							<div class="number-box">4</div>
+							<div class="text-content">
+								<div class="channel-name">Toy Stores</div>
+								<div class="channel-desc">Natural environment for children-focused products, increasing visibility among families and supporting gifting and impulse purchases.</div>
+							</div>
+						</div>
+
+						<!-- 5 -->
+						<div class="channel-item animate-on-slide fade-in-up">
+							<div class="number-box">5</div>
+							<div class="text-content">
+								<div class="channel-name">Family Centers</div>
+								<div class="channel-desc">High-trust community touchpoints where parents seek child-related services, ideal for education-driven awareness and brand credibility.</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide-thank-you" data-background="linear-gradient(135deg, #1E56A0 0%, #0D2B55 100%)">
+					<!-- Decorative Background -->
+					<div class="circle-decor c1"></div>
+					<div class="circle-decor c2"></div>
+
+					<div class="thank-you-content animate-on-slide fade-in-up">
+						<div class="thank-you-text">Thank You</div>
+					</div>
+				</section>
 			</div>
 		</div>
 
@@ -31,9 +3915,57 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
+				width: 1120,
+  				height: 620,
+				center: true,
+				progress: false,
+				controls: false,
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+			// Auto-animate elements when slide becomes visible (like landing page scroll animations)
+			function animateSlideElements(slide) {
+				if (!slide) return;
+
+				// Reset all animated elements on other slides
+				document.querySelectorAll('.animate-on-slide').forEach(el => {
+					el.classList.remove('animated');
+					el.style.animationDelay = '';
+				});
+
+				// Get all animated elements in current slide
+				const elementsToAnimate = Array.from(slide.querySelectorAll('.animate-on-slide'));
+				
+				if (elementsToAnimate.length === 0) return;
+
+				// Animate each element with staggered delay
+				elementsToAnimate.forEach((el, index) => {
+					// Use requestAnimationFrame to ensure DOM is ready
+					requestAnimationFrame(() => {
+						const delay = index * 0.1; // 100ms between each element
+						el.style.animationDelay = delay + 's';
+						
+						// Small timeout to ensure the delay is set
+						setTimeout(() => {
+							el.classList.add('animated');
+						}, 10);
+					});
+				});
+			}
+
+			// Animate elements when slide is shown
+			Reveal.on('slidechanged', event => {
+				// Small delay to ensure slide transition is complete
+				setTimeout(() => {
+					animateSlideElements(event.currentSlide);
+				}, 100);
+			});
+
+			// Also animate on initial load
+			Reveal.on('ready', event => {
+				setTimeout(() => {
+					animateSlideElements(event.currentSlide);
+				}, 100);
 			});
 		</script>
 	</body>
