@@ -3428,6 +3428,68 @@
 				background: rgba(244, 162, 97, 0.05);
 				z-index: 1;
 			}
+
+			/*
+			 * PDF export (?print-pdf): Reveal only sets section width in print layout;
+			 * content-height sections leave empty “letterbox” inside the page. Fix by
+			 * locking each slide to --slide-width/--slide-height (set on body by Reveal).
+			 */
+			html.reveal-print {
+				-webkit-print-color-adjust: exact;
+				print-color-adjust: exact;
+			}
+
+			html.reveal-print .reveal .slides section {
+				width: var(--slide-width, 1120px) !important;
+				height: var(--slide-height, 620px) !important;
+				min-height: var(--slide-height, 620px) !important;
+				max-height: var(--slide-height, 620px) !important;
+				box-sizing: border-box !important;
+				overflow: hidden !important;
+			}
+
+			html.reveal-print .reveal .slides section > [class^="slide-spss-"] {
+				width: 100% !important;
+				height: 100% !important;
+				min-height: 100% !important;
+				max-height: 100% !important;
+				box-sizing: border-box !important;
+			}
+
+			/* Full-bleed navy slides: background on inner wrapper + data-background */
+			html.reveal-print .slide-spss-intro,
+			html.reveal-print .slide-spss-thankyou {
+				background-color: #1a3a5c !important;
+			}
+
+			/*
+			 * PDF / print: entrance animations use opacity:0 until JS adds .animated.
+			 * Disable that so lists, figures, etc. are visible in the exported PDF.
+			 */
+			html.reveal-print .animate-on-slide {
+				opacity: 1 !important;
+				transform: none !important;
+				animation: none !important;
+				animation-delay: 0s !important;
+				animation-duration: 0s !important;
+				transition: none !important;
+			}
+
+			@media print {
+				.reveal .animate-on-slide {
+					opacity: 1 !important;
+					transform: none !important;
+					animation: none !important;
+					animation-delay: 0s !important;
+					transition: none !important;
+				}
+
+				.reveal .fragment {
+					opacity: 1 !important;
+					visibility: visible !important;
+					transform: none !important;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -4366,6 +4428,8 @@
 				hash: true,
 				width: 1120,
 				height: 620,
+				/* 0 = PDF pages match slide size (no extra white band around each slide) */
+				margin: 0,
 				center: true,
 				progress: false,
 				controls: false,
