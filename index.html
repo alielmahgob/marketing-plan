@@ -3545,8 +3545,9 @@
 			.reveal .slides section .slide-ba .view-title,
 			.reveal .slides section .slide-ba .view-desc,
 			.reveal .slides section .slide-ba .bottom-note,
-			.reveal .slides section .slide-ba .image-placeholder,
-			.reveal .slides section .slide-ba .bullet-list li {
+			.reveal .slides section .slide-ba .slide-ba-figure-card,
+			.reveal .slides section .slide-ba .bullet-list li,
+			.reveal .slides section .slide-ba .slide-ba-example-questions {
 				text-align: left;
 			}
 
@@ -3746,20 +3747,43 @@
 				min-width: 0;
 			}
 
-			.reveal .slides section .slide-ba--split .image-placeholder {
+			.reveal .slides section .slide-ba-figure-card {
 				width: 100%;
-				height: 320px;
-				max-height: 340px;
-				background-color: #edf2f7;
-				border: 2px dashed #a0aec0;
+				background: linear-gradient(165deg, #f8fafc 0%, #eef2f7 100%);
+				border: 2px solid #64748b;
+				border-radius: 14px;
+				padding: 10px 10px 12px;
+				box-shadow:
+					0 1px 2px rgba(15, 23, 42, 0.06),
+					inset 0 1px 0 rgba(255, 255, 255, 0.7);
 				display: flex;
-				justify-content: center;
 				align-items: center;
-				color: #718096;
-				font-size: 17px;
-				font-weight: bold;
-				text-align: center;
-				padding: 14px;
+				justify-content: center;
+				overflow: hidden;
+			}
+
+			.reveal .slides section .slide-ba-figure-card img {
+				display: block;
+				width: 100%;
+				height: auto;
+				max-height: 300px;
+				object-fit: contain;
+				border-radius: 10px;
+			}
+
+			.reveal .slides section .slide-ba-figure-card:hover {
+				border-color: #2b6cb0;
+				box-shadow:
+					0 4px 14px rgba(43, 108, 176, 0.15),
+					inset 0 1px 0 rgba(255, 255, 255, 0.75);
+			}
+
+			.reveal .slides section .slide-ba--twoviews .slide-ba-figure-card img {
+				max-height: 190px;
+			}
+
+			.reveal .slides section .slide-ba--dataentry .slide-ba-figure-card img {
+				max-height: 200px;
 			}
 
 			.reveal .slides section .slide-ba--split .step-block {
@@ -3842,11 +3866,6 @@
 				text-align: left;
 			}
 
-			.reveal .slides section .slide-ba--twoviews .image-placeholder {
-				height: 200px;
-				min-height: 160px;
-			}
-
 			.reveal .slides section .slide-ba--twoviews .bottom-note {
 				text-align: left;
 				color: #333333;
@@ -3927,6 +3946,48 @@
 				width: 100%;
 			}
 
+			.reveal .slides section .slide-ba--infocol .slide-ba-subheading {
+				font-family: "Montserrat", "Source Sans 3", sans-serif;
+				font-size: 22px;
+				font-weight: 700;
+				color: #1a365d;
+				margin: 4px 0 2px 0;
+				text-align: left;
+				width: 100%;
+				border-bottom: 2px solid #2b6cb0;
+				padding-bottom: 6px;
+			}
+
+			.reveal .slides section .slide-ba--infocol .slide-ba-subheading:first-child {
+				margin-top: 0;
+			}
+
+			.reveal .slides section .slide-ba--infocol .slide-ba-subheading:not(:first-child) {
+				margin-top: 14px;
+			}
+
+			.reveal .slides section .slide-ba--recode-slide .slide-ba-question-separator {
+				width: 100%;
+				border: none;
+				border-top: 2px solid #e2e8f0;
+				margin: 16px 0 12px 0;
+			}
+
+			.reveal .slides section .slide-ba--recode-slide .slide-ba-example-questions {
+				font-size: 14px;
+				line-height: 1.45;
+				color: #4a5568;
+				width: 100%;
+			}
+
+			.reveal .slides section .slide-ba--recode-slide .slide-ba-example-questions p {
+				margin: 0 0 10px 0;
+			}
+
+			.reveal .slides section .slide-ba--recode-slide .slide-ba-example-questions p:last-child {
+				margin-bottom: 0;
+			}
+
 			.reveal .slides section .slide-ba--dataentry .content-area {
 				flex-direction: column;
 				padding-top: 20px;
@@ -3955,11 +4016,6 @@
 				padding-left: 14px;
 				border-left: 4px solid #2b6cb0;
 				text-align: left;
-			}
-
-			.reveal .slides section .slide-ba--dataentry .image-placeholder {
-				height: 200px;
-				min-height: 150px;
 			}
 
 			.reveal .slides section .slide-ba--dataentry .bottom-note {
@@ -4094,19 +4150,8 @@
 				top: 4px;
 			}
 
-			.reveal .slides section .slide-ba--bullets-split .image-placeholder {
-				width: 100%;
-				height: 320px;
-				background-color: #e2e8f0;
-				border: 2px dashed #a0aec0;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				color: #718096;
-				font-size: 18px;
-				font-weight: bold;
-				text-align: center;
-				padding: 16px;
+			.reveal .slides section .slide-ba--bullets-split .slide-ba-figure-card img {
+				max-height: 280px;
 			}
 
 			.reveal .slides section .slide-ba--grid4 .warning-block {
@@ -4194,11 +4239,11 @@
 							</div>
 							<div class="card">
 								<div class="card-number" >2</div>
-								<div class="card-text" style="text-align: center;">widely used software for data analysis</div>
+								<div class="card-text" style="text-align: center;">Widely used software for data analysis</div>
 							</div>
 							<div class="card">
 								<div class="card-number" >3</div>
-								<div class="card-text" style="text-align: center;">helps researchers and businesses make sense of data</div>
+								<div class="card-text" style="text-align: center;">Helps researchers and businesses make sense of data</div>
 							</div>
 						</div>
 					</div>
@@ -4228,15 +4273,15 @@
 								</div>
 								<div class="step-block">
 									<div class="step-number">2</div>
-									<div class="step-text">users can begin with a new dataset or open an existing file</div>
+									<div class="step-text">Users can begin with a new dataset or open an existing file</div>
 								</div>
 								<div class="step-block">
 									<div class="step-number">3</div>
-									<div class="step-text">the starting dialog gives different options to begin working</div>
+									<div class="step-text">The starting dialog gives different options to begin working</div>
 								</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: SPSS Starting Dialog]</div>
+								<div class="slide-ba-figure-card"><img src="images/SPSS Starting Dialog.png" alt="SPSS Starting Dialog" /></div>
 							</div>
 						</div>
 					</div>
@@ -4249,12 +4294,12 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="info-card">use File &rarr; Save or Save As</div>
-								<div class="info-card">choose location and file name carefully</div>
-								<div class="info-card">saving regularly is important during data work</div>
+								<div class="info-card">Use File &rarr; Save or Save As</div>
+								<div class="info-card">Choose location and file name carefully</div>
+								<div class="info-card">Saving regularly is important during data work</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Screenshot of Save Dialog]</div>
+								<div class="slide-ba-figure-card"><img src="images/Screenshot of Save Dialog.png" alt="Screenshot of Save Dialog" /></div>
 							</div>
 						</div>
 					</div>
@@ -4270,15 +4315,15 @@
 								<div class="view-column">
 									<div class="view-title">Data View</div>
 									<div class="view-desc">Data View is used for entering observations</div>
-									<div class="image-placeholder">[Image Placeholder: Screenshot of Data View]</div>
+									<div class="slide-ba-figure-card"><img src="images/Screenshot of Data View.png" alt="Screenshot of Data View" /></div>
 								</div>
 								<div class="view-column">
 									<div class="view-title">Variable View</div>
 									<div class="view-desc">Variable View is used for defining variables</div>
-									<div class="image-placeholder">[Image Placeholder: Screenshot of Variable View]</div>
+									<div class="slide-ba-figure-card"><img src="images/Screenshot of Variable View.png" alt="Screenshot of Variable View" /></div>
 								</div>
 							</div>
-							<div class="bottom-note">both views are essential for building a dataset</div>
+							<div class="bottom-note">Both views are essential for building a dataset</div>
 						</div>
 					</div>
 				</section>
@@ -4290,13 +4335,13 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="info-block" style="text-align: center;">each variable needs a name and data type</div>
-								<div class="info-block" style="text-align: center;">numeric variables are usually preferred for analysis</div>
-								<div class="info-block" style="text-align: center;">labels help make variables easier to understand</div>
-								<div class="info-block" style="text-align: center;">decimals and widths can also be adjusted</div>
+								<div class="info-block" style="text-align: center;">Each variable needs a name and data type</div>
+								<div class="info-block" style="text-align: center;">Numeric variables are usually preferred for analysis</div>
+								<div class="info-block" style="text-align: center;">Labels help make variables easier to understand</div>
+								<div class="info-block" style="text-align: center;">Decimals and widths can also be adjusted</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Variable View Settings]</div>
+								<div class="slide-ba-figure-card"><img src="images/Variable View Settings.png" alt="Variable View Settings" /></div>
 							</div>
 						</div>
 					</div>
@@ -4309,12 +4354,12 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="info-block">value labels give meaning to coded numbers</div>
-								<div class="example-block">example: 0 = female, 1 = male</div>
-								<div class="info-block">value labels improve readability in data and output</div>
+								<div class="info-block">Value labels give meaning to coded numbers</div>
+								<div class="example-block">Example: 0 = female, 1 = male</div>
+								<div class="info-block">Value labels improve readability in data and output</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Value Labels Dialog]</div>
+								<div class="slide-ba-figure-card"><img src="images/Value Labels Dialog.png" alt="Value Labels Dialog" /></div>
 							</div>
 						</div>
 					</div>
@@ -4327,12 +4372,12 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="info-block">missing values can be system missing or user-defined</div>
-								<div class="info-block">examples: blank cells, -1, 99</div>
-								<div class="warning-block">missing values must be defined correctly so SPSS does not treat them as real data</div>
+								<div class="info-block">Missing values can be system missing or user-defined</div>
+								<div class="info-block">Examples: blank cells, -1, 99</div>
+								<div class="warning-block">Missing values must be defined correctly so SPSS does not treat them as real data</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Missing Values Dialog]</div>
+								<div class="slide-ba-figure-card"><img src="images/Missing Values Dialog.png" alt="Missing Values Dialog" /></div>
 							</div>
 						</div>
 					</div>
@@ -4346,15 +4391,15 @@
 						<div class="content-area" style="align-items: normal;">
 							<div class="methods-container">
 								<div class="method-column">
-									<div class="method-text">data can be typed directly into Data View</div>
-									<div class="image-placeholder">[Image Placeholder: Typing in Data View]</div>
+									<div class="method-text">Data can be typed directly into Data View</div>
+									<div class="slide-ba-figure-card"><img src="images/Typing in Data View.png" alt="Typing in Data View" /></div>
 								</div>
 								<div class="method-column">
-									<div class="method-text">data can also be imported from other sources</div>
-									<div class="image-placeholder">[Image Placeholder: Import Data Dialog]</div>
+									<div class="method-text">Data can also be imported from other sources</div>
+									<div class="slide-ba-figure-card"><img src="images/Import Data Dialog.png" alt="Import Data Dialog" /></div>
 								</div>
 							</div>
-							<div class="bottom-note" style="text-align: center;">correct structure is important before analysis begins</div>
+							<div class="bottom-note" style="text-align: center;">Correct structure is important before analysis begins</div>
 						</div>
 					</div>
 				</section>
@@ -4366,12 +4411,12 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="sequence-block">new variables can be calculated with Transform &rarr; Compute Variable</div>
-								<div class="sequence-block">formulas allow data transformation</div>
-								<div class="example-block">example: calculating BMI from height and weight</div>
+								<div class="sequence-block">New variables can be calculated with Transform &rarr; Compute Variable</div>
+								<div class="sequence-block">Formulas allow data transformation</div>
+								<div class="example-block">Example: calculating BMI from height and weight</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Compute Variable Dialog]</div>
+								<div class="slide-ba-figure-card"><img src="images/Compute Variable Dialog.png" alt="Compute Variable Dialog" /></div>
 							</div>
 						</div>
 					</div>
@@ -4385,11 +4430,11 @@
 						<div class="content-area">
 							<div class="text-column">
 								<div class="info-block">Select Cases allows analysis of only part of the dataset</div>
-								<div class="highlight-block">excluded observations are not deleted permanently</div>
-								<div class="info-block">useful for subgroup analysis such as males only or females only</div>
+								<div class="highlight-block">Excluded observations are not deleted permanently</div>
+								<div class="info-block">Useful for subgroup analysis such as males only or females only</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Select Cases Dialog]</div>
+								<div class="slide-ba-figure-card"><img src="images/Select Cases Dialog.png" alt="Select Cases Dialog" /></div>
 							</div>
 						</div>
 					</div>
@@ -4403,29 +4448,35 @@
 						<div class="content-area">
 							<div class="text-column">
 								<div class="info-block">Split File organizes output by groups</div>
-								<div class="example-block">allows separate results for categories such as gender</div>
-								<div class="info-block">useful when comparing groups without creating separate files</div>
+								<div class="example-block">Allows separate results for categories such as gender</div>
+								<div class="info-block">Useful when comparing groups without creating separate files</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Split File Dialog]</div>
+								<div class="slide-ba-figure-card"><img src="images/Split File Dialog.png" alt="Split File Dialog" /></div>
 							</div>
 						</div>
 					</div>
 				</section>
 
 				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--infocol">
+					<div class="slide-ba slide-ba--split slide-ba--infocol slide-ba--recode-slide">
 						<div class="header">
 							<h1>Changing Variable Coding</h1>
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="info-block">recoding adjusts values for analysis</div>
-								<div class="warning-block">it is safer to recode into a different variable</div>
-								<div class="info-block">useful when reversing scales or regrouping categories</div>
+								<div class="info-block">Recoding adjusts values for analysis</div>
+								<div class="warning-block">It is safer to recode into a different variable</div>
+								<div class="info-block">Useful when reversing scales or regrouping categories</div>
+								<hr class="slide-ba-question-separator" />
+								<div class="slide-ba-example-questions" >
+									<p><strong>Question 1:</strong> When I watch television in the evening, I eat candy on a regular basis.</p>
+									<p><strong>Question 2:</strong> If I&apos;m hungry between meals, I will eat fruit more often than candy.</p>
+									<p><strong>Question 3:</strong> I always like to add extra sugar to my dessert.</p>
+								</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Recode Dialog]</div>
+								<div class="slide-ba-figure-card"><img src="images/Recode Dialog.png" alt="Recode Dialog" /></div>
 							</div>
 						</div>
 					</div>
@@ -4449,12 +4500,12 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="info-block">frequency tables show counts and percentages</div>
-								<div class="info-block">useful for exploring data structure</div>
-								<div class="highlight-block">helpful for data cleaning and checking impossible values</div>
+								<div class="info-block">Frequency tables show counts and percentages</div>
+								<div class="info-block">Useful for exploring data structure</div>
+								<div class="highlight-block">Helpful for data cleaning and checking impossible values</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Frequency Table Example]</div>
+								<div class="slide-ba-figure-card"><img src="images/Frequency Table Example.png" alt="Frequency Table Example" /></div>
 							</div>
 						</div>
 					</div>
@@ -4467,12 +4518,12 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="sequence-block">use Analyze &rarr; Descriptive Statistics &rarr; Frequencies</div>
-								<div class="sequence-block">select one or more variables</div>
-								<div class="sequence-block">output appears in the Output Viewer</div>
+								<div class="sequence-block">Use Analyze &rarr; Descriptive Statistics &rarr; Frequencies</div>
+								<div class="sequence-block">Select one or more variables</div>
+								<div class="sequence-block">Output appears in the Output Viewer</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Frequencies Dialog]</div>
+								<div class="slide-ba-figure-card"><img src="images/Frequencies Dialog.png" alt="Frequencies Dialog" /></div>
 							</div>
 						</div>
 					</div>
@@ -4485,13 +4536,13 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="info-block">frequency = number of observations</div>
-								<div class="info-block">percent includes missing values</div>
-								<div class="info-block">valid percent excludes missing values</div>
-								<div class="info-block">cumulative percent shows running totals</div>
+								<div class="info-block">Frequency = number of observations</div>
+								<div class="info-block">Percent includes missing values</div>
+								<div class="info-block">Valid percent excludes missing values</div>
+								<div class="info-block">Cumulative percent shows running totals</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Frequency Table Output]</div>
+								<div class="slide-ba-figure-card"><img src="images/Frequency Table Output.png" alt="Frequency Table Output" /></div>
 							</div>
 						</div>
 					</div>
@@ -4504,12 +4555,12 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="info-block">charts make it easier to see patterns</div>
-								<div class="info-block">bar charts are good for categorical data</div>
-								<div class="info-block">pie charts show proportions of a whole</div>
+								<div class="info-block">Charts make it easier to see patterns</div>
+								<div class="info-block">Bar charts are good for categorical data</div>
+								<div class="info-block">Pie charts show proportions of a whole</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Bar Chart Example]</div>
+								<div class="slide-ba-figure-card"><img src="images/Bar Chart Example.png" alt="Bar Chart Example" /></div>
 							</div>
 						</div>
 					</div>
@@ -4522,9 +4573,9 @@
 						</div>
 						<div class="content-area">
 							<ul class="bullet-list">
-								<li style="font-size: 30px;" >some survey questions allow multiple answers</li>
-								<li style="font-size: 30px;" >this changes the data structure</li>
-								<li style="font-size: 30px;" >instead of one variable, several variables may be needed</li>
+								<li style="font-size: 30px;" >Some survey questions allow multiple answers</li>
+								<li style="font-size: 30px;" >This changes the data structure</li>
+								<li style="font-size: 30px;" >Instead of one variable, several variables may be needed</li>
 							</ul>
 						</div>
 					</div>
@@ -4537,12 +4588,12 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="info-block">some survey questions allow more than one answer</div>
-								<div class="example-block">example: &quot;Which brands do you know?&quot;</div>
+								<div class="info-block">Some survey questions allow more than one answer</div>
+								<div class="example-block">Example: &quot;Which brands do you know?&quot;</div>
 								<div class="info-block">SPSS requires these to be grouped before analysis</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Survey Question Example]</div>
+								<div class="slide-ba-figure-card"><img src="images/Survey Question Example.png" alt="Survey Question Example" /></div>
 							</div>
 						</div>
 					</div>
@@ -4555,12 +4606,12 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="sequence-block">use Analyze &rarr; Multiple Response &rarr; Define Variable Sets</div>
-								<div class="sequence-block">select the variables that belong to the same question</div>
-								<div class="sequence-block">specify the counted value (usually 1 for &quot;yes&quot;)</div>
+								<div class="sequence-block">Use Analyze &rarr; Multiple Response &rarr; Define Variable Sets</div>
+								<div class="sequence-block">Select the variables that belong to the same question</div>
+								<div class="sequence-block">Specify the counted value (usually 1 for &quot;yes&quot;)</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Define Sets Dialog]</div>
+								<div class="slide-ba-figure-card"><img src="images/Define Sets Dialog.png" alt="Define Sets Dialog" /></div>
 							</div>
 						</div>
 					</div>
@@ -4574,32 +4625,13 @@
 						<div class="content-area">
 							<div class="text-column">
 								<ul class="bullet-list">
-									<li>when only a limited number of answers are allowed, categories are coded differently</li>
-									<li>a smaller number of variables can store the responses</li>
+									<li>When only a limited number of answers are allowed, categories are coded differently</li>
+									<li>A smaller number of variables can store the responses</li>
 									<li>SPSS can also analyze these as a multiple response set</li>
 								</ul>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Categorical Multiple Response Structure]</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--grid4">
-						<div class="header">
-							<h1>Mean as a Summary Measure</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="info-block" style="text-align: center;">the mean is the average of all values</div>
-								<div class="info-block" style="text-align: center;">it is the most common measure of central tendency</div>
-								<div class="info-block" style="text-align: center;">it works best for interval or continuous data</div>
-								<div class="warning-block" style="text-align: center;">it can be sensitive to extreme values (outliers)</div>
-							</div>
-							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Formula or Visual of Mean]</div>
+								<div class="slide-ba-figure-card"><img src="images/Categorical Multiple Response Structure.png" alt="Categorical Multiple Response Structure" /></div>
 							</div>
 						</div>
 					</div>
@@ -4608,16 +4640,17 @@
 				<section data-background-color="#FFFFFF">
 					<div class="slide-ba slide-ba--split slide-ba--infocol">
 						<div class="header">
-							<h1>Understanding Variation in the Data</h1>
+							<h1>Mean and Variation in the Data</h1>
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="info-block">standard deviation shows how much values differ from the mean</div>
-								<div class="info-block">variance is the squared standard deviation</div>
-								<div class="info-block">minimum and maximum show the range of the data</div>
-							</div>
-							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Visualizing Standard Deviation]</div>
+								<div class="slide-ba-subheading">Mean</div>
+								<div class="info-block">The mean is the average of all values</div>
+								<div class="info-block">It is the most common measure of central tendency</div>
+								<div class="warning-block">It can be sensitive to extreme values (outliers)</div>
+								<div class="slide-ba-subheading">Variation</div>
+								<div class="info-block">Standard deviation shows how much values differ from the mean</div>
+								<div class="info-block">Minimum and maximum show the range of the data</div>
 							</div>
 						</div>
 					</div>
@@ -4630,12 +4663,12 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="sequence-block">use Analyze &rarr; Descriptive Statistics &rarr; Descriptives</div>
-								<div class="sequence-block">select interval or continuous variables</div>
-								<div class="sequence-block">options allow choosing specific measures like mean and standard deviation</div>
+								<div class="sequence-block">Use Analyze &rarr; Descriptive Statistics &rarr; Descriptives</div>
+								<div class="sequence-block">Select interval or continuous variables</div>
+								<div class="sequence-block">Options allow choosing specific measures like mean and standard deviation</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Descriptives Dialog]</div>
+								<div class="slide-ba-figure-card"><img src="images/Descriptives Dialog.png" alt="Descriptives Dialog" /></div>
 							</div>
 						</div>
 					</div>
@@ -4648,12 +4681,12 @@
 						</div>
 						<div class="content-area">
 							<div class="text-column">
-								<div class="info-block">the output table shows N, minimum, maximum, mean, and standard deviation</div>
-								<div class="info-block">the mean gives the average value</div>
-								<div class="highlight-block">the standard deviation shows how much the data varies around the mean</div>
+								<div class="info-block">The output table shows N, minimum, maximum, mean, and standard deviation</div>
+								<div class="info-block">The mean gives the average value</div>
+								<div class="highlight-block">The standard deviation shows how much the data varies around the mean</div>
 							</div>
 							<div class="image-column">
-								<div class="image-placeholder">[Image Placeholder: Descriptives Output Table]</div>
+								<div class="slide-ba-figure-card"><img src="images/Descriptives Output Table.png" alt="Descriptives Output Table" /></div>
 							</div>
 						</div>
 					</div>
