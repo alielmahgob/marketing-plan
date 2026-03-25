@@ -3936,6 +3936,163 @@
 				display: none;
 			}
 
+			.reveal .slides section .slide-ba--sequence .text-column > .sequence-block:last-child::after {
+				display: none;
+			}
+
+			.reveal .slides section .slide-ba--bullets {
+				background-color: #ffffff;
+				border-top: 10px solid #2b6cb0;
+			}
+
+			.reveal .slides section .slide-ba--bullets .content-area {
+				flex: 1;
+				padding: 32px 48px 28px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				min-height: 0;
+			}
+
+			.reveal .slides section .slide-ba--bullets .bullet-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			.reveal .slides section .slide-ba--bullets .bullet-list li {
+				color: #333333;
+				font-size: 18px;
+				margin-bottom: 18px;
+				padding-left: 26px;
+				position: relative;
+				line-height: 1.45;
+				text-align: left;
+			}
+
+			.reveal .slides section .slide-ba--bullets .bullet-list li::before {
+				content: "■";
+				color: #2b6cb0;
+				position: absolute;
+				left: 0;
+				font-size: 14px;
+				top: 4px;
+			}
+
+			.reveal .slides section .slide-ba--bullets-split .content-area {
+				flex: 1;
+				padding: 28px 36px 24px;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				gap: 28px;
+				min-height: 0;
+			}
+
+			.reveal .slides section .slide-ba--bullets-split .text-column {
+				width: 45%;
+				flex: none;
+				min-width: 0;
+			}
+
+			.reveal .slides section .slide-ba--bullets-split .image-column {
+				width: 50%;
+				flex: none;
+				display: flex;
+				justify-content: center;
+			}
+
+			.reveal .slides section .slide-ba--bullets-split .bullet-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			.reveal .slides section .slide-ba--bullets-split .bullet-list li {
+				color: #333333;
+				font-size: 17px;
+				margin-bottom: 16px;
+				padding-left: 26px;
+				position: relative;
+				line-height: 1.4;
+				text-align: left;
+			}
+
+			.reveal .slides section .slide-ba--bullets-split .bullet-list li::before {
+				content: "■";
+				color: #2b6cb0;
+				position: absolute;
+				left: 0;
+				font-size: 14px;
+				top: 4px;
+			}
+
+			.reveal .slides section .slide-ba--bullets-split .image-placeholder {
+				width: 100%;
+				height: 320px;
+				background-color: #e2e8f0;
+				border: 2px dashed #a0aec0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #718096;
+				font-size: 16px;
+				font-weight: bold;
+				text-align: center;
+				padding: 16px;
+			}
+
+			.reveal .slides section .slide-ba--grid4 .warning-block {
+				width: calc(50% - 5px);
+				background-color: #fff5f5;
+				border-top: 4px solid #e53e3e;
+				padding: 14px;
+				color: #742a2a;
+				font-size: 14px;
+				line-height: 1.35;
+				display: flex;
+				align-items: center;
+				text-align: center;
+				justify-content: center;
+				font-weight: bold;
+			}
+
+			.reveal .slides section .slide-ba--thankyou {
+				background-color: #2b6cb0;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+
+			.reveal .slides section .slide-ba--thankyou .content-wrapper {
+				max-width: 900px;
+				padding: 40px;
+				border: 4px solid #ffffff;
+			}
+
+			.reveal .slides section .slide-ba--thankyou h1 {
+				color: #ffffff;
+				font-size: 48px;
+				font-weight: bold;
+				margin-bottom: 16px;
+				text-align: center;
+			}
+
+			.reveal .slides section .slide-ba--thankyou .divider-line {
+				width: 150px;
+				height: 2px;
+				background-color: #ffffff;
+				margin: 0 auto 28px auto;
+			}
+
+			.reveal .slides section .slide-ba--thankyou h2 {
+				color: #ffffff;
+				font-size: 28px;
+				font-weight: normal;
+				margin: 0;
+				text-align: center;
+			}
+
 			html.reveal-print .reveal .slides section > .slide-ba {
 				width: 100% !important;
 				height: 100% !important;
@@ -4214,6 +4371,233 @@
 							<h2>Descriptive Statistics</h2>
 							<div class="divider-line"></div>
 							<div class="content-text">begin second part of the presentation</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF">
+					<div class="slide-ba slide-ba--split slide-ba--infocol">
+						<div class="header">
+							<h1>Understanding Distributions</h1>
+						</div>
+						<div class="content-area">
+							<div class="text-column">
+								<div class="info-block">frequency tables show counts and percentages</div>
+								<div class="info-block">useful for exploring data structure</div>
+								<div class="highlight-block">helpful for data cleaning and checking impossible values</div>
+							</div>
+							<div class="image-column">
+								<div class="image-placeholder">[Image Placeholder: Frequency Table Example]</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF">
+					<div class="slide-ba slide-ba--split slide-ba--sequence">
+						<div class="header">
+							<h1>Running Frequencies in SPSS</h1>
+						</div>
+						<div class="content-area">
+							<div class="text-column">
+								<div class="sequence-block">use Analyze &rarr; Descriptive Statistics &rarr; Frequencies</div>
+								<div class="sequence-block">select one or more variables</div>
+								<div class="sequence-block">output appears in the Output Viewer</div>
+							</div>
+							<div class="image-column">
+								<div class="image-placeholder">[Image Placeholder: Frequencies Dialog]</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF">
+					<div class="slide-ba slide-ba--split slide-ba--grid4">
+						<div class="header">
+							<h1>Reading Frequency Tables</h1>
+						</div>
+						<div class="content-area">
+							<div class="text-column">
+								<div class="info-block">frequency = number of observations</div>
+								<div class="info-block">percent includes missing values</div>
+								<div class="info-block">valid percent excludes missing values</div>
+								<div class="info-block">cumulative percent shows running totals</div>
+							</div>
+							<div class="image-column">
+								<div class="image-placeholder">[Image Placeholder: Frequency Table Output]</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF">
+					<div class="slide-ba slide-ba--split slide-ba--infocol">
+						<div class="header">
+							<h1>Visualizing Frequencies with Charts</h1>
+						</div>
+						<div class="content-area">
+							<div class="text-column">
+								<div class="info-block">charts make it easier to see patterns</div>
+								<div class="info-block">bar charts are good for categorical data</div>
+								<div class="info-block">pie charts show proportions of a whole</div>
+							</div>
+							<div class="image-column">
+								<div class="image-placeholder">[Image Placeholder: Bar Chart Example]</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF">
+					<div class="slide-ba slide-ba--split slide-ba--bullets">
+						<div class="header">
+							<h1>Questions with More Than One Answer</h1>
+						</div>
+						<div class="content-area">
+							<ul class="bullet-list">
+								<li>some survey questions allow multiple answers</li>
+								<li>this changes the data structure</li>
+								<li>instead of one variable, several variables may be needed</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF">
+					<div class="slide-ba slide-ba--split slide-ba--infocol">
+						<div class="header">
+							<h1>What are Multiple Response Sets?</h1>
+						</div>
+						<div class="content-area">
+							<div class="text-column">
+								<div class="info-block">some survey questions allow more than one answer</div>
+								<div class="example-block">example: &quot;Which brands do you know?&quot;</div>
+								<div class="info-block">SPSS requires these to be grouped before analysis</div>
+							</div>
+							<div class="image-column">
+								<div class="image-placeholder">[Image Placeholder: Survey Question Example]</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF">
+					<div class="slide-ba slide-ba--split slide-ba--sequence">
+						<div class="header">
+							<h1>Defining Multiple Response Sets</h1>
+						</div>
+						<div class="content-area">
+							<div class="text-column">
+								<div class="sequence-block">use Analyze &rarr; Multiple Response &rarr; Define Variable Sets</div>
+								<div class="sequence-block">select the variables that belong to the same question</div>
+								<div class="sequence-block">specify the counted value (usually 1 for &quot;yes&quot;)</div>
+							</div>
+							<div class="image-column">
+								<div class="image-placeholder">[Image Placeholder: Define Sets Dialog]</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF">
+					<div class="slide-ba slide-ba--split slide-ba--bullets-split">
+						<div class="header">
+							<h1>Limited-Choice Multiple Response Structure</h1>
+						</div>
+						<div class="content-area">
+							<div class="text-column">
+								<ul class="bullet-list">
+									<li>when only a limited number of answers are allowed, categories are coded differently</li>
+									<li>a smaller number of variables can store the responses</li>
+									<li>SPSS can also analyze these as a multiple response set</li>
+								</ul>
+							</div>
+							<div class="image-column">
+								<div class="image-placeholder">[Image Placeholder: Categorical Multiple Response Structure]</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF">
+					<div class="slide-ba slide-ba--split slide-ba--grid4">
+						<div class="header">
+							<h1>Mean as a Summary Measure</h1>
+						</div>
+						<div class="content-area">
+							<div class="text-column">
+								<div class="info-block">the mean is the average of all values</div>
+								<div class="info-block">it is the most common measure of central tendency</div>
+								<div class="info-block">it works best for interval or continuous data</div>
+								<div class="warning-block">it can be sensitive to extreme values (outliers)</div>
+							</div>
+							<div class="image-column">
+								<div class="image-placeholder">[Image Placeholder: Formula or Visual of Mean]</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF">
+					<div class="slide-ba slide-ba--split slide-ba--infocol">
+						<div class="header">
+							<h1>Understanding Variation in the Data</h1>
+						</div>
+						<div class="content-area">
+							<div class="text-column">
+								<div class="info-block">standard deviation shows how much values differ from the mean</div>
+								<div class="info-block">variance is the squared standard deviation</div>
+								<div class="info-block">minimum and maximum show the range of the data</div>
+							</div>
+							<div class="image-column">
+								<div class="image-placeholder">[Image Placeholder: Visualizing Standard Deviation]</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF">
+					<div class="slide-ba slide-ba--split slide-ba--sequence">
+						<div class="header">
+							<h1>Running Descriptive Statistics</h1>
+						</div>
+						<div class="content-area">
+							<div class="text-column">
+								<div class="sequence-block">use Analyze &rarr; Descriptive Statistics &rarr; Descriptives</div>
+								<div class="sequence-block">select interval or continuous variables</div>
+								<div class="sequence-block">options allow choosing specific measures like mean and standard deviation</div>
+							</div>
+							<div class="image-column">
+								<div class="image-placeholder">[Image Placeholder: Descriptives Dialog]</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#FFFFFF">
+					<div class="slide-ba slide-ba--split slide-ba--infocol">
+						<div class="header">
+							<h1>Reading Descriptive Statistics Output</h1>
+						</div>
+						<div class="content-area">
+							<div class="text-column">
+								<div class="info-block">the output table shows N, minimum, maximum, mean, and standard deviation</div>
+								<div class="info-block">the mean gives the average value</div>
+								<div class="highlight-block">the standard deviation shows how much the data varies around the mean</div>
+							</div>
+							<div class="image-column">
+								<div class="image-placeholder">[Image Placeholder: Descriptives Output Table]</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-color="#2B6CB0">
+					<div class="slide-ba slide-ba--thankyou">
+						<div class="content-wrapper">
+							<h1>Thank You</h1>
+							<div class="divider-line"></div>
+							<h2>Are there any questions?</h2>
 						</div>
 					</div>
 				</section>
