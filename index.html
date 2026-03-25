@@ -87,21 +87,21 @@
 			}
 
 			.animate-on-slide.fade-in-up.animated {
-				animation: fadeInUp 0.4s ease-out forwards;
 			}
-
+			
 			.animate-on-slide.fade-in.animated {
-				animation: fadeIn 0.4s ease-out forwards;
+				animation: fadeInUp 0.4s ease-out forwards;
+				/* animation: fadeIn 0.4s ease-out forwards; */
 			}
-
+			
 			.animate-on-slide.fade-in-left.animated {
 				animation: fadeInLeft 0.4s ease-out forwards;
 			}
-
+			
 			.animate-on-slide.fade-in-right.animated {
 				animation: fadeInRight 0.4s ease-out forwards;
 			}
-
+			
 			.animate-on-slide.scale-in.animated {
 				animation: scaleIn 0.4s ease-out forwards;
 			}
@@ -3749,17 +3749,17 @@
 
 			.reveal .slides section .slide-ba-figure-card {
 				width: 100%;
-				background: linear-gradient(165deg, #f8fafc 0%, #eef2f7 100%);
-				border: 2px solid #64748b;
+				background-color: #edf2f7;
+				border: 2px solid #2b6cb05a;
 				border-radius: 14px;
 				padding: 10px 10px 12px;
-				box-shadow:
-					0 1px 2px rgba(15, 23, 42, 0.06),
-					inset 0 1px 0 rgba(255, 255, 255, 0.7);
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				overflow: hidden;
+				transition:
+					border-color 0.2s ease,
+					background-color 0.2s ease;
 			}
 
 			.reveal .slides section .slide-ba-figure-card img {
@@ -3773,9 +3773,7 @@
 
 			.reveal .slides section .slide-ba-figure-card:hover {
 				border-color: #2b6cb0;
-				box-shadow:
-					0 4px 14px rgba(43, 108, 176, 0.15),
-					inset 0 1px 0 rgba(255, 255, 255, 0.75);
+				background-color: #e2e8f0;
 			}
 
 			.reveal .slides section .slide-ba--twoviews .slide-ba-figure-card img {
@@ -4721,6 +4719,38 @@
 				plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
 			});
 
+			var slideBaAnimSelector = [
+				'.slide-ba .header h1',
+				'.slide-ba--title .content-wrapper > *',
+				'.slide-ba--chapter .content-wrapper > *',
+				'.slide-ba--thankyou .content-wrapper > *',
+				'.slide-ba .card',
+				'.slide-ba .step-block',
+				'.slide-ba .info-card',
+				'.slide-ba .info-block',
+				'.slide-ba .example-block',
+				'.slide-ba .warning-block',
+				'.slide-ba .highlight-block',
+				'.slide-ba .sequence-block',
+				'.slide-ba .method-text',
+				'.slide-ba .view-column',
+				'.slide-ba .method-column',
+				'.slide-ba .slide-ba-figure-card',
+				'.slide-ba .bottom-note',
+				'.slide-ba .bullet-list li',
+				'.slide-ba .slide-ba-subheading',
+				'.slide-ba hr.slide-ba-question-separator',
+				'.slide-ba .slide-ba-example-questions p'
+			].join(',');
+
+			function initSlideBaAnimations() {
+				document.querySelectorAll(slideBaAnimSelector).forEach(function (el) {
+					if (!el.classList.contains('animate-on-slide')) {
+						el.classList.add('animate-on-slide', 'fade-in');
+					}
+				});
+			}
+
 			function animateSlideElements(slide) {
 				document.querySelectorAll('.animate-on-slide').forEach(function (el) {
 					el.classList.remove('animated');
@@ -4739,6 +4769,7 @@
 			}
 
 			Reveal.on('ready', function (event) {
+				initSlideBaAnimations();
 				setTimeout(function () {
 					var s = event && event.currentSlide ? event.currentSlide : Reveal.getCurrentSlide();
 					animateSlideElements(s);
