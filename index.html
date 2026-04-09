@@ -6,7 +6,7 @@
 
 		<title>Working with SPSS & Descriptive Statistics</title>
 
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -188,7 +188,6 @@
 				justify-content: center;
 				border-radius: 8px;
 				overflow: hidden;
-				background: #ffffff;
 				border: 1px solid #dee2e6;
 				box-sizing: border-box;
 				min-height: 120px;
@@ -4227,6 +4226,225 @@
 				text-align: center;
 			}
 
+			/* Shell Nigeria slides */
+			.reveal .slides section .shell-slide {
+				width: 100%;
+				height: 100%;
+
+				font-family: 'Montserrat', sans-serif;
+				box-sizing: border-box;
+				position: relative;
+				overflow: hidden;
+				color: #333333;
+			}
+
+			.reveal .slides section .shell-slide * {
+				box-sizing: border-box;
+				text-align: left;
+			}
+
+			.reveal .slides section .shell-slide--title {
+				display: flex;
+			}
+
+			.reveal .slides section .shell-slide--title .left-panel {
+				width: 40%;
+				height: 100%;
+				background-color: #004d40;
+				position: relative;
+				display: flex;
+				align-items: center;
+				overflow: hidden;
+				justify-content: center;
+			}
+
+			.reveal .slides section .shell-slide--title .geometric-accent {
+				position: absolute;
+				top: -100px;
+				right: -150px;
+				width: 320px;
+				height: 650px;
+				background-color: #00897b;
+				transform: rotate(15deg);
+				opacity: 0.8;
+				border-radius: 40px;
+			}
+
+			.reveal .slides section .shell-slide--title .geometric-accent-2 {
+				position: absolute;
+				bottom: -50px;
+				left: -50px;
+				width: 170px;
+				height: 170px;
+				background-color: #e0f2f1;
+				border-radius: 50%;
+				opacity: 0.2;
+			}
+
+			.reveal .slides section .shell-slide--title .right-panel {
+				width: 60%;
+				padding: 70px 55px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.reveal .slides section .shell-slide--title .title {
+				font-size: 58px;
+				font-weight: 800;
+				color: #004d40;
+				line-height: 1.1;
+				margin-bottom: 14px;
+				letter-spacing: -1px;
+			}
+
+			.reveal .slides section .shell-slide--title .subtitle {
+				font-size: 28px;
+				font-weight: 300;
+				color: #00897b;
+				margin-bottom: 35px;
+				border-left: 4px solid #00897b;
+				padding-left: 20px;
+			}
+
+			.reveal .slides section .shell-slide--title .students-container {
+				margin-top: auto;
+			}
+
+			.reveal .slides section .shell-slide--title .students-label {
+				font-size: 14px;
+				font-weight: 600;
+				color: #888888;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				margin-bottom: 8px;
+			}
+
+			.reveal .slides section .shell-slide--title .students-list {
+				font-size: 18px;
+				font-weight: 400;
+				color: #333333;
+				line-height: 1.5;
+			}
+
+			.reveal .slides section .shell-slide .header {
+				background-color: #004d40;
+				padding: 24px 40px;
+				position: relative;
+			}
+
+			.reveal .slides section .shell-slide .header::after {
+				content: '';
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+				width: 100%;
+				height: 5px;
+				background-color: #00897b;
+			}
+
+			.reveal .slides section .shell-slide .header h1 {
+				color: #ffffff;
+				font-size: 22px;
+				font-weight: 600;
+				line-height: 1.3;
+				margin: 0;
+			}
+
+			.reveal .slides section .shell-slide .content-area {
+				height: calc(100% - 110px);
+				padding: 18px 44px;
+				background-color: #fafafa;
+				position: relative;
+				z-index: 1;
+			}
+
+			.reveal .slides section .shell-slide .content-wrapper {
+				position: relative;
+				z-index: 3;
+			}
+
+			.reveal .slides section .shell-slide .paragraph {
+				font-size: 16px;
+				font-weight: 400;
+				color: #333333;
+				line-height: 1.45;
+				margin-bottom: 10px;
+			}
+
+			.reveal .slides section .shell-slide .paragraph strong {
+				font-weight: 700;
+				color: #004d40;
+			}
+
+			.reveal .slides section .shell-slide .paragraph:last-child {
+				margin-bottom: 0;
+			}
+
+			.reveal .slides section .shell-slide .accent-shape {
+				position: absolute;
+				background-color: #e0f2f1;
+				border-radius: 50%;
+				opacity: 0.4;
+				z-index: 1;
+			}
+
+			.reveal .slides section .shell-slide .intro-text {
+				font-size: 16px;
+				font-weight: 600;
+				color: #00897b;
+				margin-bottom: 12px;
+				line-height: 1.35;
+			}
+
+			.reveal .slides section .shell-slide .big-no {
+				font-size: 26px;
+				font-weight: 800;
+				color: #00897b;
+				margin-bottom: 4px;
+				text-transform: uppercase;
+			}
+
+			.reveal .slides section .shell-slide .why-no {
+				font-size: 17px;
+				font-weight: 600;
+				color: #333333;
+				margin-bottom: 12px;
+			}
+
+			.reveal .slides section .shell-slide .list-container {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+
+			.reveal .slides section .shell-slide .list-item {
+				display: flex;
+				align-items: flex-start;
+			}
+
+			.reveal .slides section .shell-slide .number {
+				font-size: 17px;
+				font-weight: 800;
+				color: #004d40;
+				margin-right: 10px;
+				min-width: 22px;
+			}
+
+			.reveal .slides section .shell-slide .item-content {
+				font-size: 14px;
+				font-weight: 400;
+				color: #444444;
+				line-height: 1.35;
+			}
+
+			.reveal .slides section .shell-slide .item-content strong {
+				font-weight: 700;
+				color: #004d40;
+				display: block;
+				margin-bottom: 2px;
+			}
+
 			html.reveal-print .reveal .slides section > .slide-ba {
 				width: 100% !important;
 				height: 100% !important;
@@ -4240,526 +4458,111 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--title">
-						<div class="content-wrapper">
-							<h1>Working with SPSS &amp;<br>Descriptive Statistics</h1>
-							<h2>Business Analytics</h2>
-							<div class="additional-text">Group 1 | Ali Almahgoub, Gayathri Sekar, Umesh Kumar, Mitthu Ghosh</div>
+					<div class="shell-slide shell-slide--title">
+						<div class="left-panel">
+							<div class="geometric-accent"></div>
+							<div class="geometric-accent-2"></div>
+						</div>
+						<div class="right-panel">
+							<div>
+								<h1 class="title">Shell Nigeria<br>Case</h1>
+								<h2 class="subtitle">Sustainable Development</h2>
+							</div>
+							<div class="students-container">
+								<div class="students-label">Presented By</div>
+								<div class="students-list">Ali, Anchal, Efe, Vrutika, Saikat, Sibghatullah</div>
+							</div>
 						</div>
 					</div>
 				</section>
 
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--cards">
+				<section data-background-color="#FAFAFA">
+					<div class="shell-slide shell-slide--q1">
 						<div class="header">
-							<h1>What is SPSS?</h1>
+							<h1>How will the Shell Nigeria case be evaluated from a utilitarian perspective? What would a utilitarian cost-benefit analysis take account of?</h1>
 						</div>
 						<div class="content-area">
-							<div class="card">
-								<div class="card-number">1</div>
-								<div class="card-text" style="text-align: center;">Statistical Package for the Social Sciences</div>
-							</div>
-							<div class="card">
-								<div class="card-number" >2</div>
-								<div class="card-text" style="text-align: center;">Widely used software for data analysis</div>
-							</div>
-							<div class="card">
-								<div class="card-number" >3</div>
-								<div class="card-text" style="text-align: center;">Helps researchers and businesses make sense of data</div>
+							<div class="accent-shape" style="top: 100px; right: -90px; width: 240px; height: 240px;"></div>
+							<div class="content-wrapper">
+								<p class="paragraph">A utilitarian analysis asks whether Shell's presence in Nigeria <strong>maximized total welfare for all affected people</strong>.</p>
+								<p class="paragraph">To answer this, the case must be assessed through a <strong>cost-benefit analysis</strong> that compares the overall benefits and overall costs of Shell's operations.</p>
+								<p class="paragraph">On the benefit side, Shell's activities generated <strong>oil output, export earnings, government revenue, employment, and some community investment projects</strong>. On the cost side, they caused <strong>oil spills, gas flaring, environmental destruction, health damage, delayed repairs, loss of livelihoods, violence, and deaths</strong>.</p>
+								<p class="paragraph">A proper utilitarian analysis must include <strong>all affected groups</strong>, not only Shell shareholders, the Nigerian government, and urban elites, but also <strong>Ogoni communities, workers, and future generations</strong>. This broader perspective is essential because development economics emphasizes welfare for society as a whole, not only for the most powerful actors.</p>
+								<p class="paragraph">Therefore, a <strong>narrow cost-benefit analysis</strong> that focuses mainly on revenues, income generation, and jobs may suggest a positive outcome. However, a <strong>broader and more accurate utilitarian evaluation</strong> includes the full social and environmental costs. Once these wider harms are taken into account, the case raises serious doubt that Shell's operations actually maximized welfare.</p>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<section data-background-color="#2B6CB0">
-					<div class="slide-ba slide-ba--chapter">
-						<div class="content-wrapper">
-							<h1>Chapter 1</h1>
-							<h2>Working with SPSS</h2>
-							<div class="divider-line"></div>
-							<div class="content-text">Preparing and managing data in SPSS</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split">
+				<section data-background-color="#FAFAFA">
+					<div class="shell-slide shell-slide--q2">
 						<div class="header">
-							<h1>Opening and Starting SPSS</h1>
+							<h1>Assuming that benefits in terms of additional income generated would be higher than income losses: would this necessarily imply that oil production should continue as before? Which additional arguments may call for a change?</h1>
 						</div>
 						<div class="content-area">
-							<div class="text-column">
-								<div class="step-block">
-									<div class="step-number">1</div>
-									<div class="step-text">SPSS can be started from the desktop or application menu</div>
-								</div>
-								<div class="step-block">
-									<div class="step-number">2</div>
-									<div class="step-text">Users can begin with a new dataset or open an existing file</div>
-								</div>
-								<div class="step-block">
-									<div class="step-number">3</div>
-									<div class="step-text">The starting dialog gives different options to begin working</div>
-								</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/SPSS Starting Dialog.png" alt="SPSS Starting Dialog" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--infocards">
-						<div class="header">
-							<h1>Saving SPSS Files</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="info-card">Use File &rarr; Save or Save As</div>
-								<div class="info-card">Choose location and file name carefully</div>
-								<div class="info-card">Saving regularly is important during data work</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Screenshot of Save Dialog.png" alt="Screenshot of Save Dialog" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--twoviews">
-						<div class="header">
-							<h1>The Two Main Working Views</h1>
-						</div>
-						<div class="content-area" style="align-items: normal;">
-							<div class="views-container">
-								<div class="view-column">
-									<div class="view-title">Data View</div>
-									<div class="view-desc">Data View is used for entering observations</div>
-									<div class="slide-ba-figure-card"><img src="images/Screenshot of Data View.png" alt="Screenshot of Data View" /></div>
-								</div>
-								<div class="view-column">
-									<div class="view-title">Variable View</div>
-									<div class="view-desc">Variable View is used for defining variables</div>
-									<div class="slide-ba-figure-card"><img src="images/Screenshot of Variable View.png" alt="Screenshot of Variable View" /></div>
+							<div class="accent-shape" style="bottom: -100px; right: -100px; width: 350px; height: 350px; opacity: 0.3;"></div>
+							<div class="content-wrapper">
+								<div class="big-no">A big, clear NO!</div>
+								<div class="why-no">Why the answer is "No"</div>
+								<div class="list-container">
+									<div class="list-item">
+										<div class="number">1.</div>
+										<div class="item-content"><strong>Distribution of gains and losses matters</strong>The main benefits of oil production go to the state, elites, and corporations, while local communities such as the Ogoni bear much of the pollution, displacement, and damage. A positive total income effect does not mean the outcome is fair.</div>
+									</div>
+									<div class="list-item">
+										<div class="number">2.</div>
+										<div class="item-content"><strong>Human rights and dignity cannot be ignored</strong>The case includes violent repression, killings, destruction of homes, and the execution of Ken Saro-Wiwa and other MOSOP leaders after a manipulated trial. Economic gains cannot justify such violations of basic rights.</div>
+									</div>
+									<div class="list-item">
+										<div class="number">3.</div>
+										<div class="item-content"><strong>Development is more than income</strong>As Amartya Sen argues, development should expand people's capabilities and freedoms. If people lose health, safety, clean water, livelihoods, and control over their own lives, then development is failing even if national income rises.</div>
+									</div>
+									<div class="list-item">
+										<div class="number">4.</div>
+										<div class="item-content"><strong>Environmental damage undermines sustainability</strong>Oil spills, gas flaring, pollution, and inadequate cleanup destroy land, water, and ecosystems. This weakens the basis for long-term wellbeing and harms both present and future generations.</div>
+									</div>
+									<div class="list-item">
+										<div class="number">5.</div>
+										<div class="item-content"><strong>Continuing "as before" is harmful even in the long run</strong>The case shows sabotage, kidnappings, killings, compensation payments, legal cases, reputational damage, and falling production. This means that keeping the same model is not only unjust, but also economically and politically unsustainable.</div>
+									</div>
 								</div>
 							</div>
-							<div class="bottom-note">Both views are essential for building a dataset</div>
 						</div>
 					</div>
 				</section>
 
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--grid4">
+				<section data-background-color="#FAFAFA">
+					<div class="shell-slide shell-slide--q3">
 						<div class="header">
-							<h1>Defining Variables</h1>
+							<h1>Mainstream economics predict that Foreign Direct Investment will improve the wellbeing of domestic people. Why do these assumed positive FDI impacts predicted by economic models differ remarkably from real world settings in the Shell Nigeria case? Which standard economic assumption models may be missing, thereby contributing to these differences?</h1>
 						</div>
 						<div class="content-area">
-							<div class="text-column">
-								<div class="info-block" style="text-align: center;">Each variable needs a name and data type</div>
-								<div class="info-block" style="text-align: center;">Numeric variables are usually preferred for analysis</div>
-								<div class="info-block" style="text-align: center;">Labels help make variables easier to understand</div>
-								<div class="info-block" style="text-align: center;">Decimals and widths can also be adjusted</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Variable View Settings.png" alt="Variable View Settings" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--infocol">
-						<div class="header">
-							<h1>Making Codes Understandable</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="info-block">Value labels give meaning to coded numbers</div>
-								<div class="example-block">Example: 0 = female, 1 = male</div>
-								<div class="info-block">Value labels improve readability in data and output</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Value Labels Dialog.png" alt="Value Labels Dialog" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--infocol">
-						<div class="header">
-							<h1>Working with Missing Data</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="info-block">Missing values can be system missing or user-defined</div>
-								<div class="info-block">Examples: blank cells, -1, 99</div>
-								<div class="warning-block">Missing values must be defined correctly so SPSS does not treat them as real data</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Missing Values Dialog.png" alt="Missing Values Dialog" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--dataentry">
-						<div class="header">
-							<h1>Data Entry Options</h1>
-						</div>
-						<div class="content-area" style="align-items: normal;">
-							<div class="methods-container">
-								<div class="method-column">
-									<div class="method-text">Data can be typed directly into Data View</div>
-									<div class="slide-ba-figure-card"><img src="images/Typing in Data View.png" alt="Typing in Data View" /></div>
-								</div>
-								<div class="method-column">
-									<div class="method-text">Data can also be imported from other sources</div>
-									<div class="slide-ba-figure-card"><img src="images/Import Data Dialog.png" alt="Import Data Dialog" /></div>
+							<div class="accent-shape" style="top: 150px; left: -100px; width: 260px; height: 260px; opacity: 0.3;"></div>
+							<div class="content-wrapper">
+								<div class="intro-text">FDI can improve welfare, but only if certain conditions hold.<br>In the Shell Nigeria case, several of these conditions were not met.</div>
+								<div class="list-container">
+									<div class="list-item">
+										<div class="number">1.</div>
+										<div class="item-content"><strong>Effective governance</strong>FDI works better when institutions are accountable and revenues are used properly. In this case, corruption and weak governance meant that oil wealth did not translate into real improvements for local communities.</div>
+									</div>
+									<div class="list-item">
+										<div class="number">2.</div>
+										<div class="item-content"><strong>Limited negative externalities</strong>FDI can raise welfare only if major environmental and social costs are controlled. Here, oil spills, gas flaring, pollution, and health damage imposed heavy costs on local people.</div>
+									</div>
+									<div class="list-item">
+										<div class="number">3.</div>
+										<div class="item-content"><strong>Fair distribution of benefits</strong>Higher output does not automatically mean broader wellbeing. In the Shell case, much of the benefit went to the state, elites, and corporate actors, while local communities carried most of the harm.</div>
+									</div>
+									<div class="list-item">
+										<div class="number">4.</div>
+										<div class="item-content"><strong>Reinvestment in local development</strong>FDI supports development when revenues help improve infrastructure, services, and opportunities. In this case, decades of oil production did not bring adequate water, electricity, hospitals, or broad local progress in Ogoni land.</div>
+									</div>
+									<div class="list-item">
+										<div class="number">5.</div>
+										<div class="item-content"><strong>Social and political stability</strong>Standard FDI models often assume a stable environment. In reality, the Shell case involved repression, violence, sabotage, kidnappings, and conflict, which undermined both welfare and development.</div>
+									</div>
 								</div>
 							</div>
-							<div class="bottom-note" style="text-align: center;">Correct structure is important before analysis begins</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--sequence slide-ba--infocol">
-						<div class="header">
-							<h1>Creating Additional Variables</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="sequence-block">New variables can be calculated with Transform &rarr; Compute Variable</div>
-								<div class="sequence-block">Formulas allow data transformation</div>
-								<div class="example-block">Example: calculating BMI from height and weight</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Compute Variable Dialog.png" alt="Compute Variable Dialog" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--infocol">
-						<div class="header">
-							<h1>Filtering Cases for Analysis</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="info-block">Select Cases allows analysis of only part of the dataset</div>
-								<div class="highlight-block">Excluded observations are not deleted permanently</div>
-								<div class="info-block">Useful for subgroup analysis such as males only or females only</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Select Cases Dialog.png" alt="Select Cases Dialog" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--infocol">
-						<div class="header">
-							<h1>Comparing Groups Automatically</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="info-block">Split File organizes output by groups</div>
-								<div class="example-block">Allows separate results for categories such as gender</div>
-								<div class="info-block">Useful when comparing groups without creating separate files</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Split File Dialog.png" alt="Split File Dialog" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--infocol slide-ba--recode-slide">
-						<div class="header">
-							<h1>Changing Variable Coding</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="info-block">Recoding adjusts values for analysis</div>
-								<div class="warning-block">It is safer to recode into a different variable</div>
-								<div class="info-block">Useful when reversing scales or regrouping categories</div>
-								<hr class="slide-ba-question-separator" />
-								<div class="slide-ba-example-questions" >
-									<p><strong>Question 1:</strong> When I watch television in the evening, I eat candy on a regular basis.</p>
-									<p><strong>Question 2:</strong> If I&apos;m hungry between meals, I will eat fruit more often than candy.</p>
-									<p><strong>Question 3:</strong> I always like to add extra sugar to my dessert.</p>
-								</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Recode Dialog.png" alt="Recode Dialog" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#2B6CB0">
-					<div class="slide-ba slide-ba--chapter">
-						<div class="content-wrapper">
-							<h1>Chapter 2</h1>
-							<h2>Descriptive Statistics</h2>
-							<div class="divider-line"></div>
-							<div class="content-text">Summarizing data using descriptive statistics</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--infocol">
-						<div class="header">
-							<h1>Understanding Distributions</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="info-block">Frequency tables show counts and percentages</div>
-								<div class="info-block">Useful for exploring data structure</div>
-								<div class="highlight-block">Helpful for data cleaning and checking impossible values</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Frequency Table Example.png" alt="Frequency Table Example" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--sequence">
-						<div class="header">
-							<h1>Running Frequencies in SPSS</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="sequence-block">Use Analyze &rarr; Descriptive Statistics &rarr; Frequencies</div>
-								<div class="sequence-block">Select one or more variables</div>
-								<div class="sequence-block">Output appears in the Output Viewer</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Frequencies Dialog.png" alt="Frequencies Dialog" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--grid4">
-						<div class="header">
-							<h1>Reading Frequency Tables</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="info-block">Frequency = number of observations</div>
-								<div class="info-block">Percent includes missing values</div>
-								<div class="info-block">Valid percent excludes missing values</div>
-								<div class="info-block">Cumulative percent shows running totals</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Frequency Table Output.png" alt="Frequency Table Output" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--infocol">
-						<div class="header">
-							<h1>Visualizing Frequencies with Charts</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="info-block">Charts make it easier to see patterns</div>
-								<div class="info-block">Bar charts are good for categorical data</div>
-								<div class="info-block">Pie charts show proportions of a whole</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Bar Chart Example.png" alt="Bar Chart Example" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--bullets">
-						<div class="header">
-							<h1>Questions with More Than One Answer</h1>
-						</div>
-						<div class="content-area">
-							<ul class="bullet-list">
-								<li style="font-size: 30px;" >Some survey questions allow multiple answers</li>
-								<li style="font-size: 30px;" >This changes the data structure</li>
-								<li style="font-size: 30px;" >Instead of one variable, several variables may be needed</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--infocol">
-						<div class="header">
-							<h1>What are Multiple Response Sets?</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="info-block">Some survey questions allow more than one answer</div>
-								<div class="example-block">Example: &quot;Which brands do you know?&quot;</div>
-								<div class="info-block">SPSS requires these to be grouped before analysis</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Survey Question Example.png" alt="Survey Question Example" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--sequence">
-						<div class="header">
-							<h1>Defining Multiple Response Sets</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="sequence-block">Use Analyze &rarr; Multiple Response &rarr; Define Variable Sets</div>
-								<div class="sequence-block">Select the variables that belong to the same question</div>
-								<div class="sequence-block">Specify the counted value (usually 1 for &quot;yes&quot;)</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Define Sets Dialog.png" alt="Define Sets Dialog" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--bullets-split">
-						<div class="header">
-							<h1>Limited-Choice Multiple Response Structure</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<ul class="bullet-list">
-									<li>When only a limited number of answers are allowed, categories are coded differently</li>
-									<li>A smaller number of variables can store the responses</li>
-									<li>SPSS can also analyze these as a multiple response set</li>
-								</ul>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Categorical Multiple Response Structure.png" alt="Categorical Multiple Response Structure" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--infocol">
-						<div class="header">
-							<h1>Mean and Variation in the Data</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="slide-ba-subheading">Mean</div>
-								<div class="info-block">The mean is the average of all values</div>
-								<div class="info-block">It is the most common measure of central tendency</div>
-								<div class="warning-block">It can be sensitive to extreme values (outliers)</div>
-								<div class="slide-ba-subheading">Variation</div>
-								<div class="info-block">Standard deviation shows how much values differ from the mean</div>
-								<div class="info-block">Minimum and maximum show the range of the data</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--sequence">
-						<div class="header">
-							<h1>Running Descriptive Statistics</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="sequence-block">Use Analyze &rarr; Descriptive Statistics &rarr; Descriptives</div>
-								<div class="sequence-block">Select interval or continuous variables</div>
-								<div class="sequence-block">Options allow choosing specific measures like mean and standard deviation</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Descriptives Dialog.png" alt="Descriptives Dialog" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#FFFFFF">
-					<div class="slide-ba slide-ba--split slide-ba--infocol">
-						<div class="header">
-							<h1>Reading Descriptive Statistics Output</h1>
-						</div>
-						<div class="content-area">
-							<div class="text-column">
-								<div class="info-block">The output table shows N, minimum, maximum, mean, and standard deviation</div>
-								<div class="info-block">The mean gives the average value</div>
-								<div class="highlight-block">The standard deviation shows how much the data varies around the mean</div>
-							</div>
-							<div class="image-column">
-								<div class="slide-ba-figure-card"><img src="images/Descriptives Output Table.png" alt="Descriptives Output Table" /></div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#2B6CB0">
-					<div class="slide-ba slide-ba--thankyou">
-						<div class="content-wrapper">
-							<h1>Thank You</h1>
-							<div class="divider-line"></div>
-							<h2>Now to <b>Exercises!!</b></h2>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#2B6CB0">
-					<div class="slide-ba slide-ba--thankyou slide-ba--exercise">
-						<div class="content-wrapper">
-							<h1>Exercise 1: Creating a Dataset in SPSS</h1>
-							<div class="divider-line"></div>
-							<p class="exercise-context">Create a dataset from a simple survey.</p>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#2B6CB0">
-					<div class="slide-ba slide-ba--thankyou slide-ba--exercise">
-						<div class="content-wrapper">
-							<h1>Exercise 2: Exploring Customer Preferences</h1>
-							<div class="divider-line"></div>
-							<p class="exercise-context">This dataset comes from a coffee shop survey, where customers were asked about their <b>preferred drink</b>, <b>visit frequency</b>, and <b>satisfaction</b>.</p>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#2B6CB0">
-					<div class="slide-ba slide-ba--thankyou slide-ba--exercise">
-						<div class="content-wrapper">
-							<h1>Exercise 3: Analyzing Online Shopping Behavior</h1>
-							<div class="divider-line"></div>
-							<p class="exercise-context">This dataset represents online shopping behavior, including <b>how much customers spend</b> and <b>how satisfied they are</b>.</p>
-						</div>
-					</div>
-				</section>
-
-				<section data-background-color="#2B6CB0">
-					<div class="slide-ba slide-ba--thankyou slide-ba--exercise">
-						<div class="content-wrapper">
-							<h1>Exercise 4: Multiple Response Analysis</h1>
-							<div class="divider-line"></div>
-							<p class="exercise-context">In this survey, respondents could select <b>multiple</b> car brands they find attractive, requiring a <b>multiple response analysis</b>.</p>
 						</div>
 					</div>
 				</section>
