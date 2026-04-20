@@ -6,7 +6,7 @@
 
 		<title>Working with SPSS & Descriptive Statistics</title>
 
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;600&family=Source+Sans+3:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -3439,6 +3439,8 @@
 			}
 
 			html.reveal-print .reveal .slides section {
+				/* width: var(--slide-width, 1120px) !important;
+				height: var(--slide-height, 620px) !important; */
 				width: var(--slide-width, 1120px) !important;
 				height: var(--slide-height, 620px) !important;
 				min-height: var(--slide-height, 620px) !important;
@@ -4243,6 +4245,11 @@
 				text-align: left;
 			}
 
+			.reveal .slides section .shell-slide:not(.shell-slide--title) {
+				display: flex;
+				flex-direction: column;
+			}
+
 			.reveal .slides section .shell-slide--title {
 				display: flex;
 			}
@@ -4331,6 +4338,10 @@
 				background-color: #004d40;
 				padding: 24px 40px;
 				position: relative;
+				height: 170px;
+				min-height: 170px;
+				display: flex;
+				align-items: center;
 			}
 
 			.reveal .slides section .shell-slide .header::after {
@@ -4352,8 +4363,9 @@
 			}
 
 			.reveal .slides section .shell-slide .content-area {
-				height: calc(100% - 110px);
-				padding: 18px 44px;
+				flex: 1;
+				min-height: 0;
+				padding: 18px 44px 52px;
 				background-color: #fafafa;
 				position: relative;
 				z-index: 1;
@@ -4452,117 +4464,1448 @@
 				max-height: 100% !important;
 				box-sizing: border-box !important;
 			}
+
+			.reveal .slides section .shell-slide .slide-footer {
+				position: absolute;
+				left: 44px;
+				right: 44px;
+				bottom: 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 8px 0;
+				border-top: 1px solid #cfe6e3;
+				font-size: 12px;
+				font-weight: 600;
+				color: #00695c;
+				letter-spacing: 0.15px;
+			}
+
+			.reveal .slides section .shell-slide .slide-footer .footer-slide-number {
+				font-size: 13px;
+				font-weight: 700;
+				color: #004d40;
+			}
+
+			/* ======================= Wasl slides ======================= */
+			.reveal .slides section.wasl-section {
+				padding: 0 !important;
+			}
+
+			.reveal .slides section .wasl-slide,
+			.reveal .slides section .wasl-slide * {
+				box-sizing: border-box;
+			}
+
+			.reveal .slides section .wasl-slide {
+				width: 100%;
+				height: 100%;
+				background-color: #FDF8F3;
+				font-family: 'Inter', 'Source Sans 3', sans-serif;
+				color: #2A2622;
+				position: relative;
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.reveal .slides section .wasl-slide .w-serif,
+			.reveal .slides section .wasl-slide h1,
+			.reveal .slides section .wasl-slide h2 {
+				font-family: 'Fraunces', 'Montserrat', serif;
+			}
+
+			/* ---------- Slide 1: Cover ---------- */
+			.reveal .slides section .wasl-cover {
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-cover .w-bg-1,
+			.reveal .slides section .wasl-cover .w-bg-2 {
+				position: absolute;
+				border-radius: 50%;
+				z-index: 1;
+			}
+			.reveal .slides section .wasl-cover .w-bg-1 {
+				width: 520px;
+				height: 520px;
+				background: radial-gradient(circle, rgba(245,213,196,0.45) 0%, rgba(253,248,243,0) 70%);
+				top: -180px;
+				left: -180px;
+			}
+			.reveal .slides section .wasl-cover .w-bg-2 {
+				width: 700px;
+				height: 700px;
+				background: radial-gradient(circle, rgba(123,168,136,0.18) 0%, rgba(253,248,243,0) 70%);
+				bottom: -260px;
+				right: -180px;
+			}
+			.reveal .slides section .wasl-cover .w-content {
+				position: relative;
+				z-index: 2;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-cover .w-logo {
+				display: block;
+				margin: 0 auto 22px;
+				height: 140px;
+				width: auto;
+				object-fit: contain;
+			}
+			.reveal .slides section .wasl-cover h1 {
+				font-size: 68px;
+				font-weight: 700;
+				color: #2A2622;
+				letter-spacing: -0.02em;
+				margin: 0 0 12px 0;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-cover .w-subtitle {
+				font-size: 26px;
+				color: #E8844A;
+				font-weight: 500;
+				margin-bottom: 22px;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-cover .w-rule {
+				width: 70px;
+				height: 2px;
+				background-color: #E8844A;
+				border-radius: 2px;
+				margin: 0 auto;
+			}
+			.reveal .slides section .wasl-cover .w-footer {
+				position: absolute;
+				bottom: 28px;
+				left: 0;
+				right: 0;
+				text-align: center;
+				z-index: 2;
+			}
+			.reveal .slides section .wasl-cover .w-footer p {
+				font-size: 14px;
+				color: #7A7168;
+				margin: 0 0 4px 0;
+				text-align: center;
+			}
+
+			/* ---------- Slide 2: Problem ---------- */
+			.reveal .slides section .wasl-problem .w-bg-shape {
+				position: absolute;
+				width: 320px;
+				height: 100%;
+				background-color: #F7EFE4;
+				top: 0;
+				right: 0;
+				z-index: 1;
+				border-top-left-radius: 300px;
+				border-bottom-left-radius: 300px;
+			}
+			.reveal .slides section .wasl-problem .w-header {
+				position: relative;
+				z-index: 2;
+				padding: 44px 70px 14px;
+			}
+			.reveal .slides section .wasl-problem .w-header h1 {
+				font-size: 40px;
+				font-weight: 700;
+				line-height: 1.2;
+				max-width: 820px;
+				text-align: left;
+				margin: 0;
+			}
+			.reveal .slides section .wasl-problem .w-body {
+				position: relative;
+				z-index: 2;
+				flex: 1;
+				padding: 20px 90px;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				justify-content: space-between;
+			}
+			.reveal .slides section .wasl-problem .w-stat {
+				display: flex;
+				align-items: center;
+				margin-bottom: 14px;
+				gap: 20px;
+			}
+			.reveal .slides section .wasl-problem .w-stat-num {
+				font-family: 'Fraunces', serif;
+				font-size: 52px;
+				font-weight: 700;
+				color: #E8844A;
+				line-height: 1;
+				width: 220px;
+				flex-shrink: 0;
+				text-align: right;
+			}
+			.reveal .slides section .wasl-problem .w-stat-text {
+				font-size: 22px;
+				line-height: 1.4;
+				padding-top: 6px;
+				color: #2A2622;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-problem .w-quote {
+				margin-top: 14px;
+				padding: 0 60px;
+				font-family: 'Fraunces', serif;
+				font-size: 24px;
+				font-style: italic;
+				color: #7BA888;
+				line-height: 1.4;
+				text-align: center;
+			}
+
+			/* ---------- Slide 3: Meaning ---------- */
+			.reveal .slides section .wasl-meaning {
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				padding: 40px 90px;
+			}
+			.reveal .slides section .wasl-meaning .w-bg {
+				position: absolute;
+				width: 700px;
+				height: 700px;
+				border-radius: 50%;
+				background: radial-gradient(circle, rgba(245,213,196,0.22) 0%, rgba(253,248,243,0) 70%);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+			}
+			.reveal .slides section .wasl-meaning .w-content {
+				position: relative;
+				z-index: 2;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.reveal .slides section .wasl-meaning .w-logo {
+				display: block;
+				margin: 0 auto 16px;
+				height: 150px;
+				width: auto;
+				object-fit: contain;
+			}
+			.reveal .slides section .wasl-meaning .w-title {
+				font-size: 40px;
+				font-weight: 700;
+				color: #2A2622;
+				margin-bottom: 14px;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-meaning .w-meaning-text {
+				font-size: 17px;
+				color: #7A7168;
+				max-width: 760px;
+				line-height: 1.6;
+				margin-bottom: 36px;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-meaning .w-statement {
+				font-family: 'Fraunces', serif;
+				font-size: 30px;
+				font-weight: 600;
+				color: #2A2622;
+				max-width: 880px;
+				line-height: 1.4;
+				margin-bottom: 30px;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-meaning .w-tagline {
+				font-size: 20px;
+				color: #E8844A;
+				font-weight: 600;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				text-align: center;
+			}
+
+			/* ---------- Slide 4: Vision ---------- */
+			.reveal .slides section .wasl-vision .w-bg {
+				position: absolute;
+				width: 700px;
+				height: 700px;
+				border-radius: 50%;
+				background: radial-gradient(circle, rgba(123,168,136,0.15) 0%, rgba(253,248,243,0) 70%);
+				bottom: -260px;
+				right: -180px;
+				z-index: 1;
+			}
+			.reveal .slides section .wasl-vision .w-header {
+				padding: 40px 70px 0;
+				position: relative;
+				z-index: 2;
+			}
+			.reveal .slides section .wasl-vision .w-header h1 {
+				font-size: 40px;
+				font-weight: 700;
+				margin: 0;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-vision .w-header-line {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-top: 12px;
+			}
+			.reveal .slides section .wasl-vision .w-quote-wrap {
+				position: relative;
+				z-index: 2;
+				padding: 96px 120px 0;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-vision .w-quote-mark {
+				font-family: 'Fraunces', serif;
+				font-size: 130px;
+				color: #F5D5C4;
+				position: absolute;
+				top: 4px;
+				left: 90px;
+				line-height: 1;
+				opacity: 0.6;
+				z-index: 1;
+			}
+			.reveal .slides section .wasl-vision .w-vision-text {
+				font-family: 'Fraunces', serif;
+				font-size: 36px;
+				font-weight: 600;
+				line-height: 1.35;
+				position: relative;
+				z-index: 2;
+				color: #2A2622;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-vision .w-pillars {
+				display: flex;
+				justify-content: space-between;
+				gap: 36px;
+				padding: 40px 90px 36px;
+				position: relative;
+				z-index: 2;
+				margin-top: auto;
+			}
+			.reveal .slides section .wasl-vision .w-pillar {
+				flex: 1;
+				border-top: 2px solid #EBE4DB;
+				padding-top: 18px;
+			}
+			.reveal .slides section .wasl-vision .w-pillar-title {
+				font-size: 14px;
+				font-weight: 600;
+				color: #7BA888;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				margin-bottom: 10px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-vision .w-pillar-desc {
+				font-size: 18px;
+				line-height: 1.4;
+				color: #2A2622;
+				text-align: left;
+			}
+
+			/* ---------- Scrum Team ---------- */
+			.reveal .slides section .wasl-team {
+				padding: 0;
+			}
+			.reveal .slides section .wasl-team .w-header {
+				padding: 44px 70px 0;
+			}
+			.reveal .slides section .wasl-team .w-header h1 {
+				font-size: 40px;
+				font-weight: 700;
+				margin: 0;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-team .w-header-line {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-top: 12px;
+			}
+			.reveal .slides section .wasl-team .w-cols {
+				display: flex;
+				gap: 28px;
+				padding: 36px 70px 16px;
+				flex: 1;
+				min-height: 0;
+				
+			}
+			.reveal .slides section .wasl-team .w-col {
+				overflow: hidden;
+				flex: 1;
+				background-color: #F7EFE4;
+				border-top: 4px solid #E8844A;
+				border-radius: 10px;
+				padding: 26px 24px;
+				display: flex;
+				flex-direction: column;
+				min-width: 0;
+				position: relative;
+				box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+			}
+			.reveal .slides section .wasl-team .w-col:nth-child(2) {
+				border-top-color: #7BA888;
+			}
+			.reveal .slides section .wasl-team .w-col:nth-child(3) {
+				border-top-color: #C9BEB1;
+			}
+			.reveal .slides section .wasl-team .w-role-title {
+				font-family: 'Fraunces', serif;
+				font-size: 24px;
+				font-weight: 700;
+				color: #E8844A;
+				margin-bottom: 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-team .w-col:nth-child(2) .w-role-title { color: #7BA888; }
+			.reveal .slides section .wasl-team .w-col:nth-child(3) .w-role-title { color: #8A7C6B; }
+			.reveal .slides section .wasl-team .w-role-name {
+				font-size: 15px;
+				font-weight: 600;
+				color: #2A2622;
+				margin-bottom: 16px;
+				padding-bottom: 14px;
+				border-bottom: 1px solid #EBE4DB;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-team .w-role-desc {
+				font-size: 24px;
+				color: #5A5148;
+				line-height: 1.6;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-team .w-role-icon {
+				position: absolute;
+				bottom: -14px;
+				right: -6px;
+				font-size: 110px;
+				line-height: 1;
+				opacity: 0.08;
+				color: #E8844A;
+				pointer-events: none;
+				transform: rotate(-8deg);
+			}
+			.reveal .slides section .wasl-team .w-col:nth-child(2) .w-role-icon { color: #7BA888; }
+			.reveal .slides section .wasl-team .w-col:nth-child(3) .w-role-icon { color: #8A7C6B; }
+			.reveal .slides section .wasl-team .w-footer {
+				text-align: center;
+				padding: 22px 70px 28px;
+			}
+			.reveal .slides section .wasl-team .w-footer-quote {
+				font-family: 'Fraunces', serif;
+				font-size: 19px;
+				font-style: italic;
+				color: #7BA888;
+				text-align: center;
+			}
+
+			/* ---------- Slide 5: Product Vision Board ---------- */
+			.reveal .slides section .wasl-board {
+				padding: 0;
+			}
+			.reveal .slides section .wasl-board .w-header {
+				padding: 28px 50px 0;
+			}
+			.reveal .slides section .wasl-board .w-header h1 {
+				font-size: 34px;
+				font-weight: 700;
+				margin: 0;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-board .w-banner {
+				margin: 18px 50px 0;
+				background-color: #E8844A;
+				color: #FFFFFF;
+				padding: 14px 28px;
+				display: flex;
+				align-items: center;
+				gap: 16px;
+			}
+			.reveal .slides section .wasl-board .w-banner-label {
+				font-weight: 700;
+				font-size: 15px;
+				letter-spacing: 0.1em;
+				color: #FFFFFF;
+			}
+			.reveal .slides section .wasl-board .w-banner-text {
+				font-family: 'Fraunces', serif;
+				font-size: 20px;
+				font-style: italic;
+				color: #FFFFFF;
+			}
+			.reveal .slides section .wasl-board .w-grid {
+				margin: 14px 50px 24px;
+				background-color: #F7EFE4;
+				display: flex;
+				flex: 1;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-board .w-col {
+				flex: 1;
+				padding: 18px 16px;
+				border-right: 1px solid #EBE4DB;
+				display: flex;
+				flex-direction: column;
+				min-width: 0;
+			}
+			.reveal .slides section .wasl-board .w-col:last-child {
+				border-right: none;
+			}
+			.reveal .slides section .wasl-board .w-col h2 {
+				font-family: 'Fraunces', serif;
+				font-size: 15px;
+				font-weight: 700;
+				color: #7BA888;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				margin: 0 0 14px 0;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-board ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.reveal .slides section .wasl-board li {
+				font-size: 13.5px;
+				color: #2A2622;
+				margin-bottom: 9px;
+				line-height: 1.4;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-board li strong {
+				font-weight: 600;
+			}
+
+			/* ---------- Slide 6: Personas grid ---------- */
+			.reveal .slides section .wasl-personas {
+				justify-content: center;
+			}
+			.reveal .slides section .wasl-personas .w-bg-line {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: #EBE4DB;
+				z-index: 1;
+			}
+			.reveal .slides section .wasl-personas .w-header {
+				text-align: center;
+				padding: 50px 0 36px;
+				position: relative;
+				z-index: 2;
+			}
+			.reveal .slides section .wasl-personas .w-header h1 {
+				font-size: 44px;
+				font-weight: 700;
+				margin: 0;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-personas .w-row {
+				display: flex;
+				justify-content: center;
+				gap: 32px;
+				padding: 0 50px;
+				position: relative;
+				z-index: 2;
+			}
+			.reveal .slides section .wasl-personas .w-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 150px;
+			}
+			.reveal .slides section .wasl-personas .w-avatar {
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: 'Fraunces', serif;
+				font-size: 38px;
+				font-weight: 700;
+				color: #FFFFFF;
+				margin-bottom: 18px;
+				box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+				padding: 4px;
+				overflow: hidden;
+			}
+			.reveal .slides section .wasl-personas .w-avatar img {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				object-fit: cover;
+				background-color: #FDF8F3;
+				display: block;
+			}
+			.reveal .slides section .wasl-personas .w-avatar.ember { background-color: #E8844A; }
+			.reveal .slides section .wasl-personas .w-avatar.sage { background-color: #7BA888; }
+			.reveal .slides section .wasl-personas .w-avatar.blush { background-color: #F5D5C4; color: #2A2622; }
+			.reveal .slides section .wasl-personas .w-name {
+				font-size: 20px;
+				font-weight: 600;
+				color: #2A2622;
+				margin-bottom: 4px;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-personas .w-role {
+				font-size: 13px;
+				color: #7A7168;
+				text-align: center;
+				line-height: 1.4;
+			}
+			.reveal .slides section .wasl-personas .w-quote-wrap {
+				text-align: center;
+				padding: 40px 60px 0;
+				position: relative;
+				z-index: 2;
+			}
+			.reveal .slides section .wasl-personas .w-quote {
+				font-family: 'Fraunces', serif;
+				font-size: 28px;
+				font-style: italic;
+				color: #E8844A;
+				line-height: 1.4;
+				text-align: center;
+			}
+
+			/* ---------- Persona detail slides ---------- */
+			.reveal .slides section .wasl-persona {
+				padding: 22px 40px 22px;
+			}
+			.reveal .slides section .wasl-persona .w-head {
+				display: flex;
+				align-items: center;
+				margin-bottom: 10px;
+			}
+			.reveal .slides section .wasl-persona .w-avatar {
+				width: 84px;
+				height: 84px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: 'Fraunces', serif;
+				font-size: 28px;
+				font-weight: 700;
+				color: #FFFFFF;
+				margin-right: 20px;
+				flex-shrink: 0;
+				padding: 3px;
+				box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+				overflow: hidden;
+			}
+			.reveal .slides section .wasl-persona .w-avatar img {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				object-fit: cover;
+				background-color: #FDF8F3;
+				display: block;
+			}
+			.reveal .slides section .wasl-persona .w-avatar.ember { background-color: #E8844A; }
+			.reveal .slides section .wasl-persona .w-avatar.sage { background-color: #7BA888; }
+			.reveal .slides section .wasl-persona .w-avatar.blush { background-color: #F5D5C4; color: #2A2622; }
+			.reveal .slides section .wasl-persona .w-info { display: flex; flex-direction: column; }
+			.reveal .slides section .wasl-persona .w-name {
+				font-family: 'Fraunces', serif;
+				font-size: 26px;
+				font-weight: 700;
+				line-height: 1.2;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-persona .w-details {
+				font-size: 13px;
+				color: #7A7168;
+				margin-top: 2px;
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+			.reveal .slides section .wasl-persona .w-tag {
+				background-color: #7BA888;
+				color: #FFFFFF;
+				font-size: 11px;
+				font-weight: 600;
+				padding: 3px 12px;
+				border-radius: 20px;
+				margin-left: 14px;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+			}
+			.reveal .slides section .wasl-persona .w-tag.ember { background-color: #E8844A; }
+			.reveal .slides section .wasl-persona .w-tag.sage { background-color: #7BA888; }
+			.reveal .slides section .wasl-persona .w-premium {
+				background-color: #2A2622;
+				color: #FDF8F3;
+				font-size: 10px;
+				font-weight: 700;
+				padding: 3px 10px;
+				border-radius: 4px;
+				margin-left: 10px;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+			}
+			.reveal .slides section .wasl-persona .w-quote {
+				font-family: 'Fraunces', serif;
+				font-size: 18px;
+				font-style: italic;
+				color: #E8844A;
+				line-height: 1.4;
+				margin-bottom: 12px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-persona.sage-quote .w-quote { color: #7BA888; }
+			.reveal .slides section .wasl-persona .w-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr 1fr;
+				gap: 12px;
+				flex: 1;
+				min-height: 0;
+				width: 100%;
+			}
+			.reveal .slides section .wasl-persona .w-card {
+				background-color: #FFFFFF;
+				border: 1px solid #EBE4DB;
+				border-radius: 10px;
+				padding: 14px 16px;
+				display: flex;
+				flex-direction: column;
+				min-width: 0;
+				min-height: 0;
+				overflow: hidden;
+				box-shadow: 0 2px 6px rgba(42,38,34,0.04);
+				position: relative;
+			}
+			.reveal .slides section .wasl-persona .w-card.accent-ember {
+				border-top: 4px solid #E8844A;
+			}
+			.reveal .slides section .wasl-persona .w-card.accent-sage {
+				border-top: 4px solid #7BA888;
+			}
+			.reveal .slides section .wasl-persona .w-card.accent-red {
+				border-top: 4px solid #D64545;
+			}
+			.reveal .slides section .wasl-persona .w-card.accent-neutral {
+				border-top: 4px solid #C9BEB1;
+			}
+			.reveal .slides section .wasl-persona .w-watermark {
+				position: absolute;
+				bottom: -18px;
+				right: -12px;
+				font-size: 120px;
+				line-height: 1;
+				opacity: 0.08;
+				pointer-events: none;
+				z-index: 0;
+				transform: rotate(-8deg);
+			}
+			.reveal .slides section .wasl-persona .w-card.accent-ember .w-watermark { color: #E8844A; }
+			.reveal .slides section .wasl-persona .w-card.accent-sage .w-watermark { color: #7BA888; }
+			.reveal .slides section .wasl-persona .w-card.accent-red .w-watermark { color: #D64545; }
+			.reveal .slides section .wasl-persona .w-card.accent-neutral .w-watermark { color: #8A7C6B; }
+			.reveal .slides section .wasl-persona .w-sec-title {
+				font-size: 14px;
+				font-weight: 700;
+				color: #2A2622;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				margin-bottom: 10px;
+				padding-bottom: 7px;
+				border-bottom: 1px solid #EBE4DB;
+				text-align: left;
+				flex-shrink: 0;
+			}
+			.reveal .slides section .wasl-persona .w-card-body {
+				flex: 1;
+				min-height: 0;
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				position: relative;
+				z-index: 1;
+			}
+			.reveal .slides section .wasl-persona .w-sec-title {
+				position: relative;
+				z-index: 1;
+			}
+			.reveal .slides section .wasl-persona .w-bg-text {
+				font-size: 17px;
+				color: #4A433C;
+				line-height: 1.55;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-persona .w-story {
+				font-size: 18px;
+				font-style: italic;
+				color: #2A2622;
+				line-height: 1.5;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-persona .w-list-item {
+				display: flex;
+				align-items: flex-start;
+				margin-bottom: 10px;
+				font-size: 17px;
+				color: #4A433C;
+				line-height: 1.45;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-persona .w-list-item:last-child { margin-bottom: 0; }
+			.reveal .slides section .wasl-persona .w-list-item div {
+				font-size: 17px;
+			}
+			.reveal .slides section .wasl-persona .w-list-item i {
+				margin-top: 5px;
+				margin-right: 12px;
+				font-size: 15px;
+				flex-shrink: 0;
+			}
+
+			/* Dr. Solberg: shrink Goals + Frustrations so longer lines fit cleanly */
+			.reveal .slides section .wasl-persona--solberg .w-card.accent-sage .w-list-item,
+			.reveal .slides section .wasl-persona--solberg .w-card.accent-sage .w-list-item div,
+			.reveal .slides section .wasl-persona--solberg .w-card.accent-red .w-list-item,
+			.reveal .slides section .wasl-persona--solberg .w-card.accent-red .w-list-item div {
+				font-size: 14px;
+				line-height: 1.4;
+			}
+			.reveal .slides section .wasl-persona--solberg .w-card.accent-sage .w-list-item,
+			.reveal .slides section .wasl-persona--solberg .w-card.accent-red .w-list-item {
+				margin-bottom: 7px;
+			}
+			.reveal .slides section .wasl-persona--solberg .w-card.accent-sage .w-list-item i,
+			.reveal .slides section .wasl-persona--solberg .w-card.accent-red .w-list-item i {
+				font-size: 13px;
+				margin-top: 3px;
+			}
+
+			/* ---------- Slide 12: Closing ---------- */
+			.reveal .slides section .wasl-close {
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-close .w-bg {
+				position: absolute;
+				width: 900px;
+				height: 900px;
+				border-radius: 50%;
+				background: radial-gradient(circle, rgba(245,213,196,0.4) 0%, rgba(253,248,243,0) 70%);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+			}
+			.reveal .slides section .wasl-close .w-content {
+				position: relative;
+				z-index: 2;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+			}
+			.reveal .slides section .wasl-close .w-title {
+				font-family: 'Fraunces', serif;
+				font-size: 36px;
+				font-weight: 700;
+				color: #2A2622;
+				margin-bottom: 40px;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-close .w-conn {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 34px;
+				position: relative;
+			}
+			.reveal .slides section .wasl-close .w-row {
+				display: flex;
+				gap: 44px;
+				margin-bottom: 34px;
+				position: relative;
+				z-index: 3;
+			}
+			.reveal .slides section .wasl-close .w-avatar {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: 'Fraunces', serif;
+				font-size: 28px;
+				font-weight: 700;
+				color: #FFFFFF;
+				padding: 3px;
+				box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+				overflow: hidden;
+			}
+			.reveal .slides section .wasl-close .w-avatar img {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				object-fit: cover;
+				background-color: #FDF8F3;
+				display: block;
+			}
+			.reveal .slides section .wasl-close .w-avatar.ember { background-color: #E8844A; }
+			.reveal .slides section .wasl-close .w-avatar.sage { background-color: #7BA888; }
+			.reveal .slides section .wasl-close .w-avatar.blush { background-color: #F5D5C4; color: #2A2622; }
+			.reveal .slides section .wasl-close .w-hline {
+				position: absolute;
+				top: 36px;
+				left: 36px;
+				right: 36px;
+				height: 2px;
+				background-color: #E8844A;
+				opacity: 0.4;
+				z-index: 2;
+			}
+			.reveal .slides section .wasl-close .w-vline {
+				position: absolute;
+				top: 72px;
+				left: 50%;
+				width: 2px;
+				height: 40px;
+				background-color: #E8844A;
+				opacity: 0.4;
+				z-index: 2;
+				transform: translateX(-50%);
+			}
+			.reveal .slides section .wasl-close .w-logo {
+				height: 110px;
+				width: auto;
+				object-fit: contain;
+				z-index: 3;
+			}
+			.reveal .slides section .wasl-close .w-statement {
+				font-family: 'Fraunces', serif;
+				font-size: 26px;
+				font-style: italic;
+				color: #2A2622;
+				max-width: 820px;
+				line-height: 1.4;
+				margin-bottom: 22px;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-close .w-footer-text {
+				font-size: 16px;
+				color: #7A7168;
+				font-weight: 600;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-color="#FFFFFF">
-					<div class="shell-slide shell-slide--title">
-						<div class="left-panel">
-							<div class="geometric-accent"></div>
-							<div class="geometric-accent-2"></div>
+				<!-- ========================= Wasl slides ========================= -->
+
+				<!-- Slide 1: Cover -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-cover">
+						<div class="w-bg-1"></div>
+						<div class="w-bg-2"></div>
+						<div class="w-content">
+							<img class="w-logo" src="images/wasl_arabic.png" alt="Wasl logo">
+							<h1>Wasl</h1>
+							<div class="w-subtitle">Close the distance.</div>
+							<div class="w-rule"></div>
 						</div>
-						<div class="right-panel">
-							<div>
-								<h1 class="title">Shell Nigeria<br>Case</h1>
-								<h2 class="subtitle">Sustainable Development</h2>
+						<div class="w-footer">
+							<p>Agile Project Management</p>
+							<p>Ali, Efe, Gokhan, Murtaza, Vrutika, Shilpa, & Hoori</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide 2: Problem -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-problem">
+						<div class="w-bg-shape animate-on-slide fade-in animated"></div>
+						<div class="w-header animate-on-slide fade-in animated">
+							<h1>Europe is getting older.<br>Families are getting further apart.</h1>
+						</div>
+						<div class="w-body">
+							<div class="w-stat animate-on-slide fade-in animated">
+								<div class="w-stat-num">35%</div>
+								<div class="w-stat-text">of Europeans will be over 60 by 2050</div>
 							</div>
-							<div class="students-container">
-								<div class="students-label">Presented By</div>
-								<div class="students-list">Ali, Anchal, Efe, Vrutika, Saikat, Sibghatullah</div>
+							<div class="w-stat animate-on-slide fade-in animated">
+								<div class="w-stat-num">Fewer</div>
+								<div class="w-stat-text">multi-generational households than at any point in modern history</div>
+							</div>
+							<div class="w-stat animate-on-slide fade-in animated">
+								<div class="w-stat-num">One constant</div>
+								<div class="w-stat-text">the quiet worry of a son or daughter who lives two hours away</div>
+							</div>
+							<div class="w-quote animate-on-slide fade-in animated">&ldquo;A problem that used to be solved by proximity now needs a different solution.&rdquo;</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide 3: Meaning -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-meaning">
+						<div class="w-bg"></div>
+						<div class="w-content">
+							<img class="w-logo" src="images/wasl_arabic.png" alt="Wasl logo">
+							<div class="w-title">Wasl</div>
+							<div class="w-meaning-text">
+								Arabic: وَصْل, the closing of distance between two things.<br>
+								In classical poetry, the opposite of separation. The reunion.
+							</div>
+							<div class="w-statement">
+								&ldquo;An app that lets aging parents keep their independence, and lets their families stop worrying from far away.&rdquo;
+							</div>
+							<div class="w-tagline">Close the distance.</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide 4: Vision -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-vision">
+						<div class="w-bg"></div>
+						<div class="w-header">
+							<h1>Vision</h1>
+							<div class="w-header-line"></div>
+						</div>
+						<div class="w-quote-wrap">
+							<div class="w-quote-mark">&ldquo;</div>
+							<div class="w-vision-text">A world where growing older doesn&rsquo;t mean growing apart, where every family stays close, no matter the distance between them.</div>
+						</div>
+						<div class="w-pillars">
+							<div class="w-pillar">
+								<div class="w-pillar-title">Visual</div>
+								<div class="w-pillar-desc">A thread between hands across a map</div>
+							</div>
+							<div class="w-pillar">
+								<div class="w-pillar-title">Emotional</div>
+								<div class="w-pillar-desc">Belonging, not surveillance</div>
+							</div>
+							<div class="w-pillar">
+								<div class="w-pillar-title">Future-oriented</div>
+								<div class="w-pillar-desc">Built for the Europe of 2050, not 2010</div>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<section data-background-color="#FAFAFA">
-					<div class="shell-slide shell-slide--q1">
-						<div class="header">
-							<h1>How will the Shell Nigeria case be evaluated from a utilitarian perspective? What would a utilitarian cost-benefit analysis take account of?</h1>
+				<!-- Slide 4.5: Our Scrum Team -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-team">
+						<div class="w-header">
+							<h1>Our Scrum Team</h1>
+							<div class="w-header-line"></div>
 						</div>
-						<div class="content-area">
-							<div class="accent-shape" style="top: 100px; right: -90px; width: 240px; height: 240px;"></div>
-							<div class="content-wrapper">
-								<p class="paragraph">A utilitarian analysis asks whether Shell's presence in Nigeria <strong>maximized total welfare for all affected people</strong>.</p>
-								<p class="paragraph">To answer this, the case must be assessed through a <strong>cost-benefit analysis</strong> that compares the overall benefits and overall costs of Shell's operations.</p>
-								<p class="paragraph">On the benefit side, Shell's activities generated <strong>oil output, export earnings, government revenue, employment, and some community investment projects</strong>. On the cost side, they caused <strong>oil spills, gas flaring, environmental destruction, health damage, delayed repairs, loss of livelihoods, violence, and deaths</strong>.</p>
-								<p class="paragraph">A proper utilitarian analysis must include <strong>all affected groups</strong>, not only Shell shareholders, the Nigerian government, and urban elites, but also <strong>Ogoni communities, workers, and future generations</strong>. This broader perspective is essential because development economics emphasizes welfare for society as a whole, not only for the most powerful actors.</p>
-								<p class="paragraph">Therefore, a <strong>narrow cost-benefit analysis</strong> that focuses mainly on revenues, income generation, and jobs may suggest a positive outcome. However, a <strong>broader and more accurate utilitarian evaluation</strong> includes the full social and environmental costs. Once these wider harms are taken into account, the case raises serious doubt that Shell's operations actually maximized welfare.</p>
+						<div class="w-cols">
+							<div class="w-col">
+								<i class="fas fa-compass w-role-icon"></i>
+								<div class="w-role-title">Product Owner</div>
+								<div class="w-role-name">Gokhan Aydogan</div>
+								<div class="w-role-desc">Owns the &ldquo;why.&rdquo; Defines the vision, the personas, and the priorities. Speaks for the user and the business.</div>
+							</div>
+							<div class="w-col">
+								<i class="fas fa-people-arrows w-role-icon"></i>
+								<div class="w-role-title">Scrum Master</div>
+								<div class="w-role-name">Efe Senyuva</div>
+								<div class="w-role-desc">Owns the &ldquo;how we work.&rdquo; Removes blockers, protects focus, keeps the process honest.</div>
+							</div>
+							<div class="w-col">
+								<i class="fas fa-code w-role-icon"></i>
+								<div class="w-role-title">Development Team</div>
+								<div class="w-role-name">Murtaza, Vrutika, Shilpa, Hoori, Ali</div>
+								<div class="w-role-desc">Owns the &ldquo;what.&rdquo; Designs, builds, ships. Supported by our partner dev team in India, one extended, cross-border team.</div>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<section data-background-color="#FAFAFA">
-					<div class="shell-slide shell-slide--q2">
-						<div class="header">
-							<h1>Assuming that benefits in terms of additional income generated would be higher than income losses: would this necessarily imply that oil production should continue as before? Which additional arguments may call for a change?</h1>
+				<!-- Slide 5: Product Vision Board -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-board">
+						<div class="w-header">
+							<h1>Product Vision Board</h1>
 						</div>
-						<div class="content-area">
-							<div class="accent-shape" style="bottom: -100px; right: -100px; width: 350px; height: 350px; opacity: 0.3;"></div>
-							<div class="content-wrapper">
-								<div class="big-no">A big, clear NO!</div>
-								<div class="why-no">Why the answer is "No"</div>
-								<div class="list-container">
-									<div class="list-item">
-										<div class="number">1.</div>
-										<div class="item-content"><strong>Distribution of gains and losses matters</strong>The main benefits of oil production go to the state, elites, and corporations, while local communities such as the Ogoni bear much of the pollution, displacement, and damage. A positive total income effect does not mean the outcome is fair.</div>
-									</div>
-									<div class="list-item">
-										<div class="number">2.</div>
-										<div class="item-content"><strong>Human rights and dignity cannot be ignored</strong>The case includes violent repression, killings, destruction of homes, and the execution of Ken Saro-Wiwa and other MOSOP leaders after a manipulated trial. Economic gains cannot justify such violations of basic rights.</div>
-									</div>
-									<div class="list-item">
-										<div class="number">3.</div>
-										<div class="item-content"><strong>Development is more than income</strong>As Amartya Sen argues, development should expand people's capabilities and freedoms. If people lose health, safety, clean water, livelihoods, and control over their own lives, then development is failing even if national income rises.</div>
-									</div>
-									<div class="list-item">
-										<div class="number">4.</div>
-										<div class="item-content"><strong>Environmental damage undermines sustainability</strong>Oil spills, gas flaring, pollution, and inadequate cleanup destroy land, water, and ecosystems. This weakens the basis for long-term wellbeing and harms both present and future generations.</div>
-									</div>
-									<div class="list-item">
-										<div class="number">5.</div>
-										<div class="item-content"><strong>Continuing "as before" is harmful even in the long run</strong>The case shows sabotage, kidnappings, killings, compensation payments, legal cases, reputational damage, and falling production. This means that keeping the same model is not only unjust, but also economically and politically unsustainable.</div>
-									</div>
+						<div class="w-banner">
+							<div class="w-banner-label">VISION</div>
+							<div class="w-banner-text">&ldquo;A world where growing older doesn&rsquo;t mean growing apart.&rdquo;</div>
+						</div>
+						<div class="w-grid">
+							<div class="w-col">
+								<h2>Target Group</h2>
+								<ul>
+									<li><strong>Primary:</strong> Seniors 65+ living independently in Europe</li>
+									<li><strong>Paying customer:</strong> Adult children (35–55)</li>
+									<li><strong>Secondary:</strong> Grandchildren, neighbors, trusted clinicians</li>
+									<li><strong>Launch market:</strong> Nordics + DACH region</li>
+								</ul>
+							</div>
+							<div class="w-col">
+								<h2>Needs</h2>
+								<ul>
+									<li><strong>Seniors:</strong> independence without isolation</li>
+									<li><strong>Adult children:</strong> peace of mind without over-monitoring</li>
+									<li><strong>Grandchildren:</strong> emotional connection, not surveillance</li>
+									<li><strong>Clinicians:</strong> context between appointments</li>
+									<li><strong>Unique angle:</strong> balancing dignity with safety</li>
+								</ul>
+							</div>
+							<div class="w-col">
+								<h2>Product</h2>
+								<ul>
+									<li><strong>Two-sided app:</strong> Senior mode + Family mode</li>
+									<li><strong>Core:</strong> check-in, SOS, vitals, services, video calling</li>
+									<li><strong>Fully static demo</strong> built in Flutter</li>
+									<li><strong>Unique:</strong> designed for the senior first, family second</li>
+								</ul>
+							</div>
+							<div class="w-col">
+								<h2>Business Goals</h2>
+								<ul>
+									<li><strong>Subscription:</strong> €9.99/mo Family Plan</li>
+									<li><strong>Commission:</strong> ~15% on each booked service</li>
+									<li><strong>Premium tier:</strong> clinician access (Year 2)</li>
+									<li><strong>North-star:</strong> monthly check-in adherence</li>
+									<li><strong>Strategic goal:</strong> default European care app by 2030</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide 6: Five lives, One connection -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-personas">
+						<div class="w-bg-line"></div>
+						<div class="w-header">
+							<h1>Five lives. One connection.</h1>
+						</div>
+						<div class="w-row">
+							<div class="w-item">
+								<div class="w-avatar ember"><img src="images/sofia.png" alt="Sofia"></div>
+								<div class="w-name">Sofia</div>
+								<div class="w-role">The Grandchild</div>
+							</div>
+							<div class="w-item">
+								<div class="w-avatar sage"><img src="images/magnus.png" alt="Magnus"></div>
+								<div class="w-name">Magnus</div>
+								<div class="w-role">The Son</div>
+							</div>
+							<div class="w-item">
+								<div class="w-avatar ember"><img src="images/astrid.png" alt="Astrid"></div>
+								<div class="w-name">Astrid</div>
+								<div class="w-role">The Senior</div>
+							</div>
+							<div class="w-item">
+								<div class="w-avatar blush"><img src="images/ingrid.png" alt="Ingrid"></div>
+								<div class="w-name">Ingrid</div>
+								<div class="w-role">The Doer</div>
+							</div>
+							<div class="w-item">
+								<div class="w-avatar sage"><img src="images/Kristine.png" alt="Dr. Solberg"></div>
+								<div class="w-name">Dr. Solberg</div>
+								<div class="w-role">The Clinician</div>
+							</div>
+						</div>
+						<div class="w-quote-wrap">
+							<div class="w-quote">&ldquo;Different needs. Different interfaces. One family.&rdquo;</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide 7: Astrid -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-persona">
+						<div class="w-head">
+							<div class="w-avatar ember"><img src="images/astrid.png" alt="Astrid"></div>
+							<div class="w-info">
+								<div class="w-name">Astrid Hansen</div>
+								<div class="w-details">
+									74 · Bergen, Norway
+									<span class="w-tag sage">The Independent Senior</span>
+								</div>
+							</div>
+						</div>
+						<div class="w-quote">&ldquo;A widow who refuses to give up her independence but wants her family to stop worrying, without calling her three times a day.&rdquo;</div>
+						<div class="w-grid">
+							<div class="w-card accent-neutral">
+								<i class="w-watermark fas fa-seedling"></i>
+								<div class="w-sec-title">Background</div>
+								<div class="w-card-body">
+									<div class="w-bg-text">Astrid lives alone in the home she&rsquo;s had for 40 years. Sharper than her son gives her credit for. Walks to the bakery every morning. Values her routines fiercely. Not afraid of technology, afraid of being treated like she can&rsquo;t handle it.</div>
+								</div>
+							</div>
+							<div class="w-card accent-ember">
+								<i class="w-watermark fas fa-quote-right"></i>
+								<div class="w-sec-title">User Story</div>
+								<div class="w-card-body">
+									<div class="w-story">&ldquo;As Astrid, I want to let my family know I&rsquo;m okay with a single tap each morning, so they stop worrying and I keep my independence.&rdquo;</div>
+								</div>
+							</div>
+							<div class="w-card accent-sage">
+								<i class="w-watermark fas fa-bullseye"></i>
+								<div class="w-sec-title">Goals</div>
+								<div class="w-card-body">
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Stay in her home, independence</div></div>
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Reassure her family without effort</div></div>
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Get help fast when she needs it</div></div>
+								</div>
+							</div>
+							<div class="w-card accent-red">
+								<i class="w-watermark fas fa-triangle-exclamation"></i>
+								<div class="w-sec-title">Frustrations</div>
+								<div class="w-card-body">
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Being infantilized by apps and relatives</div></div>
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Family calling constantly</div></div>
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Asking for help feels like losing</div></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<section data-background-color="#FAFAFA">
-					<div class="shell-slide shell-slide--q3">
-						<div class="header">
-							<h1>Mainstream economics predict that Foreign Direct Investment will improve the wellbeing of domestic people. Why do these assumed positive FDI impacts predicted by economic models differ remarkably from real world settings in the Shell Nigeria case? Which standard economic assumption models may be missing, thereby contributing to these differences?</h1>
-						</div>
-						<div class="content-area">
-							<div class="accent-shape" style="top: 150px; left: -100px; width: 260px; height: 260px; opacity: 0.3;"></div>
-							<div class="content-wrapper">
-								<div class="intro-text">FDI can improve welfare, but only if certain conditions hold.<br>In the Shell Nigeria case, several of these conditions were not met.</div>
-								<div class="list-container">
-									<div class="list-item">
-										<div class="number">1.</div>
-										<div class="item-content"><strong>Effective governance</strong>FDI works better when institutions are accountable and revenues are used properly. In this case, corruption and weak governance meant that oil wealth did not translate into real improvements for local communities.</div>
-									</div>
-									<div class="list-item">
-										<div class="number">2.</div>
-										<div class="item-content"><strong>Limited negative externalities</strong>FDI can raise welfare only if major environmental and social costs are controlled. Here, oil spills, gas flaring, pollution, and health damage imposed heavy costs on local people.</div>
-									</div>
-									<div class="list-item">
-										<div class="number">3.</div>
-										<div class="item-content"><strong>Fair distribution of benefits</strong>Higher output does not automatically mean broader wellbeing. In the Shell case, much of the benefit went to the state, elites, and corporate actors, while local communities carried most of the harm.</div>
-									</div>
-									<div class="list-item">
-										<div class="number">4.</div>
-										<div class="item-content"><strong>Reinvestment in local development</strong>FDI supports development when revenues help improve infrastructure, services, and opportunities. In this case, decades of oil production did not bring adequate water, electricity, hospitals, or broad local progress in Ogoni land.</div>
-									</div>
-									<div class="list-item">
-										<div class="number">5.</div>
-										<div class="item-content"><strong>Social and political stability</strong>Standard FDI models often assume a stable environment. In reality, the Shell case involved repression, violence, sabotage, kidnappings, and conflict, which undermined both welfare and development.</div>
-									</div>
+				<!-- Slide 8: Magnus -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-persona sage-quote sage-story">
+						<div class="w-head">
+							<div class="w-avatar sage"><img src="images/magnus.png" alt="Magnus"></div>
+							<div class="w-info">
+								<div class="w-name">Magnus Hansen</div>
+								<div class="w-details">
+									47 · Oslo, Norway
+									<span class="w-tag sage">The Worried Son</span>
 								</div>
 							</div>
+						</div>
+						<div class="w-quote">&ldquo;He just wants to glance at his phone and know mom is okay.&rdquo;</div>
+						<div class="w-grid">
+							<div class="w-card accent-neutral">
+								<i class="w-watermark fas fa-seedling"></i>
+								<div class="w-sec-title">Background</div>
+								<div class="w-card-body">
+									<div class="w-bg-text">Project manager who moved to Oslo 15 years ago. Calls his mother on Sundays and set up Wasl for the family. His phone is the one that buzzes if something goes wrong.</div>
+								</div>
+							</div>
+							<div class="w-card accent-ember">
+								<i class="w-watermark fas fa-quote-right"></i>
+								<div class="w-sec-title">User Story</div>
+								<div class="w-card-body">
+									<div class="w-story">&ldquo;As Magnus, I want a single dashboard showing my mother&rsquo;s daily status and vitals, so I can feel close to her without calling every day.&rdquo;</div>
+								</div>
+							</div>
+							<div class="w-card accent-sage">
+								<i class="w-watermark fas fa-bullseye"></i>
+								<div class="w-sec-title">Goals</div>
+								<div class="w-card-body">
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Peace of mind in 10 seconds</div></div>
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Catch problems early, before they become emergencies</div></div>
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Coordinate with family without many messages</div></div>
+								</div>
+							</div>
+							<div class="w-card accent-red">
+								<i class="w-watermark fas fa-triangle-exclamation"></i>
+								<div class="w-sec-title">Frustrations</div>
+								<div class="w-card-body">
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Distance guilt, he can&rsquo;t be there, so he over-monitors</div></div>
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>False alarms, doesn&rsquo;t want to drive hours for nothing</div></div>
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Information scattered across calls and messages</div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide 9: Ingrid -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-persona">
+						<div class="w-head">
+							<div class="w-avatar blush"><img src="images/ingrid.png" alt="Ingrid"></div>
+							<div class="w-info">
+								<div class="w-name">Ingrid Hansen</div>
+								<div class="w-details">
+									45 · Oslo, Norway
+									<span class="w-tag sage">The Hands-On Family Member</span>
+								</div>
+							</div>
+						</div>
+						<div class="w-quote">&ldquo;The daughter-in-law who actually makes things happen, books the grocery delivery and quietly handles what Magnus worries about.&rdquo;</div>
+						<div class="w-grid">
+							<div class="w-card accent-neutral">
+								<i class="w-watermark fas fa-seedling"></i>
+								<div class="w-sec-title">Background</div>
+								<div class="w-card-body">
+									<div class="w-bg-text">Closer to Astrid than most daughters&#8209;in&#8209;law. Where Magnus monitors, Ingrid acts, she notices needs and arranges help.</div>
+								</div>
+							</div>
+							<div class="w-card accent-ember">
+								<i class="w-watermark fas fa-quote-right"></i>
+								<div class="w-sec-title">User Story</div>
+								<div class="w-card-body">
+									<div class="w-story">&ldquo;As Ingrid, I want to book services for Astrid from my phone, so I can help without making her feel dependent.&rdquo;</div>
+								</div>
+							</div>
+							<div class="w-card accent-sage">
+								<i class="w-watermark fas fa-bullseye"></i>
+								<div class="w-sec-title">Goals</div>
+								<div class="w-card-body">
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Act on Astrid&rsquo;s behalf without fuss</div></div>
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Take load off Magnus, he watches, she does</div></div>
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Coordinate care so the family stays in sync</div></div>
+								</div>
+							</div>
+							<div class="w-card accent-red">
+								<i class="w-watermark fas fa-triangle-exclamation"></i>
+								<div class="w-sec-title">Frustrations</div>
+								<div class="w-card-body">
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Doing invisible work nobody sees</div></div>
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Feeling like a secondary user in an app made for &ldquo;the son&rdquo;</div></div>
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Over-permissioned tools, she wants to book a cleaner, not read vitals</div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide 10: Sofia -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-persona">
+						<div class="w-head">
+							<div class="w-avatar ember"><img src="images/sofia.png" alt="Sofia"></div>
+							<div class="w-info">
+								<div class="w-name">Sofia Hansen</div>
+								<div class="w-details">
+									19 · Berlin, Germany (studying abroad)
+									<span class="w-tag ember">The Distant Grandchild</span>
+								</div>
+							</div>
+						</div>
+						<div class="w-quote">&ldquo;The granddaughter who doesn&rsquo;t want a monitoring app, she wants a reason to call her grandmother more often.&rdquo;</div>
+						<div class="w-grid">
+							<div class="w-card accent-neutral">
+								<i class="w-watermark fas fa-seedling"></i>
+								<div class="w-sec-title">Background</div>
+								<div class="w-card-body">
+									<div class="w-bg-text">Design student in Berlin who misses her grandmother. She prefers short, meaningful updates (e.g., &ldquo;grandma baked today&rdquo;) over activity dashboards.</div>
+								</div>
+							</div>
+							<div class="w-card accent-ember">
+								<i class="w-watermark fas fa-quote-right"></i>
+								<div class="w-sec-title">User Story</div>
+								<div class="w-card-body">
+									<div class="w-story">&ldquo;As Sofia, I want daily highlights and a one-tap call so I can stay close while abroad.&rdquo;</div>
+								</div>
+							</div>
+							<div class="w-card accent-sage">
+								<i class="w-watermark fas fa-bullseye"></i>
+								<div class="w-sec-title">Goals</div>
+								<div class="w-card-body">
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Stay emotionally close, not surveil</div></div>
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>See human activities and highlights</div></div>
+								</div>
+							</div>
+							<div class="w-card accent-red">
+								<i class="w-watermark fas fa-triangle-exclamation"></i>
+								<div class="w-sec-title">Frustrations</div>
+								<div class="w-card-body">
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Monitoring apps feel invasive</div></div>
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Family chats are chaotic</div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide 11: Dr. Solberg -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-persona wasl-persona--solberg">
+						<div class="w-head">
+							<div class="w-avatar sage"><img src="images/Kristine.png" alt="Dr. Kristine Solberg"></div>
+							<div class="w-info">
+								<div class="w-name">Dr. Kristine Solberg</div>
+								<div class="w-details">
+									52 · Bergen, Norway
+									<span class="w-tag sage">The Trusted Clinician</span>
+									<span class="w-premium">Premium Tier</span>
+								</div>
+							</div>
+						</div>
+						<div class="w-quote">&ldquo;A GP who uses Wasl Premium to see long-term trends in her patients&rsquo; vitals, not to diagnose, but to have conversations grounded in data instead of guesswork.&rdquo;</div>
+						<div class="w-grid">
+							<div class="w-card accent-neutral">
+								<i class="w-watermark fas fa-seedling"></i>
+								<div class="w-sec-title">Background</div>
+								<div class="w-card-body">
+									<div class="w-bg-text">Astrid&rsquo;s GP for twelve years. Sees her twice a year and relies on what Astrid remembers. With Wasl Premium (consented), Dr. Solberg gets read-only access to trends, context she used to have to infer.</div>
+								</div>
+							</div>
+							<div class="w-card accent-ember">
+								<i class="w-watermark fas fa-quote-right"></i>
+								<div class="w-sec-title">User Story</div>
+								<div class="w-card-body">
+									<div class="w-story">&ldquo;As Dr. Solberg, I want to review a patient&rsquo;s vitals and activity trends before each appointment, so our conversations are grounded in data rather than memory.&rdquo;</div>
+								</div>
+							</div>
+							<div class="w-card accent-sage">
+								<i class="w-watermark fas fa-bullseye"></i>
+								<div class="w-sec-title">Goals</div>
+								<div class="w-card-body">
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>See the months between visits, not just the 20 minutes in the room</div></div>
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Spot slow declines early, falls, sleep disruption, mobility</div></div>
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Have evidence-based conversations without being clinical</div></div>
+								</div>
+							</div>
+							<div class="w-card accent-red">
+								<i class="w-watermark fas fa-triangle-exclamation"></i>
+								<div class="w-sec-title">Frustrations</div>
+								<div class="w-card-body">
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Patient self-reporting is unreliable, especially in the elderly</div></div>
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Existing medical tools are clinical and ugly, patients hate them</div></div>
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Consent and privacy complexity, won&rsquo;t use anything that isn&rsquo;t clean</div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide 12: Closing -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-close">
+						<div class="w-bg"></div>
+						<div class="w-content">
+							<div class="w-title">Five people. One app. One line closing the distance.</div>
+							<div class="w-conn">
+								<div class="w-hline"></div>
+								<div class="w-vline"></div>
+								<div class="w-row">
+									<div class="w-avatar ember"><img src="images/sofia.png" alt="Sofia"></div>
+									<div class="w-avatar sage"><img src="images/magnus.png" alt="Magnus"></div>
+									<div class="w-avatar ember"><img src="images/astrid.png" alt="Astrid"></div>
+									<div class="w-avatar blush"><img src="images/ingrid.png" alt="Ingrid"></div>
+									<div class="w-avatar sage"><img src="images/Kristine.png" alt="Dr. Solberg"></div>
+								</div>
+								<img class="w-logo" src="images/wasl_arabic.png" alt="Wasl logo">
+							</div>
+							<div class="w-footer-text">Thank you. Questions?</div>
 						</div>
 					</div>
 				</section>
@@ -4607,7 +5950,34 @@
 				'.slide-ba .bullet-list li',
 				'.slide-ba .slide-ba-subheading',
 				'.slide-ba hr.slide-ba-question-separator',
-				'.slide-ba .slide-ba-example-questions p'
+				'.slide-ba .slide-ba-example-questions p',
+				/* Wasl slides */
+				'.wasl-cover .w-content > *',
+				'.wasl-cover .w-footer p',
+				'.wasl-problem .w-header h1',
+				'.wasl-problem .w-stat',
+				'.wasl-problem .w-quote',
+				'.wasl-meaning .w-content > *',
+				'.wasl-vision .w-header h1',
+				'.wasl-vision .w-vision-text',
+				'.wasl-vision .w-pillar',
+				'.wasl-team .w-header h1',
+				'.wasl-team .w-col',
+				'.wasl-team .w-footer-quote',
+				'.wasl-board .w-header h1',
+				'.wasl-board .w-banner',
+				'.wasl-board .w-col',
+				'.wasl-personas .w-header h1',
+				'.wasl-personas .w-item',
+				'.wasl-personas .w-quote',
+				'.wasl-persona .w-head',
+				'.wasl-persona .w-quote',
+				'.wasl-persona .w-card',
+				'.wasl-close .w-title',
+				'.wasl-close .w-avatar',
+				'.wasl-close .w-logo',
+				'.wasl-close .w-statement',
+				'.wasl-close .w-footer-text'
 			].join(',');
 
 			function initSlideBaAnimations() {
