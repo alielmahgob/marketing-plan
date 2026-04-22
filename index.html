@@ -4903,10 +4903,12 @@
 			}
 			.reveal .slides section .wasl-team .w-footer-quote {
 				font-family: 'Fraunces', serif;
-				font-size: 19px;
+				font-size: 24px;
 				font-style: italic;
 				color: #7BA888;
+				line-height: 1.4;
 				text-align: center;
+				padding: 0 60px;
 			}
 
 			/* ---------- Slide 5: Product Vision Board ---------- */
@@ -4963,7 +4965,7 @@
 			}
 			.reveal .slides section .wasl-board .w-col h2 {
 				font-family: 'Fraunces', serif;
-				font-size: 15px;
+				font-size: 17px;
 				font-weight: 700;
 				color: #7BA888;
 				text-transform: uppercase;
@@ -4977,10 +4979,10 @@
 				padding: 0;
 			}
 			.reveal .slides section .wasl-board li {
-				font-size: 13.5px;
+				font-size: 16px;
 				color: #2A2622;
-				margin-bottom: 9px;
-				line-height: 1.4;
+				margin-bottom: 12px;
+				line-height: 1.45;
 				text-align: left;
 			}
 			.reveal .slides section .wasl-board li strong {
@@ -5168,6 +5170,15 @@
 				text-align: left;
 			}
 			.reveal .slides section .wasl-persona.sage-quote .w-quote { color: #7BA888; }
+			/* Lars-only overrides: shrink the chrome around the grid so the 4 cards grow taller */
+			.reveal .slides section .wasl-persona.wasl-persona--lars { padding: 10px 40px 10px; }
+			.reveal .slides section .wasl-persona.wasl-persona--lars .w-head { margin-bottom: 4px; }
+			.reveal .slides section .wasl-persona.wasl-persona--lars .w-avatar { width: 64px; height: 64px; padding: 2px; }
+			.reveal .slides section .wasl-persona.wasl-persona--lars .w-name { font-size: 22px; }
+			.reveal .slides section .wasl-persona.wasl-persona--lars .w-meta { font-size: 13px; }
+			.reveal .slides section .wasl-persona.wasl-persona--lars .w-quote { font-size: 15px; margin-bottom: 6px; line-height: 1.35; }
+			.reveal .slides section .wasl-persona.wasl-persona--lars .w-card { padding: 10px 14px; }
+			.reveal .slides section .wasl-persona.wasl-persona--lars .w-sec-title { margin-bottom: 4px; padding-bottom: 4px; }
 			.reveal .slides section .wasl-persona .w-grid {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
@@ -5276,23 +5287,6 @@
 				flex-shrink: 0;
 			}
 
-			/* Dr. Solberg: shrink Goals + Frustrations so longer lines fit cleanly */
-			.reveal .slides section .wasl-persona--solberg .w-card.accent-sage .w-list-item,
-			.reveal .slides section .wasl-persona--solberg .w-card.accent-sage .w-list-item div,
-			.reveal .slides section .wasl-persona--solberg .w-card.accent-red .w-list-item,
-			.reveal .slides section .wasl-persona--solberg .w-card.accent-red .w-list-item div {
-				font-size: 14px;
-				line-height: 1.4;
-			}
-			.reveal .slides section .wasl-persona--solberg .w-card.accent-sage .w-list-item,
-			.reveal .slides section .wasl-persona--solberg .w-card.accent-red .w-list-item {
-				margin-bottom: 7px;
-			}
-			.reveal .slides section .wasl-persona--solberg .w-card.accent-sage .w-list-item i,
-			.reveal .slides section .wasl-persona--solberg .w-card.accent-red .w-list-item i {
-				font-size: 13px;
-				margin-top: 3px;
-			}
 
 			/* ---------- Slide 12: Closing ---------- */
 			.reveal .slides section .wasl-close {
@@ -5537,6 +5531,9 @@
 								<div class="w-role-desc">Owns the &ldquo;what.&rdquo; Designs, builds, ships. Supported by our partner dev team in India, one extended, cross-border team.</div>
 							</div>
 						</div>
+						<div class="w-footer">
+							<div class="w-footer-quote">&ldquo;Our Indian partners join every daily stand-up.&rdquo;</div>
+						</div>
 					</div>
 				</section>
 
@@ -5582,10 +5579,9 @@
 							<div class="w-col">
 								<h2>Business Goals</h2>
 								<ul>
+									<li><strong>Free for seniors</strong></li>
 									<li><strong>Subscription:</strong> €9.99/mo Family Plan</li>
 									<li><strong>Commission:</strong> ~15% on each booked service</li>
-									<li><strong>Premium tier:</strong> clinician access (Year 2)</li>
-									<li><strong>North-star:</strong> monthly check-in adherence</li>
 									<li><strong>Strategic goal:</strong> default European care app by 2030</li>
 								</ul>
 							</div>
@@ -5622,9 +5618,9 @@
 								<div class="w-role">The Doer</div>
 							</div>
 							<div class="w-item">
-								<div class="w-avatar sage"><img src="images/Kristine.png" alt="Dr. Solberg"></div>
-								<div class="w-name">Dr. Solberg</div>
-								<div class="w-role">The Clinician</div>
+								<div class="w-avatar sage"><img src="images/Lars.png" alt="Lars Berg"></div>
+								<div class="w-name">Lars</div>
+								<div class="w-role">The Neighbor</div>
 							</div>
 						</div>
 						<div class="w-quote-wrap">
@@ -5805,7 +5801,7 @@
 								<i class="w-watermark fas fa-seedling"></i>
 								<div class="w-sec-title">Background</div>
 								<div class="w-card-body">
-									<div class="w-bg-text">Design student in Berlin who misses her grandmother. She prefers short, meaningful updates (e.g., &ldquo;grandma baked today&rdquo;) over activity dashboards.</div>
+									<div class="w-bg-text">Design student in Berlin who misses her grandmother. She prefers short, meaningful updates (e.g., &ldquo;Took a morning walk&rdquo;) over activity dashboards.</div>
 								</div>
 							</div>
 							<div class="w-card accent-ember">
@@ -5835,52 +5831,51 @@
 					</div>
 				</section>
 
-				<!-- Slide 11: Dr. Solberg -->
+				<!-- Slide 11: Lars Berg -->
 				<section class="wasl-section" data-background-color="#FDF8F3">
-					<div class="wasl-slide wasl-persona wasl-persona--solberg">
+					<div class="wasl-slide wasl-persona wasl-persona--lars">
 						<div class="w-head">
-							<div class="w-avatar sage"><img src="images/Kristine.png" alt="Dr. Kristine Solberg"></div>
+							<div class="w-avatar sage"><img src="images/Lars.png" alt="Lars Berg"></div>
 							<div class="w-info">
-								<div class="w-name">Dr. Kristine Solberg</div>
+								<div class="w-name">Lars Berg</div>
 								<div class="w-details">
-									52 · Bergen, Norway
-									<span class="w-tag sage">The Trusted Clinician</span>
-									<span class="w-premium">Premium Tier</span>
+									68 · Bergen, Norway
+									<span class="w-tag sage">The Trusted Neighbor</span>
 								</div>
 							</div>
 						</div>
-						<div class="w-quote">&ldquo;A GP who uses Wasl Premium to see long-term trends in her patients&rsquo; vitals, not to diagnose, but to have conversations grounded in data instead of guesswork.&rdquo;</div>
+						<div class="w-quote">&ldquo;Astrid&rsquo;s neighbor of thirty years, the person with a spare key to her front door and a place on her emergency call chain when family can&rsquo;t answer.&rdquo;</div>
 						<div class="w-grid">
 							<div class="w-card accent-neutral">
 								<i class="w-watermark fas fa-seedling"></i>
 								<div class="w-sec-title">Background</div>
 								<div class="w-card-body">
-									<div class="w-bg-text">Astrid&rsquo;s GP for twelve years. Sees her twice a year and relies on what Astrid remembers. With Wasl Premium (consented), Dr. Solberg gets read-only access to trends, context she used to have to infer.</div>
+									<div class="w-bg-text">Retired ship mechanic. Lives two houses down from Astrid. They&rsquo;ve known each other since before Magnus was born. When Astrid added Lars to her Wasl emergency contacts, he took it seriously, he checks his phone more carefully now, keeps it louder at night, and knows exactly what to do if an alert comes through.</div>
 								</div>
 							</div>
 							<div class="w-card accent-ember">
 								<i class="w-watermark fas fa-quote-right"></i>
 								<div class="w-sec-title">User Story</div>
 								<div class="w-card-body">
-									<div class="w-story">&ldquo;As Dr. Solberg, I want to review a patient&rsquo;s vitals and activity trends before each appointment, so our conversations are grounded in data rather than memory.&rdquo;</div>
+									<div class="w-story">&ldquo;As Lars, I want to be contacted only when Astrid truly needs help and her family can&rsquo;t reach her, so I can be ready to act without intruding on her daily life.&rdquo;</div>
 								</div>
 							</div>
 							<div class="w-card accent-sage">
 								<i class="w-watermark fas fa-bullseye"></i>
 								<div class="w-sec-title">Goals</div>
 								<div class="w-card-body">
-									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>See the months between visits, not just the 20 minutes in the room</div></div>
-									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Spot slow declines early, falls, sleep disruption, mobility</div></div>
-									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Have evidence-based conversations without being clinical</div></div>
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Be genuinely useful in an emergency, not just a name on a list</div></div>
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Know clearly what&rsquo;s expected of him, no ambiguous alerts</div></div>
+									<div class="w-list-item"><i class="fas fa-check" style="color:#7BA888;"></i><div>Respect Astrid&rsquo;s privacy, only emergencies, not her daily life</div></div>
 								</div>
 							</div>
 							<div class="w-card accent-red">
 								<i class="w-watermark fas fa-triangle-exclamation"></i>
 								<div class="w-sec-title">Frustrations</div>
 								<div class="w-card-body">
-									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Patient self-reporting is unreliable, especially in the elderly</div></div>
-									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Existing medical tools are clinical and ugly, patients hate them</div></div>
-									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Consent and privacy complexity, won&rsquo;t use anything that isn&rsquo;t clean</div></div>
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Group chats with the family feel intrusive when everything is fine</div></div>
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Wants a simple, minimal role, not another app to monitor</div></div>
+									<div class="w-list-item"><i class="fas fa-times" style="color:#D64545;"></i><div>Worried about false alarms, or missing a real one</div></div>
 								</div>
 							</div>
 						</div>
@@ -5901,7 +5896,7 @@
 									<div class="w-avatar sage"><img src="images/magnus.png" alt="Magnus"></div>
 									<div class="w-avatar ember"><img src="images/astrid.png" alt="Astrid"></div>
 									<div class="w-avatar blush"><img src="images/ingrid.png" alt="Ingrid"></div>
-									<div class="w-avatar sage"><img src="images/Kristine.png" alt="Dr. Solberg"></div>
+									<div class="w-avatar sage"><img src="images/Lars.png" alt="Lars Berg"></div>
 								</div>
 								<img class="w-logo" src="images/wasl_arabic.png" alt="Wasl logo">
 							</div>
