@@ -5493,40 +5493,70 @@
 
 			/* ---------- Flow slide ---------- */
 			.reveal .slides section .wasl-sp-flow {
-				padding: 36px 44px;
+				padding: 36px 56px 30px;
+			}
+			.reveal .slides section .wasl-sp-flow .sp-head {
+				margin-bottom: 18px;
 			}
 			.reveal .slides section .wasl-sp-flow h1 {
 				font-size: 34px;
 				font-weight: 700;
 				color: #2A2622;
-				margin: 0 0 28px;
+				margin: 0 0 8px;
 				text-align: left;
+			}
+			.reveal .slides section .wasl-sp-flow .sp-head-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 10px;
+			}
+			.reveal .slides section .wasl-sp-flow .sp-head-sub {
+				font-size: 15px;
+				color: #7A7168;
+				line-height: 1.5;
+				text-align: left;
+				max-width: 820px;
 			}
 			.reveal .slides section .wasl-sp-flow .sp-flow {
 				display: flex;
-				align-items: flex-start;
+				align-items: stretch;
 				justify-content: center;
-				gap: 4px;
+				gap: 2px;
 				flex: 1;
+				min-height: 0;
 			}
 			.reveal .slides section .wasl-sp-flow .sp-step {
-				width: 140px;
+				flex: 1;
+				max-width: 170px;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				text-align: center;
 			}
+			.reveal .slides section .wasl-sp-flow .sp-num {
+				font-family: 'Fraunces', serif;
+				font-size: 14px;
+				font-weight: 700;
+				color: #E8844A;
+				letter-spacing: 0.14em;
+				margin-bottom: 8px;
+			}
 			.reveal .slides section .wasl-sp-flow .sp-box {
-				width: 140px;
-				height: 88px;
+				width: 100%;
+				flex: 1;
 				background-color: #F7EFE4;
 				border: 2px solid #E8844A;
 				display: flex;
-				align-items: center;
+				flex-direction: column;
+				align-items: stretch;
 				justify-content: center;
-				padding: 8px;
-				margin-bottom: 12px;
-				border-radius: 8px;
+				padding: 18px 14px;
+				margin-bottom: 14px;
+				border-radius: 12px;
+				box-shadow: 0 6px 14px rgba(42,38,34,0.05);
+				position: relative;
+				gap: 4px;
 			}
 			.reveal .slides section .wasl-sp-flow .sp-step:nth-child(odd) .sp-box {
 				border-color: #7BA888;
@@ -5540,25 +5570,88 @@
 			.reveal .slides section .wasl-sp-flow .sp-step:nth-child(7) .sp-box {
 				border-color: #7BA888;
 			}
+			.reveal .slides section .wasl-sp-flow .sp-step:nth-child(3) .sp-num,
+			.reveal .slides section .wasl-sp-flow .sp-step:nth-child(7) .sp-num { color: #7BA888; }
 			.reveal .slides section .wasl-sp-flow .sp-box-title {
+				font-family: 'Fraunces', serif;
 				font-weight: 700;
-				font-size: 14px;
+				font-size: 18px;
 				color: #2A2622;
 				text-align: center;
-				line-height: 1.25;
+				line-height: 1.2;
+				height: 46px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0 4px;
+				flex-shrink: 0;
 			}
 			.reveal .slides section .wasl-sp-flow .sp-box-desc {
-				font-size: 11px;
+				font-size: 12px;
 				color: #7A7168;
 				line-height: 1.4;
 				text-align: center;
 				font-style: italic;
-			}
-			.reveal .slides section .wasl-sp-flow .sp-arrow {
-				font-size: 28px;
-				color: #7BA888;
 				padding: 0 4px;
-				margin-top: 26px;
+				height: 54px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-shrink: 0;
+			}
+			.reveal .slides section .wasl-sp-flow .sp-box-output {
+				margin-top: 6px;
+				font-size: 10px;
+				font-weight: 700;
+				color: #7BA888;
+				text-transform: uppercase;
+				letter-spacing: 0.12em;
+				text-align: center;
+				padding-top: 10px;
+				border-top: 1px dashed #D8CFC3;
+				width: 100%;
+				height: 32px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-shrink: 0;
+			}
+			.reveal .slides section .wasl-sp-flow .sp-step:nth-child(1) .sp-box-output,
+			.reveal .slides section .wasl-sp-flow .sp-step:nth-child(5) .sp-box-output,
+			.reveal .slides section .wasl-sp-flow .sp-step:nth-child(9) .sp-box-output { color: #E8844A; }
+			.reveal .slides section .wasl-sp-flow .sp-arrow {
+				font-size: 22px;
+				color: #C9BEB1;
+				padding: 0 2px;
+				align-self: center;
+				margin-bottom: 14px;
+				flex-shrink: 0;
+			}
+			.reveal .slides section .wasl-sp-flow .sp-footer {
+				margin-top: 10px;
+				padding-top: 16px;
+				border-top: 1px solid #EBE4DB;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 24px;
+			}
+			.reveal .slides section .wasl-sp-flow .sp-footer-quote {
+				font-family: 'Fraunces', serif;
+				font-size: 16px;
+				font-style: italic;
+				color: #7BA888;
+				line-height: 1.4;
+				text-align: left;
+				flex: 1;
+			}
+			.reveal .slides section .wasl-sp-flow .sp-footer-meta {
+				font-size: 11px;
+				color: #7A7168;
+				text-align: right;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				font-weight: 600;
 				flex-shrink: 0;
 			}
 
@@ -5576,7 +5669,7 @@
 			.reveal .slides section .wasl-sp-stories .sp-grid {
 				display: flex;
 				justify-content: space-between;
-				gap: 10px;
+				gap: 12px;
 				flex: 1;
 				min-height: 0;
 			}
@@ -5586,20 +5679,43 @@
 				flex-direction: column;
 				align-items: center;
 				min-width: 0;
+				min-height: 0;
 			}
 			.reveal .slides section .wasl-sp-stories .sp-av {
 				width: 54px;
 				height: 54px;
+				margin-bottom: 8px;
+				flex-shrink: 0;
+			}
+			.reveal .slides section .wasl-sp-stories .sp-name {
+				font-family: 'Fraunces', serif;
+				font-size: 16px;
+				font-weight: 600;
+				color: #2A2622;
 				margin-bottom: 12px;
+				text-align: center;
+				flex-shrink: 0;
+			}
+			.reveal .slides section .wasl-sp-stories .sp-cards {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				flex: 1;
+				min-height: 0;
+				gap: 10px;
 			}
 			.reveal .slides section .wasl-sp-stories .sp-card {
 				background-color: #F7EFE4;
-				padding: 8px 10px;
-				margin-bottom: 6px;
+				padding: 10px 12px;
 				width: 100%;
-				min-height: 86px;
+				flex: 1;
+				min-height: 0;
 				border-left: 3px solid #E8844A;
 				border-radius: 4px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				overflow: hidden;
 			}
 			.reveal .slides section .wasl-sp-stories .sp-col:nth-child(even) .sp-card {
 				border-left-color: #7BA888;
@@ -5608,14 +5724,15 @@
 				font-size: 9px;
 				font-weight: 700;
 				color: #7A7168;
-				margin-bottom: 3px;
+				margin-bottom: 5px;
 				text-transform: uppercase;
 				letter-spacing: 0.1em;
 				text-align: left;
+				flex-shrink: 0;
 			}
 			.reveal .slides section .wasl-sp-stories .sp-card-text {
 				font-size: 11px;
-				line-height: 1.4;
+				line-height: 1.45;
 				color: #2A2622;
 				text-align: left;
 			}
@@ -5728,10 +5845,11 @@
 				flex: 1;
 			}
 			.reveal .slides section .wasl-sp-moscow .sp-quad {
-				padding: 16px 22px;
+				padding: 18px 24px 20px;
 				display: flex;
 				flex-direction: column;
 				border-radius: 8px;
+				min-height: 0;
 			}
 			.reveal .slides section .wasl-sp-moscow .sp-must {
 				background-color: #E8844A;
@@ -5749,13 +5867,28 @@
 				background-color: #EBE4DB;
 				color: #7A7168;
 			}
+			.reveal .slides section .wasl-sp-moscow .sp-head {
+				display: flex;
+				align-items: baseline;
+				justify-content: space-between;
+				gap: 12px;
+				margin-bottom: 4px;
+			}
 			.reveal .slides section .wasl-sp-moscow .sp-label {
 				font-family: 'Fraunces', serif;
 				font-size: 22px;
 				font-weight: 700;
-				margin-bottom: 4px;
 				text-transform: uppercase;
 				text-align: left;
+				letter-spacing: 0.02em;
+			}
+			.reveal .slides section .wasl-sp-moscow .sp-count {
+				font-size: 12px;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				opacity: 0.75;
+				flex-shrink: 0;
 			}
 			.reveal .slides section .wasl-sp-moscow .sp-desc {
 				font-size: 13px;
@@ -5763,12 +5896,42 @@
 				margin-bottom: 12px;
 				opacity: 0.9;
 				text-align: left;
+				padding-bottom: 10px;
+				border-bottom: 1px solid currentColor;
+				border-bottom-color: rgba(255,255,255,0.25);
 			}
-			.reveal .slides section .wasl-sp-moscow .sp-stories {
-				font-size: 17px;
-				font-weight: 600;
-				letter-spacing: 0.08em;
+			.reveal .slides section .wasl-sp-moscow .sp-should .sp-desc,
+			.reveal .slides section .wasl-sp-moscow .sp-wont .sp-desc {
+				border-bottom-color: rgba(42,38,34,0.14);
+			}
+			.reveal .slides section .wasl-sp-moscow .sp-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+				flex: 1;
+			}
+			.reveal .slides section .wasl-sp-moscow .sp-list li {
+				display: flex;
+				align-items: baseline;
+				gap: 10px;
+				font-size: 14px;
+				line-height: 1.35;
 				text-align: left;
+			}
+			.reveal .slides section .wasl-sp-moscow .sp-list .sp-code {
+				font-family: 'Fraunces', serif;
+				font-weight: 700;
+				font-size: 14px;
+				letter-spacing: 0.04em;
+				width: 30px;
+				flex-shrink: 0;
+				opacity: 0.9;
+			}
+			.reveal .slides section .wasl-sp-moscow .sp-list .sp-story-name {
+				font-weight: 500;
 			}
 			.reveal .slides section .wasl-sp-moscow .sp-caption {
 				margin-top: 14px;
@@ -5892,23 +6055,34 @@
 
 			/* ---------- Sprint commitment slide ---------- */
 			.reveal .slides section .wasl-sp-commit {
-				padding: 36px 44px 26px;
+				padding: 28px 44px 24px;
 			}
 			.reveal .slides section .wasl-sp-commit h1 {
-				font-size: 32px;
+				font-size: 30px;
 				font-weight: 700;
 				color: #2A2622;
-				margin: 0 0 18px;
+				margin: 0 0 12px;
 				text-align: left;
 			}
 			.reveal .slides section .wasl-sp-commit .sp-goal {
 				text-align: center;
-				padding: 0 50px;
-				margin-bottom: 30px;
+				padding: 0 40px;
+				margin-bottom: 18px;
+				padding-bottom: 14px;
+				border-bottom: 1px solid #EBE4DB;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-goal-label {
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: #7BA888;
+				margin-bottom: 6px;
+				text-align: center;
 			}
 			.reveal .slides section .wasl-sp-commit .sp-goal-text {
 				font-family: 'Fraunces', serif;
-				font-size: 22px;
+				font-size: 19px;
 				font-style: italic;
 				color: #E8844A;
 				line-height: 1.4;
@@ -5917,39 +6091,148 @@
 			.reveal .slides section .wasl-sp-commit .sp-cards {
 				display: flex;
 				justify-content: center;
-				gap: 14px;
-				padding: 0 10px;
-				margin-bottom: 20px;
+				align-items: stretch;
+				gap: 12px;
+				padding: 0;
+				margin-bottom: 14px;
 			}
 			.reveal .slides section .wasl-sp-commit .sp-card {
 				background-color: #F7EFE4;
-				width: 170px;
-				height: 94px;
+				flex: 1;
+				max-width: 190px;
 				display: flex;
 				flex-direction: column;
-				justify-content: center;
 				align-items: center;
 				text-align: center;
-				padding: 10px;
+				padding: 14px 12px 12px;
 				border-top: 4px solid #7BA888;
-				border-radius: 0 0 6px 6px;
+				border-radius: 0 0 8px 8px;
+				box-shadow: 0 4px 10px rgba(42,38,34,0.05);
 			}
-			.reveal .slides section .wasl-sp-commit .sp-card-id {
+			.reveal .slides section .wasl-sp-commit .sp-card-av {
+				width: 44px;
+				height: 44px;
+				margin-bottom: 8px;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-card-meta {
+				font-family: 'Fraunces', serif;
 				font-weight: 700;
-				font-size: 17px;
-				margin-bottom: 6px;
+				font-size: 15px;
+				color: #E8844A;
+				letter-spacing: 0.03em;
+				margin-bottom: 2px;
 				text-align: center;
-				color: #2A2622;
+				display: flex;
+				align-items: center;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-card-size {
+				display: inline-block;
+				font-size: 9px;
+				font-weight: 700;
+				letter-spacing: 0.1em;
+				color: #7A7168;
+				background-color: #EBE4DB;
+				padding: 1px 6px;
+				border-radius: 3px;
+				margin-left: 4px;
+				vertical-align: middle;
 			}
 			.reveal .slides section .wasl-sp-commit .sp-card-title {
-				font-size: 12px;
-				color: #7A7168;
+				font-size: 13px;
+				font-weight: 600;
+				color: #2A2622;
+				margin-bottom: 6px;
 				text-align: center;
+				line-height: 1.3;
 			}
-			.reveal .slides section .wasl-sp-commit .sp-footer {
-				text-align: center;
-				font-size: 14px;
+			.reveal .slides section .wasl-sp-commit .sp-card-crit {
+				font-size: 10px;
+				font-style: italic;
 				color: #7A7168;
+				line-height: 1.35;
+				text-align: center;
+				margin-top: auto;
+				padding-top: 6px;
+				border-top: 1px dashed #D8CFC3;
+				width: 100%;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-glance {
+				display: flex;
+				justify-content: center;
+				align-items: stretch;
+				gap: 12px;
+				margin-bottom: 14px;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-stat {
+				flex: 1;
+				max-width: 190px;
+				background-color: #FFFFFF;
+				border: 1px solid #EBE4DB;
+				border-radius: 6px;
+				padding: 10px 14px;
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-stat-label {
+				font-size: 9px;
+				font-weight: 700;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: #7BA888;
+				margin-bottom: 4px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-stat-value {
+				font-family: 'Fraunces', serif;
+				font-size: 16px;
+				font-weight: 700;
+				color: #2A2622;
+				text-align: left;
+				line-height: 1.2;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-stat-sub {
+				font-size: 10px;
+				color: #7A7168;
+				margin-top: 2px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-dod {
+				background-color: #2A2622;
+				color: #FDF8F3;
+				border-radius: 6px;
+				padding: 12px 18px;
+				display: flex;
+
+				gap: 16px;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-dod-label {
+				font-family: 'Fraunces', serif;
+				font-size: 13px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.14em;
+				color: #E8844A;
+				flex-shrink: 0;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-dod-items {
+				display: flex;
+				gap: 22px;
+				flex: 1;
+				flex-wrap: wrap;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-dod-item {
+				font-size: 12px;
+				color: #FDF8F3;
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-sp-commit .sp-dod-item i {
+				color: #7BA888;
+				font-size: 11px;
 			}
 
 			/* ---------- Why this sprint works slide ---------- */
@@ -5995,69 +6278,6 @@
 				color: #7A7168;
 				line-height: 1.5;
 				text-align: left;
-			}
-
-			/* ---------- Road ahead slide ---------- */
-			.reveal .slides section .wasl-sp-road {
-				padding: 36px 56px;
-			}
-			.reveal .slides section .wasl-sp-road h1 {
-				font-size: 36px;
-				font-weight: 700;
-				color: #2A2622;
-				margin: 0 0 24px;
-				text-align: left;
-			}
-			.reveal .slides section .wasl-sp-road .sp-row {
-				display: flex;
-				align-items: flex-start;
-				gap: 24px;
-				margin-bottom: 16px;
-			}
-			.reveal .slides section .wasl-sp-road .sp-label {
-				width: 130px;
-				font-family: 'Fraunces', serif;
-				font-size: 20px;
-				font-weight: 700;
-				color: #E8844A;
-				padding-top: 10px;
-				flex-shrink: 0;
-				text-align: left;
-			}
-			.reveal .slides section .wasl-sp-road .sp-content {
-				flex: 1;
-				background-color: #F7EFE4;
-				padding: 14px 22px;
-				border-left: 4px solid #7BA888;
-				border-radius: 0 6px 6px 0;
-			}
-			.reveal .slides section .wasl-sp-road .sp-content ul {
-				list-style: none;
-				margin: 0;
-				padding: 0;
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 6px 18px;
-			}
-			.reveal .slides section .wasl-sp-road .sp-content li {
-				font-size: 13px;
-				color: #2A2622;
-				display: flex;
-				align-items: flex-start;
-				gap: 8px;
-				text-align: left;
-				line-height: 1.4;
-			}
-			.reveal .slides section .wasl-sp-road .sp-content li::before {
-				content: "•";
-				color: #E8844A;
-				font-weight: bold;
-				flex-shrink: 0;
-			}
-			.reveal .slides section .wasl-sp-road .sp-deferred .sp-label { color: #7A7168; }
-			.reveal .slides section .wasl-sp-road .sp-deferred .sp-content {
-				border-left-color: #EBE4DB;
-				opacity: 0.78;
 			}
 
 			/* ---------- Closing quote slide ---------- */
@@ -6594,32 +6814,60 @@
 				<!-- Sprint Planning: Ideas to Sprint flow -->
 				<section class="wasl-section" data-background-color="#FDF8F3">
 					<div class="wasl-slide wasl-sp-flow">
-						<h1>How We Got from Ideas to Sprint</h1>
+						<div class="sp-head">
+							<h1>How We Got from Ideas to Sprint</h1>
+							<div class="sp-head-rule"></div>
+							<div class="sp-head-sub">A five-step path from scattered ideas to a concrete, shippable commitment, where every stage narrows the scope and sharpens the decision.</div>
+						</div>
 						<div class="sp-flow">
 							<div class="sp-step">
-								<div class="sp-box"><div class="sp-box-title">User Stories</div></div>
-								<div class="sp-box-desc">&ldquo;15 stories, 3 per persona&rdquo;</div>
+								<div class="sp-num">01</div>
+								<div class="sp-box">
+									<div class="sp-box-title">User Stories</div>
+									<div class="sp-box-desc">&ldquo;15 stories, 3 per persona&rdquo;</div>
+									<div class="sp-box-output">Output: 15 stories</div>
+								</div>
 							</div>
-							<div class="sp-arrow">&rarr;</div>
+							<div class="sp-arrow"><i class="fas fa-arrow-right"></i></div>
 							<div class="sp-step">
-								<div class="sp-box"><div class="sp-box-title">Story Maps</div></div>
-								<div class="sp-box-desc">&ldquo;Visualize each persona&rsquo;s full journey&rdquo;</div>
+								<div class="sp-num">02</div>
+								<div class="sp-box">
+									<div class="sp-box-title">Story Maps</div>
+									<div class="sp-box-desc">&ldquo;Visualize each persona&rsquo;s full journey&rdquo;</div>
+									<div class="sp-box-output">Output: 5 maps</div>
+								</div>
 							</div>
-							<div class="sp-arrow">&rarr;</div>
+							<div class="sp-arrow"><i class="fas fa-arrow-right"></i></div>
 							<div class="sp-step">
-								<div class="sp-box"><div class="sp-box-title">Prioritization</div></div>
-								<div class="sp-box-desc">&ldquo;MoSCoW for importance, SML for size&rdquo;</div>
+								<div class="sp-num">03</div>
+								<div class="sp-box">
+									<div class="sp-box-title">Prioritization</div>
+									<div class="sp-box-desc">&ldquo;MoSCoW for importance, SML for size&rdquo;</div>
+									<div class="sp-box-output">Output: Ranked items</div>
+								</div>
 							</div>
-							<div class="sp-arrow">&rarr;</div>
+							<div class="sp-arrow"><i class="fas fa-arrow-right"></i></div>
 							<div class="sp-step">
-								<div class="sp-box"><div class="sp-box-title">Product Backlog</div></div>
-								<div class="sp-box-desc">&ldquo;One ranked list, one source of truth&rdquo;</div>
+								<div class="sp-num">04</div>
+								<div class="sp-box">
+									<div class="sp-box-title">Product Backlog</div>
+									<div class="sp-box-desc">&ldquo;One ranked list, one source of truth&rdquo;</div>
+									<div class="sp-box-output">Output: Backlog</div>
+								</div>
 							</div>
-							<div class="sp-arrow">&rarr;</div>
+							<div class="sp-arrow"><i class="fas fa-arrow-right"></i></div>
 							<div class="sp-step">
-								<div class="sp-box"><div class="sp-box-title">Sprint Backlog</div></div>
-								<div class="sp-box-desc">&ldquo;What we commit to in Sprint 1&rdquo;</div>
+								<div class="sp-num">05</div>
+								<div class="sp-box">
+									<div class="sp-box-title">Sprint Backlog</div>
+									<div class="sp-box-desc">&ldquo;What we commit to in Sprint 1&rdquo;</div>
+									<div class="sp-box-output">Output: 5 stories</div>
+								</div>
 							</div>
+						</div>
+						<div class="sp-footer">
+							<div class="sp-footer-quote">&ldquo;Each arrow is a decision. Something left behind so the next stage can be sharper.&rdquo;</div>
+							<div class="sp-footer-meta">15 stories &rarr; 5 committed</div>
 						</div>
 					</div>
 				</section>
@@ -6631,77 +6879,92 @@
 						<div class="sp-grid">
 							<div class="sp-col">
 								<div class="sp-av ember"><img src="images/astrid.png" alt="Astrid"></div>
-								<div class="sp-card">
-									<div class="sp-card-id">A1</div>
-									<div class="sp-card-text">As Astrid, I want to tell my family I&rsquo;m okay with a single tap each morning, so they stop worrying and I keep my independence.</div>
-								</div>
-								<div class="sp-card">
-									<div class="sp-card-id">A2</div>
-									<div class="sp-card-text">As Astrid, I want one clearly visible button to call for help in an emergency, so I can reach my family fast without dialing numbers.</div>
-								</div>
-								<div class="sp-card">
-									<div class="sp-card-id">A3</div>
-									<div class="sp-card-text">As Astrid, I want to request a grocery delivery from inside the app, so I don&rsquo;t have to call or travel when I&rsquo;m tired.</div>
+								<div class="sp-name">Astrid</div>
+								<div class="sp-cards">
+									<div class="sp-card">
+										<div class="sp-card-id">A1</div>
+										<div class="sp-card-text">As Astrid, I want to tell my family I&rsquo;m okay with a single tap each morning, so they stop worrying and I keep my independence.</div>
+									</div>
+									<div class="sp-card">
+										<div class="sp-card-id">A2</div>
+										<div class="sp-card-text">As Astrid, I want one clearly visible button to call for help in an emergency, so I can reach my family fast without dialing numbers.</div>
+									</div>
+									<div class="sp-card">
+										<div class="sp-card-id">A3</div>
+										<div class="sp-card-text">As Astrid, I want to request a grocery delivery from inside the app, so I don&rsquo;t have to call or travel when I&rsquo;m tired.</div>
+									</div>
 								</div>
 							</div>
 							<div class="sp-col">
 								<div class="sp-av sage"><img src="images/magnus.png" alt="Magnus"></div>
-								<div class="sp-card">
-									<div class="sp-card-id">M1</div>
-									<div class="sp-card-text">As Magnus, I want one screen showing my mother&rsquo;s current status, so I can be reassured in ten seconds.</div>
-								</div>
-								<div class="sp-card">
-									<div class="sp-card-id">M2</div>
-									<div class="sp-card-text">As Magnus, I want to be notified if my mother hasn&rsquo;t checked in by noon, so I know when to actually worry.</div>
-								</div>
-								<div class="sp-card">
-									<div class="sp-card-id">M3</div>
-									<div class="sp-card-text">As Magnus, I want to see my mother&rsquo;s activity trends over weeks, so I can spot slow changes before they become problems.</div>
+								<div class="sp-name">Magnus</div>
+								<div class="sp-cards">
+									<div class="sp-card">
+										<div class="sp-card-id">M1</div>
+										<div class="sp-card-text">As Magnus, I want one screen showing my mother&rsquo;s current status, so I can be reassured in ten seconds.</div>
+									</div>
+									<div class="sp-card">
+										<div class="sp-card-id">M2</div>
+										<div class="sp-card-text">As Magnus, I want to be notified if my mother hasn&rsquo;t checked in by noon, so I know when to actually worry.</div>
+									</div>
+									<div class="sp-card">
+										<div class="sp-card-id">M3</div>
+										<div class="sp-card-text">As Magnus, I want to see my mother&rsquo;s activity trends over weeks, so I can spot slow changes before they become problems.</div>
+									</div>
 								</div>
 							</div>
 							<div class="sp-col">
 								<div class="sp-av blush"><img src="images/ingrid.png" alt="Ingrid"></div>
-								<div class="sp-card">
-									<div class="sp-card-id">I1</div>
-									<div class="sp-card-text">As Ingrid, I want to book services for Astrid from my phone, so I can help without making her feel dependent.</div>
-								</div>
-								<div class="sp-card">
-									<div class="sp-card-id">I2</div>
-									<div class="sp-card-text">As Ingrid, I want to see which family member booked or handled each task, so we coordinate without duplicating effort.</div>
-								</div>
-								<div class="sp-card">
-									<div class="sp-card-id">I3</div>
-									<div class="sp-card-text">As Ingrid, I want to add personal notes to a service request, so the provider serves Astrid the way we would.</div>
+								<div class="sp-name">Ingrid</div>
+								<div class="sp-cards">
+									<div class="sp-card">
+										<div class="sp-card-id">I1</div>
+										<div class="sp-card-text">As Ingrid, I want to book services for Astrid from my phone, so I can help without making her feel dependent.</div>
+									</div>
+									<div class="sp-card">
+										<div class="sp-card-id">I2</div>
+										<div class="sp-card-text">As Ingrid, I want to see which family member booked or handled each task, so we coordinate without duplicating effort.</div>
+									</div>
+									<div class="sp-card">
+										<div class="sp-card-id">I3</div>
+										<div class="sp-card-text">As Ingrid, I want to add personal notes to a service request, so the provider serves Astrid the way we would.</div>
+									</div>
 								</div>
 							</div>
 							<div class="sp-col">
 								<div class="sp-av ember"><img src="images/sofia.png" alt="Sofia"></div>
-								<div class="sp-card">
-									<div class="sp-card-id">S1</div>
-									<div class="sp-card-text">As Sofia, I want to see small human updates about my grandmother&rsquo;s day, so I have a reason to call her instead of a duty to.</div>
-								</div>
-								<div class="sp-card">
-									<div class="sp-card-id">S2</div>
-									<div class="sp-card-text">As Sofia, I want to start a video call directly from an activity entry, so I can reach her while the moment is fresh.</div>
-								</div>
-								<div class="sp-card">
-									<div class="sp-card-id">S3</div>
-									<div class="sp-card-text">As Sofia, I want to send a heart or short voice note to a timeline entry, so I can show affection without a full call.</div>
+								<div class="sp-name">Sofia</div>
+								<div class="sp-cards">
+									<div class="sp-card">
+										<div class="sp-card-id">S1</div>
+										<div class="sp-card-text">As Sofia, I want to see small human updates about my grandmother&rsquo;s day, so I have a reason to call her instead of a duty to.</div>
+									</div>
+									<div class="sp-card">
+										<div class="sp-card-id">S2</div>
+										<div class="sp-card-text">As Sofia, I want to start a video call directly from an activity entry, so I can reach her while the moment is fresh.</div>
+									</div>
+									<div class="sp-card">
+										<div class="sp-card-id">S3</div>
+										<div class="sp-card-text">As Sofia, I want to send a heart or short voice note to a timeline entry, so I can show affection without a full call.</div>
+									</div>
 								</div>
 							</div>
 							<div class="sp-col">
 								<div class="sp-av sage"><img src="images/Lars.png" alt="Lars"></div>
-								<div class="sp-card">
-									<div class="sp-card-id">L1</div>
-									<div class="sp-card-text">As Lars, I want a clear emergency alert with Astrid&rsquo;s location if her family can&rsquo;t be reached, so I can check on her quickly.</div>
-								</div>
-								<div class="sp-card">
-									<div class="sp-card-id">L2</div>
-									<div class="sp-card-text">As Lars, I want a one-tap way to tell the family I&rsquo;m on my way, so they know the situation is handled.</div>
-								</div>
-								<div class="sp-card">
-									<div class="sp-card-id">L3</div>
-									<div class="sp-card-text">As Lars, I want a friendly nudge to check in on Astrid if something feels off, so I can drop by informally.</div>
+								<div class="sp-name">Lars</div>
+								<div class="sp-cards">
+									<div class="sp-card">
+										<div class="sp-card-id">L1</div>
+										<div class="sp-card-text">As Lars, I want a clear emergency alert with Astrid&rsquo;s location if her family can&rsquo;t be reached, so I can check on her quickly.</div>
+									</div>
+									<div class="sp-card">
+										<div class="sp-card-id">L2</div>
+										<div class="sp-card-text">As Lars, I want a one-tap way to tell the family I&rsquo;m on my way, so they know the situation is handled.</div>
+									</div>
+									<div class="sp-card">
+										<div class="sp-card-id">L3</div>
+										<div class="sp-card-text">As Lars, I want a friendly nudge to check in on Astrid if something feels off, so I can drop by informally.</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -6713,7 +6976,7 @@
 					<div class="wasl-slide wasl-sp-journey">
 						<div class="sp-head">
 							<div class="sp-av ember"><img src="images/astrid.png" alt="Astrid"></div>
-							<h1>Astrid&rsquo;s Journey &mdash; A normal day, and a moment that matters</h1>
+							<h1>Astrid&rsquo;s Journey: A normal day, and a moment that matters</h1>
 						</div>
 						<div class="sp-map cols-3">
 							<div class="sp-cell"></div>
@@ -6722,13 +6985,13 @@
 							<div class="sp-cell sp-h">Emergency</div>
 
 							<div class="sp-cell sp-rl">Essential</div>
-							<div class="sp-cell sp-ess"><div class="sp-story">A1 &mdash; Daily check-in</div></div>
+							<div class="sp-cell sp-ess"><div class="sp-story">A1 · Daily check-in</div></div>
 							<div class="sp-cell sp-ess"></div>
-							<div class="sp-cell sp-ess"><div class="sp-story">A2 &mdash; SOS button</div></div>
+							<div class="sp-cell sp-ess"><div class="sp-story">A2 · SOS button</div></div>
 
 							<div class="sp-cell sp-rl">Enhance</div>
 							<div class="sp-cell"></div>
-							<div class="sp-cell"><div class="sp-story">A3 &mdash; Book grocery delivery</div></div>
+							<div class="sp-cell"><div class="sp-story">A3 · Book grocery delivery</div></div>
 							<div class="sp-cell"></div>
 
 							<div class="sp-cell sp-rl sp-fut">Future</div>
@@ -6744,7 +7007,7 @@
 					<div class="wasl-slide wasl-sp-journey">
 						<div class="sp-head">
 							<div class="sp-av sage"><img src="images/magnus.png" alt="Magnus"></div>
-							<h1>Magnus&rsquo;s Journey &mdash; Peace of mind in ten seconds</h1>
+							<h1>Magnus&rsquo;s Journey: Peace of mind in ten seconds</h1>
 						</div>
 						<div class="sp-map cols-4">
 							<div class="sp-cell"></div>
@@ -6755,15 +7018,15 @@
 
 							<div class="sp-cell sp-rl">Essential</div>
 							<div class="sp-cell sp-ess"></div>
-							<div class="sp-cell sp-ess"><div class="sp-story">M1 &mdash; Glance dashboard</div></div>
-							<div class="sp-cell sp-ess"><div class="sp-story">M2 &mdash; Missed check-in alert</div></div>
+							<div class="sp-cell sp-ess"><div class="sp-story">M1 · Glance dashboard</div></div>
+							<div class="sp-cell sp-ess"><div class="sp-story">M2 · Missed check-in alert</div></div>
 							<div class="sp-cell sp-ess"></div>
 
 							<div class="sp-cell sp-rl">Enhance</div>
 							<div class="sp-cell"></div>
 							<div class="sp-cell"></div>
 							<div class="sp-cell"></div>
-							<div class="sp-cell"><div class="sp-story">M3 &mdash; Review vitals trends</div></div>
+							<div class="sp-cell"><div class="sp-story">M3 · Review vitals trends</div></div>
 
 							<div class="sp-cell sp-rl sp-fut">Future</div>
 							<div class="sp-cell sp-fut"><div class="sp-story">Home screen widget</div></div>
@@ -6779,7 +7042,7 @@
 					<div class="wasl-slide wasl-sp-journey">
 						<div class="sp-head">
 							<div class="sp-av blush"><img src="images/ingrid.png" alt="Ingrid"></div>
-							<h1>Ingrid&rsquo;s Journey &mdash; Invisible care, made visible</h1>
+							<h1>Ingrid&rsquo;s Journey: Invisible care, made visible</h1>
 						</div>
 						<div class="sp-map cols-3">
 							<div class="sp-cell"></div>
@@ -6789,12 +7052,12 @@
 
 							<div class="sp-cell sp-rl">Essential</div>
 							<div class="sp-cell sp-ess"></div>
-							<div class="sp-cell sp-ess"><div class="sp-story">I1 &mdash; Book on Astrid&rsquo;s behalf</div></div>
-							<div class="sp-cell sp-ess"><div class="sp-story">I2 &mdash; See who did what</div></div>
+							<div class="sp-cell sp-ess"><div class="sp-story">I1 · Book on Astrid&rsquo;s behalf</div></div>
+							<div class="sp-cell sp-ess"><div class="sp-story">I2 · See who did what</div></div>
 
 							<div class="sp-cell sp-rl">Enhance</div>
 							<div class="sp-cell"></div>
-							<div class="sp-cell"><div class="sp-story">I3 &mdash; Add notes to booking</div></div>
+							<div class="sp-cell"><div class="sp-story">I3 · Add notes to booking</div></div>
 							<div class="sp-cell"></div>
 
 							<div class="sp-cell sp-rl sp-fut">Future</div>
@@ -6810,7 +7073,7 @@
 					<div class="wasl-slide wasl-sp-journey">
 						<div class="sp-head">
 							<div class="sp-av ember"><img src="images/sofia.png" alt="Sofia"></div>
-							<h1>Sofia&rsquo;s Journey &mdash; A reason to call, not a duty</h1>
+							<h1>Sofia&rsquo;s Journey: A reason to call, not a duty</h1>
 						</div>
 						<div class="sp-map cols-3">
 							<div class="sp-cell"></div>
@@ -6819,18 +7082,18 @@
 							<div class="sp-cell sp-h">Reach Out</div>
 
 							<div class="sp-cell sp-rl">Essential</div>
-							<div class="sp-cell sp-ess"><div class="sp-story">S1 &mdash; Daily highlights</div></div>
+							<div class="sp-cell sp-ess"><div class="sp-story">S1 · Daily highlights</div></div>
 							<div class="sp-cell sp-ess"></div>
 							<div class="sp-cell sp-ess"></div>
 
 							<div class="sp-cell sp-rl">Enhance</div>
 							<div class="sp-cell"></div>
 							<div class="sp-cell"></div>
-							<div class="sp-cell"><div class="sp-story">S2 &mdash; Video call from entry</div></div>
+							<div class="sp-cell"><div class="sp-story">S2 · Video call from entry</div></div>
 
 							<div class="sp-cell sp-rl sp-fut">Future</div>
 							<div class="sp-cell sp-fut"><div class="sp-story">Weekly recap</div></div>
-							<div class="sp-cell sp-fut"><div class="sp-story">S3 &mdash; React with heart/voice</div></div>
+							<div class="sp-cell sp-fut"><div class="sp-story">S3 · React with heart/voice</div></div>
 							<div class="sp-cell sp-fut"><div class="sp-story">Schedule regular call time</div></div>
 						</div>
 					</div>
@@ -6841,7 +7104,7 @@
 					<div class="wasl-slide wasl-sp-journey">
 						<div class="sp-head">
 							<div class="sp-av sage"><img src="images/Lars.png" alt="Lars"></div>
-							<h1>Lars&rsquo;s Journey &mdash; Ready, not watching</h1>
+							<h1>Lars&rsquo;s Journey: Ready, not watching</h1>
 						</div>
 						<div class="sp-map cols-3">
 							<div class="sp-cell"></div>
@@ -6851,47 +7114,78 @@
 
 							<div class="sp-cell sp-rl">Essential</div>
 							<div class="sp-cell sp-ess"></div>
-							<div class="sp-cell sp-ess"><div class="sp-story">L1 &mdash; Receive SOS fallback alert</div></div>
+							<div class="sp-cell sp-ess"><div class="sp-story">L1 · Receive SOS fallback alert</div></div>
 							<div class="sp-cell sp-ess"></div>
 
 							<div class="sp-cell sp-rl">Enhance</div>
 							<div class="sp-cell"></div>
 							<div class="sp-cell"></div>
-							<div class="sp-cell"><div class="sp-story">L2 &mdash; One-tap &lsquo;I&rsquo;m on my way&rsquo;</div></div>
+							<div class="sp-cell"><div class="sp-story">L2 · One-tap &lsquo;I&rsquo;m on my way&rsquo;</div></div>
 
 							<div class="sp-cell sp-rl sp-fut">Future</div>
 							<div class="sp-cell sp-fut"></div>
-							<div class="sp-cell sp-fut"><div class="sp-story">L3 &mdash; Non-emergency nudge</div></div>
+							<div class="sp-cell sp-fut"><div class="sp-story">L3 · Non-emergency nudge</div></div>
 							<div class="sp-cell sp-fut"><div class="sp-story">Call family back from alert</div></div>
 						</div>
-						<div class="sp-caption">&ldquo;Lars&rsquo;s map is sparse on the left by design &mdash; his persona doesn&rsquo;t want presence, only clear summons when it matters.&rdquo;</div>
+						<div class="sp-caption">&ldquo;Lars&rsquo;s map is sparse on the left by design. His persona doesn&rsquo;t want presence, only clear summons when it matters.&rdquo;</div>
 					</div>
 				</section>
 
 				<!-- Sprint Planning: MoSCoW -->
 				<section class="wasl-section" data-background-color="#FDF8F3">
 					<div class="wasl-slide wasl-sp-moscow">
-						<h1>MoSCoW &mdash; How Important?</h1>
+						<h1>MoSCoW: How Important?</h1>
 						<div class="sp-grid">
 							<div class="sp-quad sp-must">
-								<div class="sp-label">Must Have</div>
+								<div class="sp-head">
+									<div class="sp-label">Must Have</div>
+									<div class="sp-count">5 stories</div>
+								</div>
 								<div class="sp-desc">&ldquo;The core promise. Sprint 1.&rdquo;</div>
-								<div class="sp-stories">A1, A2, M1, M2, L1</div>
+								<ul class="sp-list">
+									<li><span class="sp-code">A1</span><span class="sp-story-name">Daily check-in</span></li>
+									<li><span class="sp-code">A2</span><span class="sp-story-name">SOS button</span></li>
+									<li><span class="sp-code">M1</span><span class="sp-story-name">Family dashboard</span></li>
+									<li><span class="sp-code">M2</span><span class="sp-story-name">Missed check-in alert</span></li>
+									<li><span class="sp-code">L1</span><span class="sp-story-name">Neighbor SOS fallback</span></li>
+								</ul>
 							</div>
 							<div class="sp-quad sp-should">
-								<div class="sp-label">Should Have</div>
+								<div class="sp-head">
+									<div class="sp-label">Should Have</div>
+									<div class="sp-count">4 stories</div>
+								</div>
 								<div class="sp-desc">&ldquo;High value, not launch-blocking.&rdquo;</div>
-								<div class="sp-stories">A3, I1, S1, L2</div>
+								<ul class="sp-list">
+									<li><span class="sp-code">A3</span><span class="sp-story-name">Book grocery delivery</span></li>
+									<li><span class="sp-code">I1</span><span class="sp-story-name">Book on Astrid&rsquo;s behalf</span></li>
+									<li><span class="sp-code">S1</span><span class="sp-story-name">Daily highlights</span></li>
+									<li><span class="sp-code">L2</span><span class="sp-story-name">&lsquo;I&rsquo;m on my way&rsquo; confirmation</span></li>
+								</ul>
 							</div>
 							<div class="sp-quad sp-could">
-								<div class="sp-label">Could Have</div>
+								<div class="sp-head">
+									<div class="sp-label">Could Have</div>
+									<div class="sp-count">4 stories</div>
+								</div>
 								<div class="sp-desc">&ldquo;Enhance when capacity allows.&rdquo;</div>
-								<div class="sp-stories">M3, I2, I3, S2</div>
+								<ul class="sp-list">
+									<li><span class="sp-code">M3</span><span class="sp-story-name">Vitals trends</span></li>
+									<li><span class="sp-code">I2</span><span class="sp-story-name">See who did what</span></li>
+									<li><span class="sp-code">I3</span><span class="sp-story-name">Notes on booking</span></li>
+									<li><span class="sp-code">S2</span><span class="sp-story-name">Video call from timeline</span></li>
+								</ul>
 							</div>
 							<div class="sp-quad sp-wont">
-								<div class="sp-label">Won&rsquo;t Have</div>
+								<div class="sp-head">
+									<div class="sp-label">Won&rsquo;t Have</div>
+									<div class="sp-count">2 stories</div>
+								</div>
 								<div class="sp-desc">&ldquo;Deliberately cut. Shows we can say no.&rdquo;</div>
-								<div class="sp-stories">S3, L3</div>
+								<ul class="sp-list">
+									<li><span class="sp-code">S3</span><span class="sp-story-name">Heart / voice note reaction</span></li>
+									<li><span class="sp-code">L3</span><span class="sp-story-name">Non-emergency nudge</span></li>
+								</ul>
 							</div>
 						</div>
 						<div class="sp-caption">&ldquo;MoSCoW only works if you&rsquo;re willing to cut. We cut two.&rdquo;</div>
@@ -6901,7 +7195,7 @@
 				<!-- Sprint Planning: SML -->
 				<section class="wasl-section" data-background-color="#FDF8F3">
 					<div class="wasl-slide wasl-sp-sml">
-						<h1>SML &mdash; How Much Effort?</h1>
+						<h1>SML: How Much Effort?</h1>
 						<div class="sp-bars">
 							<div class="sp-bar small">
 								<div class="sp-bar-label">Small</div>
@@ -6919,7 +7213,7 @@
 								<div class="sp-bar-stories">A3, M3, S2</div>
 							</div>
 						</div>
-						<div class="sp-caption">&ldquo;Three Large stories exist. None made it into Sprint 1 &mdash; they need to be broken down first.&rdquo;</div>
+						<div class="sp-caption">&ldquo;Three Large stories exist. None made it into Sprint 1. They need to be broken down first.&rdquo;</div>
 					</div>
 				</section>
 
@@ -6961,18 +7255,79 @@
 				<!-- Sprint Planning: Sprint 1 Commitment -->
 				<section class="wasl-section" data-background-color="#FDF8F3">
 					<div class="wasl-slide wasl-sp-commit">
-						<h1>Sprint 1 &mdash; Our Commitment</h1>
+						<h1>Sprint 1: Our Commitment</h1>
 						<div class="sp-goal">
-							<div class="sp-goal-text">&ldquo;Ship a working end-to-end slice of Wasl &mdash; Astrid can say she&rsquo;s okay, Magnus can see it, Lars can help when no one else can.&rdquo;</div>
+							<div class="sp-goal-label">Sprint Goal</div>
+							<div class="sp-goal-text">&ldquo;Ship a working end-to-end slice of Wasl: Astrid can say she&rsquo;s okay, Magnus can see it, Lars can help when no one else can.&rdquo;</div>
 						</div>
 						<div class="sp-cards">
-							<div class="sp-card"><div class="sp-card-id">A1 (S)</div><div class="sp-card-title">Daily check-in</div></div>
-							<div class="sp-card"><div class="sp-card-id">A2 (M)</div><div class="sp-card-title">SOS button</div></div>
-							<div class="sp-card"><div class="sp-card-id">M1 (M)</div><div class="sp-card-title">Family dashboard</div></div>
-							<div class="sp-card"><div class="sp-card-id">M2 (S)</div><div class="sp-card-title">Missed check-in alert</div></div>
-							<div class="sp-card"><div class="sp-card-id">L1 (M)</div><div class="sp-card-title">Neighbor SOS fallback</div></div>
+							<div class="sp-card">
+								<div class="sp-av ember sp-card-av"><img src="images/astrid.png" alt="Astrid"></div>
+								<div class="sp-card-meta">A1<span class="sp-card-size">S</span></div>
+								<div class="sp-card-title">Daily check-in</div>
+								<div class="sp-card-crit">One tap sends<br /> &ldquo;I&rsquo;m okay&rdquo; to family.</div>
+							</div>
+							<div class="sp-card">
+								<div class="sp-av ember sp-card-av"><img src="images/astrid.png" alt="Astrid"></div>
+								<div class="sp-card-meta">A2<span class="sp-card-size">M</span></div>
+								<div class="sp-card-title">SOS button</div>
+								<div class="sp-card-crit">Large button notifies all family contacts instantly.</div>
+							</div>
+							<div class="sp-card">
+								<div class="sp-av sage sp-card-av"><img src="images/magnus.png" alt="Magnus"></div>
+								<div class="sp-card-meta">M1<span class="sp-card-size">M</span></div>
+								<div class="sp-card-title">Family dashboard</div>
+								<div class="sp-card-crit">Mother&rsquo;s status visible in under 10 seconds.</div>
+							</div>
+							<div class="sp-card">
+								<div class="sp-av sage sp-card-av"><img src="images/magnus.png" alt="Magnus"></div>
+								<div class="sp-card-meta">M2<span class="sp-card-size">S</span></div>
+								<div class="sp-card-title">Missed check-in alert</div>
+								<div class="sp-card-crit">Push alert fires if no check-in by noon.</div>
+							</div>
+							<div class="sp-card">
+								<div class="sp-av sage sp-card-av"><img src="images/Lars.png" alt="Lars"></div>
+								<div class="sp-card-meta">L1<span class="sp-card-size">M</span></div>
+								<div class="sp-card-title">Neighbor SOS fallback</div>
+								<div class="sp-card-crit">Lars alerted if family doesn&rsquo;t respond in 5 min.</div>
+							</div>
 						</div>
-						<div class="sp-footer">Sprint length: 2 weeks &middot; Total: 2 Small + 3 Medium</div>
+						<div class="sp-glance">
+							<div class="sp-stat">
+								<div class="sp-stat-label">Sprint Length</div>
+								<div class="sp-stat-value">2 weeks</div>
+								<div class="sp-stat-sub">10 working days</div>
+							</div>
+							<div class="sp-stat">
+								<div class="sp-stat-label">Scope</div>
+								<div class="sp-stat-value">5 stories</div>
+								<div class="sp-stat-sub">2 Small &middot; 3 Medium</div>
+							</div>
+							<div class="sp-stat">
+								<div class="sp-stat-label">Team</div>
+								<div class="sp-stat-value">7 members</div>
+								<div class="sp-stat-sub">PO &middot; SM &middot; 5 Dev</div>
+							</div>
+							<div class="sp-stat">
+								<div class="sp-stat-label">Ceremonies</div>
+								<div class="sp-stat-value">Daily · Review · Retro</div>
+								<div class="sp-stat-sub">15-min standup each morning</div>
+							</div>
+							<div class="sp-stat">
+								<div class="sp-stat-label">Slice</div>
+								<div class="sp-stat-value">End-to-end</div>
+								<div class="sp-stat-sub">Astrid &rarr; Magnus &rarr; Lars</div>
+							</div>
+						</div>
+						<div class="sp-dod">
+							<div class="sp-dod-label">Definition of Done</div>
+							<div class="sp-dod-items">
+								<div class="sp-dod-item"><i class="fas fa-check"></i>Code reviewed &amp; merged</div>
+								<div class="sp-dod-item"><i class="fas fa-check"></i>Tested on iOS &amp; Android</div>
+								<div class="sp-dod-item"><i class="fas fa-check"></i>Accessibility checked (large tap targets)</div>
+								<div class="sp-dod-item"><i class="fas fa-check"></i>Demoed to Product Owner</div>
+							</div>
+						</div>
 					</div>
 				</section>
 
@@ -7001,49 +7356,12 @@
 					</div>
 				</section>
 
-				<!-- Sprint Planning: The Road Ahead -->
-				<section class="wasl-section" data-background-color="#FDF8F3">
-					<div class="wasl-slide wasl-sp-road">
-						<h1>The Road Ahead</h1>
-						<div class="sp-row">
-							<div class="sp-label">Sprint 2</div>
-							<div class="sp-content">
-								<ul>
-									<li>S1 &mdash; Daily highlights (Sofia)</li>
-									<li>I1 &mdash; Book on Astrid&rsquo;s behalf (Ingrid)</li>
-									<li>L2 &mdash; &ldquo;I&rsquo;m on my way&rdquo; (Lars)</li>
-									<li>A3 &mdash; Grocery delivery (after breakdown)</li>
-								</ul>
-							</div>
-						</div>
-						<div class="sp-row">
-							<div class="sp-label">Sprint 3+</div>
-							<div class="sp-content">
-								<ul>
-									<li>I2, I3 &mdash; Ingrid coordination features</li>
-									<li>M3 &mdash; Magnus vitals trends</li>
-									<li>S2 &mdash; Sofia video call</li>
-								</ul>
-							</div>
-						</div>
-						<div class="sp-row sp-deferred">
-							<div class="sp-label">Deferred</div>
-							<div class="sp-content">
-								<ul>
-									<li>S3 &mdash; Reactions on timeline</li>
-									<li>L3 &mdash; Non-emergency neighbor nudge</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
-
 				<!-- Sprint Planning: Closing Quote -->
 				<section class="wasl-section" data-background-color="#FDF8F3">
 					<div class="wasl-slide wasl-sp-quote">
 						<div class="sp-bg"></div>
 						<div class="sp-quote-content">
-							<div class="sp-quote">&ldquo;We didn&rsquo;t prioritize by what was easiest. We prioritized around one question &mdash; what&rsquo;s the smallest version of Wasl that closes the distance?&rdquo;</div>
+							<div class="sp-quote">&ldquo;We didn&rsquo;t prioritize by what was easiest. We prioritized around one question: what&rsquo;s the smallest version of Wasl that closes the distance?&rdquo;</div>
 							<div class="sp-arabic">وَصْل</div>
 						</div>
 					</div>
@@ -7142,9 +7460,10 @@
 				'.wasl-close .w-footer-text',
 				/* Sprint planning slides */
 				'.wasl-sp-title .sp-content > *',
-				'.wasl-sp-flow h1',
+				'.wasl-sp-flow .sp-head > *',
 				'.wasl-sp-flow .sp-step',
 				'.wasl-sp-flow .sp-arrow',
+				'.wasl-sp-flow .sp-footer > *',
 				'.wasl-sp-stories h1',
 				'.wasl-sp-stories .sp-col',
 				'.wasl-sp-journey .sp-head',
@@ -7161,11 +7480,10 @@
 				'.wasl-sp-commit h1',
 				'.wasl-sp-commit .sp-goal',
 				'.wasl-sp-commit .sp-card',
-				'.wasl-sp-commit .sp-footer',
+				'.wasl-sp-commit .sp-stat',
+				'.wasl-sp-commit .sp-dod',
 				'.wasl-sp-why h1',
 				'.wasl-sp-why .sp-card',
-				'.wasl-sp-road h1',
-				'.wasl-sp-road .sp-row',
 				'.wasl-sp-quote .sp-quote',
 				'.wasl-sp-quote .sp-arabic'
 			].join(',');
