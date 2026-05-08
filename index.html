@@ -6320,6 +6320,1999 @@
 				font-weight: 600;
 			}
 
+			/* ======================= Day 3 Slides (Disruption + Delivery Report) ======================= */
+
+			/* ---------- Section divider (Part tag overlay) ---------- */
+			.reveal .slides section .wasl-sp-title .sp-part-tag {
+				font-size: 11px;
+				font-weight: 700;
+				letter-spacing: 0.28em;
+				text-transform: uppercase;
+				color: #7BA888;
+				margin-bottom: 16px;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-sp-title .sp-rule {
+				width: 56px;
+				height: 3px;
+				background-color: #E8844A;
+				border-radius: 2px;
+				margin: 22px auto 0;
+			}
+
+			/* ---------- Two columns: Bad news / Opportunity ---------- */
+			.reveal .slides section .wasl-d3-two {
+				padding: 36px 56px 28px;
+			}
+			.reveal .slides section .wasl-d3-two h1 {
+				font-size: 34px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-two .d3-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 20px;
+			}
+			.reveal .slides section .wasl-d3-two .d3-cols {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 22px;
+				flex: 1;
+				min-height: 0;
+				margin-bottom: 16px;
+			}
+			.reveal .slides section .wasl-d3-two .d3-col {
+				background-color: #F7EFE4;
+				border-radius: 10px;
+				padding: 22px 26px 24px;
+				display: flex;
+				flex-direction: column;
+				border-top: 4px solid #D64545;
+				box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+				min-height: 0;
+				position: relative;
+			}
+			.reveal .slides section .wasl-d3-two .d3-col.sage {
+				border-top-color: #7BA888;
+			}
+			.reveal .slides section .wasl-d3-two .d3-eyebrow {
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: #D64545;
+				margin-bottom: 8px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-two .d3-col.sage .d3-eyebrow {
+				color: #7BA888;
+			}
+			.reveal .slides section .wasl-d3-two .d3-col-title {
+				font-family: 'Fraunces', serif;
+				font-size: 20px;
+				font-weight: 700;
+				color: #2A2622;
+				margin-bottom: 14px;
+				line-height: 1.3;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-two .d3-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+			.reveal .slides section .wasl-d3-two .d3-list li {
+				display: flex;
+				align-items: flex-start;
+				gap: 10px;
+				font-size: 14.5px;
+				line-height: 1.5;
+				color: #2A2622;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-two .d3-list li i {
+				color: #D64545;
+				font-size: 11px;
+				margin-top: 6px;
+				flex-shrink: 0;
+			}
+			.reveal .slides section .wasl-d3-two .d3-col.sage .d3-list li i {
+				color: #7BA888;
+			}
+			.reveal .slides section .wasl-d3-two .d3-bottom {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 20px;
+				color: #E8844A;
+				text-align: center;
+				line-height: 1.4;
+				padding: 6px 60px 0;
+			}
+
+			/* ---------- Three numbered decision cards ---------- */
+			.reveal .slides section .wasl-d3-decisions {
+				padding: 36px 56px 30px;
+			}
+			.reveal .slides section .wasl-d3-decisions h1 {
+				font-size: 32px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-decisions .d3-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 22px;
+			}
+			.reveal .slides section .wasl-d3-decisions .d3-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 18px;
+				flex: 1;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-d3-decisions .d3-card {
+				background-color: #F7EFE4;
+				border-radius: 10px;
+				padding: 22px 22px 22px;
+				display: flex;
+				flex-direction: column;
+				border-top: 4px solid #E8844A;
+				box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+				position: relative;
+				overflow: hidden;
+			}
+			.reveal .slides section .wasl-d3-decisions .d3-card:nth-child(2) { border-top-color: #7BA888; }
+			.reveal .slides section .wasl-d3-decisions .d3-card:nth-child(3) { border-top-color: #C9BEB1; }
+			.reveal .slides section .wasl-d3-decisions .d3-num {
+				font-family: 'Fraunces', serif;
+				font-size: 56px;
+				font-weight: 700;
+				color: #E8844A;
+				line-height: 1;
+				margin-bottom: 10px;
+				opacity: 0.85;
+			}
+			.reveal .slides section .wasl-d3-decisions .d3-card:nth-child(2) .d3-num { color: #7BA888; }
+			.reveal .slides section .wasl-d3-decisions .d3-card:nth-child(3) .d3-num { color: #8A7C6B; }
+			.reveal .slides section .wasl-d3-decisions .d3-card-title {
+				font-family: 'Fraunces', serif;
+				font-size: 17px;
+				font-weight: 700;
+				color: #2A2622;
+				margin-bottom: 10px;
+				line-height: 1.3;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-decisions .d3-card-text {
+				font-size: 13.5px;
+				color: #5A5148;
+				line-height: 1.55;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-decisions .d3-card-text strong {
+				color: #2A2622;
+				font-weight: 600;
+			}
+
+			/* ---------- Reinertsen Matrix explained (left text + 3x3 right) ---------- */
+			.reveal .slides section .wasl-d3-matrix {
+				padding: 32px 50px 24px;
+			}
+			.reveal .slides section .wasl-d3-matrix h1 {
+				font-size: 30px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 18px;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-cols {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 32px;
+				flex: 1;
+				min-height: 0;
+				align-items: stretch;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-text {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 14px;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-q {
+				display: flex;
+				align-items: flex-start;
+				gap: 14px;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-q-num {
+				font-family: 'Fraunces', serif;
+				font-size: 28px;
+				font-weight: 700;
+				color: #E8844A;
+				line-height: 1;
+				flex-shrink: 0;
+				width: 28px;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-q:nth-child(2) .d3-q-num { color: #7BA888; }
+			.reveal .slides section .wasl-d3-matrix .d3-q-body {
+				flex: 1;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-q-title {
+				font-family: 'Fraunces', serif;
+				font-size: 16px;
+				font-weight: 700;
+				color: #2A2622;
+				margin-bottom: 4px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-q-text {
+				font-size: 13.5px;
+				color: #5A5148;
+				line-height: 1.5;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-explain {
+				font-size: 13.5px;
+				color: #5A5148;
+				line-height: 1.55;
+				text-align: left;
+				padding: 14px 16px;
+				background-color: #F7EFE4;
+				border-left: 3px solid #E8844A;
+				border-radius: 0 6px 6px 0;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-explain strong { color: #2A2622; font-weight: 700; }
+			.reveal .slides section .wasl-d3-matrix .d3-mx {
+				display: grid;
+				grid-template-columns: 28px 1fr 1fr 1fr;
+				grid-template-rows: 28px 1fr 1fr 1fr;
+				gap: 6px;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-mx-axis-x {
+				grid-column: 2 / -1;
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 6px;
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #7A7168;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-mx-axis-x > div {
+				padding-bottom: 4px;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-mx-axis-y {
+				grid-row: 2 / -1;
+				grid-column: 1 / 2;
+				display: grid;
+				grid-template-rows: 1fr 1fr 1fr;
+				gap: 6px;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-mx-axis-y > div {
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #7A7168;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				writing-mode: vertical-rl;
+				transform: rotate(180deg);
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-mx-cell {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 6px;
+				font-family: 'Fraunces', serif;
+				font-size: 22px;
+				font-weight: 700;
+				color: #2A2622;
+				background-color: #F7EFE4;
+				border: 1px solid #EBE4DB;
+				min-height: 50px;
+			}
+			/* Tiers map 1:1 to the priority bands below the matrix.
+			   tier-1: solid ember, the do-first hero (Cell 1)
+			   tier-2: ember tint, top-priority family (Cell 2) — matches "Top priority" band
+			   tier-3: blush, defer family (Cells 3, 4, 5) — matches "Revisit or defer" band
+			   tier-4: neutral, low-priority family (Cells 6, 7, 8, 9) — matches "Low priority" band */
+			.reveal .slides section .wasl-d3-matrix .d3-mx-cell.tier-1 {
+				background-color: #E8844A;
+				color: #FFFFFF;
+				border-color: #E8844A;
+				font-size: 28px;
+				box-shadow: 0 6px 14px rgba(232,132,74,0.25);
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-mx-cell.tier-2 {
+				background-color: rgba(232,132,74,0.14);
+				border-color: rgba(232,132,74,0.30);
+				color: #E8844A;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-mx-cell.tier-3 {
+				background-color: rgba(245,213,196,0.55);
+				border-color: #F5D5C4;
+				color: #C96E34;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-mx-cell.tier-4 {
+				background-color: #EFEAE2;
+				border-color: #DCD2C4;
+				color: #8A7C6B;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-caption {
+				font-size: 11px;
+				font-style: italic;
+				color: #7A7168;
+				text-align: center;
+				margin-top: 12px;
+			}
+
+			/* ---------- City CoD: three rows ---------- */
+			.reveal .slides section .wasl-d3-citycod {
+				padding: 32px 56px 28px;
+			}
+			.reveal .slides section .wasl-d3-citycod h1 {
+				font-size: 30px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-citycod .d3-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 22px;
+			}
+			.reveal .slides section .wasl-d3-citycod .d3-rows {
+				display: flex;
+				flex-direction: column;
+				gap: 14px;
+				flex: 1;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-d3-citycod .d3-row {
+				display: grid;
+				grid-template-columns: 380px 36px 1fr;
+				gap: 16px;
+				align-items: center;
+				background-color: #F7EFE4;
+				border-radius: 10px;
+				padding: 16px 22px;
+				border-left: 4px solid #E8844A;
+				flex: 1;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-d3-citycod .d3-row:nth-child(2) { border-left-color: #7BA888; }
+			.reveal .slides section .wasl-d3-citycod .d3-row:nth-child(3) { border-left-color: #F5D5C4; }
+			.reveal .slides section .wasl-d3-citycod .d3-demand {
+				font-family: 'Fraunces', serif;
+				font-size: 16px;
+				font-style: italic;
+				color: #2A2622;
+				line-height: 1.35;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-citycod .d3-arrow {
+				font-size: 18px;
+				color: #E8844A;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-d3-citycod .d3-row:nth-child(2) .d3-arrow { color: #7BA888; }
+			.reveal .slides section .wasl-d3-citycod .d3-row:nth-child(3) .d3-arrow { color: #C9BEB1; }
+			.reveal .slides section .wasl-d3-citycod .d3-impact {
+				font-size: 14px;
+				color: #2A2622;
+				line-height: 1.45;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-citycod .d3-impact strong {
+				color: #E8844A;
+				font-weight: 700;
+			}
+			.reveal .slides section .wasl-d3-citycod .d3-bottom {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 17px;
+				color: #7BA888;
+				text-align: center;
+				margin-top: 16px;
+				line-height: 1.4;
+			}
+
+			/* ---------- Hero matrix populated with stories ---------- */
+			.reveal .slides section .wasl-d3-grid {
+				padding: 24px 36px 18px;
+			}
+			.reveal .slides section .wasl-d3-grid h1 {
+				font-size: 26px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 4px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-sub {
+				font-size: 12px;
+				color: #7A7168;
+				margin-bottom: 12px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-legend {
+				display: flex;
+				gap: 18px;
+				margin-bottom: 10px;
+				font-size: 10px;
+				color: #5A5148;
+				font-weight: 600;
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-legend .d3-dot {
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				margin-right: 6px;
+				vertical-align: middle;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-legend .d3-dot.keep { background-color: #7BA888; }
+			.reveal .slides section .wasl-d3-grid .d3-legend .d3-dot.defer { background-color: #E8844A; }
+			.reveal .slides section .wasl-d3-grid .d3-legend .d3-dot.cut { background-color: #C9BEB1; }
+			.reveal .slides section .wasl-d3-grid .d3-mx {
+				display: grid;
+				grid-template-columns: 26px 1fr 1fr 1fr;
+				grid-template-rows: 24px 1fr 1fr 1fr;
+				gap: 8px;
+				flex: 1;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-mx-axis-x {
+				grid-column: 2 / -1;
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 8px;
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #7A7168;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-mx-axis-y {
+				grid-row: 2 / -1;
+				grid-column: 1 / 2;
+				display: grid;
+				grid-template-rows: 1fr 1fr 1fr;
+				gap: 8px;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-mx-axis-y > div {
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #7A7168;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				writing-mode: vertical-rl;
+				transform: rotate(180deg);
+			}
+			.reveal .slides section .wasl-d3-grid .d3-cell {
+				border-radius: 8px;
+				background-color: #F7EFE4;
+				border: 1px solid #EBE4DB;
+				padding: 8px 10px 8px;
+				display: flex;
+				flex-direction: column;
+				min-height: 0;
+				min-width: 0;
+				position: relative;
+				overflow: hidden;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-cell.keep {
+				background-color: rgba(123,168,136,0.14);
+				border-color: rgba(123,168,136,0.55);
+			}
+			.reveal .slides section .wasl-d3-grid .d3-cell.do-first {
+				background-color: rgba(232,132,74,0.14);
+				border: 1.5px solid #E8844A;
+				box-shadow: 0 4px 12px rgba(232,132,74,0.15);
+			}
+			.reveal .slides section .wasl-d3-grid .d3-cell.defer {
+				background-color: rgba(245,213,196,0.45);
+				border-color: #F5D5C4;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-cell.cut {
+				background-color: #EFEAE2;
+				border-color: #DCD2C4;
+				opacity: 0.85;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-cell-head {
+				display: flex;
+				align-items: baseline;
+				justify-content: space-between;
+				margin-bottom: 5px;
+				gap: 6px;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-cell-num {
+				font-family: 'Fraunces', serif;
+				font-size: 13px;
+				font-weight: 700;
+				color: #2A2622;
+				opacity: 0.65;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-cell.do-first .d3-cell-num { color: #E8844A; opacity: 1; }
+			.reveal .slides section .wasl-d3-grid .d3-cell.keep .d3-cell-num { color: #7BA888; opacity: 1; }
+			.reveal .slides section .wasl-d3-grid .d3-cell-tag {
+				font-size: 8.5px;
+				font-weight: 700;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: #7A7168;
+				white-space: nowrap;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-cell.do-first .d3-cell-tag { color: #E8844A; }
+			.reveal .slides section .wasl-d3-grid .d3-cell.keep .d3-cell-tag { color: #7BA888; }
+			.reveal .slides section .wasl-d3-grid .d3-cell.cut .d3-cell-tag { color: #8A7C6B; }
+			.reveal .slides section .wasl-d3-grid .d3-chips {
+				display: flex;
+				flex-direction: column;
+				gap: 3px;
+				min-height: 0;
+				overflow: hidden;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-chip {
+				font-size: 9.5px;
+				font-weight: 600;
+				color: #2A2622;
+				background-color: rgba(255,255,255,0.6);
+				padding: 3px 7px;
+				border-radius: 4px;
+				line-height: 1.25;
+				border: 1px solid rgba(42,38,34,0.05);
+			}
+			.reveal .slides section .wasl-d3-grid .d3-cell.cut .d3-chip {
+				background-color: rgba(255,255,255,0.4);
+				color: #5A5148;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-chip.new {
+				background-color: #2A2622;
+				color: #FDF8F3;
+				border-color: #2A2622;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-cell-empty {
+				font-size: 10px;
+				font-style: italic;
+				color: #7A7168;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex: 1;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-d3-grid .d3-bottom {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 13.5px;
+				color: #7BA888;
+				text-align: center;
+				margin-top: 10px;
+			}
+
+			/* ---------- 16 → 7: keep / cut split ---------- */
+			.reveal .slides section .wasl-d3-survived {
+				padding: 32px 50px 24px;
+			}
+			.reveal .slides section .wasl-d3-survived h1 {
+				font-size: 32px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 4px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-numbers {
+				display: flex;
+				gap: 20px;
+				margin-bottom: 16px;
+				align-items: baseline;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-numbers .d3-from {
+				font-family: 'Fraunces', serif;
+				font-size: 14px;
+				color: #7A7168;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-numbers .d3-arrow {
+				font-size: 18px;
+				color: #E8844A;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-numbers strong {
+				color: #2A2622;
+				font-weight: 700;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-cols {
+				display: grid;
+				grid-template-columns: 1.4fr 1fr;
+				gap: 20px;
+				flex: 1;
+				min-height: 0;
+				align-items: center;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-keep {
+				background-color: rgba(123,168,136,0.10);
+				border-radius: 10px;
+				padding: 18px 22px;
+				border-top: 4px solid #7BA888;
+				display: flex;
+				flex-direction: column;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-cut {
+				background-color: #F0EBE2;
+				border-radius: 10px;
+				padding: 18px 22px;
+				border-top: 4px solid #C9BEB1;
+				display: flex;
+				flex-direction: column;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-side-label {
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: #7BA888;
+				margin-bottom: 4px;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-cut .d3-side-label { color: #8A7C6B; }
+			.reveal .slides section .wasl-d3-survived .d3-side-title {
+				font-family: 'Fraunces', serif;
+				font-size: 18px;
+				font-weight: 700;
+				color: #2A2622;
+				margin-bottom: 12px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-grp {
+				margin-bottom: 12px;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-grp:last-child { margin-bottom: 0; }
+			.reveal .slides section .wasl-d3-survived .d3-grp-label {
+				font-size: 11px;
+				font-weight: 700;
+				color: #E8844A;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				margin-bottom: 6px;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-cut .d3-grp-label { color: #8A7C6B; }
+			.reveal .slides section .wasl-d3-survived .d3-keep .d3-grp:nth-child(2) .d3-grp-label { color: #7BA888; }
+			.reveal .slides section .wasl-d3-survived .d3-items {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 6px;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-item {
+				display: inline-flex;
+				align-items: baseline;
+				gap: 6px;
+				background-color: #FFFFFF;
+				border: 1px solid #EBE4DB;
+				padding: 4px 10px;
+				border-radius: 14px;
+				font-size: 12px;
+				color: #2A2622;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-item .d3-id {
+				font-family: 'Fraunces', serif;
+				font-weight: 700;
+				color: #E8844A;
+				font-size: 11px;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-item.new {
+				background-color: #2A2622;
+				color: #FDF8F3;
+				border-color: #2A2622;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-item.new .d3-id { color: #E8844A; }
+			.reveal .slides section .wasl-d3-survived .d3-cut .d3-item {
+				background-color: rgba(255,255,255,0.5);
+				color: #7A7168;
+				font-size: 11px;
+				padding: 3px 9px;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-cut .d3-item .d3-id { color: #8A7C6B; }
+			.reveal .slides section .wasl-d3-survived .d3-bottom {
+				grid-column: 1 / -1;
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 17px;
+				color: #E8844A;
+				text-align: center;
+				margin-top: 12px;
+				line-height: 1.4;
+			}
+
+			/* ---------- Why we defended Sprint 1 ---------- */
+			.reveal .slides section .wasl-d3-defend {
+				padding: 36px 56px 30px;
+			}
+			.reveal .slides section .wasl-d3-defend h1 {
+				font-size: 30px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 6px;
+				text-align: left;
+				line-height: 1.25;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 22px;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 16px;
+				flex: 1;
+				min-height: 0;
+				align-items: center;
+				margin-bottom: 14px;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-card {
+				background-color: #FFFFFF;
+				border: 1px solid #EBE4DB;
+				border-radius: 10px;
+				padding: 20px 22px;
+				display: flex;
+				flex-direction: column;
+				border-top: 4px solid #E8844A;
+				box-shadow: 0 4px 10px rgba(42,38,34,0.04);
+				position: relative;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-card:nth-child(2) { border-top-color: #7BA888; }
+			.reveal .slides section .wasl-d3-defend .d3-card:nth-child(3) { border-top-color: #F5D5C4; }
+			.reveal .slides section .wasl-d3-defend .d3-icon {
+				font-size: 22px;
+				color: #E8844A;
+				margin-bottom: 10px;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-card:nth-child(2) .d3-icon { color: #7BA888; }
+			.reveal .slides section .wasl-d3-defend .d3-card:nth-child(3) .d3-icon { color: #C96E34; }
+			.reveal .slides section .wasl-d3-defend .d3-card-title {
+				font-family: 'Fraunces', serif;
+				font-size: 16px;
+				font-weight: 700;
+				color: #2A2622;
+				margin-bottom: 8px;
+				line-height: 1.3;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-card-text {
+				font-size: 13.5px;
+				color: #5A5148;
+				line-height: 1.55;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-card-text strong {
+				color: #2A2622;
+				font-weight: 600;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-bottom {
+				background-color: #2A2622;
+				color: #FDF8F3;
+				padding: 14px 24px;
+				border-radius: 8px;
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 15px;
+				line-height: 1.45;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-bottom strong {
+				color: #E8844A;
+				font-weight: 700;
+			}
+
+			/* ---------- Pitch slide (big quote + 3 pillars) ---------- */
+			.reveal .slides section .wasl-d3-pitch {
+				padding: 36px 70px 28px;
+				justify-content: center;
+			}
+			.reveal .slides section .wasl-d3-pitch .d3-bg {
+				position: absolute;
+				width: 700px;
+				height: 700px;
+				border-radius: 50%;
+				background: radial-gradient(circle, rgba(123,168,136,0.12) 0%, rgba(253,248,243,0) 70%);
+				bottom: -260px;
+				right: -180px;
+				z-index: 1;
+			}
+			.reveal .slides section .wasl-d3-pitch .d3-bg-2 {
+				position: absolute;
+				width: 460px;
+				height: 460px;
+				border-radius: 50%;
+				background: radial-gradient(circle, rgba(245,213,196,0.35) 0%, rgba(253,248,243,0) 70%);
+				top: -180px;
+				left: -160px;
+				z-index: 1;
+			}
+			.reveal .slides section .wasl-d3-pitch .d3-content {
+				position: relative;
+				z-index: 2;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				flex: 1;
+			}
+			.reveal .slides section .wasl-d3-pitch h1 {
+				font-size: 26px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 4px;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-d3-pitch .d3-rule {
+				width: 60px;
+				height: 3px;
+				background-color: #E8844A;
+				margin: 0 auto 22px;
+			}
+			.reveal .slides section .wasl-d3-pitch .d3-quote-wrap {
+				position: relative;
+				margin: 0 auto 28px;
+				max-width: 880px;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-d3-pitch .d3-q-mark {
+				font-family: 'Fraunces', serif;
+				font-size: 110px;
+				color: #F5D5C4;
+				position: absolute;
+				top: -20px;
+				left: -10px;
+				line-height: 1;
+				opacity: 0.6;
+				z-index: 0;
+			}
+			.reveal .slides section .wasl-d3-pitch .d3-quote {
+				position: relative;
+				z-index: 1;
+				font-family: 'Fraunces', serif;
+				font-size: 22px;
+				font-weight: 600;
+				color: #2A2622;
+				line-height: 1.45;
+				font-style: italic;
+				text-align: center;
+				padding: 0 30px;
+			}
+			.reveal .slides section .wasl-d3-pitch .d3-pillars {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 28px;
+				margin-bottom: 18px;
+			}
+			.reveal .slides section .wasl-d3-pitch .d3-pillar {
+				border-top: 2px solid #EBE4DB;
+				padding-top: 16px;
+			}
+			.reveal .slides section .wasl-d3-pitch .d3-pillar-title {
+				font-size: 12px;
+				font-weight: 700;
+				color: #7BA888;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				margin-bottom: 8px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-pitch .d3-pillar:nth-child(2) .d3-pillar-title { color: #E8844A; }
+			.reveal .slides section .wasl-d3-pitch .d3-pillar:nth-child(3) .d3-pillar-title { color: #C96E34; }
+			.reveal .slides section .wasl-d3-pitch .d3-pillar-desc {
+				font-size: 13px;
+				color: #2A2622;
+				line-height: 1.45;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-pitch .d3-bottom {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 15px;
+				color: #7BA888;
+				text-align: center;
+				line-height: 1.4;
+			}
+
+			/* ---------- Timeline (5 milestones) ---------- */
+			.reveal .slides section .wasl-d3-timeline {
+				padding: 36px 56px 28px;
+			}
+			.reveal .slides section .wasl-d3-timeline h1 {
+				font-size: 30px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-timeline .d3-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 22px;
+			}
+			.reveal .slides section .wasl-d3-timeline .d3-line-wrap {
+				position: relative;
+				flex: 1;
+				display: flex;
+				align-items: center;
+				padding: 0 10px;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-d3-timeline .d3-track {
+				position: absolute;
+				top: 56px;
+				left: 60px;
+				right: 60px;
+				height: 2px;
+				background: linear-gradient(to right, #E8844A 0%, #7BA888 100%);
+				z-index: 1;
+			}
+			.reveal .slides section .wasl-d3-timeline .d3-stops {
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+				gap: 14px;
+				width: 100%;
+				position: relative;
+				z-index: 2;
+				align-items: start;
+			}
+			.reveal .slides section .wasl-d3-timeline .d3-stop {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-d3-timeline .d3-stop-num {
+				font-family: 'Fraunces', serif;
+				font-size: 14px;
+				font-weight: 700;
+				color: #E8844A;
+				letter-spacing: 0.14em;
+				margin-bottom: 14px;
+			}
+			.reveal .slides section .wasl-d3-timeline .d3-stop-dot {
+				width: 22px;
+				height: 22px;
+				border-radius: 50%;
+				background-color: #FDF8F3;
+				border: 3px solid #E8844A;
+				margin-bottom: 14px;
+				box-shadow: 0 4px 10px rgba(232,132,74,0.18);
+			}
+			.reveal .slides section .wasl-d3-timeline .d3-stop:nth-child(2) .d3-stop-dot { border-color: #C96E34; }
+			.reveal .slides section .wasl-d3-timeline .d3-stop:nth-child(3) .d3-stop-dot { border-color: #B58F60; }
+			.reveal .slides section .wasl-d3-timeline .d3-stop:nth-child(4) .d3-stop-dot { border-color: #8A9F7E; }
+			.reveal .slides section .wasl-d3-timeline .d3-stop:nth-child(5) .d3-stop-dot { border-color: #7BA888; }
+			.reveal .slides section .wasl-d3-timeline .d3-stop:nth-child(2) .d3-stop-num { color: #C96E34; }
+			.reveal .slides section .wasl-d3-timeline .d3-stop:nth-child(3) .d3-stop-num { color: #B58F60; }
+			.reveal .slides section .wasl-d3-timeline .d3-stop:nth-child(4) .d3-stop-num { color: #8A9F7E; }
+			.reveal .slides section .wasl-d3-timeline .d3-stop:nth-child(5) .d3-stop-num { color: #7BA888; }
+			.reveal .slides section .wasl-d3-timeline .d3-stop-title {
+				font-family: 'Fraunces', serif;
+				font-size: 16px;
+				font-weight: 700;
+				color: #2A2622;
+				margin-bottom: 8px;
+				line-height: 1.3;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-d3-timeline .d3-stop-desc {
+				font-size: 12px;
+				font-style: italic;
+				color: #7A7168;
+				line-height: 1.4;
+				text-align: center;
+				padding: 0 4px;
+			}
+			.reveal .slides section .wasl-d3-timeline .d3-bottom {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 15px;
+				color: #7BA888;
+				text-align: center;
+				margin-top: 22px;
+				padding-top: 16px;
+				border-top: 1px solid #EBE4DB;
+			}
+
+			/* ---------- Roles & artefacts ---------- */
+			.reveal .slides section .wasl-d3-roles {
+				padding: 32px 50px 24px;
+			}
+			.reveal .slides section .wasl-d3-roles h1 {
+				font-size: 30px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 18px;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 16px;
+				flex: 1;
+				min-height: 0;
+				align-items: center;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-card {
+				background-color: #F7EFE4;
+				border-radius: 10px;
+				padding: 20px 22px;
+				display: flex;
+				flex-direction: column;
+				border-top: 4px solid #E8844A;
+				box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+				min-height: 0;
+				position: relative;
+				overflow: hidden;
+				min-height: 355px;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-card:nth-child(2) { border-top-color: #7BA888; }
+			.reveal .slides section .wasl-d3-roles .d3-card:nth-child(3) { border-top-color: #C9BEB1; }
+			.reveal .slides section .wasl-d3-roles .d3-role {
+				font-family: 'Fraunces', serif;
+				font-size: 18px;
+				font-weight: 700;
+				color: #E8844A;
+				margin-bottom: 4px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-card:nth-child(2) .d3-role { color: #7BA888; }
+			.reveal .slides section .wasl-d3-roles .d3-card:nth-child(3) .d3-role { color: #8A7C6B; }
+			.reveal .slides section .wasl-d3-roles .d3-name {
+				font-size: 13px;
+				font-weight: 600;
+				color: #2A2622;
+				margin-bottom: 12px;
+				padding-bottom: 12px;
+				border-bottom: 1px solid #EBE4DB;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-tag {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 13px;
+				color: #2A2622;
+				margin-bottom: 12px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-block {
+				margin-bottom: 10px;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-block:last-child { margin-bottom: 0; }
+			.reveal .slides section .wasl-d3-roles .d3-block-label {
+				font-size: 10px;
+				font-weight: 700;
+				color: #7A7168;
+				text-transform: uppercase;
+				letter-spacing: 0.12em;
+				margin-bottom: 4px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-block-text {
+				font-size: 12.5px;
+				color: #2A2622;
+				line-height: 1.45;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-card .d3-icon {
+				position: absolute;
+				bottom: -14px;
+				right: -6px;
+				font-size: 110px;
+				line-height: 1;
+				opacity: 0.07;
+				color: #E8844A;
+				pointer-events: none;
+				transform: rotate(-8deg);
+			}
+			.reveal .slides section .wasl-d3-roles .d3-card:nth-child(2) .d3-icon { color: #7BA888; }
+			.reveal .slides section .wasl-d3-roles .d3-card:nth-child(3) .d3-icon { color: #8A7C6B; }
+
+			/* ---------- Ceremonies (5 meetings) ---------- */
+			.reveal .slides section .wasl-d3-ceremonies {
+				padding: 32px 56px 24px;
+			}
+			.reveal .slides section .wasl-d3-ceremonies h1 {
+				font-size: 30px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-ceremonies .d3-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 22px;
+			}
+			.reveal .slides section .wasl-d3-ceremonies .d3-list {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				flex: 1;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-d3-ceremonies .d3-row {
+				display: grid;
+				grid-template-columns: 50px 1fr 200px;
+				gap: 18px;
+				align-items: center;
+				background-color: #F7EFE4;
+				border-radius: 8px;
+				padding: 12px 18px;
+				border-left: 3px solid #E8844A;
+				flex: 1;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-d3-ceremonies .d3-row:nth-child(odd) {
+				border-left-color: #7BA888;
+				background-color: rgba(123,168,136,0.07);
+			}
+			.reveal .slides section .wasl-d3-ceremonies .d3-num {
+				font-family: 'Fraunces', serif;
+				font-size: 30px;
+				font-weight: 700;
+				color: #E8844A;
+				line-height: 1;
+				text-align: center;
+			}
+			.reveal .slides section .wasl-d3-ceremonies .d3-row:nth-child(odd) .d3-num { color: #7BA888; }
+			.reveal .slides section .wasl-d3-ceremonies .d3-body {
+				display: flex;
+				flex-direction: column;
+				gap: 2px;
+				min-width: 0;
+			}
+			.reveal .slides section .wasl-d3-ceremonies .d3-title {
+				font-family: 'Fraunces', serif;
+				font-size: 16px;
+				font-weight: 700;
+				color: #2A2622;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-ceremonies .d3-desc {
+				font-size: 12.5px;
+				font-style: italic;
+				color: #5A5148;
+				line-height: 1.4;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-ceremonies .d3-meta {
+				font-size: 11px;
+				font-weight: 600;
+				color: #7A7168;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				text-align: right;
+				line-height: 1.4;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.reveal .slides section .wasl-d3-ceremonies .d3-meta strong {
+				color: #2A2622;
+				font-family: 'Fraunces', serif;
+				font-size: 13px;
+				font-weight: 700;
+				display: block;
+				letter-spacing: 0.04em;
+				text-transform: none;
+			}
+
+			/* ---------- Three lenses ---------- */
+			.reveal .slides section .wasl-d3-lenses {
+				padding: 32px 50px 24px;
+			}
+			.reveal .slides section .wasl-d3-lenses h1 {
+				font-size: 30px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 22px;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 16px;
+				flex: 1;
+				min-height: 0;
+				margin-bottom: 14px;
+				align-items: center;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-card {
+				background-color: #FFFFFF;
+				border: 1px solid #EBE4DB;
+				border-top: 4px solid #E8844A;
+				border-radius: 10px;
+				padding: 18px 20px;
+				display: flex;
+				flex-direction: column;
+				box-shadow: 0 4px 10px rgba(42,38,34,0.04);
+				min-height: 280px;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-card:nth-child(2) { border-top-color: #7BA888; }
+			.reveal .slides section .wasl-d3-lenses .d3-card:nth-child(3) { border-top-color: #C9BEB1; }
+			.reveal .slides section .wasl-d3-lenses .d3-tool {
+				font-family: 'Fraunces', serif;
+				font-size: 18px;
+				font-weight: 700;
+				color: #2A2622;
+				margin-bottom: 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-q {
+				font-size: 12px;
+				font-style: italic;
+				color: #E8844A;
+				margin-bottom: 12px;
+				padding-bottom: 12px;
+				border-bottom: 1px dashed #EBE4DB;
+				line-height: 1.4;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-card:nth-child(2) .d3-q { color: #7BA888; }
+			.reveal .slides section .wasl-d3-lenses .d3-card:nth-child(3) .d3-q { color: #8A7C6B; }
+			.reveal .slides section .wasl-d3-lenses .d3-why-label {
+				font-size: 9.5px;
+				font-weight: 700;
+				color: #7A7168;
+				text-transform: uppercase;
+				letter-spacing: 0.14em;
+				margin-bottom: 6px;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-why {
+				font-size: 13px;
+				color: #2A2622;
+				line-height: 1.5;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-bottom {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 15px;
+				color: #7BA888;
+				text-align: center;
+				padding-top: 8px;
+				border-top: 1px solid #EBE4DB;
+				margin-top: 4px;
+			}
+
+			/* ---------- Reinertsen as 4th lens (two cols) ---------- */
+			.reveal .slides section .wasl-d3-fourth {
+				padding: 32px 56px 26px;
+			}
+			.reveal .slides section .wasl-d3-fourth h1 {
+				font-size: 30px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 22px;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-cols {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 22px;
+				flex: 1;
+				min-height: 0;
+				margin-bottom: 16px;
+				align-items: center;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-col {
+				background-color: #F7EFE4;
+				border-radius: 10px;
+				padding: 22px 24px;
+				display: flex;
+				flex-direction: column;
+				border-top: 4px solid #C9BEB1;
+				box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+				min-height: 320px;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-col.right {
+				border-top-color: #7BA888;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-col-eyebrow {
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: #8A7C6B;
+				margin-bottom: 6px;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-col.right .d3-col-eyebrow { color: #7BA888; }
+			.reveal .slides section .wasl-d3-fourth .d3-col-title {
+				font-family: 'Fraunces', serif;
+				font-size: 18px;
+				font-weight: 700;
+				color: #2A2622;
+				margin-bottom: 14px;
+				line-height: 1.3;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-list li {
+				display: flex;
+				align-items: flex-start;
+				gap: 10px;
+				font-size: 14px;
+				line-height: 1.5;
+				color: #2A2622;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-list li i {
+				color: #C9BEB1;
+				font-size: 10px;
+				margin-top: 6px;
+				flex-shrink: 0;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-col.right .d3-list li i {
+				color: #7BA888;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-bottom {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 16px;
+				color: #E8844A;
+				text-align: center;
+				line-height: 1.4;
+				padding: 0 60px;
+			}
+
+			/* ---------- Challenges (3 stacked cards: problem + solution) ---------- */
+			.reveal .slides section .wasl-d3-challenges {
+				padding: 28px 50px 22px;
+			}
+			.reveal .slides section .wasl-d3-challenges h1 {
+				font-size: 28px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 6px;
+				text-align: left;
+				line-height: 1.25;
+			}
+			.reveal .slides section .wasl-d3-challenges .d3-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 16px;
+			}
+			.reveal .slides section .wasl-d3-challenges .d3-list {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				flex: 1;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-d3-challenges .d3-card {
+				background-color: #F7EFE4;
+				border-radius: 10px;
+				padding: 14px 22px;
+				display: grid;
+				grid-template-columns: 36px 1fr 1fr;
+				gap: 18px;
+				align-items: stretch;
+				border-left: 4px solid #D64545;
+				flex: 1;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-d3-challenges .d3-card:nth-child(2) { border-left-color: #C96E34; }
+			.reveal .slides section .wasl-d3-challenges .d3-card:nth-child(3) { border-left-color: #7BA888; }
+			.reveal .slides section .wasl-d3-challenges .d3-num {
+				font-family: 'Fraunces', serif;
+				font-size: 32px;
+				font-weight: 700;
+				color: #D64545;
+				line-height: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.reveal .slides section .wasl-d3-challenges .d3-card:nth-child(2) .d3-num { color: #C96E34; }
+			.reveal .slides section .wasl-d3-challenges .d3-card:nth-child(3) .d3-num { color: #7BA888; }
+			.reveal .slides section .wasl-d3-challenges .d3-side {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 4px;
+				min-width: 0;
+			}
+			.reveal .slides section .wasl-d3-challenges .d3-side-label {
+				font-size: 9.5px;
+				font-weight: 700;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				color: #D64545;
+			}
+			.reveal .slides section .wasl-d3-challenges .d3-card:nth-child(2) .d3-side-label { color: #C96E34; }
+			.reveal .slides section .wasl-d3-challenges .d3-card:nth-child(3) .d3-side-label { color: #7BA888; }
+			.reveal .slides section .wasl-d3-challenges .d3-side.fix .d3-side-label { color: #7BA888; }
+			.reveal .slides section .wasl-d3-challenges .d3-side-title {
+				font-family: 'Fraunces', serif;
+				font-size: 13.5px;
+				font-weight: 700;
+				color: #2A2622;
+				line-height: 1.3;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-challenges .d3-side-text {
+				font-size: 12px;
+				color: #5A5148;
+				line-height: 1.45;
+				text-align: left;
+			}
+
+			/* ---------- Lessons (3 declarative cards) ---------- */
+			.reveal .slides section .wasl-d3-lessons {
+				padding: 36px 56px 30px;
+			}
+			.reveal .slides section .wasl-d3-lessons h1 {
+				font-size: 32px;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0 0 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-lessons .d3-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				margin-bottom: 26px;
+			}
+			.reveal .slides section .wasl-d3-lessons .d3-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 18px;
+				flex: 1;
+				min-height: 0;
+			}
+			.reveal .slides section .wasl-d3-lessons .d3-card {
+				background-color: #FFFFFF;
+				border: 1px solid #EBE4DB;
+				border-radius: 10px;
+				padding: 22px 22px;
+				display: flex;
+				flex-direction: column;
+				border-top: 4px solid #E8844A;
+				box-shadow: 0 6px 14px rgba(42,38,34,0.05);
+				position: relative;
+			}
+			.reveal .slides section .wasl-d3-lessons .d3-card:nth-child(2) { border-top-color: #7BA888; }
+			.reveal .slides section .wasl-d3-lessons .d3-card:nth-child(3) { border-top-color: #C96E34; }
+			.reveal .slides section .wasl-d3-lessons .d3-num {
+				font-family: 'Fraunces', serif;
+				font-size: 14px;
+				font-weight: 700;
+				color: #E8844A;
+				letter-spacing: 0.14em;
+				margin-bottom: 12px;
+			}
+			.reveal .slides section .wasl-d3-lessons .d3-card:nth-child(2) .d3-num { color: #7BA888; }
+			.reveal .slides section .wasl-d3-lessons .d3-card:nth-child(3) .d3-num { color: #C96E34; }
+			.reveal .slides section .wasl-d3-lessons .d3-headline {
+				font-family: 'Fraunces', serif;
+				font-size: 18px;
+				font-weight: 700;
+				color: #2A2622;
+				line-height: 1.35;
+				margin-bottom: 14px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-lessons .d3-text {
+				font-size: 13px;
+				color: #5A5148;
+				line-height: 1.55;
+				text-align: left;
+			}
+
+			/* ======================= Day 3 — fill-the-empty-space additions ======================= */
+
+			/* Shared "watermark" icon for visual interest in card corners */
+			.reveal .slides section [class*="wasl-d3-"] .d3-watermark {
+				position: absolute;
+				bottom: -16px;
+				right: -10px;
+				font-size: 110px;
+				line-height: 1;
+				opacity: 0.07;
+				color: #E8844A;
+				transform: rotate(-8deg);
+				pointer-events: none;
+				z-index: 0;
+			}
+			.reveal .slides section [class*="wasl-d3-"] .d3-card,
+			.reveal .slides section [class*="wasl-d3-"] .d3-col {
+				position: relative;
+				overflow: hidden;
+			}
+			.reveal .slides section [class*="wasl-d3-"] .d3-card > *,
+			.reveal .slides section [class*="wasl-d3-"] .d3-col > * {
+				position: relative;
+				z-index: 1;
+			}
+
+			/* Decisions: stretch cards, add outcome footers + watermark per accent color */
+			.reveal .slides section .wasl-d3-decisions .d3-card {
+				justify-content: space-between;
+			}
+			.reveal .slides section .wasl-d3-decisions .d3-card-text {
+				margin-bottom: 14px;
+			}
+			.reveal .slides section .wasl-d3-decisions .d3-foot {
+				margin-top: auto;
+				padding-top: 12px;
+				border-top: 1px dashed #D8CFC3;
+			}
+			.reveal .slides section .wasl-d3-decisions .d3-foot-label {
+				font-size: 9.5px;
+				font-weight: 700;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				color: #E8844A;
+				margin-bottom: 4px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-decisions .d3-card:nth-child(2) .d3-foot-label { color: #7BA888; }
+			.reveal .slides section .wasl-d3-decisions .d3-card:nth-child(3) .d3-foot-label { color: #8A7C6B; }
+			.reveal .slides section .wasl-d3-decisions .d3-foot-text {
+				font-family: 'Fraunces', serif;
+				font-size: 13px;
+				font-style: italic;
+				color: #2A2622;
+				line-height: 1.4;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-decisions .d3-card:nth-child(2) .d3-watermark { color: #7BA888; }
+			.reveal .slides section .wasl-d3-decisions .d3-card:nth-child(3) .d3-watermark { color: #8A7C6B; }
+			.reveal .slides section .wasl-d3-decisions .d3-bottom {
+				margin-top: 18px;
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 15px;
+				color: #7BA888;
+				text-align: center;
+				padding-top: 14px;
+				border-top: 1px solid #EBE4DB;
+			}
+
+			/* Matrix explained: add three priority bands key */
+			.reveal .slides section .wasl-d3-matrix .d3-bands {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 8px;
+				margin-top: 4px;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-band {
+				padding: 8px 10px;
+				border-radius: 6px;
+				font-size: 10.5px;
+				color: #2A2622;
+				line-height: 1.35;
+				text-align: left;
+				display: flex;
+				flex-direction: column;
+				gap: 2px;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-band strong {
+				font-family: 'Fraunces', serif;
+				font-size: 12px;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-band.ship {
+				background-color: rgba(232,132,74,0.12);
+				border-left: 3px solid #E8844A;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-band.ship strong { color: #E8844A; }
+			.reveal .slides section .wasl-d3-matrix .d3-band.defer {
+				background-color: rgba(245,213,196,0.5);
+				border-left: 3px solid #C9BEB1;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-band.defer strong { color: #C96E34; }
+			.reveal .slides section .wasl-d3-matrix .d3-band.cut {
+				background-color: #EFEAE2;
+				border-left: 3px solid #8A7C6B;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-band.cut strong { color: #8A7C6B; }
+			.reveal .slides section .wasl-d3-matrix .d3-example {
+				margin-top: 12px;
+				padding: 12px 14px;
+				background-color: #2A2622;
+				color: #FDF8F3;
+				border-radius: 6px;
+				font-size: 11.5px;
+				line-height: 1.5;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-matrix .d3-example strong {
+				font-family: 'Fraunces', serif;
+				color: #E8844A;
+				font-weight: 700;
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+				font-size: 9.5px;
+				display: block;
+				margin-bottom: 4px;
+			}
+
+			/* Two Things Happened: stretch panels + add bottom sub-section */
+			.reveal .slides section .wasl-d3-two .d3-col {
+				justify-content: flex-start;
+			}
+			.reveal .slides section .wasl-d3-two .d3-list {
+				margin-bottom: 14px;
+			}
+			.reveal .slides section .wasl-d3-two .d3-foot {
+				margin-top: auto;
+				padding-top: 12px;
+				border-top: 1px dashed #D8CFC3;
+			}
+			.reveal .slides section .wasl-d3-two .d3-foot-label {
+				font-size: 9.5px;
+				font-weight: 700;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				color: #D64545;
+				margin-bottom: 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-two .d3-col.sage .d3-foot-label { color: #7BA888; }
+			.reveal .slides section .wasl-d3-two .d3-foot-text {
+				font-family: 'Fraunces', serif;
+				font-size: 13.5px;
+				font-style: italic;
+				color: #2A2622;
+				line-height: 1.4;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-two .d3-watermark { color: #D64545; opacity: 0.06; }
+			.reveal .slides section .wasl-d3-two .d3-col.sage .d3-watermark { color: #7BA888; }
+
+			/* From 16 to 7: add a horizontal distribution bar at the bottom */
+			.reveal .slides section .wasl-d3-survived .d3-keep,
+			.reveal .slides section .wasl-d3-survived .d3-cut {
+				justify-content: flex-start;
+				min-height: 255px;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-cols {
+				margin-bottom: 14px;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-distribution {
+				background-color: #FFFFFF;
+				border: 1px solid #EBE4DB;
+				border-radius: 8px;
+				padding: 12px 18px;
+				margin-bottom: 12px;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-dist-label {
+				font-size: 9.5px;
+				font-weight: 700;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: #7A7168;
+				margin-bottom: 6px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-dist-bar {
+				display: flex;
+				width: 100%;
+				height: 18px;
+				border-radius: 4px;
+				overflow: hidden;
+				gap: 2px;
+				margin-bottom: 6px;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-dist-seg {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 10px;
+				font-weight: 700;
+				color: #FFFFFF;
+				letter-spacing: 0.04em;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-dist-seg.s1 { background-color: #7BA888; flex: 5; }
+			.reveal .slides section .wasl-d3-survived .d3-dist-seg.s2 { background-color: #B0C8B5; flex: 2; color: #2A2622; }
+			.reveal .slides section .wasl-d3-survived .d3-dist-seg.cut { background-color: #C9BEB1; flex: 8; color: #2A2622; }
+			.reveal .slides section .wasl-d3-survived .d3-dist-key {
+				display: flex;
+				justify-content: space-between;
+				gap: 12px;
+				font-size: 10.5px;
+				color: #5A5148;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-dist-key span {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-dist-key i {
+				width: 8px;
+				height: 8px;
+				display: inline-block;
+				border-radius: 2px;
+			}
+			.reveal .slides section .wasl-d3-survived .d3-dist-key i.s1 { background-color: #7BA888; }
+			.reveal .slides section .wasl-d3-survived .d3-dist-key i.s2 { background-color: #B0C8B5; }
+			.reveal .slides section .wasl-d3-survived .d3-dist-key i.cut { background-color: #C9BEB1; }
+
+			/* Defend Sprint 1: stretch + add consequence footers */
+			.reveal .slides section .wasl-d3-defend .d3-card {
+				justify-content: space-between;
+				min-height: 310px;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-card-text {
+				margin-bottom: 14px;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-foot {
+				margin-top: auto;
+				padding-top: 12px;
+				border-top: 1px dashed #EBE4DB;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-foot-label {
+				font-size: 9.5px;
+				font-weight: 700;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				color: #D64545;
+				margin-bottom: 4px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-defend .d3-foot-text {
+				font-family: 'Fraunces', serif;
+				font-size: 12.5px;
+				font-style: italic;
+				color: #5A5148;
+				line-height: 1.4;
+				text-align: left;
+			}
+
+			/* Roles: add asks/key-question footers */
+			.reveal .slides section .wasl-d3-roles .d3-card {
+				justify-content: space-between;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-block:last-of-type {
+				margin-bottom: 14px;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-asks {
+				margin-top: auto;
+				padding: 10px 12px;
+				background-color: rgba(232,132,74,0.08);
+				border-left: 3px solid #E8844A;
+				border-radius: 0 6px 6px 0;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-card:nth-child(2) .d3-asks {
+				background-color: rgba(123,168,136,0.10);
+				border-left-color: #7BA888;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-card:nth-child(3) .d3-asks {
+				background-color: rgba(201,190,177,0.20);
+				border-left-color: #8A7C6B;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-asks-label {
+				font-size: 9px;
+				font-weight: 700;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				color: #E8844A;
+				margin-bottom: 3px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-roles .d3-card:nth-child(2) .d3-asks-label { color: #7BA888; }
+			.reveal .slides section .wasl-d3-roles .d3-card:nth-child(3) .d3-asks-label { color: #8A7C6B; }
+			.reveal .slides section .wasl-d3-roles .d3-asks-text {
+				font-family: 'Fraunces', serif;
+				font-size: 13px;
+				font-style: italic;
+				color: #2A2622;
+				line-height: 1.4;
+				text-align: left;
+			}
+
+			/* Lenses: add icon + 'best for' footer */
+			.reveal .slides section .wasl-d3-lenses .d3-card {
+				justify-content: flex-start;
+				position: relative;
+				overflow: hidden;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-tool-row {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				margin-bottom: 6px;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-tool-icon {
+				width: 36px;
+				height: 36px;
+				border-radius: 8px;
+				background-color: rgba(232,132,74,0.12);
+				color: #E8844A;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				flex-shrink: 0;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-card:nth-child(2) .d3-tool-icon {
+				background-color: rgba(123,168,136,0.15);
+				color: #7BA888;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-card:nth-child(3) .d3-tool-icon {
+				background-color: rgba(201,190,177,0.30);
+				color: #8A7C6B;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-tool {
+				margin-bottom: 0;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-foot {
+				margin-top: auto;
+				padding-top: 12px;
+				border-top: 1px dashed #EBE4DB;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-foot-label {
+				font-size: 9px;
+				font-weight: 700;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				color: #E8844A;
+				margin-bottom: 4px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-lenses .d3-card:nth-child(2) .d3-foot-label { color: #7BA888; }
+			.reveal .slides section .wasl-d3-lenses .d3-card:nth-child(3) .d3-foot-label { color: #8A7C6B; }
+			.reveal .slides section .wasl-d3-lenses .d3-foot-text {
+				font-family: 'Fraunces', serif;
+				font-size: 12.5px;
+				font-style: italic;
+				color: #2A2622;
+				line-height: 1.4;
+				text-align: left;
+			}
+
+			/* Reinertsen as fourth lens: stretch panels + add insight callouts */
+			.reveal .slides section .wasl-d3-fourth .d3-col {
+				justify-content: flex-start;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-list {
+				margin-bottom: 14px;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-insight {
+				margin-top: auto;
+				padding: 10px 12px;
+				background-color: #FFFFFF;
+				border-left: 3px solid #C9BEB1;
+				border-radius: 0 6px 6px 0;
+				display: flex;
+				align-items: flex-start;
+				gap: 10px;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-col.right .d3-insight {
+				border-left-color: #7BA888;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-insight i {
+				font-size: 14px;
+				color: #C9BEB1;
+				margin-top: 2px;
+				flex-shrink: 0;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-col.right .d3-insight i {
+				color: #7BA888;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-insight-body {
+				flex: 1;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-insight-label {
+				font-size: 9px;
+				font-weight: 700;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				color: #8A7C6B;
+				margin-bottom: 2px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-fourth .d3-col.right .d3-insight-label { color: #7BA888; }
+			.reveal .slides section .wasl-d3-fourth .d3-insight-text {
+				font-family: 'Fraunces', serif;
+				font-size: 12.5px;
+				font-style: italic;
+				color: #2A2622;
+				line-height: 1.4;
+				text-align: left;
+			}
+
+			/* Lessons: stretch + add 'in practice' footers + watermark */
+			.reveal .slides section .wasl-d3-lessons .d3-card {
+				justify-content: space-between;
+			}
+			.reveal .slides section .wasl-d3-lessons .d3-text {
+				margin-bottom: 16px;
+			}
+			.reveal .slides section .wasl-d3-lessons .d3-foot {
+				margin-top: auto;
+				padding-top: 12px;
+				border-top: 1px dashed #EBE4DB;
+			}
+			.reveal .slides section .wasl-d3-lessons .d3-foot-label {
+				font-size: 9px;
+				font-weight: 700;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				color: #E8844A;
+				margin-bottom: 4px;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-lessons .d3-card:nth-child(2) .d3-foot-label { color: #7BA888; }
+			.reveal .slides section .wasl-d3-lessons .d3-card:nth-child(3) .d3-foot-label { color: #C96E34; }
+			.reveal .slides section .wasl-d3-lessons .d3-foot-text {
+				font-family: 'Fraunces', serif;
+				font-size: 12.5px;
+				font-style: italic;
+				color: #2A2622;
+				line-height: 1.4;
+				text-align: left;
+			}
+			.reveal .slides section .wasl-d3-lessons .d3-watermark { color: #E8844A; }
+			.reveal .slides section .wasl-d3-lessons .d3-card:nth-child(2) .d3-watermark { color: #7BA888; }
+			.reveal .slides section .wasl-d3-lessons .d3-card:nth-child(3) .d3-watermark { color: #C96E34; }
+
 		</style>
 	</head>
 	<body>
@@ -7367,6 +9360,801 @@
 					</div>
 				</section>
 
+				<!-- ===================== Day 3: Part I — Dealing with Disruptions ===================== -->
+
+				<!-- Day 3 / Slide 1: Section divider — When the Plan Meets Reality -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-sp-title">
+						<div class="sp-logo-corner"><img src="images/wasl_arabic.png" alt="Wasl logo"></div>
+						<div class="sp-motif">
+							<div class="sp-circle"></div>
+							<div class="sp-circle sp-circle-2"></div>
+						</div>
+						<div class="sp-content">
+							<div class="sp-part-tag">Part I &middot; Dealing with Disruptions</div>
+							<h1>When the Plan Meets Reality</h1>
+							<div class="sp-subtitle">Half the resources. New demands. One sprint to defend.</div>
+							<div class="sp-rule"></div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 2: Two Things Happened -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-two">
+						<h1>Two Things Happened</h1>
+						<div class="d3-rule"></div>
+						<div class="d3-cols">
+							<div class="d3-col">
+								<div class="d3-eyebrow">The Bad News</div>
+								<div class="d3-col-title">Our partner team in India hit a major impediment.</div>
+								<ul class="d3-list">
+									<li><i class="fas fa-circle"></i><div>We have <strong>half the capacity</strong> we planned for.</div></li>
+									<li><i class="fas fa-circle"></i><div>Across all sizes (S, M, L), we have to cut by <strong>50%</strong>.</div></li>
+									<li><i class="fas fa-circle"></i><div>The disruption hit the backlog, not the team&rsquo;s commitment.</div></li>
+								</ul>
+								<div class="d3-foot">
+									<div class="d3-foot-label">What this means for us</div>
+									<div class="d3-foot-text">We have to choose what to drop, and prove that what stays still works.</div>
+								</div>
+								<div class="d3-watermark"><i class="fas fa-exclamation-triangle"></i></div>
+							</div>
+							<div class="d3-col sage">
+								<div class="d3-eyebrow">The Opportunity</div>
+								<div class="d3-col-title">The city wants to advertise Wasl publicly.</div>
+								<ul class="d3-list">
+									<li><i class="fas fa-circle"></i><div>Key features must work <strong>perfectly</strong>.</div></li>
+									<li><i class="fas fa-circle"></i><div><strong>Data security</strong> is not negotiable.</div></li>
+									<li><i class="fas fa-circle"></i><div><strong>Ease of use</strong> is a must.</div></li>
+								</ul>
+								<div class="d3-foot">
+									<div class="d3-foot-label">What this means for us</div>
+									<div class="d3-foot-text">The city&rsquo;s voice is a sharper compass than MoSCoW alone.</div>
+								</div>
+								<div class="d3-watermark"><i class="fas fa-bullhorn"></i></div>
+							</div>
+						</div>
+						<div class="d3-bottom">&ldquo;Less capacity. Higher standards. Same promise.&rdquo;</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 3: Three Decisions Before We Cut a Single Story -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-decisions">
+						<h1>Three Decisions Before We Cut a Single Story</h1>
+						<div class="d3-rule"></div>
+						<div class="d3-grid">
+							<div class="d3-card">
+								<div>
+									<div class="d3-num">01</div>
+									<div class="d3-card-title">We listened to the city.</div>
+									<div class="d3-card-text">Their demands aren&rsquo;t pressure. They&rsquo;re <strong>prioritization signal</strong>. If &ldquo;data security&rdquo; is a blocker for them, it&rsquo;s a Must for us, even though it wasn&rsquo;t loud on our original backlog.</div>
+								</div>
+								<div class="d3-foot">
+									<div class="d3-foot-label">Outcome</div>
+									<div class="d3-foot-text">City demands &rarr; new prioritization inputs.</div>
+								</div>
+								<div class="d3-watermark"><i class="fas fa-headset"></i></div>
+							</div>
+							<div class="d3-card">
+								<div>
+									<div class="d3-num">02</div>
+									<div class="d3-card-title">We raised the bar, not the count.</div>
+									<div class="d3-card-text">Instead of adding new stories under pressure, we baked the city&rsquo;s must-haves (data security, ease of use) into the <strong>Definition of Done</strong> for every Sprint 1 story. Same <strong>15 stories</strong>. Higher acceptance bar.</div>
+								</div>
+								<div class="d3-foot">
+									<div class="d3-foot-label">Outcome</div>
+									<div class="d3-foot-text">Story count stays 15. The bar each story must clear rises.</div>
+								</div>
+								<div class="d3-watermark"><i class="fas fa-shield-alt"></i></div>
+							</div>
+							<div class="d3-card">
+								<div>
+									<div class="d3-num">03</div>
+									<div class="d3-card-title">We changed the tool.</div>
+									<div class="d3-card-text">MoSCoW got us to Sprint 1. Under capacity pressure, we needed a sharper instrument: the <strong>Reinertsen Matrix</strong>.</div>
+								</div>
+								<div class="d3-foot">
+									<div class="d3-foot-label">Outcome</div>
+									<div class="d3-foot-text">Importance &rarr; importance &times; cost of delay.</div>
+								</div>
+								<div class="d3-watermark"><i class="fas fa-th"></i></div>
+							</div>
+						</div>
+						<div class="d3-bottom">&ldquo;We didn&rsquo;t cut first. We re-decided first.&rdquo;</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 4: Reinertsen Matrix Explained -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-matrix">
+						<h1>Reinertsen Matrix: Cost of Delay &times; Duration</h1>
+						<div class="d3-rule"></div>
+						<div class="d3-cols">
+							<div class="d3-text">
+								<div class="d3-q">
+									<div class="d3-q-num">1.</div>
+									<div class="d3-q-body">
+										<div class="d3-q-title">Cost of Delay</div>
+										<div class="d3-q-text">How much pain if this ships later?</div>
+									</div>
+								</div>
+								<div class="d3-q">
+									<div class="d3-q-num">2.</div>
+									<div class="d3-q-body">
+										<div class="d3-q-title">Duration</div>
+										<div class="d3-q-text">How long does it take to build?</div>
+									</div>
+								</div>
+								<div class="d3-explain">The matrix produces nine cells, ranked 1 to 9. <strong>Cell 1</strong> (high CoD, low duration) is what you do first. <strong>Cell 9</strong> (low CoD, high duration) is what you cut.</div>
+								<div class="d3-bands">
+									<div class="d3-band ship"><strong>Cells 1&ndash;2</strong>Top priority</div>
+									<div class="d3-band defer"><strong>Cells 3&ndash;5</strong>Revisit or defer</div>
+									<div class="d3-band cut"><strong>Cells 6&ndash;9</strong>Low priority</div>
+								</div>
+								<div class="d3-example"><strong>Worked example</strong>A1 &middot; Daily check-in: High CoD, Low duration &rarr; Cell 1 &rarr; <em>Do first.</em></div>
+							</div>
+							<div style="margin: auto 0" >
+								<div class="d3-mx">
+									<div class="d3-mx-axis-x">
+										<div>Dur: High</div>
+										<div>Dur: Medium</div>
+										<div>Dur: Low</div>
+									</div>
+									<div class="d3-mx-axis-y">
+										<div>CoD: High</div>
+										<div>CoD: Medium</div>
+										<div>CoD: Low</div>
+									</div>
+									<div class="d3-mx-cell tier-3">4</div>
+									<div class="d3-mx-cell tier-2">2</div>
+									<div class="d3-mx-cell tier-1">1</div>
+									<div class="d3-mx-cell tier-4">7</div>
+									<div class="d3-mx-cell tier-3">5</div>
+									<div class="d3-mx-cell tier-3">3</div>
+									<div class="d3-mx-cell tier-4">9</div>
+									<div class="d3-mx-cell tier-4">8</div>
+									<div class="d3-mx-cell tier-4">6</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 5: City told us what Cost of Delay means -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-citycod">
+						<h1>The City Told Us What &ldquo;Cost of Delay&rdquo; Means</h1>
+						<div class="d3-rule"></div>
+						<div class="d3-rows">
+							<div class="d3-row">
+								<div class="d3-demand">&ldquo;Key features must work perfectly.&rdquo;</div>
+								<div class="d3-arrow"><i class="fas fa-arrow-right"></i></div>
+								<div class="d3-impact"><strong>High CoD</strong> on the core promise: daily check-in, SOS, dashboard, missed-check alert, neighbor fallback.</div>
+							</div>
+							<div class="d3-row">
+								<div class="d3-demand">&ldquo;Data security is not negotiable.&rdquo;</div>
+								<div class="d3-arrow"><i class="fas fa-arrow-right"></i></div>
+								<div class="d3-impact"><strong>High CoD</strong> on every Sprint 1 story&rsquo;s Definition of Done. No story ships unless data handling clears the bar.</div>
+							</div>
+							<div class="d3-row">
+								<div class="d3-demand">&ldquo;Ease of use is a must.&rdquo;</div>
+								<div class="d3-arrow"><i class="fas fa-arrow-right"></i></div>
+								<div class="d3-impact"><strong>High CoD</strong> on every Astrid-facing surface. Anything that touches the senior must be simple.</div>
+							</div>
+						</div>
+						<div class="d3-bottom">&ldquo;The city didn&rsquo;t just ask for features. They told us which delays cost the most.&rdquo;</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 6: All 15 stories on the matrix (HERO) -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-grid">
+						<h1>15 Stories. Nine Cells. One Decision.</h1>
+						<div class="d3-sub">All 15 stories placed by Cost of Delay &times; Duration. Cells 1&ndash;2 ship. Cell 5 defers. Cells 3, 8, 9 are cut.</div>
+						<div class="d3-legend">
+							<div><span class="d3-dot keep"></span>Keep / Do first</div>
+							<div><span class="d3-dot defer"></span>Defer to Sprint 2</div>
+							<div><span class="d3-dot cut"></span>Cut</div>
+						</div>
+						<div class="d3-mx">
+							<div class="d3-mx-axis-x">
+								<div>Dur: High</div>
+								<div>Dur: Medium</div>
+								<div>Dur: Low</div>
+							</div>
+							<div class="d3-mx-axis-y">
+								<div>CoD: High</div>
+								<div>CoD: Medium</div>
+								<div>CoD: Low</div>
+							</div>
+							<!-- Row 1: CoD High -->
+							<div class="d3-cell">
+								<div class="d3-cell-head"><div class="d3-cell-num">4</div><div class="d3-cell-tag">Break down</div></div>
+								<div class="d3-cell-empty">No High-CoD Larges. All are S or M.</div>
+							</div>
+							<div class="d3-cell keep">
+								<div class="d3-cell-head"><div class="d3-cell-num">2</div><div class="d3-cell-tag">Keep</div></div>
+								<div class="d3-chips">
+									<div class="d3-chip">A2 &middot; SOS button (M)</div>
+									<div class="d3-chip">M1 &middot; Family dashboard (M)</div>
+									<div class="d3-chip">L1 &middot; Neighbor SOS fallback (M)</div>
+								</div>
+							</div>
+							<div class="d3-cell do-first">
+								<div class="d3-cell-head"><div class="d3-cell-num">1</div><div class="d3-cell-tag">Do first</div></div>
+								<div class="d3-chips">
+									<div class="d3-chip">A1 &middot; Daily check-in (S)</div>
+									<div class="d3-chip">M2 &middot; Missed check-in alert (S)</div>
+								</div>
+							</div>
+							<!-- Row 2: CoD Medium -->
+							<div class="d3-cell">
+								<div class="d3-cell-head"><div class="d3-cell-num">7</div><div class="d3-cell-tag">Empty</div></div>
+								<div class="d3-cell-empty">No story landed here.</div>
+							</div>
+							<div class="d3-cell defer">
+								<div class="d3-cell-head"><div class="d3-cell-num">5</div><div class="d3-cell-tag">Defer</div></div>
+								<div class="d3-chips">
+									<div class="d3-chip">I1 &middot; Book on Astrid&rsquo;s behalf (M)</div>
+									<div class="d3-chip">S1 &middot; Daily highlights (M)</div>
+								</div>
+							</div>
+							<div class="d3-cell cut">
+								<div class="d3-cell-head"><div class="d3-cell-num">3</div><div class="d3-cell-tag">Cut</div></div>
+								<div class="d3-chips">
+									<div class="d3-chip">I2 &middot; See who did what (S)</div>
+									<div class="d3-chip">I3 &middot; Notes on booking (S)</div>
+									<div class="d3-chip">L2 &middot; &ldquo;I&rsquo;m on my way&rdquo; (S)</div>
+								</div>
+							</div>
+							<!-- Row 3: CoD Low -->
+							<div class="d3-cell cut">
+								<div class="d3-cell-head"><div class="d3-cell-num">9</div><div class="d3-cell-tag">Cut first</div></div>
+								<div class="d3-chips">
+									<div class="d3-chip">M3 &middot; Vitals trends (L)</div>
+									<div class="d3-chip">S2 &middot; Video call from timeline (L)</div>
+									<div class="d3-chip">A3 &middot; Grocery delivery (L)</div>
+									<div class="d3-chip">S3 &middot; Heart/voice reaction</div>
+								</div>
+							</div>
+							<div class="d3-cell cut">
+								<div class="d3-cell-head"><div class="d3-cell-num">8</div><div class="d3-cell-tag">Cut</div></div>
+								<div class="d3-chips">
+									<div class="d3-chip">L3 &middot; Non-emergency nudge (M)</div>
+								</div>
+							</div>
+							<div class="d3-cell">
+								<div class="d3-cell-head"><div class="d3-cell-num">6</div><div class="d3-cell-tag">Empty</div></div>
+								<div class="d3-cell-empty">No story landed here.</div>
+							</div>
+						</div>
+						<div class="d3-bottom">&ldquo;Cells 1&ndash;2 ship. Cell 5 defers. Cells 3, 8, 9 are cut.&rdquo;</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 7: From 15 Stories to 7 -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-survived">
+						<h1>From 15 Stories to 7</h1>
+						<div class="d3-numbers">
+							<div class="d3-from">15 stories</div>
+							<div class="d3-arrow"><i class="fas fa-arrow-right"></i></div>
+							<div class="d3-from"><strong>7 ship</strong> &middot; 8 cut or deferred</div>
+						</div>
+						<div class="d3-cols">
+							<div class="d3-keep">
+								<div class="d3-side-label">Keeping</div>
+								<div class="d3-side-title">Sprint 1 holds. Sprint 2 keeps the roadmap moving.</div>
+								<div class="d3-grp">
+									<div class="d3-grp-label">Sprint 1 &middot; 5 stories</div>
+									<div class="d3-items">
+										<div class="d3-item"><span class="d3-id">A1</span>Daily check-in</div>
+										<div class="d3-item"><span class="d3-id">A2</span>SOS button</div>
+										<div class="d3-item"><span class="d3-id">M1</span>Family dashboard</div>
+										<div class="d3-item"><span class="d3-id">M2</span>Missed check-in alert</div>
+										<div class="d3-item"><span class="d3-id">L1</span>Neighbor SOS fallback</div>
+									</div>
+								</div>
+								<div class="d3-grp">
+									<div class="d3-grp-label">Sprint 2 &middot; 2 stories</div>
+									<div class="d3-items">
+										<div class="d3-item"><span class="d3-id">I1</span>Book on Astrid&rsquo;s behalf</div>
+										<div class="d3-item"><span class="d3-id">S1</span>Daily highlights</div>
+									</div>
+								</div>
+							</div>
+							<div class="d3-cut">
+								<div class="d3-side-label">Cut or deferred</div>
+								<div class="d3-side-title">8 stories beyond Sprint 1.</div>
+								<div class="d3-grp">
+									<div class="d3-grp-label">Low payoff &middot; low size</div>
+									<div class="d3-items">
+										<div class="d3-item"><span class="d3-id">I2</span>&middot;</div>
+										<div class="d3-item"><span class="d3-id">I3</span>&middot;</div>
+										<div class="d3-item"><span class="d3-id">L2</span>&middot;</div>
+										<div class="d3-item"><span class="d3-id">L3</span>&middot;</div>
+									</div>
+								</div>
+								<div class="d3-grp">
+									<div class="d3-grp-label">High effort &middot; lower urgency</div>
+									<div class="d3-items">
+										<div class="d3-item"><span class="d3-id">M3</span>&middot;</div>
+										<div class="d3-item"><span class="d3-id">S2</span>&middot;</div>
+										<div class="d3-item"><span class="d3-id">A3</span>&middot;</div>
+									</div>
+								</div>
+								<div class="d3-grp">
+									<div class="d3-grp-label">Already a Won&rsquo;t-Have</div>
+									<div class="d3-items">
+										<div class="d3-item"><span class="d3-id">S3</span>&middot;</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="d3-distribution">
+							<div class="d3-dist-label">15 stories &middot; how the cut distributed</div>
+							<div class="d3-dist-bar">
+								<div class="d3-dist-seg s1">5 &middot; Sprint 1</div>
+								<div class="d3-dist-seg s2">2 &middot; Sprint 2</div>
+								<div class="d3-dist-seg cut">8 &middot; Cut or deferred</div>
+							</div>
+							<div class="d3-dist-key">
+								<span><i class="s1"></i>Sprint 1 (5 stories, raised DoD)</span>
+								<span><i class="s2"></i>Sprint 2 (deferred but kept on roadmap)</span>
+								<span><i class="cut"></i>Cut from the backlog beyond Sprint 1</span>
+							</div>
+						</div>
+						<div class="d3-bottom">&ldquo;Sprint 1 stayed intact. The cut came from the backlog beyond it.&rdquo;</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 8: Why we defended Sprint 1 -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-defend">
+						<h1>Cutting the Slice Would Have Broken the Promise</h1>
+						<div class="d3-rule"></div>
+						<div class="d3-grid">
+							<div class="d3-card">
+								<div>
+									<div class="d3-icon"><i class="fas fa-cut"></i></div>
+									<div class="d3-card-title">The slice is already minimal.</div>
+									<div class="d3-card-text">We&rsquo;d already cut MoSCoW Won&rsquo;t-Haves before this disruption hit. <strong>There is no fat left in Sprint 1.</strong></div>
+								</div>
+								<div class="d3-foot">
+									<div class="d3-foot-label">If we cut more</div>
+									<div class="d3-foot-text">We start cutting muscle, not fat. The slice stops being minimal viable.</div>
+								</div>
+							</div>
+							<div class="d3-card">
+								<div>
+									<div class="d3-icon"><i class="fas fa-link"></i></div>
+									<div class="d3-card-title">The slice is vertical, not horizontal.</div>
+									<div class="d3-card-text">Drop Magnus&rsquo;s dashboard and Astrid&rsquo;s check-in goes nowhere. Drop Lars&rsquo;s fallback and the safety net disappears. <strong>Each story holds the others up.</strong></div>
+								</div>
+								<div class="d3-foot">
+									<div class="d3-foot-label">If we cut one</div>
+									<div class="d3-foot-text">The chain breaks. Astrid &rarr; Magnus &rarr; Lars only works end&#8209;to&#8209;end.</div>
+								</div>
+							</div>
+							<div class="d3-card">
+								<div>
+									<div class="d3-icon"><i class="fas fa-bullseye"></i></div>
+									<div class="d3-card-title">The city&rsquo;s &ldquo;key features&rdquo; are exactly Sprint 1.</div>
+									<div class="d3-card-text">Daily check-in. SOS. Dashboard. Missed-check alert. Neighbor fallback. <strong>The city&rsquo;s &ldquo;perfect&rdquo; features and our Sprint 1 are the same list.</strong></div>
+								</div>
+								<div class="d3-foot">
+									<div class="d3-foot-label">If we cut here</div>
+									<div class="d3-foot-text">There&rsquo;s nothing left for the city to advertise. We lose the public launch.</div>
+								</div>
+							</div>
+						</div>
+						<div class="d3-bottom">We didn&rsquo;t defend the sprint out of stubbornness. We defended it because <strong>cutting it means there&rsquo;s no product left to advertise.</strong></div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 9: Pitch to the city -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-pitch">
+						<div class="d3-bg"></div>
+						<div class="d3-bg-2"></div>
+						<div class="d3-content">
+							<h1>Why the City Should Still Pick Wasl</h1>
+							<div class="d3-rule"></div>
+							<div class="d3-quote-wrap">
+								<div class="d3-q-mark">&ldquo;</div>
+								<div class="d3-quote">You asked for key features that work perfectly, data security you can trust, and ease of use that respects seniors. Capacity got cut in half this week. We still ship all three.</div>
+							</div>
+							<div class="d3-pillars">
+								<div class="d3-pillar">
+									<div class="d3-pillar-title">Key features, perfect</div>
+									<div class="d3-pillar-desc">The five Sprint 1 stories <em>are</em> the core promise. Nothing else competes for attention.</div>
+								</div>
+								<div class="d3-pillar">
+									<div class="d3-pillar-title">Data security, baked in</div>
+									<div class="d3-pillar-desc">Written into the Definition of Done for every Sprint 1 story. No story ships unless it clears the bar.</div>
+								</div>
+								<div class="d3-pillar">
+									<div class="d3-pillar-title">Ease of use, by design</div>
+									<div class="d3-pillar-desc">Astrid is our primary user. Large tap targets, single-tap flows, accessibility in our Definition of Done.</div>
+								</div>
+							</div>
+							<div class="d3-bottom">&ldquo;Less capacity didn&rsquo;t change what we ship first. It changed what we drop later.&rdquo;</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- ===================== Day 3: Part II — Product Delivery Report ===================== -->
+
+				<!-- Day 3 / Slide 10: Section divider — Product Delivery Report -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-sp-title">
+						<div class="sp-logo-corner"><img src="images/wasl_arabic.png" alt="Wasl logo"></div>
+						<div class="sp-motif">
+							<div class="sp-circle"></div>
+							<div class="sp-circle sp-circle-2"></div>
+						</div>
+						<div class="sp-content">
+							<div class="sp-part-tag">Part II &middot; Product Delivery Report</div>
+							<h1>Looking Back at the Journey</h1>
+							<div class="sp-subtitle">From a vision to a sprint we can defend.</div>
+							<div class="sp-rule"></div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 11: Journey timeline -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-timeline">
+						<h1>From an Idea to a Shippable Slice</h1>
+						<div class="d3-rule"></div>
+						<div class="d3-line-wrap">
+							<div class="d3-track"></div>
+							<div class="d3-stops">
+								<div class="d3-stop">
+									<div class="d3-stop-num">01</div>
+									<div class="d3-stop-dot"></div>
+									<div class="d3-stop-title">Vision &amp; Personas</div>
+									<div class="d3-stop-desc">&ldquo;Five lives, one connection.&rdquo;</div>
+								</div>
+								<div class="d3-stop">
+									<div class="d3-stop-num">02</div>
+									<div class="d3-stop-dot"></div>
+									<div class="d3-stop-title">15 User Stories</div>
+									<div class="d3-stop-desc">&ldquo;Three per persona.&rdquo;</div>
+								</div>
+								<div class="d3-stop">
+									<div class="d3-stop-num">03</div>
+									<div class="d3-stop-dot"></div>
+									<div class="d3-stop-title">Story Maps + Prioritization</div>
+									<div class="d3-stop-desc">&ldquo;MoSCoW for importance, SML for effort.&rdquo;</div>
+								</div>
+								<div class="d3-stop">
+									<div class="d3-stop-num">04</div>
+									<div class="d3-stop-dot"></div>
+									<div class="d3-stop-title">Sprint 1 Backlog</div>
+									<div class="d3-stop-desc">&ldquo;5 stories, vertical slice.&rdquo;</div>
+								</div>
+								<div class="d3-stop">
+									<div class="d3-stop-num">05</div>
+									<div class="d3-stop-dot"></div>
+									<div class="d3-stop-title">Disruption &amp; Re-prioritization</div>
+									<div class="d3-stop-desc">&ldquo;Reinertsen, capacity halved, Sprint 1 defended.&rdquo;</div>
+								</div>
+							</div>
+						</div>
+						<div class="d3-bottom">&ldquo;Every milestone made the next decision sharper.&rdquo;</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 12: Roles & artefacts -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-roles">
+						<h1>Who Owned What</h1>
+						<div class="d3-rule"></div>
+						<div class="d3-grid">
+							<div class="d3-card">
+								<div>
+									<div class="d3-role">Product Owner</div>
+									<div class="d3-name">Gokhan Aydogan</div>
+									<div class="d3-tag">&ldquo;Owns the why.&rdquo;</div>
+									<div class="d3-block">
+										<div class="d3-block-label">Artefacts</div>
+										<div class="d3-block-text">Vision Board &middot; Personas &middot; Product Backlog (priority order)</div>
+									</div>
+									<div class="d3-block">
+										<div class="d3-block-label">Voice of</div>
+										<div class="d3-block-text">The user and the business.</div>
+									</div>
+								</div>
+								<div class="d3-asks">
+									<div class="d3-asks-label">Asks every sprint</div>
+									<div class="d3-asks-text">&ldquo;Are we still building the right thing?&rdquo;</div>
+								</div>
+								<div class="d3-icon"><i class="fas fa-compass"></i></div>
+							</div>
+							<div class="d3-card">
+								<div>
+									<div class="d3-role">Scrum Master</div>
+									<div class="d3-name">Efe Senyuva</div>
+									<div class="d3-tag">&ldquo;Owns the how.&rdquo;</div>
+									<div class="d3-block">
+										<div class="d3-block-label">Artefacts</div>
+										<div class="d3-block-text">Sprint Backlog &middot; Definition of Done &middot; Impediment log</div>
+									</div>
+									<div class="d3-block">
+										<div class="d3-block-label">Protects</div>
+										<div class="d3-block-text">Focus, ceremonies, the team.</div>
+									</div>
+								</div>
+								<div class="d3-asks">
+									<div class="d3-asks-label">Asks every day</div>
+									<div class="d3-asks-text">&ldquo;What&rsquo;s blocking us, and how do I clear it?&rdquo;</div>
+								</div>
+								<div class="d3-icon"><i class="fas fa-shield-alt"></i></div>
+							</div>
+							<div class="d3-card">
+								<div>
+									<div class="d3-role">Development Team</div>
+									<div class="d3-name">Murtaza &middot; Vrutika &middot; Shilpa &middot; Hoori &middot; Ali</div>
+									<div class="d3-tag">&ldquo;Owns the what.&rdquo;</div>
+									<div class="d3-block">
+										<div class="d3-block-label">Artefacts</div>
+										<div class="d3-block-text">User Stories &middot; Story Maps &middot; Sprint Increment &middot; Flutter prototype</div>
+									</div>
+									<div class="d3-block">
+										<div class="d3-block-label">Plus</div>
+										<div class="d3-block-text">Our partner dev team in India, joined every daily.</div>
+									</div>
+								</div>
+								<div class="d3-asks">
+									<div class="d3-asks-label">Asks every story</div>
+									<div class="d3-asks-text">&ldquo;What&rsquo;s the smallest thing we can ship that&rsquo;s real?&rdquo;</div>
+								</div>
+								<div class="d3-icon"><i class="fas fa-code"></i></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 13: Five ceremonies -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-ceremonies">
+						<h1>Five Meetings, One Rhythm</h1>
+						<div class="d3-rule"></div>
+						<div class="d3-list">
+							<div class="d3-row">
+								<div class="d3-num">01</div>
+								<div class="d3-body">
+									<div class="d3-title">Sprint Planning I &middot; <em>What</em></div>
+									<div class="d3-desc">PO presents priorities. Team commits to a sprint goal.</div>
+								</div>
+								<div class="d3-meta"><strong>Every 2 weeks</strong>1 hour</div>
+							</div>
+							<div class="d3-row">
+								<div class="d3-num">02</div>
+								<div class="d3-body">
+									<div class="d3-title">Sprint Planning II &middot; <em>How</em></div>
+									<div class="d3-desc">Team breaks committed stories into tasks.</div>
+								</div>
+								<div class="d3-meta"><strong>Same day</strong>1 hour</div>
+							</div>
+							<div class="d3-row">
+								<div class="d3-num">03</div>
+								<div class="d3-body">
+									<div class="d3-title">Daily Standup</div>
+									<div class="d3-desc">Did. Doing. Blocked. India joins by video.</div>
+								</div>
+								<div class="d3-meta"><strong>Every working day</strong>15 min</div>
+							</div>
+							<div class="d3-row">
+								<div class="d3-num">04</div>
+								<div class="d3-body">
+									<div class="d3-title">Sprint Review</div>
+									<div class="d3-desc">Demo to PO. Stakeholder feedback collected.</div>
+								</div>
+								<div class="d3-meta"><strong>End of sprint</strong>1 hour</div>
+							</div>
+							<div class="d3-row">
+								<div class="d3-num">05</div>
+								<div class="d3-body">
+									<div class="d3-title">Retrospective</div>
+									<div class="d3-desc">What worked. What didn&rsquo;t. One change for next sprint.</div>
+								</div>
+								<div class="d3-meta"><strong>End of sprint</strong>45 min</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 14: Three lenses -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-lenses">
+						<h1>Three Lenses, Three Questions</h1>
+						<div class="d3-rule"></div>
+						<div class="d3-grid">
+							<div class="d3-card">
+								<div class="d3-tool-row">
+									<div class="d3-tool-icon"><i class="fas fa-map"></i></div>
+									<div class="d3-tool">Story Mapping</div>
+								</div>
+								<div class="d3-q">Where does this story sit in the user&rsquo;s journey?</div>
+								<div class="d3-why-label">Why it worked</div>
+								<div class="d3-why">Forced us to see the experience, not just the backlog. Made gaps obvious: Lars&rsquo;s &ldquo;stay in background&rdquo; column was empty by design, not by accident.</div>
+								<div class="d3-foot">
+									<div class="d3-foot-label">Best for</div>
+									<div class="d3-foot-text">Discovering missing flows and seeing the story arc.</div>
+								</div>
+							</div>
+							<div class="d3-card">
+								<div class="d3-tool-row">
+									<div class="d3-tool-icon"><i class="fas fa-tasks"></i></div>
+									<div class="d3-tool">MoSCoW</div>
+								</div>
+								<div class="d3-q">How important is this story?</div>
+								<div class="d3-why-label">Why it worked</div>
+								<div class="d3-why">Forced us to put two stories in &ldquo;Won&rsquo;t Have.&rdquo; If you can&rsquo;t say no, you haven&rsquo;t prioritized.</div>
+								<div class="d3-foot">
+									<div class="d3-foot-label">Best for</div>
+									<div class="d3-foot-text">Forcing a clear &ldquo;no&rdquo; alongside every &ldquo;yes.&rdquo;</div>
+								</div>
+							</div>
+							<div class="d3-card">
+								<div class="d3-tool-row">
+									<div class="d3-tool-icon"><i class="fas fa-ruler"></i></div>
+									<div class="d3-tool">SML &middot; Small / Medium / Large</div>
+								</div>
+								<div class="d3-q">How much effort will this take?</div>
+								<div class="d3-why-label">Why it worked</div>
+								<div class="d3-why">Cheaper than story points for early-stage estimation. Three buckets, fast consensus, easy to revisit.</div>
+								<div class="d3-foot">
+									<div class="d3-foot-label">Best for</div>
+									<div class="d3-foot-text">Fast effort sizing when the team is still aligning.</div>
+								</div>
+							</div>
+						</div>
+						<div class="d3-bottom">&ldquo;No single tool prioritizes well. Together, they triangulate the right call.&rdquo;</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 15: Reinertsen as fourth lens -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-fourth">
+						<h1>Reinertsen: The Tool the Crisis Demanded</h1>
+						<div class="d3-rule"></div>
+						<div class="d3-cols">
+							<div class="d3-col">
+								<div class="d3-col-eyebrow">Why MoSCoW wasn&rsquo;t enough</div>
+								<div class="d3-col-title">Importance, but not trade-off under constraint.</div>
+								<ul class="d3-list">
+									<li><i class="fas fa-circle"></i><div>MoSCoW had already pushed everything we could into Won&rsquo;t-Haves.</div></li>
+									<li><i class="fas fa-circle"></i><div>It tells you <em>importance</em>, not <em>trade-off under constraint</em>.</div></li>
+									<li><i class="fas fa-circle"></i><div>&ldquo;Must Have&rdquo; is binary. It can&rsquo;t help you choose between two Musts.</div></li>
+								</ul>
+								<div class="d3-insight">
+									<i class="fas fa-exclamation-circle"></i>
+									<div class="d3-insight-body">
+										<div class="d3-insight-label">The gap</div>
+										<div class="d3-insight-text">9 Musts on day one, 0 way to rank them.</div>
+									</div>
+								</div>
+							</div>
+							<div class="d3-col right">
+								<div class="d3-col-eyebrow">What Reinertsen added</div>
+								<div class="d3-col-title">A sharper instrument for cutting under pressure.</div>
+								<ul class="d3-list">
+									<li><i class="fas fa-circle"></i><div>Made <em>delay cost</em> explicit, not implicit.</div></li>
+									<li><i class="fas fa-circle"></i><div>Combined importance and effort in one view.</div></li>
+									<li><i class="fas fa-circle"></i><div>Cut along the right axis: low-payoff Larges go first, high-payoff Smalls stay.</div></li>
+								</ul>
+								<div class="d3-insight">
+									<i class="fas fa-check-circle"></i>
+									<div class="d3-insight-body">
+										<div class="d3-insight-label">The result</div>
+										<div class="d3-insight-text">15 stories ranked 1&ndash;9 in a single afternoon.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="d3-bottom">&ldquo;Different sprint, different problem, different tool. That&rsquo;s how we got the answer.&rdquo;</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 16: Challenges -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-challenges">
+						<h1>Three Things We Got Wrong, And What We Did About It</h1>
+						<div class="d3-rule"></div>
+						<div class="d3-list">
+							<div class="d3-card">
+								<div class="d3-num">01</div>
+								<div class="d3-side">
+									<div class="d3-side-label">The mistake</div>
+									<div class="d3-side-title">We started with the prototype, not the vision.</div>
+									<div class="d3-side-text">Ali had a Flutter prototype before we wrote a vision statement. We were designing screens before we knew who they were for.</div>
+								</div>
+								<div class="d3-side fix">
+									<div class="d3-side-label">What we did</div>
+									<div class="d3-side-title">Stopped. Wrote the vision. Re-derived stories from personas.</div>
+									<div class="d3-side-text">The prototype became evidence, not the source.</div>
+								</div>
+							</div>
+							<div class="d3-card">
+								<div class="d3-num">02</div>
+								<div class="d3-side">
+									<div class="d3-side-label">The mistake</div>
+									<div class="d3-side-title">Cross-border standups were chaos at first.</div>
+									<div class="d3-side-text">Our partners in India joined dailies, but it was unclear which decisions were ours alone vs. theirs to weigh in on. Standups ran 35 minutes.</div>
+								</div>
+								<div class="d3-side fix">
+									<div class="d3-side-label">What we did</div>
+									<div class="d3-side-title">SM enforced the three-question format strictly.</div>
+									<div class="d3-side-text">Decisions and discussions moved to a separate sync. Standups now run 15 minutes flat.</div>
+								</div>
+							</div>
+							<div class="d3-card">
+								<div class="d3-num">03</div>
+								<div class="d3-side">
+									<div class="d3-side-label">The mistake</div>
+									<div class="d3-side-title">We almost confused MoSCoW with prioritization.</div>
+									<div class="d3-side-text">Early on, &ldquo;Must / Should / Could / Won&rsquo;t&rdquo; felt like the answer. We had nine Musts.</div>
+								</div>
+								<div class="d3-side fix">
+									<div class="d3-side-label">What we did</div>
+									<div class="d3-side-title">Forced ourselves to use SML alongside MoSCoW.</div>
+									<div class="d3-side-text">Put real stories in Won&rsquo;t-Have. When the disruption hit, Reinertsen taught us a third axis we&rsquo;d been ignoring: cost of delay.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Day 3 / Slide 17: Lessons -->
+				<section class="wasl-section" data-background-color="#FDF8F3">
+					<div class="wasl-slide wasl-d3-lessons">
+						<h1>Three Lessons That Will Carry Forward</h1>
+						<div class="d3-rule"></div>
+						<div class="d3-grid">
+							<div class="d3-card">
+								<div>
+									<div class="d3-num">01</div>
+									<div class="d3-headline">The vision is the cheapest thing to write and the most expensive thing to skip.</div>
+									<div class="d3-text">Once we wrote it, every prioritization conversation got 10&times; faster.</div>
+								</div>
+								<div class="d3-foot">
+									<div class="d3-foot-label">In practice</div>
+									<div class="d3-foot-text">Write the vision in week 1. Re-read it before every prioritization debate.</div>
+								</div>
+								<div class="d3-watermark"><i class="fas fa-eye"></i></div>
+							</div>
+							<div class="d3-card">
+								<div>
+									<div class="d3-num">02</div>
+									<div class="d3-headline">Constraints don&rsquo;t break a backlog. They reveal it.</div>
+									<div class="d3-text">Half the capacity made us decide what we actually meant by &ldquo;Must.&rdquo;</div>
+								</div>
+								<div class="d3-foot">
+									<div class="d3-foot-label">In practice</div>
+									<div class="d3-foot-text">Don&rsquo;t fear the cut. Treat constraints as the test your backlog needed.</div>
+								</div>
+								<div class="d3-watermark"><i class="fas fa-compress"></i></div>
+							</div>
+							<div class="d3-card">
+								<div>
+									<div class="d3-num">03</div>
+									<div class="d3-headline">No single prioritization tool is enough.</div>
+									<div class="d3-text">Story map, MoSCoW, SML, Reinertsen. Each answers a different question. Use the one the moment is asking for.</div>
+								</div>
+								<div class="d3-foot">
+									<div class="d3-foot-label">In practice</div>
+									<div class="d3-foot-text">Match the tool to the question. Switch when the question changes.</div>
+								</div>
+								<div class="d3-watermark"><i class="fas fa-toolbox"></i></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
 				<!-- Slide 12: Closing -->
 				<section class="wasl-section" data-background-color="#FDF8F3">
 					<div class="wasl-slide wasl-close">
@@ -7485,7 +10273,56 @@
 				'.wasl-sp-why h1',
 				'.wasl-sp-why .sp-card',
 				'.wasl-sp-quote .sp-quote',
-				'.wasl-sp-quote .sp-arabic'
+				'.wasl-sp-quote .sp-arabic',
+				/* Day 3 slides */
+				'.wasl-sp-title .sp-part-tag',
+				'.wasl-sp-title .sp-rule',
+				'.wasl-d3-two h1',
+				'.wasl-d3-two .d3-col',
+				'.wasl-d3-two .d3-bottom',
+				'.wasl-d3-decisions h1',
+				'.wasl-d3-decisions .d3-card',
+				'.wasl-d3-matrix h1',
+				'.wasl-d3-matrix .d3-q',
+				'.wasl-d3-matrix .d3-explain',
+				'.wasl-d3-matrix .d3-mx-cell',
+				'.wasl-d3-citycod h1',
+				'.wasl-d3-citycod .d3-row',
+				'.wasl-d3-citycod .d3-bottom',
+				'.wasl-d3-grid h1',
+				'.wasl-d3-grid .d3-sub',
+				'.wasl-d3-grid .d3-legend',
+				'.wasl-d3-grid .d3-cell',
+				'.wasl-d3-grid .d3-bottom',
+				'.wasl-d3-survived h1',
+				'.wasl-d3-survived .d3-numbers',
+				'.wasl-d3-survived .d3-keep',
+				'.wasl-d3-survived .d3-cut',
+				'.wasl-d3-survived .d3-bottom',
+				'.wasl-d3-defend h1',
+				'.wasl-d3-defend .d3-card',
+				'.wasl-d3-defend .d3-bottom',
+				'.wasl-d3-pitch h1',
+				'.wasl-d3-pitch .d3-quote-wrap',
+				'.wasl-d3-pitch .d3-pillar',
+				'.wasl-d3-pitch .d3-bottom',
+				'.wasl-d3-timeline h1',
+				'.wasl-d3-timeline .d3-stop',
+				'.wasl-d3-timeline .d3-bottom',
+				'.wasl-d3-roles h1',
+				'.wasl-d3-roles .d3-card',
+				'.wasl-d3-ceremonies h1',
+				'.wasl-d3-ceremonies .d3-row',
+				'.wasl-d3-lenses h1',
+				'.wasl-d3-lenses .d3-card',
+				'.wasl-d3-lenses .d3-bottom',
+				'.wasl-d3-fourth h1',
+				'.wasl-d3-fourth .d3-col',
+				'.wasl-d3-fourth .d3-bottom',
+				'.wasl-d3-challenges h1',
+				'.wasl-d3-challenges .d3-card',
+				'.wasl-d3-lessons h1',
+				'.wasl-d3-lessons .d3-card'
 			].join(',');
 
 			function initSlideBaAnimations() {
