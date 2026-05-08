@@ -8314,6 +8314,586 @@
 			.reveal .slides section .wasl-d3-lessons .d3-card:nth-child(2) .d3-watermark { color: #7BA888; }
 			.reveal .slides section .wasl-d3-lessons .d3-card:nth-child(3) .d3-watermark { color: #C96E34; }
 
+			/* ======================= Cisco Case Study ======================= */
+
+			.reveal .slides section .cisco-slide {
+				width: 100%;
+				height: 100%;
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				color: #2A2622;
+				font-family: 'Source Sans 3', sans-serif;
+				background-color: #FDF8F3;
+				position: relative;
+			}
+			.reveal .slides section .cisco-slide h1 {
+				font-family: 'Fraunces', serif;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0;
+				text-align: left;
+				line-height: 1.15;
+			}
+			.reveal .slides section .cisco-slide .c-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				border-radius: 2px;
+				margin: 10px 0 18px;
+			}
+			.reveal .slides section .cisco-slide .c-eyebrow {
+				font-size: 10.5px;
+				font-weight: 700;
+				letter-spacing: 0.28em;
+				text-transform: uppercase;
+				color: #1F4E79;
+				margin-bottom: 10px;
+			}
+			.reveal .slides section .cisco-slide .c-bottom {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 19px;
+				color: #E8844A;
+				text-align: center;
+				line-height: 1.4;
+				padding: 8px 50px 0;
+			}
+
+			/* ----- Slide 1: Title / Setup ----- */
+			.reveal .slides section .cisco-title {
+				padding: 60px 70px;
+				justify-content: center;
+			}
+			.reveal .slides section .cisco-title h1 {
+				font-size: 50px;
+				margin-bottom: 14px;
+			}
+			.reveal .slides section .cisco-title .c-sub {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 22px;
+				color: #5A5148;
+				line-height: 1.45;
+				margin-bottom: 26px;
+				max-width: 820px;
+			}
+			.reveal .slides section .cisco-title .c-rule {
+				width: 64px;
+				height: 4px;
+				margin: 0 0 28px;
+			}
+			.reveal .slides section .cisco-title .c-facts {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 18px;
+				max-width: 920px;
+			}
+			.reveal .slides section .cisco-title .c-fact {
+				background-color: #F7EFE4;
+				border-radius: 10px;
+				padding: 18px 22px;
+				border-left: 3px solid #E8844A;
+				box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+			}
+			.reveal .slides section .cisco-title .c-fact:nth-child(2) { border-left-color: #7BA888; }
+			.reveal .slides section .cisco-title .c-fact:nth-child(3) { border-left-color: #1F4E79; }
+			.reveal .slides section .cisco-title .c-fact-label {
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.22em;
+				text-transform: uppercase;
+				color: #8A7C6B;
+				margin-bottom: 6px;
+			}
+			.reveal .slides section .cisco-title .c-fact-value {
+				font-family: 'Fraunces', serif;
+				font-size: 16.5px;
+				font-weight: 700;
+				color: #2A2622;
+				line-height: 1.3;
+			}
+
+			/* ----- Shared header block ----- */
+			.reveal .slides section .cisco-slide.with-header {
+				padding: 36px 56px 30px;
+			}
+			.reveal .slides section .cisco-slide.with-header h1 {
+				font-size: 30px;
+			}
+
+			/* ----- Slide 2: Waterfall Problem (two columns) ----- */
+			.reveal .slides section .cisco-waterfall .c-cols {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 22px;
+				flex: 1;
+				min-height: 0;
+				margin-bottom: 14px;
+				align-items: center;
+			}
+			.reveal .slides section .cisco-waterfall .c-col {
+				background-color: #F7EFE4;
+				border-radius: 10px;
+				padding: 22px 26px 22px;
+				display: flex;
+				flex-direction: column;
+				border-top: 4px solid #D64545;
+				box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+				height: 220px;
+			}
+			.reveal .slides section .cisco-waterfall .c-col.right {
+				border-top-color: #C96E34;
+			}
+			.reveal .slides section .cisco-waterfall .c-col-eye {
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				color: #D64545;
+				margin-bottom: 8px;
+			}
+			.reveal .slides section .cisco-waterfall .c-col.right .c-col-eye { color: #C96E34; }
+			.reveal .slides section .cisco-waterfall .c-col-title {
+				font-family: 'Fraunces', serif;
+				font-size: 19px;
+				font-weight: 700;
+				color: #2A2622;
+				margin-bottom: 12px;
+				line-height: 1.3;
+			}
+			.reveal .slides section .cisco-waterfall .c-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+			.reveal .slides section .cisco-waterfall .c-list li {
+				display: flex;
+				align-items: flex-start;
+				gap: 10px;
+				font-size: 14.5px;
+				line-height: 1.5;
+				color: #2A2622;
+			}
+			.reveal .slides section .cisco-waterfall .c-list li i {
+				color: #D64545;
+				font-size: 11px;
+				margin-top: 6px;
+				flex-shrink: 0;
+			}
+			.reveal .slides section .cisco-waterfall .c-col.right .c-list li i { color: #C96E34; }
+
+			/* ----- Slide 3: Transformation (table + bullets) ----- */
+			.reveal .slides section .cisco-transform .c-section-eye {
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.22em;
+				text-transform: uppercase;
+				color: #1F4E79;
+				margin-bottom: 8px;
+			}
+			.reveal .slides section .cisco-transform .c-section-eye.alt {
+				color: #7BA888;
+				margin-top: 14px;
+			}
+			.reveal .slides section .cisco-transform .c-table {
+				width: 100%;
+				border-collapse: separate;
+				border-spacing: 0;
+				margin-bottom: 4px;
+				background-color: #F7EFE4;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+				margin-top: 40px !important;
+			}
+			.reveal .slides section .cisco-transform .c-table th {
+				font-family: 'Fraunces', serif;
+				font-size: 13px;
+				font-weight: 700;
+				color: #FDF8F3;
+				background-color: #1F4E79;
+				padding: 10px 18px;
+				text-align: left;
+				letter-spacing: 0.04em;
+			}
+			.reveal .slides section .cisco-transform .c-table td {
+				padding: 12px 18px;
+				font-size: 14px;
+				color: #2A2622;
+				line-height: 1.4;
+				border-top: 1px solid rgba(42,38,34,0.08);
+			}
+			.reveal .slides section .cisco-transform .c-table td.c-art {
+				font-family: 'Fraunces', serif;
+				font-weight: 700;
+				color: #1F4E79;
+				width: 30%;
+			}
+			.reveal .slides section .cisco-transform .c-cult {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 14px;
+				margin-top: 10px;
+				margin-bottom: 8px;
+			}
+			.reveal .slides section .cisco-transform .c-cult-card {
+				background-color: #FDF8F3;
+				border: 1px solid rgba(123,168,136,0.35);
+				border-left: 3px solid #7BA888;
+				border-radius: 8px;
+				padding: 12px 14px 12px;
+			}
+			.reveal .slides section .cisco-transform .c-cult-title {
+				font-family: 'Fraunces', serif;
+				font-size: 14px;
+				font-weight: 700;
+				color: #2A2622;
+				margin-bottom: 4px;
+				line-height: 1.3;
+			}
+			.reveal .slides section .cisco-transform .c-cult-text {
+				font-size: 12.5px;
+				line-height: 1.45;
+				color: #5A5148;
+			}
+
+			/* ----- Slide 4: Where Scrum Fit In (three cards) ----- */
+			.reveal .slides section .cisco-roles .c-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 18px;
+				flex: 1;
+				min-height: 0;
+				margin-bottom: 12px;
+				align-items: center;
+			}
+			.reveal .slides section .cisco-roles .c-card {
+				background-color: #F7EFE4;
+				border-radius: 10px;
+				padding: 22px 22px 22px;
+				display: flex;
+				flex-direction: column;
+				border-top: 4px solid #1F4E79;
+				box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+				position: relative;
+				overflow: hidden;
+				height: 320px;
+				box-sizing: border-box;
+			}
+			.reveal .slides section .cisco-roles .c-card:nth-child(2) { border-top-color: #E8844A; }
+			.reveal .slides section .cisco-roles .c-card:nth-child(3) { border-top-color: #7BA888; }
+			.reveal .slides section .cisco-roles .c-card-name {
+				font-family: 'Fraunces', serif;
+				font-size: 24px;
+				font-weight: 700;
+				color: #1F4E79;
+				line-height: 1;
+				margin-bottom: 4px;
+			}
+			.reveal .slides section .cisco-roles .c-card:nth-child(2) .c-card-name { color: #E8844A; }
+			.reveal .slides section .cisco-roles .c-card:nth-child(3) .c-card-name { color: #7BA888; }
+			.reveal .slides section .cisco-roles .c-card-role {
+				font-size: 11px;
+				font-weight: 700;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				color: #8A7C6B;
+				margin-bottom: 12px;
+			}
+			.reveal .slides section .cisco-roles .c-card-text {
+				font-size: 20px;
+				color: #5A5148;
+				line-height: 1.55;
+			}
+			.reveal .slides section .cisco-roles .c-card-text strong {
+				color: #2A2622;
+				font-weight: 600;
+			}
+
+			/* ----- Slide 5: Results (metric cards) ----- */
+			.reveal .slides section .cisco-results .c-metrics {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 14px;
+				margin-bottom: 16px;
+			}
+			.reveal .slides section .cisco-results .c-metric {
+				background-color: #F7EFE4;
+				border-radius: 10px;
+				padding: 18px 16px 16px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				border-top: 4px solid #7BA888;
+				box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+			}
+			.reveal .slides section .cisco-results .c-metric:nth-child(2) { border-top-color: #7BA888; }
+			.reveal .slides section .cisco-results .c-metric:nth-child(3) { border-top-color: #E8844A; }
+			.reveal .slides section .cisco-results .c-metric:nth-child(4) { border-top-color: #1F4E79; }
+			.reveal .slides section .cisco-results .c-metric-value {
+				font-family: 'Fraunces', serif;
+				font-size: 36px;
+				font-weight: 700;
+				color: #7BA888;
+				line-height: 1;
+				margin-bottom: 8px;
+				text-align: center;
+			}
+			.reveal .slides section .cisco-results .c-metric:nth-child(3) .c-metric-value { color: #E8844A; }
+			.reveal .slides section .cisco-results .c-metric:nth-child(4) .c-metric-value { color: #1F4E79; }
+			.reveal .slides section .cisco-results .c-metric-label {
+				font-family: 'Fraunces', serif;
+				font-size: 13px;
+				font-weight: 700;
+				color: #2A2622;
+				line-height: 1.3;
+				margin-bottom: 4px;
+				text-align: center;
+			}
+			.reveal .slides section .cisco-results .c-metric-sub {
+				font-size: 11.5px;
+				color: #8A7C6B;
+				line-height: 1.4;
+				text-align: center;
+			}
+			.reveal .slides section .cisco-results .c-extras {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 14px;
+				margin-bottom: 10px;
+			}
+			.reveal .slides section .cisco-results .c-extra {
+				background-color: #FDF8F3;
+				border: 1px solid rgba(31,78,121,0.18);
+				border-left: 3px solid #1F4E79;
+				border-radius: 8px;
+				padding: 10px 14px;
+				font-size: 13px;
+				line-height: 1.45;
+				color: #2A2622;
+				display: flex;
+				align-items: flex-start;
+				gap: 10px;
+			}
+			.reveal .slides section .cisco-results .c-extra i {
+				color: #1F4E79;
+				font-size: 13px;
+				margin-top: 3px;
+				flex-shrink: 0;
+			}
+
+			/* ----- Slide 6: Benefits (5 cards) ----- */
+			.reveal .slides section .cisco-benefits .c-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: 1fr 1fr;
+				gap: 14px;
+				flex: 1;
+				min-height: 0;
+				align-items: center;
+				margin-bottom: 10px;
+			}
+			.reveal .slides section .cisco-benefits .c-card {
+				background-color: #F7EFE4;
+				border-radius: 10px;
+				padding: 16px 18px 16px;
+				display: flex;
+				flex-direction: column;
+				border-top: 3px solid #E8844A;
+				box-shadow: 0 4px 12px rgba(42,38,34,0.04);
+				position: relative;
+				overflow: hidden;
+				height: 140px;
+				box-sizing: border-box;
+			}
+			.reveal .slides section .cisco-benefits .c-card:nth-child(1) { border-top-color: #E8844A; }
+			.reveal .slides section .cisco-benefits .c-card:nth-child(2) { border-top-color: #7BA888; }
+			.reveal .slides section .cisco-benefits .c-card:nth-child(3) { border-top-color: #1F4E79; }
+			.reveal .slides section .cisco-benefits .c-card:nth-child(4) { border-top-color: #C96E34; }
+			.reveal .slides section .cisco-benefits .c-card:nth-child(5) { border-top-color: #C9BEB1; }
+			.reveal .slides section .cisco-benefits .c-card-head {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				margin-bottom: 8px;
+			}
+			.reveal .slides section .cisco-benefits .c-card-icon {
+				width: 28px;
+				height: 28px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				color: #FDF8F3;
+				background-color: #E8844A;
+				font-size: 13px;
+				flex-shrink: 0;
+			}
+			.reveal .slides section .cisco-benefits .c-card:nth-child(2) .c-card-icon { background-color: #7BA888; }
+			.reveal .slides section .cisco-benefits .c-card:nth-child(3) .c-card-icon { background-color: #1F4E79; }
+			.reveal .slides section .cisco-benefits .c-card:nth-child(4) .c-card-icon { background-color: #C96E34; }
+			.reveal .slides section .cisco-benefits .c-card:nth-child(5) .c-card-icon { background-color: #8A7C6B; }
+			.reveal .slides section .cisco-benefits .c-card-title {
+				font-family: 'Fraunces', serif;
+				font-size: 17px;
+				font-weight: 700;
+				color: #2A2622;
+				line-height: 1.2;
+			}
+			.reveal .slides section .cisco-benefits .c-card-text {
+				font-size: 13px;
+				color: #5A5148;
+				line-height: 1.5;
+			}
+			.reveal .slides section .cisco-benefits .c-card-text strong {
+				color: #2A2622;
+				font-weight: 600;
+			}
+			.reveal .slides section .cisco-benefits .c-card.summary {
+				background-color: #1F4E79;
+				border-top-color: #E8844A !important;
+				color: #FDF8F3;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				padding: 14px 18px;
+			}
+			.reveal .slides section .cisco-benefits .c-card.summary .c-summary-eye {
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.24em;
+				text-transform: uppercase;
+				color: #F5D5C4;
+				margin-bottom: 8px;
+				text-align: center;
+			}
+			.reveal .slides section .cisco-benefits .c-card.summary .c-summary-text {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 16px;
+				line-height: 1.4;
+				color: #FDF8F3;
+				text-align: center;
+			}
+
+			/* ----- Slide 7: Limitations + Conclusion ----- */
+			.reveal .slides section .cisco-limits .c-cols {
+				display: grid;
+				grid-template-columns: 1.4fr 1fr;
+				gap: 22px;
+				flex: 1;
+				min-height: 0;
+				margin-bottom: 12px;
+				align-items: center;
+			}
+			.reveal .slides section .cisco-limits .c-col {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				min-height: 0;
+			}
+			.reveal .slides section .cisco-limits .c-limit {
+				background-color: #F7EFE4;
+				border-radius: 8px;
+				padding: 12px 16px 12px;
+				border-left: 3px solid #C96E34;
+				display: flex;
+				gap: 12px;
+				align-items: flex-start;
+				box-shadow: 0 2px 8px rgba(42,38,34,0.04);
+			}
+			.reveal .slides section .cisco-limits .c-limit-num {
+				font-family: 'Fraunces', serif;
+				font-size: 22px;
+				font-weight: 700;
+				color: #C96E34;
+				line-height: 1;
+				flex-shrink: 0;
+				margin-top: 1px;
+			}
+			.reveal .slides section .cisco-limits .c-limit-body {
+				display: flex;
+				flex-direction: column;
+				gap: 2px;
+			}
+			.reveal .slides section .cisco-limits .c-limit-title {
+				font-family: 'Fraunces', serif;
+				font-size: 14px;
+				font-weight: 700;
+				color: #2A2622;
+				line-height: 1.3;
+			}
+			.reveal .slides section .cisco-limits .c-limit-text {
+				font-size: 12.5px;
+				line-height: 1.45;
+				color: #5A5148;
+			}
+			.reveal .slides section .cisco-limits .c-take {
+				background-color: #1F4E79;
+				border-radius: 10px;
+				padding: 22px 24px;
+				color: #FDF8F3;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				box-shadow: 0 6px 16px rgba(31,78,121,0.18);
+			}
+			.reveal .slides section .cisco-limits .c-take-eye {
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 0.24em;
+				text-transform: uppercase;
+				color: #F5D5C4;
+				margin-bottom: 12px;
+			}
+			.reveal .slides section .cisco-limits .c-take-text {
+				font-family: 'Fraunces', serif;
+				font-size: 17px;
+				line-height: 1.45;
+				color: #FDF8F3;
+				margin-bottom: 16px;
+			}
+			.reveal .slides section .cisco-limits .c-take-text strong {
+				color: #F5D5C4;
+				font-weight: 700;
+			}
+			.reveal .slides section .cisco-limits .c-take-mini-rule {
+				width: 36px;
+				height: 2px;
+				background-color: #E8844A;
+				border-radius: 2px;
+				margin-bottom: 12px;
+			}
+			.reveal .slides section .cisco-limits .c-take-frameworks {
+				display: flex;
+				gap: 10px;
+				flex-wrap: wrap;
+			}
+			.reveal .slides section .cisco-limits .c-take-chip {
+				font-size: 11px;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				padding: 5px 10px;
+				border-radius: 4px;
+				background-color: rgba(255,255,255,0.12);
+				color: #FDF8F3;
+			}
+			.reveal .slides section .cisco-limits .c-close {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 22px;
+				color: #E8844A;
+				text-align: center;
+				line-height: 1.4;
+				padding: 4px 40px 0;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -10178,6 +10758,303 @@
 						</div>
 					</div>
 				</section>
+
+				<!-- ========================= Cisco Case Study ========================= -->
+
+				<!-- Cisco Slide 1: Title / Setup -->
+				<section data-background-color="#FDF8F3">
+					<div class="cisco-slide cisco-title">
+						<div class="c-eyebrow">Case Study &middot; 15 minutes</div>
+						<h1>Cisco&rsquo;s Agile Transformation</h1>
+						<div class="c-rule"></div>
+						<div class="c-sub">How a billing platform escaped Waterfall, and what Scrum&rsquo;s role really was.</div>
+						<div class="c-facts">
+							<div class="c-fact">
+								<div class="c-fact-label">Company</div>
+								<div class="c-fact-value">Cisco Subscription Billing Platform</div>
+							</div>
+							<div class="c-fact">
+								<div class="c-fact-label">Transformation Year</div>
+								<div class="c-fact-value">2015</div>
+							</div>
+							<div class="c-fact">
+								<div class="c-fact-label">Frameworks Used</div>
+								<div class="c-fact-value">SAFe + Scrum + XP practices</div>
+							</div>
+						</div>
+						<aside class="notes">
+							We're going to walk through Cisco's transformation in five steps: where they started, what they changed, what Scrum specifically contributed, what they got out of it, and what this teaches us about Scrum's benefits and limits. The interesting twist in this case is that Cisco didn't just adopt Scrum; they combined it with SAFe and XP. So the real question isn't "did Scrum work?" It's "what role did Scrum play, and where did it need help?"
+						</aside>
+					</div>
+				</section>
+
+				<!-- Cisco Slide 2: Where Cisco Started: The Waterfall Problem -->
+				<section data-background-color="#FDF8F3">
+					<div class="cisco-slide cisco-waterfall with-header">
+						<div class="c-eyebrow">Before 2015</div>
+						<h1>A Pipeline Breaking Under Its Own Weight</h1>
+						<div class="c-rule"></div>
+						<div class="c-cols">
+							<div class="c-col">
+								<div class="c-col-eye">How they worked</div>
+								<div class="c-col-title">Waterfall, hand-off by hand-off.</div>
+								<ul class="c-list">
+									<li><i class="fas fa-circle"></i><div>Waterfall methodology across the platform.</div></li>
+									<li><i class="fas fa-circle"></i><div>Separate teams for design &rarr; build &rarr; test &rarr; deploy.</div></li>
+									<li><i class="fas fa-circle"></i><div>Each phase handed off sequentially to the next.</div></li>
+								</ul>
+							</div>
+							<div class="c-col right">
+								<div class="c-col-eye">What it produced</div>
+								<div class="c-col-title">Defects late, deadlines slipping, people burning out.</div>
+								<ul class="c-list">
+									<li><i class="fas fa-circle"></i><div>Many defects discovered late in the cycle.</div></li>
+									<li><i class="fas fa-circle"></i><div>Deadlines frequently missed.</div></li>
+									<li><i class="fas fa-circle"></i><div>People working overtime to compensate.</div></li>
+									<li><i class="fas fa-circle"></i><div>Teams worked in silos, with no visibility across the pipeline.</div></li>
+								</ul>
+							</div>
+						</div>
+						<div class="c-bottom">&ldquo;Waterfall didn&rsquo;t fail because the teams were bad. It failed because problems were found too late to fix cheaply.&rdquo;</div>
+						<aside class="notes">
+							Cisco's Subscription Billing Platform was built the traditional way: design hands off to build, build hands off to test, test hands off to deploy. Each handoff was a wall. Defects discovered in test came from decisions made in design weeks earlier. By then, fixing them was expensive. Deadlines slipped. Teams worked overtime to compensate. This is the textbook Waterfall failure mode, not because anyone was incompetent, but because the structure didn't allow problems to surface until it was too late to fix them cheaply.
+						</aside>
+					</div>
+				</section>
+
+				<!-- Cisco Slide 3: What Changed: The 2015 Transformation -->
+				<section data-background-color="#FDF8F3">
+					<div class="cisco-slide cisco-transform with-header">
+						<div class="c-eyebrow">2015 &middot; The Transformation</div>
+						<h1>Three Agile Release Trains, One Daily Rhythm</h1>
+						<div class="c-rule"></div>
+						<div class="c-section-eye">The structural change</div>
+						<table class="c-table">
+							<thead>
+								<tr>
+									<th>Agile Release Train</th>
+									<th>Focus</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="c-art">Capabilities</td>
+									<td>New features and functionality</td>
+								</tr>
+								<tr>
+									<td class="c-art">Defects / Fixes</td>
+									<td>Bug resolution and stability</td>
+								</tr>
+								<tr>
+									<td class="c-art">Projects</td>
+									<td>Larger initiatives spanning multiple sprints</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="c-section-eye alt">The cultural change</div>
+						<div class="c-cult">
+							<div class="c-cult-card">
+								<div class="c-cult-title">Daily 15-min sync</div>
+								<div class="c-cult-text">A single short meeting across teams to align on work.</div>
+							</div>
+							<div class="c-cult-card">
+								<div class="c-cult-title">Transparency</div>
+								<div class="c-cult-text">Every team could see what every other team was doing.</div>
+							</div>
+							<div class="c-cult-card">
+								<div class="c-cult-title">Self-management</div>
+								<div class="c-cult-text">Teams managed themselves; accountability via status awareness.</div>
+							</div>
+						</div>
+						<div class="c-bottom">&ldquo;Same people. New structure. The handoffs disappeared.&rdquo;</div>
+						<aside class="notes">
+							In 2015, Cisco moved to the Scaled Agile Framework, or SAFe. The key structural change was organizing work into three Agile Release Trains. An ART in SAFe is essentially a team of teams: multiple Scrum teams working together on a shared cadence. They split into Capabilities, Defects, and Projects. The cultural change was just as important: a 15-minute daily meeting that gave every team visibility into every other team's work. No more silos, no more discovering integration problems at the end.
+						</aside>
+					</div>
+				</section>
+
+				<!-- Cisco Slide 4: Where Scrum Fit In -->
+				<section data-background-color="#FDF8F3">
+					<div class="cisco-slide cisco-roles with-header">
+						<div class="c-eyebrow">The Stack</div>
+						<h1>Scrum Was the Engine, Not the Whole Machine</h1>
+						<div class="c-rule"></div>
+						<div class="c-grid">
+							<div class="c-card">
+								<div class="c-card-name">SAFe</div>
+								<div class="c-card-role">The structure</div>
+								<div class="c-card-text">Coordinated multiple teams via <strong>Agile Release Trains</strong>. Set the cadence at the program level. Provided the framework for cross-team alignment.</div>
+							</div>
+							<div class="c-card">
+								<div class="c-card-name">Scrum</div>
+								<div class="c-card-role">The engine inside each team</div>
+								<div class="c-card-text">Used by individual teams within each ART. <strong>Daily standups, sprint cycles, retrospectives.</strong> Originally piloted on another Cisco product, the WebEx app for Samsung, and brought into the billing platform.</div>
+							</div>
+							<div class="c-card">
+								<div class="c-card-name">XP</div>
+								<div class="c-card-role">The engineering practices</div>
+								<div class="c-card-text"><strong>Test-driven development (TDD)</strong> and <strong>continuous integration (CI)</strong> made sure code stayed shippable.</div>
+							</div>
+						</div>
+						<div class="c-bottom">&ldquo;Scrum gave each team its rhythm. SAFe gave the teams a way to work together. XP made the code reliable.&rdquo;</div>
+						<aside class="notes">
+							This is the part of the story we want to highlight. Cisco didn't just "adopt Scrum." They used Scrum as the engine inside each team: the daily standups, the sprints, the retrospectives we've been studying in this course. But Scrum alone wasn't enough at Cisco's scale. They needed SAFe to coordinate across teams, and they needed XP practices like TDD and continuous integration to keep the code itself reliable. The lesson here, which Cisco says explicitly in their case study, is that you can use one framework for one product and another for another within the same organization. The frameworks aren't religious. They're tools.
+						</aside>
+					</div>
+				</section>
+
+				<!-- Cisco Slide 5: The Results -->
+				<section data-background-color="#FDF8F3">
+					<div class="cisco-slide cisco-results with-header">
+						<div class="c-eyebrow">Outcomes</div>
+						<h1>What Cisco Got Out of It</h1>
+						<div class="c-rule"></div>
+
+						<div style="margin: auto;" >
+						<div class="c-metrics">
+							<div class="c-metric">
+								<div class="c-metric-value">&minus;40%</div>
+								<div class="c-metric-label">Critical &amp; Major Defects</div>
+								<div class="c-metric-sub">Release-blocking bugs cut nearly in half.</div>
+							</div>
+							<div class="c-metric">
+								<div class="c-metric-value">&minus;16%</div>
+								<div class="c-metric-label">Defect Rejected Ratio</div>
+								<div class="c-metric-sub">Fewer fixes bounced back for rework.</div>
+							</div>
+							<div class="c-metric">
+								<div class="c-metric-value">+14%</div>
+								<div class="c-metric-label">Defect Removal Efficiency</div>
+								<div class="c-metric-sub">More defects caught before production.</div>
+							</div>
+							<div class="c-metric">
+								<div class="c-metric-value">0</div>
+								<div class="c-metric-label">Overtime</div>
+								<div class="c-metric-sub">Eliminated. Sustained pace restored.</div>
+							</div>
+						</div>
+						<div class="c-extras">
+							<div class="c-extra"><i class="fas fa-check"></i><div>Product increments now delivered <strong>on time</strong>.</div></div>
+							<div class="c-extra"><i class="fas fa-check"></i><div>Continuous integration enabled <strong>frequent releases</strong>.</div></div>
+							<div class="c-extra"><i class="fas fa-check"></i><div>Cross-team interaction across <strong>international teams</strong> improved measurably.</div></div>
+						</div>
+						<div class="c-bottom">&ldquo;Fewer defects. No overtime. On-time delivery. The pipeline started working.&rdquo;</div>
+					</div>
+						<aside class="notes">
+							The numbers are concrete. A 40% decrease in critical and major defects: those are the bugs that block releases. A 16% drop in DRR, which means fewer fixes were rejected and had to be reworked. A 14% improvement in DRE, meaning more defects were caught before reaching production. And, importantly, overtime was eliminated. Product increments are delivered on time. The takeaway: Cisco's transformation wasn't a slogan. It produced measurable, sustained improvement in both code quality and team wellbeing.
+						</aside>
+					</div>
+				</section>
+
+				<!-- Cisco Slide 6: Benefits of Scrum -->
+				<section data-background-color="#FDF8F3">
+					<div class="cisco-slide cisco-benefits with-header">
+						<div class="c-eyebrow">What This Case Confirms</div>
+						<h1>What Scrum Brings to the Table</h1>
+						<div class="c-rule"></div>
+						<div class="c-grid">
+							<div class="c-card">
+								<div class="c-card-head">
+									<div class="c-card-icon"><i class="fas fa-eye"></i></div>
+									<div class="c-card-title">Visibility</div>
+								</div>
+								<div class="c-card-text">Daily standups surface blockers early. Everyone knows what everyone else is doing.</div>
+							</div>
+							<div class="c-card">
+								<div class="c-card-head">
+									<div class="c-card-icon"><i class="fas fa-bolt"></i></div>
+									<div class="c-card-title">Faster feedback</div>
+								</div>
+								<div class="c-card-text">Short sprints mean problems are caught in <strong>days, not months</strong>.</div>
+							</div>
+							<div class="c-card">
+								<div class="c-card-head">
+									<div class="c-card-icon"><i class="fas fa-users"></i></div>
+									<div class="c-card-title">Team ownership</div>
+								</div>
+								<div class="c-card-text">Self-managing teams promote accountability and morale. Cisco&rsquo;s elimination of overtime is direct evidence.</div>
+							</div>
+							<div class="c-card">
+								<div class="c-card-head">
+									<div class="c-card-icon"><i class="fas fa-compass"></i></div>
+									<div class="c-card-title">Adaptability</div>
+								</div>
+								<div class="c-card-text">Sprint-by-sprint planning lets the team respond to change instead of locking in decisions made months ago.</div>
+							</div>
+							<div class="c-card">
+								<div class="c-card-head">
+									<div class="c-card-icon"><i class="fas fa-shield-alt"></i></div>
+									<div class="c-card-title">Quality</div>
+								</div>
+								<div class="c-card-text">Combined with XP (TDD, CI), Scrum&rsquo;s iterative cycles caught defects earlier. The <strong>40% drop</strong> in major defects is the proof.</div>
+							</div>
+							<div class="c-card summary">
+								<div class="c-summary-eye">Bottom line</div>
+								<div class="c-summary-text">Scrum&rsquo;s strength is the rhythm: short cycles, visible work, fast feedback.</div>
+							</div>
+						</div>
+						<aside class="notes">
+							From the Cisco case, we can see five concrete benefits of Scrum. First, visibility: the daily standup is the simplest, most powerful ritual in software. Second, faster feedback: sprints catch what waterfalls miss. Third, team ownership, and this is where Cisco's overtime elimination is so telling, because empowered teams don't burn out the same way. Fourth, adaptability: sprint planning lets you steer. And fifth, quality: when you combine Scrum's cycles with engineering practices like TDD and CI, defect rates drop measurably. Scrum's core strength is rhythm: short cycles, visible work, fast feedback.
+						</aside>
+					</div>
+				</section>
+
+				<!-- Cisco Slide 7: Limitations + Conclusion -->
+				<section data-background-color="#FDF8F3">
+					<div class="cisco-slide cisco-limits with-header">
+						<div class="c-eyebrow">The Honest Read</div>
+						<h1>Where Scrum Needs Help. The Lesson From Cisco.</h1>
+						<div class="c-rule"></div>
+						<div class="c-cols">
+							<div class="c-col">
+								<div class="c-limit">
+									<div class="c-limit-num">01</div>
+									<div class="c-limit-body">
+										<div class="c-limit-title">Doesn&rsquo;t scale on its own.</div>
+										<div class="c-limit-text">Scrum works inside one team. Coordinating multiple teams needed SAFe.</div>
+									</div>
+								</div>
+								<div class="c-limit">
+									<div class="c-limit-num">02</div>
+									<div class="c-limit-body">
+										<div class="c-limit-title">Doesn&rsquo;t dictate engineering practices.</div>
+										<div class="c-limit-text">Scrum tells you <em>when</em> to ship, not <em>how</em> to keep code reliable. Cisco needed XP (TDD + CI) for that.</div>
+									</div>
+								</div>
+								<div class="c-limit">
+									<div class="c-limit-num">03</div>
+									<div class="c-limit-body">
+										<div class="c-limit-title">Requires cultural change, not just process change.</div>
+										<div class="c-limit-text">Daily standups don&rsquo;t help if teams still work in silos. Cisco had to change how teams talked, not just how they planned.</div>
+									</div>
+								</div>
+								<div class="c-limit">
+									<div class="c-limit-num">04</div>
+									<div class="c-limit-body">
+										<div class="c-limit-title">Demands discipline.</div>
+										<div class="c-limit-text">Sprint commitments only work if the team protects them. Without it, sprints become &ldquo;mini-waterfalls.&rdquo;</div>
+									</div>
+								</div>
+							</div>
+							<div class="c-col">
+								<div class="c-take">
+									<div class="c-take-eye">The takeaway</div>
+									<div class="c-take-mini-rule"></div>
+									<div class="c-take-text">Scrum is <strong>necessary, but rarely sufficient</strong> at scale. Cisco&rsquo;s transformation worked because they layered Scrum with SAFe for coordination and XP for engineering quality.</div>
+									<div class="c-take-frameworks">
+										<div class="c-take-chip">SAFe</div>
+										<div class="c-take-chip">Scrum</div>
+										<div class="c-take-chip">XP</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="c-close">No framework wins alone. Match the tool to the problem.</div>
+						<aside class="notes">
+							And here's where the story gets honest. Scrum has real limits. It doesn't scale on its own; that's why Cisco needed SAFe. It doesn't tell you how to engineer reliable code; that's why they needed XP. It requires cultural change, not just process change, because daily standups don't help silos. And it demands discipline, because without it, sprints become mini-waterfalls. The real lesson from Cisco is the one we keep coming back to in this course: no framework is religion. Scrum is necessary, but rarely sufficient at scale. Match the tool to the problem. Thank you.
+						</aside>
+					</div>
+				</section>
 			</div>
 		</div>
 
@@ -10323,7 +11200,25 @@
 				'.wasl-d3-challenges h1',
 				'.wasl-d3-challenges .d3-card',
 				'.wasl-d3-lessons h1',
-				'.wasl-d3-lessons .d3-card'
+				'.wasl-d3-lessons .d3-card',
+				/* Cisco Case Study slides */
+				'.cisco-slide .c-eyebrow',
+				'.cisco-slide h1',
+				'.cisco-slide .c-rule',
+				'.cisco-title .c-sub',
+				'.cisco-title .c-fact',
+				'.cisco-slide .c-bottom',
+				'.cisco-waterfall .c-col',
+				'.cisco-transform .c-section-eye',
+				'.cisco-transform .c-table',
+				'.cisco-transform .c-cult-card',
+				'.cisco-roles .c-card',
+				'.cisco-results .c-metric',
+				'.cisco-results .c-extra',
+				'.cisco-benefits .c-card',
+				'.cisco-limits .c-limit',
+				'.cisco-limits .c-take',
+				'.cisco-limits .c-close'
 			].join(',');
 
 			function initSlideBaAnimations() {
