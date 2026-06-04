@@ -8894,6 +8894,425 @@
 				padding: 4px 40px 0;
 			}
 
+			/* ============================================================
+			   Scrum Under the Microscope — Day-4 critical-reflection deck
+			   (self-contained section; shares the Wasl/Cisco design language)
+			   ============================================================ */
+			.reveal .slides section .scrum-slide {
+				width: 100%;
+				height: 100%;
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				color: #2A2622;
+				font-family: 'Source Sans 3', sans-serif;
+				background-color: #FDF8F3;
+				position: relative;
+			}
+			.reveal .slides section .scrum-slide h1 {
+				font-family: 'Fraunces', serif;
+				font-weight: 700;
+				color: #2A2622;
+				margin: 0;
+				text-align: left;
+				line-height: 1.15;
+			}
+			.reveal .slides section .scrum-slide .scr-eyebrow {
+				font-size: 10.5px;
+				font-weight: 700;
+				letter-spacing: 0.28em;
+				text-transform: uppercase;
+				color: #1F4E79;
+				margin-bottom: 10px;
+			}
+			.reveal .slides section .scrum-slide .scr-rule {
+				width: 52px;
+				height: 3px;
+				background-color: #E8844A;
+				border-radius: 2px;
+				margin: 10px 0 18px;
+			}
+			.reveal .slides section .scrum-slide.with-header {
+				padding: 34px 56px 28px;
+			}
+			.reveal .slides section .scrum-slide.with-header h1 {
+				font-size: 29px;
+			}
+			.reveal .slides section .scrum-slide .scr-bottom {
+				font-family: 'Fraunces', serif;
+				font-style: italic;
+				font-size: 18px;
+				color: #E8844A;
+				text-align: center;
+				line-height: 1.4;
+				padding: 12px 40px 0;
+				margin-top: auto;
+			}
+			.reveal .slides section .scrum-slide .scr-bottom strong { color: #C96E34; font-weight: 700; font-style: normal; }
+			.reveal .slides section .scrum-slide .scr-callout {
+				background-color: #FDF8F3;
+				border: 1px solid rgba(31,78,121,0.16);
+				border-left: 3px solid #E8844A;
+				border-radius: 8px;
+				padding: 12px 16px;
+				font-size: 13.5px;
+				line-height: 1.5;
+				color: #2A2622;
+				margin-top: 14px;
+				display: flex;
+				gap: 10px;
+				align-items: flex-start;
+			}
+			.reveal .slides section .scrum-slide .scr-callout i { color: #E8844A; font-size: 13px; margin-top: 3px; flex-shrink: 0; }
+			.reveal .slides section .scrum-slide .scr-callout strong { font-weight: 700; }
+			.reveal .slides section .scrum-slide .scr-blist {
+				list-style: none; margin: 0; padding: 0;
+				display: flex; flex-direction: column; gap: 14px;
+			}
+			.reveal .slides section .scrum-slide .scr-blist li {
+				display: flex; gap: 12px; align-items: flex-start;
+				font-size: 15px; line-height: 1.5; color: #2A2622;
+			}
+			.reveal .slides section .scrum-slide .scr-blist li i { color: #E8844A; font-size: 13px; margin-top: 4px; flex-shrink: 0; }
+			.reveal .slides section .scrum-slide .scr-blist li strong { font-weight: 700; }
+
+			/* Vertically center the lighter compositions so they sit balanced */
+			.reveal .slides section .scrum-landscape,
+			.reveal .slides section .scrum-limits,
+			.reveal .slides section .scrum-wasl { justify-content: center; }
+
+			/* ----- Slide 1: Title / Welcome ----- */
+			.reveal .slides section .scrum-title { padding: 54px 70px; justify-content: center; }
+			.reveal .slides section .scrum-title .scr-eyebrow { font-size: 12px; letter-spacing: 0.3em; margin-bottom: 18px; }
+			.reveal .slides section .scrum-title h1 { font-size: 54px; margin-bottom: 16px; letter-spacing: -0.01em; }
+			.reveal .slides section .scrum-title .scr-lead {
+				font-family: 'Fraunces', serif; font-style: italic; font-size: 22px;
+				color: #5A5148; line-height: 1.45; margin-bottom: 26px; max-width: 760px;
+			}
+			.reveal .slides section .scrum-title .scr-rule { width: 64px; height: 4px; margin: 0 0 28px; }
+			.reveal .slides section .scrum-title .scr-acts {
+				display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 900px; margin-bottom: 26px;
+			}
+			.reveal .slides section .scrum-title .scr-act {
+				background-color: #F7EFE4; border-radius: 10px; padding: 16px 18px;
+				border-left: 3px solid #E8844A; box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+			}
+			.reveal .slides section .scrum-title .scr-act:nth-child(2) { border-left-color: #7BA888; }
+			.reveal .slides section .scrum-title .scr-act:nth-child(3) { border-left-color: #1F4E79; }
+			.reveal .slides section .scrum-title .scr-act-num {
+				font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7C6B; margin-bottom: 6px;
+			}
+			.reveal .slides section .scrum-title .scr-act-name {
+				font-family: 'Fraunces', serif; font-size: 15px; font-weight: 700; color: #2A2622; line-height: 1.3;
+			}
+			.reveal .slides section .scrum-title .scr-footer { font-size: 13px; color: #8A7C6B; letter-spacing: 0.04em; }
+			.reveal .slides section .scrum-title .scr-footer strong { color: #5A5148; font-weight: 700; }
+
+			/* ----- Slide 2: Agenda ----- */
+			.reveal .slides section .scrum-agenda .scr-cols {
+				display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; flex: 1; min-height: 0; align-items: stretch;
+				align-items: center !important;
+			}
+			.reveal .slides section .scrum-agenda .scr-col {
+				background-color: #F7EFE4; border-radius: 10px; padding: 20px 20px 18px;
+				border-top: 4px solid #1F4E79; box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+				display: flex; flex-direction: column;
+				min-height: 250px;
+				box-sizing: border-box;
+			}
+			.reveal .slides section .scrum-agenda .scr-col:nth-child(2) { border-top-color: #E8844A; }
+			.reveal .slides section .scrum-agenda .scr-col:nth-child(3) { border-top-color: #7BA888; }
+			.reveal .slides section .scrum-agenda .scr-col-eye {
+				font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #1F4E79; margin-bottom: 4px;
+			}
+			.reveal .slides section .scrum-agenda .scr-col:nth-child(2) .scr-col-eye { color: #E8844A; }
+			.reveal .slides section .scrum-agenda .scr-col:nth-child(3) .scr-col-eye { color: #7BA888; }
+			.reveal .slides section .scrum-agenda .scr-col-title {
+				font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; color: #2A2622; margin-bottom: 14px; line-height: 1.2;
+			}
+			.reveal .slides section .scrum-agenda .scr-items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+			.reveal .slides section .scrum-agenda .scr-items li { display: flex; gap: 10px; align-items: baseline; font-size: 14px; line-height: 1.4; color: #2A2622; }
+			.reveal .slides section .scrum-agenda .scr-items .n { font-family: 'Fraunces', serif; font-weight: 700; color: #C96E34; flex-shrink: 0; }
+
+			/* ----- Slide 3: Scrum in 90 Seconds ----- */
+			.reveal .slides section .scrum-90 .scr-grid {
+				display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; flex: 1; min-height: 0; align-items: stretch; margin-bottom: 14px;
+			}
+			.reveal .slides section .scrum-90 .scr-card {
+				background-color: #F7EFE4; border-radius: 10px; padding: 20px 22px;
+				border-top: 4px solid #1F4E79; box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+				display: flex; flex-direction: column; box-sizing: border-box;
+			}
+			.reveal .slides section .scrum-90 .scr-card:nth-child(2) { border-top-color: #E8844A; }
+			.reveal .slides section .scrum-90 .scr-card:nth-child(3) { border-top-color: #7BA888; }
+			.reveal .slides section .scrum-90 .scr-card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; padding-bottom: 14px; border-bottom: 1px solid rgba(42,38,34,0.08); }
+			.reveal .slides section .scrum-90 .scr-card-icon { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background-color: #1F4E79; color: #FDF8F3; font-size: 16px; flex-shrink: 0; }
+			.reveal .slides section .scrum-90 .scr-card:nth-child(2) .scr-card-icon { background-color: #E8844A; }
+			.reveal .slides section .scrum-90 .scr-card:nth-child(3) .scr-card-icon { background-color: #7BA888; }
+			.reveal .slides section .scrum-90 .scr-card-eye { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #8A7C6B; margin-bottom: 2px; }
+			.reveal .slides section .scrum-90 .scr-card-title { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; color: #1F4E79; line-height: 1; }
+			.reveal .slides section .scrum-90 .scr-card:nth-child(2) .scr-card-title { color: #E8844A; }
+			.reveal .slides section .scrum-90 .scr-card:nth-child(3) .scr-card-title { color: #7BA888; }
+			.reveal .slides section .scrum-90 .scr-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; flex: 1; justify-content: space-evenly; gap: 4px; }
+			.reveal .slides section .scrum-90 .scr-list li { color: #2A2622; display: flex; gap: 11px; align-items: flex-start; }
+			.reveal .slides section .scrum-90 .scr-list li i { color: #C9BEB1; font-size: 6px; margin-top: 7px; flex-shrink: 0; }
+			.reveal .slides section .scrum-90 .scr-li-body { display: flex; flex-direction: column; gap: 1px; }
+			.reveal .slides section .scrum-90 .scr-li-term { font-size: 14.5px; line-height: 1.25; color: #2A2622; }
+			.reveal .slides section .scrum-90 .scr-li-desc { font-size: 11.5px; line-height: 1.35; color: #8A7C6B; }
+			.reveal .slides section .scrum-90 .scr-list li strong { font-weight: 700; }
+			.reveal .slides section .scrum-90 .scr-list li em { font-style: italic; color: #C96E34; }
+			.reveal .slides section .scrum-90 .scr-engine {
+				background-color: #1F4E79; border-radius: 10px; padding: 14px 22px;
+				display: flex; align-items: center; gap: 20px; justify-content: center; box-shadow: 0 6px 16px rgba(31,78,121,0.18);
+			}
+			.reveal .slides section .scrum-90 .scr-engine-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #F5D5C4; }
+			.reveal .slides section .scrum-90 .scr-engine-flow { display: flex; align-items: center; gap: 14px; }
+			.reveal .slides section .scrum-90 .scr-engine-step { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 700; color: #FDF8F3; }
+			.reveal .slides section .scrum-90 .scr-engine-arrow { color: #E8844A; font-size: 13px; }
+
+			/* ----- Slide 4: Why Scrum Exists ----- */
+			.reveal .slides section .scrum-why .scr-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; flex: 1; min-height: 0; align-items: center; }
+			.reveal .slides section .scrum-why .scr-panel {
+				background-color: #F7EFE4; border-radius: 10px; padding: 24px 26px; height: 300px;
+				display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+				border-top: 4px solid #D64545; box-sizing: border-box;
+			}
+			.reveal .slides section .scrum-why .scr-panel.right { border-top-color: #7BA888; }
+			.reveal .slides section .scrum-why .scr-panel-eye { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #D64545; margin-bottom: 8px; }
+			.reveal .slides section .scrum-why .scr-panel.right .scr-panel-eye { color: #7BA888; }
+			.reveal .slides section .scrum-why .scr-panel-title { font-family: 'Fraunces', serif; font-size: 23px; font-weight: 700; color: #2A2622; margin-bottom: 14px; line-height: 1.25; }
+			.reveal .slides section .scrum-why .scr-panel p { font-size: 15px; line-height: 1.55; color: #5A5148; }
+			.reveal .slides section .scrum-why .scr-panel p + p { margin-top: 12px; }
+			.reveal .slides section .scrum-why .scr-panel strong { color: #2A2622; font-weight: 700; }
+
+			/* ----- Slide 5: Methodology Landscape ----- */
+			.reveal .slides section .scrum-landscape .scr-seg-row { display: flex; gap: 8px; margin: 2px 0 8px; }
+			.reveal .slides section .scrum-landscape .scr-seg { flex: 1; border-radius: 9px; padding: 14px 16px; color: #FDF8F3; box-shadow: 0 4px 12px rgba(42,38,34,0.08); }
+			.reveal .slides section .scrum-landscape .scr-seg.s1 { background-color: #1F4E79; }
+			.reveal .slides section .scrum-landscape .scr-seg.s2 { background-color: #C96E34; }
+			.reveal .slides section .scrum-landscape .scr-seg.s3 { background-color: #E8844A; }
+			.reveal .slides section .scrum-landscape .scr-seg.s4 { background-color: #7BA888; }
+			.reveal .slides section .scrum-landscape .scr-seg-name { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 700; margin-bottom: 4px; line-height: 1.2; }
+			.reveal .slides section .scrum-landscape .scr-seg-desc { font-size: 11.5px; line-height: 1.35; color: rgba(253,248,243,0.88); }
+			.reveal .slides section .scrum-landscape .scr-axis { display: flex; align-items: center; gap: 14px; margin: 0 2px 16px; }
+			.reveal .slides section .scrum-landscape .scr-axis span { font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8A7C6B; white-space: nowrap; }
+			.reveal .slides section .scrum-landscape .scr-axis .arrow { flex: 1; height: 0; border-top: 2px dashed #C9BEB1; }
+			.reveal .slides section .scrum-landscape .scr-point { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+			.reveal .slides section .scrum-landscape .scr-pcard {
+				background-color: #F7EFE4; border-radius: 10px; padding: 16px 18px; border-left: 3px solid #1F4E79; box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+			}
+			.reveal .slides section .scrum-landscape .scr-pcard.alt { border-left-color: #E8844A; }
+			.reveal .slides section .scrum-landscape .scr-pcard-title { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 700; color: #1F4E79; margin-bottom: 6px; }
+			.reveal .slides section .scrum-landscape .scr-pcard.alt .scr-pcard-title { color: #E8844A; }
+			.reveal .slides section .scrum-landscape .scr-pcard-text { font-size: 13px; line-height: 1.45; color: #5A5148; }
+			.reveal .slides section .scrum-landscape .scr-pcard-text strong { color: #2A2622; font-weight: 700; }
+
+			/* ----- Shared comparison table ----- */
+			.reveal .slides section .scrum-slide .scrum-table {
+				width: 100%; border-collapse: separate; border-spacing: 0;
+				background-color: #F7EFE4; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(42,38,34,0.05);
+			}
+			.reveal .slides section .scrum-slide .scrum-table th {
+				font-family: 'Fraunces', serif; font-size: 13.5px; font-weight: 700; color: #FDF8F3; padding: 11px 18px; text-align: left; letter-spacing: 0.03em;
+			}
+			.reveal .slides section .scrum-slide .scrum-table td {
+				padding: 10px 18px; font-size: 13.5px; color: #2A2622; line-height: 1.35; border-top: 1px solid rgba(42,38,34,0.08);
+			}
+			.reveal .slides section .scrum-slide .scrum-table strong { font-weight: 700; }
+
+			/* ----- Slide 6: Scrum vs Waterfall ----- */
+			.reveal .slides section .scrum-vs-waterfall th.dim { background-color: #8A7C6B; width: 24%; }
+			.reveal .slides section .scrum-vs-waterfall th.wf { background-color: #C96E34; }
+			.reveal .slides section .scrum-vs-waterfall th.sc { background-color: #1F4E79; }
+			.reveal .slides section .scrum-vs-waterfall td.dim { font-family: 'Fraunces', serif; font-weight: 700; color: #5A5148; }
+
+			/* ----- Slide 7: Scrum vs Other Agile ----- */
+			.reveal .slides section .scrum-vs-agile th.rowhead { background-color: #8A7C6B; width: 22%; }
+			.reveal .slides section .scrum-vs-agile th.c-scrum { background-color: #1F4E79; }
+			.reveal .slides section .scrum-vs-agile th.c-kanban { background-color: #7BA888; }
+			.reveal .slides section .scrum-vs-agile th.c-xp { background-color: #C96E34; }
+			.reveal .slides section .scrum-vs-agile td.rowhead { font-family: 'Fraunces', serif; font-weight: 700; color: #5A5148; }
+
+			/* ----- Slide 8: Hybrid Water-Scrum-Fall ----- */
+			.reveal .slides section .scrum-hybrid .scr-cols { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 28px; flex: 1; min-height: 0; align-items: center; }
+			.reveal .slides section .scrum-hybrid .scr-sandwich { display: flex; flex-direction: column; gap: 4px; }
+			.reveal .slides section .scrum-hybrid .scr-layer { border-radius: 9px; padding: 15px 18px; color: #FDF8F3; box-shadow: 0 4px 12px rgba(42,38,34,0.08); }
+			.reveal .slides section .scrum-hybrid .scr-layer.wf { background-color: #C96E34; }
+			.reveal .slides section .scrum-hybrid .scr-layer.scrum { background-color: #1F4E79; padding: 18px 18px; }
+			.reveal .slides section .scrum-hybrid .scr-layer-eye { font-size: 9.5px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.85; margin-bottom: 4px; }
+			.reveal .slides section .scrum-hybrid .scr-layer-title { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 700; line-height: 1.25; }
+			.reveal .slides section .scrum-hybrid .scr-layer .sprints { display: flex; gap: 6px; margin-top: 10px; }
+			.reveal .slides section .scrum-hybrid .scr-layer .sprint { flex: 1; background-color: rgba(255,255,255,0.16); border-radius: 4px; text-align: center; font-size: 10px; font-weight: 700; padding: 5px 0; letter-spacing: 0.05em; }
+			.reveal .slides section .scrum-hybrid .scr-arrow-mid { text-align: center; color: #C9BEB1; font-size: 11px; }
+
+			/* ----- Slide 9: Organizational Transformation ----- */
+			.reveal .slides section .scrum-transform .scr-cols { display: grid; grid-template-columns: 1fr 1.08fr; gap: 24px; flex: 1; min-height: 0; align-items: stretch; margin-bottom: 14px; }
+			.reveal .slides section .scrum-transform .scr-left { background-color: #F7EFE4; border-radius: 12px; border-top: 4px solid #1F4E79; box-shadow: 0 4px 12px rgba(42,38,34,0.05); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; padding: 24px; box-sizing: border-box; }
+			.reveal .slides section .scrum-transform .scr-scale { display: flex; align-items: center; gap: 30px; justify-content: center; }
+			.reveal .slides section .scrum-transform .scr-scale-block { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+			.reveal .slides section .scrum-transform .scr-team-dot { width: 88px; height: 88px; border-radius: 20px; background-color: #1F4E79; display: flex; align-items: center; justify-content: center; color: #FDF8F3; font-size: 36px; box-shadow: 0 6px 16px rgba(31,78,121,0.22); }
+			.reveal .slides section .scrum-transform .scr-team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
+			.reveal .slides section .scrum-transform .scr-team-grid .d { width: 46px; height: 46px; border-radius: 10px; background-color: #7BA888; display: flex; align-items: center; justify-content: center; color: #FDF8F3; font-size: 17px; box-shadow: 0 3px 8px rgba(123,168,136,0.28); }
+			.reveal .slides section .scrum-transform .scr-scale-label { font-size: 12.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #5A5148; }
+			.reveal .slides section .scrum-transform .scr-scale-arrow { color: #E8844A; font-size: 34px; }
+			.reveal .slides section .scrum-transform .scr-frameworks { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+			.reveal .slides section .scrum-transform .scr-chip { font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; padding: 8px 15px; border-radius: 6px; background-color: #FDF8F3; color: #1F4E79; border: 1px solid rgba(31,78,121,0.2); }
+			.reveal .slides section .scrum-transform .scr-blist { display: flex; flex-direction: column; justify-content: space-evenly; gap: 14px; }
+			.reveal .slides section .scrum-transform .scr-blist li { background-color: #F7EFE4; border-radius: 10px; border-left: 3px solid #E8844A; box-shadow: 0 3px 8px rgba(42,38,34,0.04); padding: 18px 20px; gap: 15px; font-size: 16px; line-height: 1.5; }
+			.reveal .slides section .scrum-transform .scr-blist li i { color: #E8844A; font-size: 15px; margin-top: 4px; }
+			.reveal .slides section .scrum-transform .scr-truth {
+				background-color: #1F4E79; border-radius: 10px; padding: 18px 24px; color: #FDF8F3;
+				font-family: 'Fraunces', serif; font-size: 17px; line-height: 1.45; box-shadow: 0 6px 16px rgba(31,78,121,0.18);
+			}
+			.reveal .slides section .scrum-transform .scr-truth strong { color: #F5D5C4; }
+
+			/* ----- Slide 10: Advantages (2x3 icon grid) ----- */
+			.reveal .slides section .scrum-adv .scr-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; gap: 16px; flex: 1; min-height: 0; align-items: stretch; }
+			.reveal .slides section .scrum-adv .scr-card { background-color: #F7EFE4; border-radius: 10px; padding: 24px 26px; border-top: 4px solid #7BA888; box-shadow: 0 4px 12px rgba(42,38,34,0.04); display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; }
+			.reveal .slides section .scrum-adv .scr-card:nth-child(2) { border-top-color: #1F4E79; }
+			.reveal .slides section .scrum-adv .scr-card:nth-child(3) { border-top-color: #E8844A; }
+			.reveal .slides section .scrum-adv .scr-card:nth-child(4) { border-top-color: #C96E34; }
+			.reveal .slides section .scrum-adv .scr-card:nth-child(5) { border-top-color: #8A7C6B; }
+			.reveal .slides section .scrum-adv .scr-card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+			.reveal .slides section .scrum-adv .scr-card-icon { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background-color: #7BA888; color: #FDF8F3; font-size: 19px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(123,168,136,0.28); }
+			.reveal .slides section .scrum-adv .scr-card:nth-child(2) .scr-card-icon { background-color: #1F4E79; box-shadow: 0 4px 10px rgba(31,78,121,0.24); }
+			.reveal .slides section .scrum-adv .scr-card:nth-child(3) .scr-card-icon { background-color: #E8844A; box-shadow: 0 4px 10px rgba(232,132,74,0.26); }
+			.reveal .slides section .scrum-adv .scr-card:nth-child(4) .scr-card-icon { background-color: #C96E34; box-shadow: 0 4px 10px rgba(201,110,52,0.26); }
+			.reveal .slides section .scrum-adv .scr-card:nth-child(5) .scr-card-icon { background-color: #8A7C6B; box-shadow: 0 4px 10px rgba(138,124,107,0.26); }
+			.reveal .slides section .scrum-adv .scr-card-title { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; color: #2A2622; line-height: 1.2; }
+			.reveal .slides section .scrum-adv .scr-card-text { font-size: 15px; color: #5A5148; line-height: 1.6; }
+			.reveal .slides section .scrum-adv .scr-card-text em { font-style: italic; color: #C96E34; }
+
+			/* ----- Slide 11: Limitations (caution grid + banner) ----- */
+			.reveal .slides section .scrum-limits .scr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 12px; }
+			.reveal .slides section .scrum-limits .scr-card { background-color: #FDF8F3; border: 1px solid rgba(201,110,52,0.28); border-left: 3px solid #C96E34; border-radius: 8px; padding: 12px 14px; }
+			.reveal .slides section .scrum-limits .scr-card-head { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+			.reveal .slides section .scrum-limits .scr-card-icon { color: #C96E34; font-size: 13px; }
+			.reveal .slides section .scrum-limits .scr-card-title { font-family: 'Fraunces', serif; font-size: 14px; font-weight: 700; color: #2A2622; line-height: 1.2; }
+			.reveal .slides section .scrum-limits .scr-card-text { font-size: 12px; color: #5A5148; line-height: 1.4; }
+			.reveal .slides section .scrum-limits .scr-card-text strong { color: #2A2622; font-weight: 700; }
+			.reveal .slides section .scrum-limits .scr-fake { background-color: #D64545; border-radius: 8px; padding: 14px 18px; color: #FDF8F3; display: flex; align-items: center; gap: 16px; box-shadow: 0 4px 12px rgba(214,69,69,0.2); }
+			.reveal .slides section .scrum-limits .scr-fake-icon { font-size: 22px; flex-shrink: 0; }
+			.reveal .slides section .scrum-limits .scr-fake-title { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 700; line-height: 1.2; }
+			.reveal .slides section .scrum-limits .scr-fake-text { font-size: 13px; line-height: 1.4; color: rgba(253,248,243,0.92); }
+
+			/* ----- Slide 12: When it works vs breaks ----- */
+			.reveal .slides section .scrum-fit .scr-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; flex: 1; min-height: 0; align-items: stretch; }
+			.reveal .slides section .scrum-fit .scr-col { background-color: #F7EFE4; border-radius: 10px; padding: 22px 24px; display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(42,38,34,0.05); }
+			.reveal .slides section .scrum-fit .scr-col.good { border-top: 4px solid #7BA888; }
+			.reveal .slides section .scrum-fit .scr-col.bad { border-top: 4px solid #D64545; }
+			.reveal .slides section .scrum-fit .scr-col-head { display: flex; align-items: center; gap: 11px; margin-bottom: 6px; padding-bottom: 16px; border-bottom: 1px solid rgba(42,38,34,0.08); }
+			.reveal .slides section .scrum-fit .scr-col-head i { font-size: 22px; }
+			.reveal .slides section .scrum-fit .scr-col.good .scr-col-head i { color: #7BA888; }
+			.reveal .slides section .scrum-fit .scr-col.bad .scr-col-head i { color: #D64545; }
+			.reveal .slides section .scrum-fit .scr-col-title { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; color: #2A2622; }
+			.reveal .slides section .scrum-fit .scr-rows { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; flex: 1; justify-content: space-evenly; gap: 10px; }
+			.reveal .slides section .scrum-fit .scr-rows li { font-size: 15px; line-height: 1.35; color: #2A2622; display: flex; gap: 13px; align-items: center; background-color: #FDF8F3; border-radius: 8px; padding: 13px 16px; box-shadow: 0 2px 6px rgba(42,38,34,0.04); }
+			.reveal .slides section .scrum-fit .scr-rows li i { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; flex-shrink: 0; color: #FDF8F3; }
+			.reveal .slides section .scrum-fit .scr-col.good .scr-rows li { border-left: 3px solid #7BA888; }
+			.reveal .slides section .scrum-fit .scr-col.bad .scr-rows li { border-left: 3px solid #D64545; }
+			.reveal .slides section .scrum-fit .scr-col.good .scr-rows li i { background-color: #7BA888; }
+			.reveal .slides section .scrum-fit .scr-col.bad .scr-rows li i { background-color: #D64545; }
+
+			/* ----- Slide 13: Our practice — Wasl ----- */
+			.reveal .slides section .scrum-wasl .scr-intro { font-size: 15px; color: #5A5148; line-height: 1.5; margin-bottom: 18px; max-width: 920px; }
+			.reveal .slides section .scrum-wasl .scr-intro strong { color: #2A2622; font-weight: 700; }
+			.reveal .slides section .scrum-wasl .scr-flow { display: flex; align-items: stretch; gap: 4px; margin-bottom: 22px; }
+			.reveal .slides section .scrum-wasl .scr-step { flex: 1; background-color: #F7EFE4; border-radius: 8px; padding: 12px 6px; text-align: center; border-top: 3px solid #1F4E79; box-shadow: 0 3px 8px rgba(42,38,34,0.05); display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+			.reveal .slides section .scrum-wasl .scr-step-num { font-size: 9px; font-weight: 700; letter-spacing: 0.12em; color: #8A7C6B; }
+			.reveal .slides section .scrum-wasl .scr-step-name { font-family: 'Fraunces', serif; font-size: 12px; font-weight: 700; color: #2A2622; line-height: 1.2; }
+			.reveal .slides section .scrum-wasl .scr-step.last { border-top-color: #E8844A; background-color: #1F4E79; }
+			.reveal .slides section .scrum-wasl .scr-step.last .scr-step-name { color: #FDF8F3; }
+			.reveal .slides section .scrum-wasl .scr-step.last .scr-step-num { color: #F5D5C4; }
+			.reveal .slides section .scrum-wasl .scr-flow-arrow { display: flex; align-items: center; color: #C9BEB1; font-size: 10px; }
+			.reveal .slides section .scrum-wasl .scr-roles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+			.reveal .slides section .scrum-wasl .scr-role { background-color: #F7EFE4; border-radius: 10px; padding: 16px 18px; border-left: 3px solid #1F4E79; box-shadow: 0 4px 12px rgba(42,38,34,0.05); }
+			.reveal .slides section .scrum-wasl .scr-role:nth-child(2) { border-left-color: #E8844A; }
+			.reveal .slides section .scrum-wasl .scr-role:nth-child(3) { border-left-color: #7BA888; }
+			.reveal .slides section .scrum-wasl .scr-role-title { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #8A7C6B; margin-bottom: 6px; }
+			.reveal .slides section .scrum-wasl .scr-role-name { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 700; color: #1F4E79; line-height: 1.2; }
+			.reveal .slides section .scrum-wasl .scr-role:nth-child(2) .scr-role-name { color: #E8844A; }
+			.reveal .slides section .scrum-wasl .scr-role:nth-child(3) .scr-role-name { color: #7BA888; }
+			.reveal .slides section .scrum-wasl .scr-role-desc { font-size: 12.5px; color: #5A5148; margin-top: 4px; line-height: 1.4; }
+
+			/* ----- Slides 14 & 15: Wasl — what worked / what strained ----- */
+			.reveal .slides section .scrum-worked .scr-grid,
+			.reveal .slides section .scrum-strained .scr-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 16px; flex: 1; min-height: 0; }
+			.reveal .slides section .scrum-worked .scr-card,
+			.reveal .slides section .scrum-strained .scr-card { background-color: #F7EFE4; border-radius: 10px; padding: 24px 26px; box-shadow: 0 4px 12px rgba(42,38,34,0.05); display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; }
+			.reveal .slides section .scrum-worked .scr-card { border-left: 4px solid #7BA888; }
+			.reveal .slides section .scrum-strained .scr-card { border-left: 4px solid #C96E34; }
+			.reveal .slides section .scrum-worked .scr-card-head,
+			.reveal .slides section .scrum-strained .scr-card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+			.reveal .slides section .scrum-worked .scr-card-icon,
+			.reveal .slides section .scrum-strained .scr-card-icon { width: 44px; height: 44px; border-radius: 50%; color: #FDF8F3; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+			.reveal .slides section .scrum-worked .scr-card-icon { background-color: #7BA888; box-shadow: 0 4px 10px rgba(123,168,136,0.28); }
+			.reveal .slides section .scrum-strained .scr-card-icon { background-color: #C96E34; box-shadow: 0 4px 10px rgba(201,110,52,0.26); }
+			.reveal .slides section .scrum-worked .scr-card-title,
+			.reveal .slides section .scrum-strained .scr-card-title { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 700; color: #2A2622; line-height: 1.2; }
+			.reveal .slides section .scrum-worked .scr-card-text,
+			.reveal .slides section .scrum-strained .scr-card-text { font-size: 14.5px; color: #5A5148; line-height: 1.6; }
+			.reveal .slides section .scrum-worked .scr-card-text strong,
+			.reveal .slides section .scrum-strained .scr-card-text strong { color: #2A2622; font-weight: 700; }
+			.reveal .slides section .scrum-worked .scr-card-text em,
+			.reveal .slides section .scrum-strained .scr-card-text em { font-style: italic; color: #C96E34; }
+
+			/* ----- Slide 16: Scrum in the real world ----- */
+			.reveal .slides section .scrum-realworld .scr-quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; flex: 1; min-height: 0; align-items: stretch; margin-bottom: 14px; }
+			.reveal .slides section .scrum-realworld .scr-quote { background-color: #F7EFE4; border-radius: 10px; padding: 22px 24px 20px; border-top: 4px solid #1F4E79; box-shadow: 0 4px 12px rgba(42,38,34,0.05); display: flex; flex-direction: column; }
+			.reveal .slides section .scrum-realworld .scr-quote:nth-child(2) { border-top-color: #E8844A; }
+			.reveal .slides section .scrum-realworld .scr-quote:nth-child(3) { border-top-color: #7BA888; }
+			.reveal .slides section .scrum-realworld .scr-quote-mark { font-family: 'Fraunces', serif; font-size: 60px; line-height: 0.7; color: #1F4E79; opacity: 0.35; height: 34px; }
+			.reveal .slides section .scrum-realworld .scr-quote:nth-child(2) .scr-quote-mark { color: #E8844A; }
+			.reveal .slides section .scrum-realworld .scr-quote:nth-child(3) .scr-quote-mark { color: #7BA888; }
+			.reveal .slides section .scrum-realworld .scr-quote-text { font-family: 'Fraunces', serif; font-size: 18px; font-style: italic; color: #2A2622; line-height: 1.5; flex: 1; display: flex; align-items: center; }
+			.reveal .slides section .scrum-realworld .scr-quote-foot { display: flex; align-items: center; gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(42,38,34,0.1); }
+			.reveal .slides section .scrum-realworld .scr-quote-foot i { font-size: 14px; color: #1F4E79; flex-shrink: 0; }
+			.reveal .slides section .scrum-realworld .scr-quote:nth-child(2) .scr-quote-foot i { color: #E8844A; }
+			.reveal .slides section .scrum-realworld .scr-quote:nth-child(3) .scr-quote-foot i { color: #7BA888; }
+			.reveal .slides section .scrum-realworld .scr-quote-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8A7C6B; }
+			.reveal .slides section .scrum-realworld .scr-pattern { background-color: #1F4E79; border-radius: 10px; padding: 14px 22px; color: #FDF8F3; text-align: center; box-shadow: 0 6px 16px rgba(31,78,121,0.18); }
+			.reveal .slides section .scrum-realworld .scr-pattern .eye { font-size: 9.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #F5D5C4; margin-bottom: 6px; }
+			.reveal .slides section .scrum-realworld .scr-pattern .txt { font-family: 'Fraunces', serif; font-size: 16px; line-height: 1.4; }
+			.reveal .slides section .scrum-realworld .scr-pattern .txt strong { color: #F5D5C4; }
+
+			/* ----- Slide 17: Implications ----- */
+			.reveal .slides section .scrum-implications .scr-list2 { display: flex; flex-direction: column; gap: 11px; flex: 1; min-height: 0; justify-content: center; }
+			.reveal .slides section .scrum-implications .scr-imp { display: flex; gap: 16px; align-items: center; background-color: #F7EFE4; border-radius: 10px; padding: 13px 20px; border-left: 4px solid #1F4E79; box-shadow: 0 3px 10px rgba(42,38,34,0.04); }
+			.reveal .slides section .scrum-implications .scr-imp:nth-child(even) { border-left-color: #E8844A; }
+			.reveal .slides section .scrum-implications .scr-imp-num { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 700; color: #1F4E79; line-height: 1; flex-shrink: 0; width: 28px; text-align: center; }
+			.reveal .slides section .scrum-implications .scr-imp:nth-child(even) .scr-imp-num { color: #E8844A; }
+			.reveal .slides section .scrum-implications .scr-imp-body { display: flex; flex-direction: column; gap: 2px; }
+			.reveal .slides section .scrum-implications .scr-imp-title { font-family: 'Fraunces', serif; font-size: 15.5px; font-weight: 700; color: #2A2622; line-height: 1.25; }
+			.reveal .slides section .scrum-implications .scr-imp-text { font-size: 13px; color: #5A5148; line-height: 1.4; }
+
+			/* ----- Slide 18: Not a silver bullet (decision matrix) ----- */
+			.reveal .slides section .scrum-silver th.sit { background-color: #8A7C6B; width: 56%; }
+			.reveal .slides section .scrum-silver th.fit { background-color: #1F4E79; }
+			.reveal .slides section .scrum-silver td.fit { font-family: 'Fraunces', serif; font-weight: 700; color: #1F4E79; }
+
+			/* ----- Slide 19: Verdict ----- */
+			.reveal .slides section .scrum-verdict .scr-cols { display: grid; grid-template-columns: 0.62fr 1.38fr; gap: 22px; flex: 1; min-height: 0; align-items: stretch; }
+			.reveal .slides section .scrum-verdict .scr-hero { background-color: #1F4E79; border-radius: 12px; padding: 26px 24px; color: #FDF8F3; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 8px 20px rgba(31,78,121,0.2); }
+			.reveal .slides section .scrum-verdict .scr-hero-eye { font-size: 10px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #F5D5C4; margin-bottom: 12px; }
+			.reveal .slides section .scrum-verdict .scr-hero-title { font-family: 'Fraunces', serif; font-size: 30px; font-weight: 700; line-height: 1.1; margin-bottom: 14px; }
+			.reveal .slides section .scrum-verdict .scr-hero-rule { width: 40px; height: 3px; background-color: #E8844A; border-radius: 2px; margin-bottom: 14px; }
+			.reveal .slides section .scrum-verdict .scr-hero-text { font-family: 'Fraunces', serif; font-style: italic; font-size: 15px; line-height: 1.45; color: rgba(253,248,243,0.9); }
+			.reveal .slides section .scrum-verdict .scr-points { display: flex; flex-direction: column; gap: 9px; justify-content: center; }
+			.reveal .slides section .scrum-verdict .scr-vp { display: flex; gap: 14px; align-items: center; background-color: #F7EFE4; border-radius: 8px; padding: 11px 16px; box-shadow: 0 3px 8px rgba(42,38,34,0.04); border-left: 3px solid #E8844A; }
+			.reveal .slides section .scrum-verdict .scr-vp-num { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; color: #E8844A; line-height: 1; width: 22px; flex-shrink: 0; text-align: center; }
+			.reveal .slides section .scrum-verdict .scr-vp-text { font-size: 13.5px; color: #2A2622; line-height: 1.4; }
+			.reveal .slides section .scrum-verdict .scr-vp-text strong { font-weight: 700; color: #1F4E79; }
+
+			/* ----- Slide 20: Thank you ----- */
+			.reveal .slides section .scrum-thanks { padding: 60px 70px; justify-content: center; }
+			.reveal .slides section .scrum-thanks .scr-eyebrow { font-size: 12px; letter-spacing: 0.3em; margin-bottom: 18px; }
+			.reveal .slides section .scrum-thanks h1 { font-size: 52px; margin-bottom: 18px; }
+			.reveal .slides section .scrum-thanks .scr-rule { width: 64px; height: 4px; margin: 0 0 24px; }
+			.reveal .slides section .scrum-thanks .scr-thanks-text { font-family: 'Fraunces', serif; font-style: italic; font-size: 20px; color: #5A5148; line-height: 1.5; margin-bottom: 28px; max-width: 720px; }
+			.reveal .slides section .scrum-thanks .scr-footer { font-size: 13px; color: #8A7C6B; letter-spacing: 0.04em; }
+			.reveal .slides section .scrum-thanks .scr-footer strong { color: #5A5148; font-weight: 700; }
+
 		</style>
 	</head>
 	<body>
@@ -11055,6 +11474,579 @@
 						</aside>
 					</div>
 				</section>
+
+				<!-- ============================================================
+				     Scrum Under the Microscope, self-contained Day-4 deck
+				     (appended after the Cisco case study; own welcome + close)
+				     ============================================================ -->
+
+				<!-- Scrum Slide 1: Title / Welcome -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-title">
+						<div class="scr-eyebrow">Agile Project Management</div>
+						<h1>Scrum Under the Microscope</h1>
+						<div class="scr-lead">A critical reflection on Scrum versus the other ways we&rsquo;ve learned to run projects.</div>
+						<div class="scr-rule"></div>
+						<div class="scr-acts">
+							<div class="scr-act">
+								<div class="scr-act-num">Act 1</div>
+								<div class="scr-act-name">Theory: what Scrum is &amp; why it exists</div>
+							</div>
+							<div class="scr-act">
+								<div class="scr-act-num">Act 2</div>
+								<div class="scr-act-name">Critique: where it fits &amp; where it breaks</div>
+							</div>
+							<div class="scr-act">
+								<div class="scr-act-num">Act 3</div>
+								<div class="scr-act-name">Practice &amp; implications: Wasl &amp; the real world</div>
+							</div>
+						</div>
+						<div class="scr-footer"><strong>Ali, Efe, Gokhan, Murtaza, Vrutika, Shilpa, & Hoori</strong></div>
+						<aside class="notes">Welcome. This is a separate, self-contained deck from the Wasl walkthrough. Quick framing: we are not here to sell Scrum, we are here to put it under the microscope and ask where it actually fits. Three acts: the theory, an honest critique, and what we lived on Wasl plus our day jobs.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 2: Agenda -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-agenda with-header">
+						<div class="scr-eyebrow">Agenda</div>
+						<h1>What We&rsquo;ll Cover in the Next 30 Minutes</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-cols">
+							<div class="scr-col">
+								<div class="scr-col-eye">Act 1 &middot; Theory</div>
+								<div class="scr-col-title">The framework</div>
+								<ul class="scr-items">
+									<li><span class="n">1</span><span>Scrum in 90 seconds</span></li>
+									<li><span class="n">2</span><span>Why Scrum exists: the problem it solves</span></li>
+									<li><span class="n">3</span><span>The methodology landscape: where Scrum sits</span></li>
+								</ul>
+							</div>
+							<div class="scr-col">
+								<div class="scr-col-eye">Act 2 &middot; Critique</div>
+								<div class="scr-col-title">Comparison &amp; reflection</div>
+								<ul class="scr-items">
+									<li><span class="n">4</span><span>Scrum vs. Waterfall, other agile &amp; hybrid</span></li>
+									<li><span class="n">5</span><span>Scaling: organizational transformation</span></li>
+									<li><span class="n">6</span><span>Advantages of Scrum</span></li>
+									<li><span class="n">7</span><span>Limitations of Scrum</span></li>
+									<li><span class="n">8</span><span>When Scrum works and when it breaks</span></li>
+								</ul>
+							</div>
+							<div class="scr-col">
+								<div class="scr-col-eye">Act 3 &middot; Practice</div>
+								<div class="scr-col-title">Lived &amp; applied</div>
+								<ul class="scr-items">
+									<li><span class="n">9</span><span>Our practice: Wasl + real-world experience</span></li>
+									<li><span class="n">10</span><span>Implications for organizations going agile</span></li>
+									<li><span class="n">11</span><span>Verdict</span></li>
+								</ul>
+							</div>
+						</div>
+						<aside class="notes">Three acts. Theory first so everyone shares the vocabulary. Then the critical part: comparisons, advantages, limitations, and the fit question. Finally what we actually lived on Wasl and in our jobs, and what it means for an organization going agile.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 3: Scrum in 90 Seconds -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-90 with-header">
+						<div class="scr-eyebrow">The whole framework on one slide</div>
+						<h1>Scrum in 90 Seconds</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-grid">
+							<div class="scr-card">
+								<div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-users"></i></div><div><div class="scr-card-eye">3 Roles</div><div class="scr-card-title">Who</div></div></div>
+								<ul class="scr-list">
+									<li><i class="fas fa-circle"></i><div class="scr-li-body"><span class="scr-li-term"><strong>Product Owner</strong> &middot; the <em>what</em></span><span class="scr-li-desc">Owns the backlog &amp; maximizes value</span></div></li>
+									<li><i class="fas fa-circle"></i><div class="scr-li-body"><span class="scr-li-term"><strong>Scrum Master</strong> &middot; the <em>how-well</em></span><span class="scr-li-desc">Coaches the team, removes blockers</span></div></li>
+									<li><i class="fas fa-circle"></i><div class="scr-li-body"><span class="scr-li-term"><strong>Developers</strong> &middot; the <em>build</em></span><span class="scr-li-desc">A self-organizing, cross-functional team</span></div></li>
+								</ul>
+							</div>
+							<div class="scr-card">
+								<div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-arrows-rotate"></i></div><div><div class="scr-card-eye">5 Events</div><div class="scr-card-title">When</div></div></div>
+								<ul class="scr-list">
+									<li><i class="fas fa-circle"></i><div class="scr-li-body"><span class="scr-li-term"><strong>The Sprint</strong></span><span class="scr-li-desc">The container, 1&ndash;4 weeks</span></div></li>
+									<li><i class="fas fa-circle"></i><div class="scr-li-body"><span class="scr-li-term">Sprint Planning</span><span class="scr-li-desc">Agree the sprint goal</span></div></li>
+									<li><i class="fas fa-circle"></i><div class="scr-li-body"><span class="scr-li-term">Daily Scrum</span><span class="scr-li-desc">15-minute sync, every day</span></div></li>
+									<li><i class="fas fa-circle"></i><div class="scr-li-body"><span class="scr-li-term">Sprint Review</span><span class="scr-li-desc">Inspect the increment</span></div></li>
+									<li><i class="fas fa-circle"></i><div class="scr-li-body"><span class="scr-li-term">Retrospective</span><span class="scr-li-desc">Improve how we work</span></div></li>
+								</ul>
+							</div>
+							<div class="scr-card">
+								<div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-cube"></i></div><div><div class="scr-card-eye">3 Artifacts</div><div class="scr-card-title">What</div></div></div>
+								<ul class="scr-list">
+									<li><i class="fas fa-circle"></i><div class="scr-li-body"><span class="scr-li-term"><strong>Product Backlog</strong></span><span class="scr-li-desc">What we <em>might</em> build, ordered by value</span></div></li>
+									<li><i class="fas fa-circle"></i><div class="scr-li-body"><span class="scr-li-term"><strong>Sprint Backlog</strong></span><span class="scr-li-desc">What we commit to <em>this</em> sprint</span></div></li>
+									<li><i class="fas fa-circle"></i><div class="scr-li-body"><span class="scr-li-term"><strong>Increment</strong></span><span class="scr-li-desc">A working, usable slice we can ship</span></div></li>
+								</ul>
+							</div>
+						</div>
+						<div class="scr-engine">
+							<div class="scr-engine-label">The engine underneath: empiricism</div>
+							<div class="scr-engine-flow">
+								<span class="scr-engine-step">Transparency</span>
+								<span class="scr-engine-arrow"><i class="fas fa-arrow-right"></i></span>
+								<span class="scr-engine-step">Inspection</span>
+								<span class="scr-engine-arrow"><i class="fas fa-arrow-right"></i></span>
+								<span class="scr-engine-step">Adaptation</span>
+							</div>
+						</div>
+						<aside class="notes">The whole framework on one slide. Three roles, five events, three artifacts. But the part that matters most is the engine underneath: empiricism. Transparency so you can see reality, inspection so you check against it, adaptation so you change course. Everything else is scaffolding around that loop.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 4: Why Scrum Exists -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-why with-header">
+						<div class="scr-eyebrow">The problem it was built to solve</div>
+						<h1>Why Scrum Exists</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-cols">
+							<div class="scr-panel">
+								<div class="scr-panel-eye">Plan-driven</div>
+								<div class="scr-panel-title">Predict everything up front</div>
+								<p>Traditional PM assumes requirements are <strong>knowable and stable</strong> before work begins.</p>
+								<p>In software and innovation, reality refuses to cooperate: the plan is obsolete the moment it meets the world.</p>
+							</div>
+							<div class="scr-panel right">
+								<div class="scr-panel-eye">Empirical</div>
+								<div class="scr-panel-title">Inspect &amp; adapt</div>
+								<p>Scrum trades the <strong>illusion of a fixed plan</strong> for short, repeated feedback loops.</p>
+								<p>Ship a working increment every sprint, inspect what is real, and adapt the plan from evidence, not assumptions.</p>
+							</div>
+						</div>
+						<div class="scr-bottom">The philosophical break from Waterfall: <strong>embrace change instead of resisting it.</strong></div>
+						<aside class="notes">Why does Scrum exist at all? Because the old assumption, that you can know everything up front, breaks down in software and innovation. Scrum doesn't pretend to predict the future; it sets up short feedback loops so you can correct fast. That's the philosophical break from Waterfall: change is welcomed, not fought.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 5: The Methodology Landscape -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-landscape with-header">
+						<div class="scr-eyebrow">Where Scrum sits · Module 1</div>
+						<h1>The Methodology Landscape</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-seg-row">
+							<div class="scr-seg s1">
+								<div class="scr-seg-name">Waterfall</div>
+								<div class="scr-seg-desc">Fully plan-driven</div>
+							</div>
+							<div class="scr-seg s2">
+								<div class="scr-seg-name">Hybrid</div>
+								<div class="scr-seg-desc">Water-Scrum-Fall: plan-driven wrapper, agile core</div>
+							</div>
+							<div class="scr-seg s3">
+								<div class="scr-seg-name">Scrum / Kanban / XP</div>
+								<div class="scr-seg-desc">Agile delivery</div>
+							</div>
+							<div class="scr-seg s4">
+								<div class="scr-seg-name">SAFe / LeSS</div>
+								<div class="scr-seg-desc">Scaling agile across the org</div>
+							</div>
+						</div>
+						<div class="scr-axis">
+							<span>Plan-driven</span>
+							<span class="arrow"></span>
+							<span>Adaptive</span>
+						</div>
+						<div class="scr-eyebrow" style="color:#C96E34; margin-top:4px;">The critical point</div>
+						<div class="scr-point">
+							<div class="scr-pcard">
+								<div class="scr-pcard-title">Agile = the mindset</div>
+								<div class="scr-pcard-text">The Manifesto: individuals &amp; interactions, working software, customer collaboration, responding to change.</div>
+							</div>
+							<div class="scr-pcard alt">
+								<div class="scr-pcard-title">Scrum = one implementation</div>
+								<div class="scr-pcard-text">Scrum is <strong>one</strong> agile framework, not &ldquo;agile&rdquo; itself. Don&rsquo;t confuse the tool for the philosophy.</div>
+							</div>
+						</div>
+						<aside class="notes">It's a spectrum, not a binary, running from fully plan-driven to fully adaptive. The critical point, and a common confusion, is that Scrum is not the same thing as agile. Agile is the mindset, the Manifesto. Scrum is just one way to implement it. Mixing those two up is how organizations end up doing the rituals without the philosophy.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 6: Scrum vs Waterfall -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-vs-waterfall with-header">
+						<div class="scr-eyebrow">Head to head</div>
+						<h1>Scrum vs. Waterfall</h1>
+						<div class="scr-rule"></div>
+						<table class="scrum-table">
+							<thead>
+								<tr>
+									<th class="dim">Dimension</th>
+									<th class="wf">Waterfall</th>
+									<th class="sc">Scrum</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td class="dim">Requirements</td><td>Fixed up front</td><td>Emerge &amp; evolve</td></tr>
+								<tr><td class="dim">Delivery</td><td>One big release at the end</td><td>Incremental, every sprint</td></tr>
+								<tr><td class="dim">Feedback</td><td>Late, after the build</td><td>Early &amp; continuous</td></tr>
+								<tr><td class="dim">Change</td><td>Costly, resisted</td><td>Expected, absorbed</td></tr>
+								<tr><td class="dim">Risk surfaces</td><td>Late (worst time)</td><td>Early (cheapest time)</td></tr>
+								<tr><td class="dim">Best fit</td><td>Stable, regulated, fixed contract</td><td>Uncertain, fast-changing scope</td></tr>
+							</tbody>
+						</table>
+						<div class="scr-callout"><i class="fas fa-info-circle"></i><span><strong>Waterfall isn&rsquo;t &ldquo;wrong&rdquo;</strong>: it&rsquo;s right for the <em>wrong</em> problems. Bridges, aircraft firmware, and regulated hardware still ship Waterfall, correctly.</span></div>
+						<aside class="notes">Head to head. The pattern is consistent: Waterfall front-loads certainty, Scrum front-loads feedback. The key row is when risk surfaces, Waterfall finds out late, which is the most expensive time; Scrum finds out early. But the honest caveat is that Waterfall isn't wrong, it's right for the wrong problems. For a bridge or aircraft firmware, you want Waterfall.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 7: Scrum vs Other Agile -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-vs-agile with-header">
+						<div class="scr-eyebrow">Scrum isn&rsquo;t the only agile game</div>
+						<h1>Scrum vs. Other Agile: Kanban &amp; XP</h1>
+						<div class="scr-rule"></div>
+						<table class="scrum-table">
+							<thead>
+								<tr>
+									<th class="rowhead"></th>
+									<th class="c-scrum">Scrum</th>
+									<th class="c-kanban">Kanban</th>
+									<th class="c-xp">XP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td class="rowhead">Core unit</td><td>Time-boxed sprint</td><td>Continuous flow</td><td>Engineering discipline</td></tr>
+								<tr><td class="rowhead">Change mid-cycle</td><td>Discouraged in a sprint</td><td>Anytime</td><td>Anytime</td></tr>
+								<tr><td class="rowhead">Strength</td><td>Cadence, predictability</td><td>Flow, flexibility</td><td>Code quality (TDD, CI, pairing)</td></tr>
+								<tr><td class="rowhead">Weakness</td><td>Rigid sprint boundary</td><td>Little structure</td><td>Demands strong eng. culture</td></tr>
+							</tbody>
+						</table>
+						<div class="scr-callout"><i class="fas fa-info-circle"></i><span>Mature teams <strong>blend</strong> these: Scrum cadence + Kanban flow (&ldquo;Scrumban&rdquo;) + XP practices for quality. The frameworks are <strong>tools, not religions.</strong></span></div>
+						<aside class="notes">Scrum isn't the only agile game. Kanban optimizes for flow and continuous delivery; XP is about engineering discipline, test-driven development, continuous integration, pairing. Each has a weakness. The mature move is to blend them: Scrum's cadence, Kanban's flow, XP's quality practices. Treat frameworks as tools, not religions.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 8: Hybrid Water-Scrum-Fall -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-hybrid with-header">
+						<div class="scr-eyebrow">The most common real-world reality</div>
+						<h1>Hybrid: Water-Scrum-Fall</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-cols">
+							<div class="scr-sandwich">
+								<div class="scr-layer wf">
+									<div class="scr-layer-eye">Waterfall</div>
+									<div class="scr-layer-title">Up-front planning &amp; budgeting</div>
+								</div>
+								<div class="scr-arrow-mid"><i class="fas fa-chevron-down"></i></div>
+								<div class="scr-layer scrum">
+									<div class="scr-layer-eye">Agile core</div>
+									<div class="scr-layer-title">Scrum delivery in the middle</div>
+									<div class="sprints">
+										<span class="sprint">S1</span><span class="sprint">S2</span><span class="sprint">S3</span><span class="sprint">S4</span>
+									</div>
+								</div>
+								<div class="scr-arrow-mid"><i class="fas fa-chevron-down"></i></div>
+								<div class="scr-layer wf">
+									<div class="scr-layer-eye">Waterfall</div>
+									<div class="scr-layer-title">Staged release &amp; governance gates</div>
+								</div>
+							</div>
+							<ul class="scr-blist">
+								<li><i class="fas fa-arrow-right"></i><span><strong>Why it happens:</strong> agile delivery teams live inside non-agile organizations: finance, procurement, legal and compliance still run on fixed plans.</span></li>
+								<li><i class="fas fa-arrow-right"></i><span><strong>Not automatically a failure</strong>, often a pragmatic compromise that still ships real software.</span></li>
+								<li><i class="fas fa-arrow-right"></i><span><strong>The danger:</strong> if the &ldquo;fall&rdquo; parts dominate, they strangle the feedback loop: you keep the ceremonies but lose the benefit.</span></li>
+							</ul>
+						</div>
+						<aside class="notes">This is the reality almost nobody teaches honestly. In practice you get a Waterfall plan and budget on top, agile Scrum delivery in the middle, and a Waterfall release with governance gates at the bottom. It happens because agile teams live inside non-agile organizations. It's not automatically a failure, but if the Waterfall layers dominate, they strangle the feedback loop and you're left with ceremonies and no benefit.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 9: Organizational Transformation -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-transform with-header">
+						<div class="scr-eyebrow">Scaling Scrum past one team</div>
+						<h1>Organizational Transformation Toward Agility</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-cols">
+							<div class="scr-left">
+								<div class="scr-scale">
+									<div class="scr-scale-block">
+										<div class="scr-team-dot"><i class="fas fa-users"></i></div>
+										<div class="scr-scale-label">One team</div>
+									</div>
+									<div class="scr-scale-arrow"><i class="fas fa-arrow-right-long"></i></div>
+									<div class="scr-scale-block">
+										<div class="scr-team-grid">
+											<div class="d"><i class="fas fa-users"></i></div>
+											<div class="d"><i class="fas fa-users"></i></div>
+											<div class="d"><i class="fas fa-users"></i></div>
+											<div class="d"><i class="fas fa-users"></i></div>
+											<div class="d"><i class="fas fa-users"></i></div>
+											<div class="d"><i class="fas fa-users"></i></div>
+											<div class="d"><i class="fas fa-users"></i></div>
+											<div class="d"><i class="fas fa-users"></i></div>
+											<div class="d"><i class="fas fa-users"></i></div>
+										</div>
+										<div class="scr-scale-label">Team of teams</div>
+									</div>
+								</div>
+								<div class="scr-frameworks">
+									<span class="scr-chip">SAFe</span><span class="scr-chip">LeSS</span><span class="scr-chip">Spotify model</span>
+								</div>
+							</div>
+							<ul class="scr-blist">
+								<li><i class="fas fa-arrow-right"></i><span>One Scrum team is easy. <strong>Fifty teams is a completely different problem.</strong></span></li>
+								<li><i class="fas fa-arrow-right"></i><span>Scaling frameworks try to coordinate the chaos, but the hard part isn&rsquo;t the ceremonies.</span></li>
+								<li><i class="fas fa-arrow-right"></i><span>It&rsquo;s <strong>culture:</strong> trust, decentralized decisions, tolerance for failure.</span></li>
+							</ul>
+						</div>
+						<div class="scr-truth">Most &ldquo;agile transformations&rdquo; fail not on process, but on <strong>management refusing to give up command-and-control.</strong></div>
+						<aside class="notes">One Scrum team is easy. Fifty teams is a completely different problem, and that's what SAFe, LeSS, and the Spotify model try to solve. But here's the uncomfortable truth: the hard part is never the ceremonies. It's culture, trust, decentralized decisions, tolerance for failure. Most agile transformations fail because management won't give up command-and-control, not because the process was wrong.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 10: Advantages -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-adv with-header">
+						<div class="scr-eyebrow">What Scrum genuinely delivers when it works</div>
+						<h1>Advantages of Scrum</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-grid">
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-bolt"></i></div><div class="scr-card-title">Fast feedback</div></div><div class="scr-card-text">Catch the wrong direction early, while it&rsquo;s cheap to fix. Every sprint surfaces something real to react to.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-eye"></i></div><div class="scr-card-title">Transparency</div></div><div class="scr-card-text">Backlog and board make all work visible. No hidden tasks, no nasty surprises at the deadline.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-sync-alt"></i></div><div class="scr-card-title">Adaptability</div></div><div class="scr-card-text">Re-prioritize every sprint as you learn. The plan bends to reality, not the other way around.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-handshake"></i></div><div class="scr-card-title">Customer focus</div></div><div class="scr-card-text">A working increment every sprint, not a promise. Value lands continuously, not only at the end.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-users"></i></div><div class="scr-card-title">Team ownership</div></div><div class="scr-card-text">Self-organizing teams mean higher engagement and accountability. People who choose the <em>how</em> own the outcome.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-shield-alt"></i></div><div class="scr-card-title">Risk reduction</div></div><div class="scr-card-text">Problems surface early, not at the finish line. Small, frequent bets instead of one big gamble.</div></div>
+						</div>
+						<aside class="notes">When Scrum works, these are the real payoffs. Fast feedback and early risk reduction are two sides of the same coin, you find out you're wrong while it's still cheap. Transparency and team ownership change how people behave. And the customer focus is concrete: every sprint ends in a working increment, not a status report.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 11: Limitations -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-limits with-header">
+						<div class="scr-eyebrow">The honest critique: this is what the grade rewards</div>
+						<h1>Limitations of Scrum</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-grid">
+							<div class="scr-card"><div class="scr-card-head"><i class="fas fa-exclamation-triangle scr-card-icon"></i><div class="scr-card-title">Scope-creep risk</div></div><div class="scr-card-text">&ldquo;Embrace change&rdquo; with no discipline becomes endless change.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><i class="fas fa-exclamation-triangle scr-card-icon"></i><div class="scr-card-title">Estimation is hard</div></div><div class="scr-card-text">Velocity is noisy; story points get gamed.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><i class="fas fa-exclamation-triangle scr-card-icon"></i><div class="scr-card-title">Ceremony overhead</div></div><div class="scr-card-text">Standups, plannings, reviews &amp; retros can decay into ritual theater.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><i class="fas fa-exclamation-triangle scr-card-icon"></i><div class="scr-card-title">Demands seniority</div></div><div class="scr-card-text">Self-organization collapses with junior or passive teams.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><i class="fas fa-exclamation-triangle scr-card-icon"></i><div class="scr-card-title">Weak for fixed scope</div></div><div class="scr-card-text">Clashes with &ldquo;how much, by when, for what price?&rdquo; contracts.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><i class="fas fa-exclamation-triangle scr-card-icon"></i><div class="scr-card-title">Silent on quality</div></div><div class="scr-card-text">Scrum never tells you <em>how</em> to build well: that&rsquo;s XP&rsquo;s job.</div></div>
+						</div>
+						<div class="scr-fake">
+							<div class="scr-fake-icon"><i class="fas fa-ghost"></i></div>
+							<div>
+								<div class="scr-fake-title">&ldquo;Fake agile&rdquo;</div>
+								<div class="scr-fake-text">Adopt the rituals, keep the old culture, and you get the worst of both worlds.</div>
+							</div>
+						</div>
+						<aside class="notes">This is the slide the grade rewards, so we're being honest. Scrum invites scope creep if there's no discipline. Estimation is genuinely hard and story points get gamed. The ceremonies can become theater. It needs senior, empowered people. It's weak for fixed-scope contracts, and it's completely silent on engineering quality. And the worst failure mode is fake agile: the rituals with none of the culture, the worst of both worlds.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 12: When it works vs breaks -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-fit with-header">
+						<div class="scr-eyebrow">The critical-reflection slide</div>
+						<h1>When Scrum Works and When It Breaks</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-cols">
+							<div class="scr-col good">
+								<div class="scr-col-head"><i class="fas fa-check-circle"></i><div class="scr-col-title">Scrum thrives when&hellip;</div></div>
+								<ul class="scr-rows">
+									<li><i class="fas fa-check"></i><span>Requirements are uncertain</span></li>
+									<li><i class="fas fa-check"></i><span>The customer can engage continuously</span></li>
+									<li><i class="fas fa-check"></i><span>The team is empowered &amp; cross-functional</span></li>
+									<li><i class="fas fa-check"></i><span>Leadership tolerates change</span></li>
+									<li><i class="fas fa-check"></i><span>Work decomposes into increments</span></li>
+								</ul>
+							</div>
+							<div class="scr-col bad">
+								<div class="scr-col-head"><i class="fas fa-times-circle"></i><div class="scr-col-title">Scrum breaks when&hellip;</div></div>
+								<ul class="scr-rows">
+									<li><i class="fas fa-times"></i><span>Scope &amp; deadline are fixed by contract</span></li>
+									<li><i class="fas fa-times"></i><span>The Product Owner / customer is absent</span></li>
+									<li><i class="fas fa-times"></i><span>The team is junior, siloed, or micromanaged</span></li>
+									<li><i class="fas fa-times"></i><span>Management demands a fixed plan &amp; date up front</span></li>
+									<li><i class="fas fa-times"></i><span>Work is monolithic: can&rsquo;t ship partially</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="scr-bottom">The framework rarely fails. What fails is the <strong>match between framework and context.</strong></div>
+						<aside class="notes">This is the heart of the critical reflection. Scrum is a fit question, not a quality question. On the left, the conditions where it genuinely shines. On the right, the conditions where it predictably breaks, and notice they're mostly organizational: absent customers, fixed contracts, micromanagement. The takeaway: the framework rarely fails. What fails is the match between the framework and the context.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 13: Our Practice, Wasl -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-wasl with-header">
+						<div class="scr-eyebrow">Our practice this semester</div>
+						<h1>We Ran Scrum on Wasl</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-intro"><strong>Wasl</strong>, a senior-safety &amp; family-connection app, was our team&rsquo;s semester project. We ran the <strong>full Scrum cycle</strong>, from product vision all the way to a committed Sprint&nbsp;1.</div>
+						<div class="scr-flow">
+							<div class="scr-step"><div class="scr-step-num">01</div><div class="scr-step-name">Product vision</div></div>
+							<div class="scr-flow-arrow"><i class="fas fa-chevron-right"></i></div>
+							<div class="scr-step"><div class="scr-step-num">02</div><div class="scr-step-name">Personas</div></div>
+							<div class="scr-flow-arrow"><i class="fas fa-chevron-right"></i></div>
+							<div class="scr-step"><div class="scr-step-num">03</div><div class="scr-step-name">User stories</div></div>
+							<div class="scr-flow-arrow"><i class="fas fa-chevron-right"></i></div>
+							<div class="scr-step"><div class="scr-step-num">04</div><div class="scr-step-name">Story mapping</div></div>
+							<div class="scr-flow-arrow"><i class="fas fa-chevron-right"></i></div>
+							<div class="scr-step"><div class="scr-step-num">05</div><div class="scr-step-name">MoSCoW + SML</div></div>
+							<div class="scr-flow-arrow"><i class="fas fa-chevron-right"></i></div>
+							<div class="scr-step"><div class="scr-step-num">06</div><div class="scr-step-name">Product backlog</div></div>
+							<div class="scr-flow-arrow"><i class="fas fa-chevron-right"></i></div>
+							<div class="scr-step last"><div class="scr-step-num">07</div><div class="scr-step-name">Sprint 1</div></div>
+						</div>
+						<div class="scr-roles">
+							<div class="scr-role"><div class="scr-role-title">Product Owner</div><div class="scr-role-name">Gokhan</div><div class="scr-role-desc">Owned the vision, personas &amp; priorities.</div></div>
+							<div class="scr-role"><div class="scr-role-title">Scrum Master</div><div class="scr-role-name">Efe</div><div class="scr-role-desc">Protected focus &amp; kept the process honest.</div></div>
+							<div class="scr-role"><div class="scr-role-title">Developers</div><div class="scr-role-name">The rest of us</div><div class="scr-role-desc">Murtaza, Vrutika, Shilpa, Hoori &amp; Ali.</div></div>
+						</div>
+						<aside class="notes">Now the practice. Wasl was our semester project, a senior-safety and family-connection app. We didn't just read about Scrum; we ran the full cycle: vision, personas, user stories, story mapping, MoSCoW and SML prioritization, the product backlog, and a committed Sprint 1. Gokhan was Product Owner, Efe was Scrum Master, and the rest of us were the development team.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 14: Wasl, What Worked -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-worked with-header">
+						<div class="scr-eyebrow">The advantages, lived, not just read</div>
+						<h1>Scrum on Wasl: What Worked</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-grid">
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-route"></i></div><div class="scr-card-title">Story mapping</div></div><div class="scr-card-text">Forced us to think in <strong>user journeys, not feature lists.</strong> We mapped a persona&rsquo;s whole day before writing a single story.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-list-ol"></i></div><div class="scr-card-title">MoSCoW + SML</div></div><div class="scr-card-text">Turned prioritization into a <strong>reasoned decision</strong>, not a wish list. Every &ldquo;Must&rdquo; had to earn its place against the rest.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-layer-group"></i></div><div class="scr-card-title">Vertical slice</div></div><div class="scr-card-text">Sprint&nbsp;1 (Astrid &rarr; Magnus &rarr; Lars) proved <strong>&ldquo;deliver end-to-end early.&rdquo;</strong> One thin path through the whole product, actually working.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-sync-alt"></i></div><div class="scr-card-title">Re-prioritize, no panic</div></div><div class="scr-card-text">When the brief changed mid-project, we <strong>cut from the backlog, not the slice.</strong> Capacity halved, but the core demo still shipped.</div></div>
+						</div>
+						<div class="scr-bottom">Scrum&rsquo;s <strong>adaptability advantage</strong>, experienced first-hand.</div>
+						<aside class="notes">Here's what genuinely worked for us. Story mapping forced journey-thinking instead of a feature dump. MoSCoW plus SML made prioritization a defensible decision. The vertical slice in Sprint 1, Astrid to Magnus to Lars, proved the value of delivering something end-to-end early. And when the brief changed mid-project, Scrum let us re-prioritize without panic: we cut from the backlog, not from the slice. That's the adaptability advantage, lived.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 15: Wasl, What Strained -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-strained with-header">
+						<div class="scr-eyebrow">The honest reflection: we hit the limits ourselves</div>
+						<h1>Scrum on Wasl: What Strained</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-grid">
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-user-slash"></i></div><div class="scr-card-title">No real customer</div></div><div class="scr-card-text">Our PO had no market to listen to: priorities were <strong>educated guesses.</strong> We were the customer <em>and</em> the team, which hides real-world friction.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-chart-line"></i></div><div class="scr-card-title">No velocity history</div></div><div class="scr-card-text">Estimation was guesswork: <strong>no past data to calibrate against.</strong> Story points were numbers we mostly invented on the spot.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-hourglass-half"></i></div><div class="scr-card-title">Ceremony overhead</div></div><div class="scr-card-text">For a small, short project the process sometimes <strong>outweighed the work.</strong> Full ceremonies on a tiny team can feel like ritual.</div></div>
+							<div class="scr-card"><div class="scr-card-head"><div class="scr-card-icon"><i class="fas fa-plug"></i></div><div class="scr-card-title">No real users</div></div><div class="scr-card-text">We got the <strong>structure</strong> but never the core payoff: a real feedback loop. Without shipping, &ldquo;inspect &amp; adapt&rdquo; stays theoretical.</div></div>
+						</div>
+						<div class="scr-bottom">We didn&rsquo;t just learn Scrum&rsquo;s limits in theory: <strong>we ran into them.</strong></div>
+						<aside class="notes">And here's the honest mirror image. As a student team, our Product Owner had no real customer, so our priorities were educated guesses, which is exactly the absent-customer limitation. We had no velocity history, so estimation was guesswork. The ceremonies felt heavy for such a short project. And critically, we never shipped to real users, so we got Scrum's structure but never its core payoff: a real feedback loop. We didn't just read about the limits, we ran into them.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 16: Scrum in the Real World -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-realworld with-header">
+						<div class="scr-eyebrow">Real-life expertise as a team</div>
+						<h1>Scrum in the Real World</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-quotes">
+							<div class="scr-quote">
+								<div class="scr-quote-mark">&ldquo;</div>
+								<div class="scr-quote-text">On a 20-person continuous-delivery team, the daily standup broke down past about ten people.</div>
+								<div class="scr-quote-foot"><i class="fas fa-users"></i><span class="scr-quote-tag">Scaling friction</span></div>
+							</div>
+							<div class="scr-quote">
+								<div class="scr-quote-mark">&ldquo;</div>
+								<div class="scr-quote-text">Sprint commitments collapsed whenever stakeholders kept injecting &lsquo;urgent&rsquo; work mid-sprint.</div>
+								<div class="scr-quote-foot"><i class="fas fa-bolt"></i><span class="scr-quote-tag">Discipline breaks down</span></div>
+							</div>
+							<div class="scr-quote">
+								<div class="scr-quote-mark">&ldquo;</div>
+								<div class="scr-quote-text">Retros only changed anything when management actually acted on them: otherwise, venting.</div>
+								<div class="scr-quote-foot"><i class="fas fa-comments"></i><span class="scr-quote-tag">Culture, not process</span></div>
+							</div>
+						</div>
+						<div class="scr-pattern">
+							<div class="eye">The pattern across all of our experiences</div>
+							<div class="txt">Scrum&rsquo;s failure mode is almost always <strong>organizational, not technical.</strong></div>
+						</div>
+						<aside class="notes">TEAM: replace these three example lines with one real one-liner each from your actual jobs, this is the slide that delivers the "real-life expertise as a team" point and separates us from groups that only have the fictional project. The through-line to land: across every one of our experiences, Scrum's failure mode is organizational, not technical.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 17: Implications for Organizations -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-implications with-header">
+						<div class="scr-eyebrow">Answering the brief directly</div>
+						<h1>Implications for Organizations Going Agile</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-list2">
+							<div class="scr-imp"><div class="scr-imp-num">1</div><div class="scr-imp-body"><div class="scr-imp-title">Adopt the mindset, not just the rituals.</div><div class="scr-imp-text">Ceremonies without culture change equal fake agile.</div></div></div>
+							<div class="scr-imp"><div class="scr-imp-num">2</div><div class="scr-imp-body"><div class="scr-imp-title">Start with one empowered team, prove value, then scale.</div><div class="scr-imp-text">Don&rsquo;t big-bang the whole organization at once.</div></div></div>
+							<div class="scr-imp"><div class="scr-imp-num">3</div><div class="scr-imp-body"><div class="scr-imp-title">Leadership must give up control.</div><div class="scr-imp-text">This is the real cost, and where most transformations die.</div></div></div>
+							<div class="scr-imp"><div class="scr-imp-num">4</div><div class="scr-imp-body"><div class="scr-imp-title">Keep what Waterfall is good at.</div><div class="scr-imp-text">Agile is not abandoning planning, budgeting, or compliance.</div></div></div>
+							<div class="scr-imp"><div class="scr-imp-num">5</div><div class="scr-imp-body"><div class="scr-imp-title">Match the framework to the work, not to the trend.</div><div class="scr-imp-text">The goal is delivery, not buzzword compliance.</div></div></div>
+						</div>
+						<aside class="notes">This answers the brief directly: what does this mean for an organization that wants to be more agile? Five things. Adopt the mindset, not just the rituals. Start with one empowered team and prove value before scaling. Leadership has to give up control, that's the real cost. Keep what Waterfall does well; agile isn't anti-planning. And match the framework to the work, not to the trend.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 18: Not a Silver Bullet -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-silver with-header">
+						<div class="scr-eyebrow">A decision guide: when to use what what</div>
+						<h1>Scrum Is Not a Silver Bullet</h1>
+						<div class="scr-rule"></div>
+						<table class="scrum-table">
+							<thead>
+								<tr><th class="sit">Your situation</th><th class="fit">Best-fit approach</th></tr>
+							</thead>
+							<tbody>
+								<tr><td>Stable scope, regulated, fixed contract</td><td class="fit">Waterfall</td></tr>
+								<tr><td>Uncertain scope, fast feedback possible</td><td class="fit">Scrum</td></tr>
+								<tr><td>Continuous flow, support / ops work</td><td class="fit">Kanban</td></tr>
+								<tr><td>Large org, many coordinated teams</td><td class="fit">Scaled agile (SAFe / LeSS)</td></tr>
+								<tr><td>Agile team inside a plan-driven org</td><td class="fit">Hybrid, consciously, not by accident</td></tr>
+							</tbody>
+						</table>
+						<div class="scr-bottom">The mature answer isn&rsquo;t &ldquo;go agile&rdquo;: it&rsquo;s <strong>&ldquo;use the right tool, and know why.&rdquo;</strong></div>
+						<aside class="notes">So Scrum is not a silver bullet, and this is the decision guide. Stable, regulated, fixed contract, Waterfall. Uncertain scope with real feedback, Scrum. Continuous support and ops work, Kanban. Many coordinated teams, scaled agile. An agile team inside a plan-driven org, hybrid, but chosen consciously, not by accident. The mature answer is never just "go agile." It's "use the right tool, and know why."</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 19: Verdict -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-verdict with-header">
+						<div class="scr-eyebrow">Our critical take on Scrum</div>
+						<h1>Verdict</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-cols">
+							<div class="scr-hero">
+								<div class="scr-hero-eye">In one line</div>
+								<div class="scr-hero-title">Conditional, not universal.</div>
+								<div class="scr-hero-rule"></div>
+								<div class="scr-hero-text">Scrum is a fit question, not an automatic upgrade.</div>
+							</div>
+							<div class="scr-points">
+								<div class="scr-vp"><div class="scr-vp-num">1</div><div class="scr-vp-text"><strong>Conditional, not universal</strong>: the right tool only for the right problem.</div></div>
+								<div class="scr-vp"><div class="scr-vp-num">2</div><div class="scr-vp-text">Its greatest strength is also its greatest risk: <strong>change without discipline becomes chaos.</strong></div></div>
+								<div class="scr-vp"><div class="scr-vp-num">3</div><div class="scr-vp-text">Most failures are <strong>cultural, not procedural</strong>: we saw it in Wasl and in our jobs.</div></div>
+								<div class="scr-vp"><div class="scr-vp-num">4</div><div class="scr-vp-text">Know its blind spots: <strong>silent on engineering quality</strong>, weak on fixed-scope contracts.</div></div>
+								<div class="scr-vp"><div class="scr-vp-num">5</div><div class="scr-vp-text">For organizations: <strong>adopt the mindset, empower teams, give up control</strong>, or don&rsquo;t bother.</div></div>
+							</div>
+						</div>
+						<aside class="notes">Our verdict, in one line: Scrum is conditional, not universal. Five points. It's the right tool only for the right problem. Its greatest strength, embracing change, is also its greatest risk without discipline. Most failures are cultural, not procedural; we saw that both on Wasl and in our jobs. Know its blind spots: engineering quality and fixed-scope work. And for organizations, the deal is all-or-nothing: adopt the mindset, empower teams, and give up control, or don't bother adopting it at all.</aside>
+					</div>
+				</section>
+
+				<!-- Scrum Slide 20: Thank You -->
+				<section data-background-color="#FDF8F3">
+					<div class="scrum-slide scrum-thanks">
+						<div class="scr-eyebrow">Scrum Under the Microscope</div>
+						<h1>Thank you.</h1>
+						<div class="scr-rule"></div>
+						<div class="scr-thanks-text">Questions welcome. Let&rsquo;s talk about where Scrum fits, and where it doesn&rsquo;t.</div>
+						<div class="scr-footer"><strong>International MBA</strong> &middot; Agile Project Management &middot; Prof. Dr. Matthias Handrich</div>
+						<aside class="notes">Thank you. We're happy to take questions, especially on the fit question, or on anything from our Wasl experience or our day jobs.</aside>
+					</div>
+				</section>
 			</div>
 		</div>
 
@@ -11218,7 +12210,48 @@
 				'.cisco-benefits .c-card',
 				'.cisco-limits .c-limit',
 				'.cisco-limits .c-take',
-				'.cisco-limits .c-close'
+				'.cisco-limits .c-close',
+				/* Scrum Under the Microscope deck */
+				'.scrum-slide .scr-eyebrow',
+				'.scrum-slide h1',
+				'.scrum-slide .scr-rule',
+				'.scrum-slide .scr-bottom',
+				'.scrum-slide .scr-callout',
+				'.scrum-title .scr-lead',
+				'.scrum-title .scr-act',
+				'.scrum-title .scr-footer',
+				'.scrum-agenda .scr-col',
+				'.scrum-90 .scr-card',
+				'.scrum-90 .scr-engine',
+				'.scrum-why .scr-panel',
+				'.scrum-landscape .scr-seg',
+				'.scrum-landscape .scr-axis',
+				'.scrum-landscape .scr-pcard',
+				'.scrum-vs-waterfall .scrum-table',
+				'.scrum-vs-agile .scrum-table',
+				'.scrum-hybrid .scr-layer',
+				'.scrum-hybrid .scr-blist li',
+				'.scrum-transform .scr-scale',
+				'.scrum-transform .scr-frameworks',
+				'.scrum-transform .scr-blist li',
+				'.scrum-transform .scr-truth',
+				'.scrum-adv .scr-card',
+				'.scrum-limits .scr-card',
+				'.scrum-limits .scr-fake',
+				'.scrum-fit .scr-col',
+				'.scrum-wasl .scr-intro',
+				'.scrum-wasl .scr-step',
+				'.scrum-wasl .scr-role',
+				'.scrum-worked .scr-card',
+				'.scrum-strained .scr-card',
+				'.scrum-realworld .scr-quote',
+				'.scrum-realworld .scr-pattern',
+				'.scrum-implications .scr-imp',
+				'.scrum-silver .scrum-table',
+				'.scrum-verdict .scr-hero',
+				'.scrum-verdict .scr-vp',
+				'.scrum-thanks .scr-thanks-text',
+				'.scrum-thanks .scr-footer'
 			].join(',');
 
 			function initSlideBaAnimations() {
